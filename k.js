@@ -1,3 +1,5 @@
+
+function k(a,b){
 var kj = new Array();
 var m = new Array();
 var w = new Array();
@@ -6,7 +8,6 @@ kj[i] = document.getElementById(("kj" + String(i + 1)));
 m[i] = document.getElementById(("m" + String(i + 1)));
 w[i] = document.getElementById(("w" + String(i + 1)));
 }
-function k(a,b){
 var b=b;
 var lockReconnect = false;//避免重复连接
     var ws;
@@ -128,7 +129,7 @@ var kweekArray = new Array("日", "一", "二", "三", "四", "五", "六");
 var kweek = kweekArray[new Date(krq).getDay()];
 sqsj.innerHTML =krq+" 星期"+kweek;
 }
-//香港上期时间
+//上期时间
 function loadXMLDoc(b){
 var xmlhttp;
 xmlhttp = new XMLHttpRequest();
