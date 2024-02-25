@@ -85,7 +85,7 @@ display: inline-block;margin:5px 8px 0 8px;
 </div>
 <div class="kj-sj">第<span id="q" class="h">2024000</span>期<span id="sqsj" class="d">2024-00-00 星期日</span></div>
 </div>
-<div class="kj-right xg"></div>
+<div class="kj-right xg" id="kjico"></div>
 <div class="kj-hm">
     <div style="float: left;width:13.5%;"><div class="hm" id="kj1">
         <h2><span id=m1>00</span></h2></div>
@@ -125,8 +125,10 @@ if(strxmlurl == "xg"){
 k(xgwss,xgsqurl);
 } else if(strxmlurl == "xa"){
 k(xawss,xasqurl);
+$('#kjico').removeClass('kj-right xg').addClass('kj-right xa');
 } else if(strxmlurl == "la"){
 lk(laurl1,laurl2,laurl3);
+$('#kjico').removeClass('kj-right xg').addClass('kj-right la');
 } else {
 k(xgwss,xgsqurl);
 }
