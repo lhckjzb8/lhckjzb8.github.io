@@ -20,13 +20,5 @@ function check(i){
                 i<10?num="0"+i:num=i;
                 return num;
 }
-var kj = new Array();
-var m = new Array();
-var w = new Array();
-for (i = 0; i < 7; i++) {
-kj[i] = document.getElementById(("kj" + String(i + 1)));
-m[i] = document.getElementById(("m" + String(i + 1)));
-w[i] = document.getElementById(("w" + String(i + 1)));
-}
 
 function trim(a){return a.replace(/^\s+|\s+$/g,"").replace(/[ ]/g,"").replace("2024","")}
