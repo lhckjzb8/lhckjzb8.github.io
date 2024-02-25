@@ -65,7 +65,7 @@ display: inline-block;margin:5px 8px 0 8px;
 .kj-hm li{list-style-type: none;}
 .kj-hm .sx{width: 40px;line-height: 35px;text-align: center;margin-left:-1px;font-size: 15px;}
 </style>
-<link rel="stylesheet" href="https://lhckjzb8.github.io/js/ico.css">
+<link rel="stylesheet" href="/js/ico.css">
 <script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
 <script src="/js/cdm.js"></script>
 <script src="/js/k.js"></script>
@@ -117,8 +117,21 @@ display: inline-block;margin:5px 8px 0 8px;
 <div class="sx"><span id=w7>中</span></div>
     </div>  
 </div>
+<script>document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');</script>
 <script>
-k('wss://zhibo3.yuexiawang.com','https://api.49lhapi.com/api/web/lottery/lastLotteryRecord?lotteryType=1');
+var urlid = location.search;
+var strxmlurl = urlid.substr(1);
+var xgwss=xgwss;
+var xgsqurl=xgsqurl;
+if(strxmlurl == "xg"){
+k(xgwss,xgsqurl);
+} else if(strxmlurl == "xa"){
+k(xawss,xasqurl);
+} else if(strxmlurl == "la"){
+lk(laurl1,laurl2,laurl3);
+} else {
+k(xgwss,xgsqurl);
+}
 </script>
 </body>
 </html>
