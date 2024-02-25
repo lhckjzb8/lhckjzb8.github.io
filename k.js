@@ -1,4 +1,13 @@
+
 function k(a,b){
+var kj = new Array();
+var m = new Array();
+var w = new Array();
+for (i = 0; i < 7; i++) {
+kj[i] = document.getElementById(("kj" + String(i + 1)));
+m[i] = document.getElementById(("m" + String(i + 1)));
+w[i] = document.getElementById(("w" + String(i + 1)));
+}
 var b=b;
 var lockReconnect = false;//避免重复连接
     var ws;
