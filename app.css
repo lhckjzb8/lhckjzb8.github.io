@@ -1,0 +1,415 @@
+body{
+margin:0;
+padding:0;
+background-color: #eff1f1;
+font-size: 15px;
+width: 100%;
+height:10000px;
+}
+.bjh{
+background-color:#EE7942;
+color:#fff;
+}
+.bjb{
+background-color:#fff;
+color:#000;
+}
+header{
+width: 100%;
+position: fixed;
+top:0;
+z-index:1001;
+background-color: #eff1f1;
+}
+header .top{
+float: left;
+padding:10px;
+display: inline-block;
+}
+header .topleft{
+float: left;color:#fff;
+}
+header .topright{
+float: right;
+}
+header .topright span{position:absolute;width:24px;height:33px;color:#fff;}
+header .topright span.menu{top:7px;right:12px;background-size:30px auto;-webkit-background-size:30px auto;background-position:0 -50px}
+header .menu-list{
+position:absolute;
+top:42px;
+right:9px;
+z-index:1001;
+background-color: #fff;
+background-image: linear-gradient(rgba(255,0,0,0.01), rgba(255,0,0,0.06), rgba(255,0,0,0.08));
+width: 98px;
+padding:5px 0;
+border: 1px solid rgba(0,0,0,0.03);
+border-radius: 8px;
+text-align: center;
+}
+header .menu-list .list-center{
+padding:3px 10px;
+margin:8px;
+border: 1px solid #EE7942;
+border-radius: 5px;
+text-align: center;
+}
+.index{
+float: left;
+margin-top:40px;
+width: 100%;
+//background-color: rgba(0,0,0,0.06);
+background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.01), rgba(0,0,0,0.02), rgba(0,0,0,0.03));
+}
+.indexkj{
+float: left;
+padding:10px;
+}
+.indexkj .mun{
+float: left;
+width: 100%;
+border-bottom: 2px solid #EE7942;
+}
+.indexkj .mun .lan{
+display: inline-block;
+margin-right:5px;
+padding: 5px 5px;
+border-radius: 8px 8px 0 0 ;
+box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+}
+.indexkj .kj{
+float: left;
+width: 100%;
+padding: 5px 0;
+border-radius: 0 0 8px 8px ;
+box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+background-color: #fff;
+margin-bottom:8px;
+display: inline-block;
+}
+.indexkj .kj-left{
+float: left;
+display: inline-block;
+}
+.indexkj .kj-right{
+float: right;
+width: 88px;
+height: 88px;
+border-radius: 50%;
+margin:7px 7px 0 0;
+}
+.indexkj .kj-sj{
+padding:5px 7px;
+}
+.indexkj .kj-sj .h{
+color:#f43;margin:0 3px;font-size: 16px;
+}
+.indexkj .kj-sj .d{
+color:#808080;margin-left:6px;
+}
+.indexkj .kj-djs{
+padding:10px;text-align: center;
+}
+.indexkj .kj-djs .t-num {
+    padding:2px 5px;
+    background-color: #EE7942;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+border: 1px solid rgba(0,0,0,0.1);
+  }
+.indexkj .kj-djs .t-dv {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+margin:0 5px
+  }
+.indexkj .kj-djs .t-tian {
+    font-size: 15px;
+    font-weight: 600;
+    color: #EE7942;
+margin:1px;
+  }
+.indexkj .kj-hm{
+float: left;
+width: 96%;
+display: inline-block;margin:5px 8px 0 8px;
+}
+.indexkj .kj-hm h2{width: 100%;margin-top: 5px;margin-left:-3px;font-size: 20px; text-align: center;font-weight:normal;}
+.indexkj .kj-hm li{list-style-type: none;}
+.indexkj .kj-hm .sx{width: 40px;line-height: 35px;text-align: center;margin-left:-1px;font-size: 15px;}
+
+.indexkj .nr{
+float: left;
+width: 100%;
+padding-bottom: 5px;
+margin-bottom:8px;
+border-radius: 8px ;
+box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+background-color: #fff;
+}
+.indexkj .nr .gs{
+    margin:8px;
+}
+.indexkj .nr .gs .t{
+    display: inline-block;
+    font-size: 18px;font-weight: bold;
+    color:#000;
+}
+.indexkj .nr .gs .t span{
+    font-size: 14px;font-weight:normal;
+    color:#808080;margin-left:13px;
+}
+.bottom{
+width: 100%;
+position: fixed;
+bottom:0;
+z-index:1001;
+background-color: transparent;
+}
+.bottom .center{
+width: 100%;
+float: left;
+padding:0px 10px;
+display: inline-block;
+}
+.bottom .center .bottom-center{
+display: inline-block;
+width: 21%;
+padding:5px 10px;
+margin:6.5px;
+border: 1px solid #EE7942;
+border-radius: 5px;
+text-align: center;
+}
+
+
+/*开奖日期*/
+.holidayCalendar * {
+    margin: 0;
+    padding: 0;
+}
+.holidayCalendar {
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #DCDCDC;
+}
+.holidayCalendar a, .holidayCalendar a:hover {
+    color: #888;
+    text-decoration: none;
+}
+.holidayCalendar ul, .holidayCalendar li {
+    list-style: none;margin:3px 0;
+}
+.holidayCalendar {
+    display: none;
+    width: 322px;
+    //padding-bottom: 10px;
+    margin: 0px auto 0;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.holidayCalendar-title {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 0;
+}
+.holidayCalendar-title a.title {
+    display: inline-block;
+    font-size: 16px;
+    text-indent: 10px;padding: 0 10px;
+}
+.holidayCalendar-title a.kjrq {
+    display: inline-block;
+    font-size: 18px;font-weight: bold;
+    text-indent: 0px;color:#000;
+}
+#backToday {
+    position: absolute;
+    left: 40%;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #44b549;
+    font-size: 13px;
+}
+.holidayCalendar-title .arrow {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 150px;
+}
+.holidayCalendar-title .arrow span {
+    color: #ddd;
+    font-size: 26px;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.holidayCalendar-title .arrow span:hover {
+    color: #888;
+}
+.holidayCalendar-title .arrow .arrow-disabled:hover {
+    color: #ddd;
+    cursor: no-drop;
+}
+.holidayCalendar-title .arrow-prev {
+    float: left;
+}
+.holidayCalendar-title .arrow-next {
+    float: right;
+}
+.holidayCalendar-week,
+.holidayCalendar-date {
+    overflow: hidden;
+}
+.holidayCalendar-week .item,
+.holidayCalendar-date .item {
+    float: left;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;border-radius: 50%;margin-right:20.9px;
+}
+.holidayCalendar-week {
+    padding-bottom: 6px;
+    border-bottom: 0px solid #44b549;
+    font-weight: bold;
+    font-size: 16px;color: #888;
+}
+.holidayCalendar-date {}
+.holidayCalendar-date .item {
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 0px solid #ccc;border-radius: 50%;
+}
+.holidayCalendar-date .item:hover,
+.holidayCalendar-date .item-curMonth:hover {
+    background-color: #f0f0f0;
+}
+.holidayCalendar-date .item-curMonth {
+    color: #333;
+}
+.holidayCalendar-date .item-curDay,
+.holidayCalendar-date .item-curDay:hover {
+    color: #fff;
+    background-color: rgb(68,181,73,0.8);
+}
+.holidayCalendar-date .item-holiday {
+    color: #e02d2d;
+    position:relative;box-shadow: 0px 0px 1px 0px rgba(255,0,0,1);border-radius: 50%;
+    //background-color:#FFFAFA;
+}
+.holidayCalendar-date .item-holiday:after {
+    content: '开';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    color: #fff;
+    background: rgba(255,0,0,0.6);
+    text-align: left;
+    text-indent: 1px;
+    line-height: 7px;font-size: 5px;
+    overflow: hidden;
+}
+.holidayCalendar-date .item-holiday1 {
+    //color: #e02d2d;
+    position:relative;box-shadow: 0px 0px 1px 0px rgba(0,0,0,1);border-radius: 50%;
+    //background-color:#FFFAFA;
+}
+.holidayCalendar-date .item-holiday1:after {
+    content: '已开';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 12px;
+    height: 7px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    text-align: left;
+    text-indent: 1px;
+    line-height: 7px;font-size: 5px;
+    overflow: hidden;
+}
+.holidayCalendar-date .item-workingDay{
+    color: #e02d2d;
+    //background-color: #FFFAFA;
+    position:relative;box-shadow: 0px 0px 1px 0px rgba(255,165,0,1);border-radius: 50%;
+}
+.holidayCalendar-date .item-workingDay:after {
+    content: '金';
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    color: #fff;
+    background: #FFC300;
+    text-align: left;
+    text-indent: 1px;
+    line-height: 7px;
+    overflow: hidden;font-size: 5px;
+}
+.holidayCalendar-date .item-workingDay1{
+    //color: #e02d2d;
+    //background-color: #FFFAFA;
+    position:relative;box-shadow: 0px 0px 1px 0px rgba(0,0,0,1);border-radius: 50%;
+}
+.holidayCalendar-date .item-workingDay1:after {
+    content: '金';
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    color: #fff;
+    background: rgba(0,0,0,1);
+    text-align: left;
+    text-indent: 1px;
+    line-height: 7px;
+    overflow: hidden;font-size: 5px;
+}
+.holidayCalendar-today {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 65px;
+    height: 28px;
+    padding: 6px 6px;
+    background-color: #44b549;
+    border-radius: 5px;
+}
+.holidayCalendar-today .triangle {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -36px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #44b549 transparent;
+}
+.holidayCalendar-today p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+}
