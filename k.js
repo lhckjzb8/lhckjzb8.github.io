@@ -141,21 +141,6 @@ function countTime() {
          fen.innerHTML = "开";
          miao.innerHTML = "奖";
         } 
-var year = date.getFullYear(); 
-var moon = check(date.getMonth()+1);//获取当前月份的日期 
-var day=check(date.getDate());
-var sjrq=year+"-"+moon+"-"+day;
-var hour= date.getHours();//得到小时数
-var minute= date.getMinutes();//得到分钟数
-var second= date.getSeconds();//得到秒数
-hour=check(hour);
-minute=check(minute);
-second=check(second);
-var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
-var week = weekArray[new Date(sjrq).getDay()];
-var hmf = hour + ":" + minute + ":" + second;
-var nyrx =year + "年" + moon +"月"+day+"日 星期"+week;
-shijian.innerHTML = "当前时间：<span style=color:#f;margin-right:8px;>"+hmf+"</span>"+nyrx;
 setTimeout(countTime, 1000);
 }
 //当前开奖时间
