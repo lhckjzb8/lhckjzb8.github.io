@@ -305,10 +305,10 @@ var hour= d.getHours();//得到小时数
 var minute= d.getMinutes();//得到分钟数
 hour=check(hour);
 minute=check(minute);
-//if(hour == 21 && minute>=33 && minute<=35){
+if(hour == 21 && minute>=33 && minute<=35){
 $.ajax({
   type:'get',
-  url: laurl3,
+  url: laurl2,
   dataType: 'jsonp',
   timeout: 1000,
   complete: function (res) {
@@ -321,7 +321,7 @@ xmlhttp.send();
      }
    }
 });
-//}
+}
 },1000);
 
 //判断离开页面
