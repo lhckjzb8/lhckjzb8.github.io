@@ -1,4 +1,4 @@
-var cacheName = 'Pwa_a_2024_0000000';
+var cacheName = 'Pwa_a_2024_00000000';
 var cacheFiles = [
   '/index.html',
   '/laoao.html',
