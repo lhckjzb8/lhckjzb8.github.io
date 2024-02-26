@@ -1,4 +1,21 @@
-
+//音频
+var audio = document.getElementById('myaudio');
+var t2 = 999;//音频的长度，确保能够完整的播放给用户
+var play = false;
+var tplay = false;
+function run(){
+    if(play){
+        return false;
+    }
+    audio.currentTime = 0;//设置播放的音频的起始时间
+    audio.volume = 0.5;//设置音频的声音大小
+    audio.muted = false;//关闭静音状态
+    play = true;
+    setTimeout(function(){
+        play = false;
+        audio.muted = true;//播放完毕，开启静音状态
+    },t2);
+};
 function k(a,b){
 var kj = new Array();
 var m = new Array();
@@ -47,7 +64,7 @@ var kjhm= kjobj.replace("四,九,图,库,开,奖,快","\u9999,\u6e2f,\u516d,\u54
 kjjg=kjhm.split(",");
 var aa=kjjg[0].replace("2024","");
 var bb=kjjg[8].replace("2024","");
-if(kjjg[1].length>1 && isNaN(kjjg[2]) || kjjg[2].length>1 && isNaN(kjjg[3]) || kjjg[3].length>1 && isNaN(kjjg[4]) || kjjg[4].length>1 && isNaN(kjjg[5]) || kjjg[5].length>1 && isNaN(kjjg[6]) || kjjg[6].length>1 && isNaN(kjjg[7]) || kjjg[7].length>1 && aa==bb){};
+if(kjjg[1].length>1 && isNaN(kjjg[2]) || kjjg[2].length>1 && isNaN(kjjg[3]) || kjjg[3].length>1 && isNaN(kjjg[4]) || kjjg[4].length>1 && isNaN(kjjg[5]) || kjjg[5].length>1 && isNaN(kjjg[6]) || kjjg[6].length>1 && isNaN(kjjg[7]) || kjjg[7].length>1 && aa==bb){run();};
 q.innerHTML = "2024"+kjjg[0];
 nextq.innerHTML = "2024"+kjjg[8].replace("2024","");
 nextsj.innerHTML = "2024-"+kjjg[9]+"-"+kjjg[10]+" 星期"+kjjg[11];
@@ -337,6 +354,72 @@ xmlhttp.send();
 //倒计时
 setTimeout(function() {
 countTime();},2000);
+
+//音效
+var hm1sxsy=setInterval(function (){
+var hh = hm.replace(/\s*/g,"");
+var hhjg=hh.split(",");
+var zz="中";
+if(typeof hhjg[0] === "undefined" || hhjg[0] === null || hhjg[0].trim() === ""){hhjg[0]=zz;}
+if(typeof hhjg[1] === "undefined" || hhjg[1] === null || hhjg[1].trim() === ""){hhjg[1]=zz;}
+if(hhjg[0]>0 && isNaN(hhjg[1])){run();clearInterval(hm1sxsy);}
+},950);
+
+var hm2sxsy=setInterval(function () {
+var hh = hm.replace(/\s*/g,"");
+var hhjg=hh.split(",");
+var zz="中";
+if(typeof hhjg[1] === "undefined" || hhjg[1] === null || hhjg[1].trim() === ""){hhjg[1]=zz;}
+if(typeof hhjg[2] === "undefined" || hhjg[2] === null || hhjg[2].trim() === ""){hhjg[2]=zz;}
+if(hhjg[1]>0 && isNaN(hhjg[2])){run();clearInterval(hm2sxsy);}
+},950);
+
+var hm3sxsy=setInterval(function () {
+var hh = hm.replace(/\s*/g,"");
+var hhjg=hh.split(",");
+var zz="中";
+if(typeof hhjg[2] === "undefined" || hhjg[2] === null || hhjg[2].trim() === ""){hhjg[2]=zz;}
+if(typeof hhjg[3] === "undefined" || hhjg[3] === null || hhjg[3].trim() === ""){hhjg[3]=zz;}
+if(hhjg[2]>0 && isNaN(hhjg[3])){run();clearInterval(hm3sxsy);}
+},950);
+
+var hm4sxsy=setInterval(function () {
+var hh = hm.replace(/\s*/g,"");
+var hhjg=hh.split(",");
+var zz="中";
+if(typeof hhjg[3] === "undefined" || hhjg[3] === null || hhjg[3].trim() === ""){hhjg[3]=zz;}
+if(typeof hhjg[4] === "undefined" || hhjg[4] === null || hhjg[4].trim() === ""){hhjg[4]=zz;}
+if(hhjg[3]>0 && isNaN(hhjg[4])){run();clearInterval(hm4sxsy);}
+},950);
+
+var hm5sxsy=setInterval(function () {
+var hh = hm.replace(/\s*/g,"");
+var hhjg=hh.split(",");
+var zz="中";
+if(typeof hhjg[4] === "undefined" || hhjg[4] === null || hhjg[4].trim() === ""){hhjg[4]=zz;}
+if(typeof hhjg[5] === "undefined" || hhjg[5] === null || hhjg[5].trim() === ""){hhjg[5]=zz;}
+if(hhjg[4]>0 && isNaN(hhjg[5]))
+{run();clearInterval(hm5sxsy);}
+},950);
+
+var hm6sxsy=setInterval(function () {
+var hh = hm.replace(/\s*/g,"");
+var hhjg=hh.split(",");
+var zz="中";
+if(typeof hhjg[5] === "undefined" || hhjg[5] === null || hhjg[5].trim() === ""){hhjg[5]=zz;}
+if(typeof hhjg[6] === "undefined" || hhjg[6] === null || hhjg[6].trim() === ""){hhjg[6]=zz;}
+if(hhjg[5]>0 && isNaN(hhjg[6]))
+{run();hm7sxx=setInterval(hm7sxj,100);clearInterval(hm6sxsy);}
+},950);
+function hm7sxj(){hm7sxsy=setInterval(hm7sxjg,950);clearInterval(hm7sxx);};
+function hm7sxjg() {
+var hh = hm.replace(/\s*/g,"");
+var hhjg=hh.split(",");
+var zz="中";
+if(hhjg[6]>0)
+{run();clearInterval(hm7sxsy);}
+};
+
 }
 
 
