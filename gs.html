@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>公式</title>
+<style type="text/css"> 
+@font-face{
+    font-family: 'HYk2gj';
+    src : url('ByteNumber-Medium.ttf');
+}
+  body {
+  /* Disables pull-to-refresh but allows overscroll glow effects. */
+  overscroll-behavior-y: contain;
+}
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+body {padding:0 2px;margin: 0;background-color:#fff;font-family: HYk2gj;}
+.modala {
+display: none;z-index: 2;position: absolute;width: 100%;
+}
+.modal {
+    margin: auto;
+    padding-top: 5%;
+    z-index: 3;display:table;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+.modal img {
+    display: block;
+    padding: 5px;
+    margin: auto;height: 500px;
+    width: 80%;
+    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.2), 0 10px 20px rgb(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px solid white;background:#fff;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+*{list-style: none;}
+#imglist {
+    list-style: none;width:100%;padding-top:5px;
+}
+#imglist p{
+    padding: 2px;text-align: center;border-bottom: 0.1px solid #DCDCDC;border-left: 0.1px solid #DCDCDC;border-right: 0.1px solid #DCDCDC;color: #808080;margin-top: -5px;
+  font-size: 12px;border-radius: 0 0 5px 5px;font-size: 10px;background-image: linear-gradient(#fff, #fff,#ccc);
+}
+li img {
+    cursor: zoom-in;border: 0.1px solid #DCDCDC;border-radius: 5px 5px 0 0;padding:3px;width:150px;height:200px;
+}
+#imglist li {
+    //float: left;
+}
+#imglist .imgl {
+    padding:0;float: left;
+}
+#imglist .imgr {
+    padding:0;float: right;
+}
+.ze{z-index:1;position: absolute;padding:13px 28px;background:#fff;border-radius: 8px 0 0 0;margin-top:186px;margin-left: 100px;filter: blur(5px);}
+</style>
+<script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body onselectstart="javascript:return(false);" oncontextmenu="javascript:return(false);">
+<script type="text/javascript">
+document.write('<script src="/.well-known/gs.js?'+Math.random()+'"><\/script>');
+</script>
+<div class="loading-mask" style="padding-top:50%;width: 100%;position: fixed;text-align: center;font-size: 14px;"><img src="/.well-known/loading.gif" width="100px" height="100px"><p style="padding-top:15px;">正在加载中...</p></div>
+<div style="display:table;">
+<div id="outerdiv" style="position:fixed;top:-0px;left:0px;background:rgba(0,0,0,0.3);z-index:2;width:100%;height:100%;display:none;overflow-y: scroll;
+2 -webkit-overflow-scrolling: touch;">
+</div>
+<div id="imglist">
+<div class="zdlist" style="float: left;width:100%;"></div>
+<div class="imglist" style="float: left;width:100%;">正在加载中...</div>
+</div>
+
+</div>
+
+<script>
+function isEven(num) {
+  return num % 2 === 0;
+}
+var kk=k.split(",");
+
+var zuobj=zu.split(",");
+var zdobj=zd.split(",");
+
+var obj=imgurl.split(",");
+
+var obj2=imgurl2.split(",");
+
+if(kk[0]=="yes"){
+var zdresult = '';
+$('.zdlist').html('');
+if(zuobj.length == zdobj.length){
+for (i = 0; i < zdobj.length; i++) {
+if(isEven(i)==true){var imgi="imgl";} else {var imgi="imgr";};
+if(zuobj[i]==obj[0]){var cs="ze";} else {var cs="";};
+zdresult +='<li class="'+imgi+'"><span class="'+cs+'"></span><img id="imga'+i+'" src ="https://'+zuobj[i]+'.com/'+zdobj[i]+'?'+Math.random()+'" onclick="showBgImg(this)"><p style="color:#f00;">重点关注</p><div id="imga'+i+'a" class="modala" onclick="closeImg(this)"><div class="modal"><span style="z-index:1;position: absolute;padding:18px 55px;right:3%;top:493px;border-radius: 30px 0 8px 0;filter: blur(5px);background:#fff;"></span><img id="imga'+i+'aa"></div></div></li>';
+}
+} else {$('.zdlist').html('<div style="padding:15px;margin-left: 45px;color:#0000ff;">重点关注出错，请检查地址或图片。</div>');};
+$('.zdlist').append(zdresult);
+}
+//
+
+var result = '';
+$('.imglist').html('');
+if(kk[1]=="yes"){
+for (i = 1; i < obj.length; i++) {
+if(isEven(i)==true){var imgi="imgr";} else {var imgi="imgl";};
+result +='<li class="'+imgi+'"><span class="ze"></span><img id="imgb'+i+'" src ="https://'+obj[0]+'.com/'+obj[i]+'?'+Math.random()+'" onclick="showBgImg(this)"><p>公式图'+[i]+'</p><div id="imgb'+i+'a" class="modala" onclick="closeImg(this)"><div class="modal" ><span style="z-index:1;position: absolute;padding:18px 55px;right:3%;top:493px;border-radius: 30px 0 8px 0;filter: blur(5px);background:#fff;"></span><img id="imgb'+i+'aa"></div></div></li>';
+}
+var objlength = obj.length -1;
+} else {var objlength = 0;};
+if(kk[2]=="yes"){
+for (i = 1; i < obj2.length; i++) {
+if(isEven(i+objlength)==true){var imgi="imgr";} else {var imgi="imgl";};
+result +='<li class="'+imgi+'"><img id="imgc'+i+'" src ="https://'+obj2[0]+'.com/'+obj2[i]+'?'+Math.random()+'" onclick="showBgImg(this)"><p>公式图'+[i+objlength]+'</p><div id="imgc'+i+'a" class="modala" onclick="closeImg(this)"><div class="modal" ><span style="z-index:1;position: absolute;padding:18px 55px;right:3%;top:493px;border-radius: 30px 0 8px 0;filter: blur(5px);background:#fff;"></span><img id="imgc'+i+'aa"></div></div></li>';
+}
+}
+$('.imglist').append(result);
+</script>
+
+<script>
+function showBgImg(e) {
+var outerdiv = document.getElementById("outerdiv");
+outerdiv.style.display = 'block';
+var id=e.id+"a";
+var modal = document.getElementById(id);
+modal.style.display = 'block';
+var ida=e.id+"aa";
+var modala = document.getElementById(ida);
+var imgtop=e.getBoundingClientRect().top;
+if(imgtop>ktop){var htop=-550;} else if(imgtop<50){var htop=-235;} else {var htop=-400;}
+    var src = e.src;//获取当前点击的pimg元素中的src属性
+    $(modala).attr("src", src);//设置#bigimg元素的src属性
+        /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+    $("<img/>").attr("src", src).load(function(){
+        var windowW = $(window).width();//获取当前窗口宽度
+        var windowH = $(window).height();//获取当前窗口高度
+        var realWidth = this.width;//获取图片真实宽度
+        var realHeight = this.height;//获取图片真实高度
+        var imgWidth, imgHeight;
+        var scale = 0.9;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+        if(realHeight>windowH*scale) {//判断图片高度
+            imgHeight = windowH*scale;//如大于窗口高度，图片高度进行缩放
+            imgWidth = imgHeight/realHeight*realWidth;//等比例缩放宽度
+            if(imgWidth<windowW*scale) {//如宽度小于缩放宽度
+                imgWidth = windowW*scale;//再对宽度进行扩大
+            }
+            if(imgWidth>windowW*scale) {//如宽度扔大于窗口宽度
+                imgWidth = windowW*scale;//再对宽度进行缩放
+            }
+        } else if(realWidth>windowW*scale) {//如图片高度合适，判断图片宽度
+            imgWidth = windowW*scale;//如大于窗口宽度，图片宽度进行缩放
+            imgHeight = imgWidth/realWidth*realHeight;//等比例缩放高度
+        } else {//如果图片真实高度和宽度都符合要求，高宽不变
+            imgWidth = realWidth;
+            imgHeight = realHeight;
+        }
+$(modala).css("width",imgWidth);//以最终的宽度对图片缩放
+$(modal).css({"left":0,"margin-top":htop});//设置#innerdiv的left属性
+    });
+	}
+
+function closeImg(e) {
+var outerdiv = document.getElementById("outerdiv");
+outerdiv.style.display = 'none';
+var id=e.id.replace("aa","a");
+var modal = document.getElementById(id);
+modal.style.display = 'none';
+}
+</script>
+<script>$(document).ready(function () {
+    setTimeout(function () {
+      $("body>.loading-mask").hide();
+    }, 1000)
+  });</script>
+<script language="javascript">
+setTimeout(function g(){
+var g=document.body.scrollHeight;
+window.parent.postMessage({msggs: g}, "*");
+},500)
+</script>
+</body>
+</html>
