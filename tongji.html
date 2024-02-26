@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="UTF-8">
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="直播" />
+<link rel="apple-touch-icon" href="ico.jpg" />
+<link rel="icon" sizes="192x192" href="ico.jpg">
+<meta name="theme-color" content="#fc6162" />
 <title>统计助手</title>
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet" href="ico.css">
@@ -14,6 +20,15 @@
 <script src="kjjl.js"></script>
 </head>
 <body>
+ <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(function(r) {
+        console.log('注册成功', r);
+      }).catch(function(err) {
+        console.error('err', err);
+      });
+    }
+  </script>
 <header><div class="top">
 <div class="topleft" id="shijian">当前时间：00:00:00 2024年01月01号星期日</div>
 <div class="topright"><span class="menu" onClick="div_none('menu-list');"></span></div>
