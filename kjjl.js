@@ -102,6 +102,11 @@ var ii=1;
 } else{
 var ii=0;
 }
+if(Size-arrLen>10){
+$(".load-more").hide();
+} else {
+$(".load-more").show();
+} 
 				for (var i = ii; i < arrLen; i++) {
 result += '<div class="kj-left"><div class="kj-sj">第<span class="h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<span class="d">' + datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","") + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</span></div></div>';
 result += '<div class="kj-hm">';
