@@ -97,16 +97,5 @@ var nyrx =year + "年" + moon +"月"+day+"日 星期"+week;
 shijian.innerHTML = "当前时间：<span style=color:#f;margin-right:8px;>"+hmf+"</span>"+nyrx;
 }, 1000);
 </script>
-<script type="text/javascript">
-var u = navigator.userAgent, app = navigator.appVersion;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-if(isiOS){
-document.querySelector(".bottom").style.paddingBottom="15px";
-}
-window.addEventListener("message",(event)=>{
-document.getElementById('fushi').style.height = event.data.msgfs + 'px';
-})
-</script>
 </body>
 </html>
