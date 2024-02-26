@@ -20,6 +20,15 @@
 <script src="kjjl.js"></script>
 </head>
 <body>
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(function(r) {
+        console.log('注册成功', r);
+      }).catch(function(err) {
+        console.error('err', err);
+      });
+    }
+  </script>
 <header><div class="top">
 <div class="topleft" id="shijian">当前时间：00:00:00 2024年01月01号星期日</div>
 <div class="topright"><span class="menu" onClick="div_none('menu-list');"></span></div>
