@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<title>记录查询</title>
+<style>
+body{
+font-family: "微软雅黑";
+background-color: #fff;
+//background-image: linear-gradient(#FFB6C1, #fff, #fff,#fff, #fff);
+//height:100%;
+padding-bottom:15px;
+}
+font{
+background-color:#00ff00;
+color:#f00;
+}
+#lotery-list{
+box-shadow: 0 0 0.5px 0 rgb(0, 0, 0, 0.5);
+width:100%;text-align: center;float: left;
+height:100%;margin-bottom:10px;background-color: #fff;
+}
+.kjjl,.top{
+display:block;
+width:100%;
+font-size: 13px;
+text-align: center;
+float: left;
+height:28px;
+line-height:28px;background-color: #fff;
+}
+.kjjl:nth-child(odd){background-color:rgb(0, 0, 0, 0.03);}/*奇数行背景色*/
+.kjjl:nth-child(even){background-color:#fff;}/*偶数行字体颜色*/
+.top{
+background-color:rgb(255, 182, 193 ,0.5);
+}
+.kjjl li,.top li{
+display: inline-block;
+list-style-type: none;
+width:10.9%;
+text-align: center;
+box-shadow: 0 0 0.3px 0 rgb(0, 0, 0, 0.5);
+float: left;
+height:28px;
+line-height:28px;
+}
+.kjjl .sj,.top .sj{
+width:23.7%;
+text-align: center;
+}
+.kjjl .hm{
+width:12%;height:100%;
+}
+.color{
+text-align: center;float: left;width:100%;
+padding:5px 0 10px 0;
+}
+.color ol{
+list-style-type: none;
+margin:0px;
+padding:5px;
+}
+.color li{
+float: left;
+display: inline-block;
+list-style-type: none;
+padding:5px 10px;
+color:#fff;
+font-size: 12px;
+margin-right: 3px;
+}
+.color .red{
+background-color:red;
+}
+.color .black{
+background-color:black;
+}
+.color .salmon{
+background-color:salmon;
+}
+.color .orange{
+background-color:Orange;
+}
+.color .mediumorchid{
+background-color:MediumOrchid;
+}
+.color .blue{
+background-color:Blue;
+}
+.color .qc{
+box-shadow: 0 0 1px 0 rgb(0, 0, 0, 0.5);
+margin-right: 0px;
+margin-left: 1.5px;color:#000;float: right;
+}
+
+.red:active,.black:active,.salmon:active,.orange:active,.mediumorchid:active,.blue:active,.qc:active{
+color:cyan;
+}
+
+.lan{
+margin-bottom:0px;border: 0.1px solid #ccc;padding:10px 0;font-size: 12px;width:100%;float: left;background-color: #fff;
+}
+.lan input{
+outline-style: none ;
+text-align:center;
+border: 1px solid rgb(0, 0, 0, 0.1);
+width: 26px;
+font-size: 13px;
+height:18px;
+margin:0 3px;
+}
+.lan input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.lan .left{
+float: left;
+width:83.5%;
+margin: 0 0.5% 0 1%;
+}
+.lan .hao{
+float: left;
+width:100%;
+padding-bottom:10px;
+}
+.lan .hao li{
+display: inline-block;
+list-style-type: none;
+width:24%;
+}
+.lan .q{
+float: left;
+width:100%;
+}
+.lan .q li{
+display: inline-block;
+list-style-type: none;
+}
+.lan .right{
+width:15%;
+float: right;
+}
+.lan .tijiao{
+margin: 0 3px;
+background-color:#DAF7A6;
+color:#f00;
+font-size: 12px;
+width: 90%;
+height:33px;
+line-height:25px;
+margin-bottom:-10px;
+border-radius: 5px;
+}
+.lan .fuyuan{
+margin: 0 3px;
+margin-top:-10px;
+background-color:rgb(220, 220, 220,0.1);
+color:#008B8B;
+font-size: 12px;
+width: 90%;
+height:25px;
+line-height:21px;
+margin-bottom:6px;
+border-radius: 5px;
+}
+#loading{width: 100%;
+display:none;padding:15px 0;text-align: center;font-size: 14px;z-index:1;position: absolute;left:0;
+}
+.tishi{
+width: 100%;float: left;border: 0.1px solid #ccc;background-color: Snow;font-size: 13px;color: #000;padding:3px 0;margin-bottom: 10px;line-height:25px;text-align: center;
+}
+.tishi .dx{
+margin-left:2px;
+margin-top:-2px;
+margin-bottom:2px;
+border: 0.1px solid #ccc;
+color:mediumorchid;
+background-color: Snow;
+border-radius: 5px;
+width: 90%;
+height:25px;
+line-height:25px;
+text-align: center;
+}
+.qtjl{
+border: 0.1px solid #ccc;
+background-color: Snow;
+  color: RosyBrown;
+  padding: 5px 10px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+  float: center;margin-right: 5%;font-size: 14px;
+}
+.dqjl{
+border: 0.1px solid #ccc;
+background-color: rgb(255, 165, 0, 0.3);
+  color: Tomato;
+  padding:5px 10px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+  float: center;font-size: 14px;margin-right: 5%;
+  }
+.qtjl a {
+text-align: center; 
+    text-decoration: none;color: RosyBrown;
+}
+</style>
+</head>
+<body>
+</script>
+<script type="text/javascript" src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+<div class="color" onclick="se();"><li class="red">红色</li><li class="black">黑色</li><li class="blue">蓝色</li><li class="orange">金色</li><li class="mediumorchid">紫色</li><li class="salmon">粉色</li><li class="qc" id="qc">上色</li></div>
+<div class="lan">
+<div class="left">
+<div class="hao"><li>号①<input type="text" id="hm1" name="hm1"></li><li>号②<input type="text" id="hm2" name="hm2" value=""></li><li>号③<input type="text" id="hm3" name="hm3" value=""></li><li style="width: 28%;text-align:right;">最近<input type="text" id="qs" name="qs" value="1">年</li></div>
+<div class="q"><li style="float: left;">年份<input type="text" style="width: 50px;" id="q1" name="q1" value="2024" onclick="qsqc();"> 至 <input type="text" style="width: 50px;" id="q2" name="q2" value="2024" onclick="qsqc();"></li><li style="float: right;">历史同期<input type="text" id="tq" name="tq" value="" style="width: 38px;"></li></div>
+</div>
+<div class="right">
+<input onclick="fuyuan();" class="fuyuan" type=button value=复原 id=fuyuan>
+ <input onclick="kj();" class="tijiao" type=button value=提交 id=tijiao></div>
+</div>
+
+<div style="width: 83%;float: left;margin-top:8px;">
+<span class="qtjl"><a href="xgcx.html">香港查询</a></span><span class="dqjl">新澳查询</span><span class="qtjl"><a href="lacx.html">老澳查询</a></span></div>
+<div class="tishi" style="border-top:none;margin-right:-0.5px;margin-top:-0.2px;float: right;width: 15%;background-color: #fff;"><div class="dx" id="daxiao"><span>大小序</span></div></div>
+
+<div class="tishi" id="fhcxqs" style="display:none;"><div style="float: right;width: 50%;"><input type="checkbox" name="fhqs" id="fhqs" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">仅显示查询符合的期数</span></div></div>
+<div class="tishi" id="wstqxs" style="display:none;"><div style="float: left;width: 50%;"><input type="checkbox" name="tqxq" id="tqxq" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">显示查询的下 <input type="text" id="xqs" name="xqs" style="color:#0000ff;text-align:center;width: 15px;height:10px;" value="1"> 期</span></div><div style="float: right;width: 50%;"><input type="checkbox" name="wstq" id="wstq" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">显示查询同尾期的期数</span></div></div>
+<div id=lotery-list>
+<div id=loading><img src="/.well-known/loading.gif" width="100px" height="100px"><p style="padding-top:15px;">正在加载中...</p></div>
+<div class='top'><li class='sj'>年份-期数</li><li>平一</li><li>平二</li><li>平三</li><li>平四</li><li>平五</li><li>平六</li><li>特码</li></div><div id='top'></div>
+<div id="jl2024"></div>
+<div id="jl2023"></div>
+<div id="jl2022"></div>
+<div id="jl2021"></div>
+<div id="jl2020"></div>
+</div>
+
+<script type="text/javascript" src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+function checkqs(i){
+                //方法一，用三元运算符
+                var num;
+if(i<10){num="00"+i;}
+else if(i<100){num="0"+i;}
+else {num=i;}
+return num;          
+}
+function check(num) {  
+    var len = num.length;  
+    while(len < 2) {  
+        num = "0" + num;  
+        len++;  
+    }  
+    return num;  
+}
+function check1(num) {  
+    var len = num.length;  
+    while(len < 3) {  
+        num = "0" + num;  
+        len++;  
+    }  
+    return num;  
+}
+function check10(i){
+                //方法一，用三元运算符
+                var num;
+                i<10?num="0"+i:num=i;
+                return num;
+}
+function check100(i){
+                //方法一，用三元运算符
+                var num;
+                i<100?num="0"+i:num=i;
+                return num;
+}
+function qsqc(){
+document.getElementById("qs").value="0";
+}
+function fuyuan(){
+document.getElementById("hm1").value="";
+document.getElementById("hm2").value="";
+document.getElementById("hm3").value="";
+document.getElementById("qs").value="1";
+document.getElementById("tq").value="";
+tjxs.style.display = "none";
+$('#qc').html('上色');
+$('#top').html('');
+$('#daxiao').html('大小序<span></span>')
+qc.style.color = '';
+flag = 0;
+flag2 = 0;
+kj();
+}
+function shuju(comurl,y,ddxx) {
+$.ajax({
+		type: 'GET',
+		url: comurl,
+		dataType: 'json',
+		sync: false,
+		beforeSend:function() {
+$("#loading").show();
+  }, 
+
+		success: function(data) {
+			var arrLen = data.data.recordList.length;
+			var datas = data.data.recordList;
+			var result = "";
+			var resulttj = "";
+			if (arrLen > 0) {
+				$(y).html('');$("#top").html('');
+var h1=document.getElementById("hm1").value;
+var h2=document.getElementById("hm2").value;
+var h3=document.getElementById("hm3").value;
+var qs=document.getElementById("qs").value;
+var q1=document.getElementById("q1").value;
+var q2=document.getElementById("q2").value;
+var tq=document.getElementById("tq").value;
+var hm1=check(h1);
+var hm2=check(h2);
+var hm3=check(h3);
+if(isNaN(h1)||h1.length>0 && Number(h1)<1||h1.length>0 && Number(h1)>49){
+$("#top").html("<div class='kjjl'>号码输入错误！请输入01~49的号码！</div>");
+}
+ if(isNaN(h2)||h2.length>0 && Number(h2)<1||h2.length>0 && Number(h2)>49){
+$("#top").html("<div class='kjjl'>号码输入错误！请输入01~49的号码！</div>");
+}
+ if(isNaN(h3)||h3.length>0&&Number(h3)<1||h3.length>0&&Number(h3)>49){
+$("#top").html("<div class='kjjl'>号码输入错误！请输入01~49的号码！</div>");
+}
+if(Number(q1)<1&&Number(q2)<1&&Number(qs)<1&&Number(tq)<1){
+document.getElementById("qs").value="1";
+document.getElementById("q1").value="2024";
+document.getElementById("q2").value="2024";
+var q1="2024";
+var q2="2024";
+var arrLen="0";
+}
+if(isNaN(qs)||Number(qs)<0){
+$("#top").html("<div class='kjjl'>(最近N年)输入错误！请输入要查找几年！例：1</div>");
+var q1="2024";
+var q2="2024";
+var arrLen="0";
+}
+if(Number(qs)>=1){
+document.getElementById("q1").value=2024-qs+1;
+document.getElementById("q2").value="2024";
+var q1=document.getElementById("q1").value;
+var q2="2024";
+}
+if(isNaN(q1)||Number(q1)<2020&&Number(qs)<1&&Number(tq)<1||isNaN(q2)||Number(q2)<Number(q1)&&Number(qs)<1&&Number(tq)<1){
+$("#top").html("<div class='kjjl'>年份输入错误！请输入正确年份！例：2000 至 2024</div>");
+var q1="2024";
+var q2="2024";
+var arrLen="0";
+}
+if(isNaN(tq)||Number(tq)<0||Number(tq)>366){
+$("#top").html("<div class='kjjl'>(历史同期)输入错误！请要查找的最近期数！例：098</div>");
+var q1="2024";
+var q2="2024";
+var arrLen="0";
+}
+if(Number(tq)>=1&&Number(qs)<0){
+document.getElementById("q1").value="2020";
+document.getElementById("q2").value="2024";
+var q1="2020";
+var q2="2024";
+} else if(Number(tq)>=1&&Number(qs)>=1){
+var q1=document.getElementById("q1").value;
+var q2="2024";
+} else {
+var q1=document.getElementById("q1").value;
+var q2=document.getElementById("q2").value;
+}
+var hmsl=0;
+fhcxqs.style.display = "none";
+var fh=document.getElementById("fhqs");
+if(Number(h1)>=1 && Number(h2)<1 && Number(h3)<1){
+fhcxqs.style.display = "";
+if(fh.checked){
+var hmsl=1;
+} else {
+var hmsl=0;
+};
+}
+if(Number(h1)<1 && Number(h2)>=1 && Number(h3)<1){
+fhcxqs.style.display = "";
+if(fh.checked){
+var hmsl=1;
+} else {
+var hmsl=0;
+};
+var hm1=check(h2);
+}
+if(Number(h1)<1 && Number(h2)<1 && Number(h3)>=1){
+fhcxqs.style.display = "";
+if(fh.checked){
+var hmsl=1;
+} else {
+var hmsl=0;
+};
+var hm1=check(h3);
+}
+if(Number(h1)>=1 && Number(h2)>=1 && Number(h3)<1){
+fhcxqs.style.display = "";
+if(fh.checked){
+var hmsl=2;
+} else {
+var hmsl=0;
+};
+}
+if(Number(h1)>=1 && Number(h2)<1 && Number(h3)>=1){
+fhcxqs.style.display = "";
+if(fh.checked){
+var hmsl=2;
+} else {
+var hmsl=0;
+};
+var hm2=check(h3);
+}
+if(Number(h1)<1 && Number(h2)>=1 && Number(h3)>=1){
+fhcxqs.style.display = "";
+if(fh.checked){
+var hmsl=2;
+} else {
+var hmsl=0;
+};
+var hm1=check(h3);
+}
+if(Number(h1)>=1 && Number(h2)>=1 && Number(h3)>=1){
+fhcxqs.style.display = "";
+if(fh.checked){
+var hmsl=3;
+} else {
+var hmsl=0;
+};
+}
+for (var i = 0; i < arrLen; i++) {
+for(var f=q1;f<=q2;f++){
+wstqxs.style.display = "none";
+var aa=1;
+var bb=aa;
+var cc=aa;
+var dd=aa;
+if(Number(tq)>=1){
+wstqxs.style.display = "";
+var tw1=document.getElementById("wstq").checked;
+var tw2=document.getElementById("tqxq").checked;
+var xqs=document.getElementById("xqs").value;
+if(xqs>3){
+var result = "<div class='kjjl'>(显示下期)输入错误！目前只支持最多3期</div>";
+var xqs=3;
+document.getElementById("xqs").value="3";
+}
+var lstq=checkqs(tq).toString();
+var lstqw=lstq.slice(-1);
+var tqq1=+lstq+1;
+var tqq2=+lstq+2;
+var tqq3=+lstq+3;
+var ttqq1=checkqs(tqq1).toString(); 
+var ttqq2=checkqs(tqq2).toString(); 
+var ttqq3=checkqs(tqq3).toString(); 
+var lstqw1=ttqq1.slice(-1);//期尾显示下1期结果
+var lstqw2=ttqq2.slice(-1);//期尾显示下2期结果
+var lstqw3=ttqq3.slice(-1);//期尾显示下3期结果
+
+var lstq1=ttqq1;//同期显示下1期结果
+var lstq2=ttqq2;//同期显示下2期结果
+var lstq3=ttqq3;//同期显示下3期结果
+var qsdata=checkqs(datas[i].period).toString();
+var qsdataw=qsdata.slice(-1);
+var aa=qsdata.indexOf(check1(check(tq)));
+var bb=aa;
+var cc=aa;
+var dd=aa;
+if(tw1==true&&tw2==false){//显示同尾期
+var aa=qsdataw.indexOf(lstqw);
+}
+if(tw1==false&&tw2==true){//显示下期
+if(xqs==1){
+var bb=qsdata.indexOf(lstq1);
+} else if(xqs==2){
+var bb=qsdata.indexOf(lstq1);
+var cc=qsdata.indexOf(lstq2);
+} else if(xqs==3){
+var bb=qsdata.indexOf(lstq1);
+var cc=qsdata.indexOf(lstq2);
+var dd=qsdata.indexOf(lstq3);
+};
+}
+if(tw1==true&&tw2==true){//显示同尾期下期
+var aa=qsdataw.indexOf(lstqw);
+if(xqs==1){
+var bb=qsdataw.indexOf(lstqw1);
+} else if(xqs==2){
+var bb=qsdataw.indexOf(lstqw1);
+var cc=qsdataw.indexOf(lstqw2);
+} else if(xqs==3){
+var bb=qsdataw.indexOf(lstqw1);
+var cc=qsdataw.indexOf(lstqw2);
+var dd=qsdataw.indexOf(lstqw3);
+};
+}
+} 
+if(datas[i].lotteryTime.indexOf(f)!=-1){
+if(aa!=-1||bb!=-1||cc!=-1||dd!=-1){
+
+if(ddxx=="dx"){
+//大小排序
+var tm=datas[i].numberList[6].number;
+var dx=datas[i].numberList;
+dx.sort((a, b) => a.number.replace(tm,"") - b.number.replace(tm,""));
+var zh="<li><span class='h'>"+datas[i]['numberList'][1]['number'] +"</li><li><span class='h'>"+datas[i]['numberList'][2]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][3]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][4]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][5]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][6]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][0]['number']+"</span></li>";
+var hm=zh.replace(hm1,"<font>"+hm1+"</font>").replace(hm2,"<font>"+hm2+"</font>").replace(hm3,"<font>"+hm3+"</font>");
+var zhtj=datas[i]['numberList'][1]['number'] +","+datas[i]['numberList'][2]['number'] +","+datas[i]['numberList'][3]['number'] +","+datas[i]['numberList'][4]['number'] +","+datas[i]['numberList'][5]['number'] +","+datas[i]['numberList'][6]['number'] +","+datas[i]['numberList'][0]['number'];
+} else {			
+var zh="<li><span class='h'>"+datas[i]['numberList'][0]['number'] +"</li><li><span class='h'>"+datas[i]['numberList'][1]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][2]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][3]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][4]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][5]['number'] +"</span></li><li><span class='h'>"+datas[i]['numberList'][6]['number']+"</span></li>";
+var hm=zh.replace(hm1,"<font>"+hm1+"</font>").replace(hm2,"<font>"+hm2+"</font>").replace(hm3,"<font>"+hm3+"</font>");
+var zhtj=datas[i]['numberList'][0]['number'] +","+datas[i]['numberList'][1]['number'] +","+datas[i]['numberList'][2]['number'] +","+datas[i]['numberList'][3]['number'] +","+datas[i]['numberList'][4]['number'] +","+datas[i]['numberList'][5]['number'] +","+datas[i]['numberList'][6]['number'];
+}
+var sj=datas[i].lotteryTime.replace("年","-").replace("月","-").replace("日","").split("-");
+if(hmsl==0){
+result += "<div class='kjjl'><li class='sj'>"+sj[0]+"-"+checkqs(datas[i].period)+"期</li>"+hm+"</div>";
+resulttj += sj[0]+","+checkqs(datas[i].period)+","+zhtj+"<br>\n";
+}
+if(hmsl==1){
+for(var k=0;k<7;k++){
+var haoma1=check(datas[i].numberList[k].number);
+if(haoma1.indexOf(hm1)!=-1){
+result += "<div class='kjjl'><li class='sj'>"+sj[0]+"-"+checkqs(datas[i].period)+"期</li>"+hm+"</div>";
+resulttj += sj[0]+","+checkqs(datas[i].period)+","+zhtj+"<br>\n";
+} 
+}
+}
+
+if(hmsl==2){
+for(var k=0;k<7;k++){
+var haoma1=check(datas[i].numberList[k].number);
+if(haoma1.indexOf(hm1)!=-1){
+for(var z=0;z<7;z++){
+var haoma2=check(datas[i].numberList[z].number);
+if(haoma2.indexOf(hm2)!=-1){
+result += "<div class='kjjl'><li class='sj'>"+sj[0]+"-"+checkqs(datas[i].period)+"期</li>"+hm+"</div>";
+resulttj += sj[0]+","+checkqs(datas[i].period)+","+zhtj+"<br>\n";
+}}
+}}
+}
+if(hmsl==3){
+for(var k=0;k<7;k++){
+var haoma1=check(datas[i].numberList[k].number);
+if(haoma1.indexOf(hm1)!=-1){
+for(var z=0;z<7;z++){
+var haoma2=check(datas[i].numberList[z].number);
+if(haoma2.indexOf(hm2)!=-1){
+for(var n=0;n<7;n++){
+var haoma3=check(datas[i].numberList[n].number);
+if(haoma3.indexOf(hm3)!=-1){
+result += "<div class='kjjl'><li class='sj'>"+sj[0]+"-"+checkqs(datas[i].period)+"期</li>"+hm+"</div>";
+resulttj += sj[0]+","+checkqs(datas[i].period)+","+zhtj+"<br>\n";
+}}
+}}
+}}
+}
+//
+}
+}}}
+				$(y).append(result);
+g();
+$("#tjxs").on('click', function() {
+$('#show').html('');
+$('#show').append(resulttj);
+copyName();
+})
+			}
+		},
+complete:setTimeout(function() { 
+     $("#loading").hide();
+  },1500), 
+	})
+}
+
+</script>
+<script>
+function kj(dddxxx) {
+var qs=document.getElementById("qs").value;
+var tq=document.getElementById("tq").value;
+var q1=document.getElementById("q1").value;
+var q2=document.getElementById("q2").value;
+if(Number(qs)>=1){
+document.getElementById("q1").value=2024-qs+1;
+document.getElementById("q2").value="2024";
+var q1=document.getElementById("q1").value;
+var q2="2024";
+}
+if(Number(tq)>=1&&Number(qs)<0){
+document.getElementById("q1").value="2020";
+document.getElementById("q2").value="2024";
+var q1="2020";
+var q2="2024";
+} else if(Number(tq)>=1&&Number(qs)>=1){
+document.getElementById("q1").value=2024-qs+1;
+document.getElementById("q2").value="2024";
+var q1=document.getElementById("q1").value;
+var q2="2024";
+} else {
+var q1=document.getElementById("q1").value;
+var q2=document.getElementById("q2").value;
+}
+for (var j=2020;j<=2024;j++) {
+var yy="#jl"+j;
+$(yy).html('');
+}
+for (var i=q1;i<=q2;i++) {
+var y="#jl"+i;
+var u="https://www.49wz888.com/site/h5/lottery/search?pageSize=366&year="+i+"&sort=1&lotteryType=2";
+if(dddxxx=="dx"){
+var ddxx="dx";
+}
+shuju(u,y,ddxx);
+}
+}
+kj();
+</script>
+<script>
+$("#tijiao").on('click', function() {
+tjxs.style.display = "none";
+$('#qc').html('上色');
+$('#top').html('');
+$('#daxiao').html('大小序<span></span>')
+qc.style.color = '';
+flag = 0;
+flag2 = 0;
+//var  xs = document.querySelectorAll("#lotery-list .kjjl").length;
+//var  xsli = document.querySelectorAll("#lotery-list .kjjl li").length;
+//if(xs>0){
+//if(xsli>0){
+tjxs.style.display = "";
+g();
+//}
+//} else {
+//$("#top").html("<p>查无数据！</p>");
+//g();
+//}
+})
+</script>
+<script>
+var flag2= 0;
+	$('#daxiao').on('click', function() {
+		if (flag2 == 0) {
+			
+			$(this).html('落球序<span></span>');
+			kj('dx');
+			flag2 = 1;
+		} else {
+			$(this).html('大小序<span></span>');
+			kj();
+			flag2 = 0;
+		}
+	});
+  </script>
+<script>
+var flag = 0;
+$('#qc').on('click', function() {
+if (flag == 0) {
+$('#qc').html('去色');
+$('#top').html("<div class='kjjl' style='background-color:#fff;'><li class='sj'  contenteditable></li><li style='width: 65.4%;' contenteditable></li><li><span class='h' contenteditable></span></li></div>");
+flag = 1;
+} else {
+$('#qc').html('上色');
+$('#top').html('')
+qc.style.color = '';
+flag = 0;
+};
+});
+var bc="red";
+var  colorlist = document.querySelectorAll(".color li");
+for (var s=0;s<colorlist.length-1;s++) {
+$(colorlist[s]).on('click', function() {
+flag=1;
+$('#qc').html('去色');
+$('#top').html("<div class='kjjl' style='background-color:#fff;'><li class='sj'  contenteditable></li><li style='width: 65.4%;' contenteditable></li><li><span class='h' contenteditable></span></li></div>");
+})
+}
+for (var y=0;y<colorlist.length;y++) {    //根据tab-list下的li标签长度循环
+colorlist[y].index=y;
+colorlist[y].onmouseover=function() {
+var bcolor = colorlist[this.index].className;
+if(bcolor=="red"){
+bc="red";
+} else if(bcolor=="black"){
+bc="black";
+} else if(bcolor=="blue"){
+bc="blue";
+} else if(bcolor=="orange"){
+bc="orange";
+} else if(bcolor=="mediumorchid"){
+bc="mediumorchid";
+} else if(bcolor=="salmon"){
+bc="salmon";
+} else if(bcolor=="qc"){
+var  allItemList = document.querySelectorAll(".kjjl li span");
+for (var i=0;i<allItemList.length;i++) {
+allItemList[i].style.backgroundColor = '';
+allItemList[i].style.color = '';
+}
+} else {
+bc="";
+}
+qc.style.color = bc;
+}
+}
+function se(){
+var  allItemList = document.querySelectorAll(".h");
+for (var i=0;i<allItemList.length;i++) {    //根据tab-list下的li标签长度循环
+allItemList[i].index=i;
+allItemList[i].onmouseover=function() {
+if(flag==1){
+var backgroundColor = allItemList[this.index].style.backgroundColor;
+
+if (backgroundColor == bc) {//红色
+allItemList[this.index].style.backgroundColor = '';
+allItemList[this.index].style.color = '';
+allItemList[this.index].style.padding = '';
+allItemList[this.index].style.borderRadius = '';
+} else {
+allItemList[this.index].style.backgroundColor = bc;
+allItemList[this.index].style.color = '#fff';
+allItemList[this.index].style.padding = '5px 5.5px';
+allItemList[this.index].style.borderRadius = '50%';
+  }
+}
+}
+}
+}
+</script>
+
+<div id=tjxs style="width: 100%;float: left;border: 0.1px solid #ccc;background-color: Snow;font-size: 13px;color: #f00;text-align: center;padding:3px 0;display:none;margin-bottom: 10px;">复制~文本格式的数据</div>
+<textarea id="show" style="display:none;"></textarea>
+<script>
+//复制
+function copyToClipboard(text) {
+  const bgColor = '#ff00ff';
+
+  const textarea = document.createElement('textarea');
+  textarea.value =text;
+  textarea.style.background = bgColor;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+
+  // 显示成功提示
+  const successMessage = document.createElement('div');
+  successMessage.textContent = '复制成功!';
+  successMessage.style.position = 'fixed';
+  successMessage.style.top = '200px';
+  successMessage.style.right = '35%';
+  successMessage.style.background = bgColor;
+  successMessage.style.color = '#fff';
+  successMessage.style.padding = '8px';
+  document.body.appendChild(successMessage);
+
+  // 3 秒后隐藏提示
+  setTimeout(() => {
+    successMessage.remove();
+    show.innerHTML="";//复制成功,清除容器内容
+  }, 3000);
+}
+
+function copyName() {
+setTimeout(() => {
+var showq = document.querySelector("#show");
+var text = showq.value;
+copyToClipboard(text);
+  }, 100);
+}
+//复制结束
+function g(){
+var g=document.body.scrollHeight+30;
+window.parent.postMessage({msgcx: g}, "*");
+window.parent.postMessage({msgxa: g}, "*");
+window.parent.postMessage({msgxg: g}, "*");
+window.parent.postMessage({msgla: g}, "*");
+}
+g();
+</script>
+</body>
+</html>
