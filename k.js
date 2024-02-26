@@ -368,10 +368,10 @@ function countTime() {
          fen.innerHTML = m;
          miao.innerHTML = s;
        } else {
-         tian.innerHTML = "正";
-         shi.innerHTML = "在";
-         fen.innerHTML = "开";
-         miao.innerHTML = "奖";
+         tian.innerHTML = "•";
+         shi.innerHTML = "开";
+         fen.innerHTML = "奖";
+         miao.innerHTML = "中";
         } 
 setTimeout(countTime, 1000);
 }
