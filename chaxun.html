@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<title>开奖查询</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="ico.css">
+<script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+<script src="cdm.js"></script>
+<script src="k.js"></script>
+<script src="kjrq.js"></script>
+<script src="kjjl.js"></script>
+</head>
+<body>
+<header><div class="top">
+<div class="topleft" id="shijian">当前时间：00:00:00 2024年01月01号星期日</div>
+<div class="topright"><span class="menu" onClick="div_none('menu-list');"></span></div>
+ <div class="menu-list" style="display:none;">
+ <div class="list-center" onClick="get('xg');">香港专区</div>
+ <div class="list-center"  onClick="get('xa');">新澳专区</div>
+ <div class="list-center" onClick="get('la');">老澳专区</div>
+ <div class="list-center" onClick="get('cx');">查询助手</div>
+ <div class="list-center" onClick="get('tj');">统计助手</div>
+ <div class="list-center" onClick="get('fs');">复试计算</div>
+</div>
+</div>
+</header>
+<div class="index">
+<div style="padding:10px 8px;">
+<iframe id="jlcx" frameborder="0" scrolling="no" width="100%" height="100%" src="/xgcx.html"></iframe>
+</div>
+</div>
+<script>
+document.write('<script src="/js/riqi.js?'+Math.random()+'"><\/script>');
+document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');
+</script>
+<script>
+function get(a){
+if(a=="xg"){
+window.location.href = "index.html";
+} else if(a=="xa"){
+window.location.href = "xinao.html";
+} else if(a=="la"){
+window.location.href = "laoao.html";
+} else if(a=="cx"){
+window.location.href = "chaxun.html";
+} else if(a=="tj"){
+window.location.href = "tongji.html";
+} else if(a=="fs"){
+window.location.href = "fushi.html";
+} else {
+window.location.href = "/";
+}
+}
+</script>
+<script>
+function div_none(theclass){
+var allPageTags = new Array();
+var allPageTags = document.getElementsByTagName("div");
+for (i=0; i<allPageTags.length;i++){
+if(allPageTags[i].className == theclass){
+var obj = allPageTags[i];
+if(obj.style.display == "none"){
+obj.style.display = "";
+g();
+}else{
+obj.style.display = "none";
+g();
+}
+}
+}
+}
+function check1(i){
+                //方法一，用三元运算符
+                var num;
+                i<10?num="0"+i:num=i;
+                return num;
+}
+setInterval(function() {
+var date = new Date();
+var year = date.getFullYear(); 
+var moon = check1(date.getMonth()+1);//获取当前月份的日期 
+var day=check1(date.getDate());
+var sjrq=year+"-"+moon+"-"+day;
+var hour= date.getHours();//得到小时数
+var minute= date.getMinutes();//得到分钟数
+var second= date.getSeconds();//得到秒数
+hour=check1(hour);
+minute=check1(minute);
+second=check1(second);
+var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
+var week = weekArray[new Date(sjrq).getDay()];
+var hmf = hour + ":" + minute + ":" + second;
+var nyrx =year + "年" + moon +"月"+day+"日 星期"+week;
+shijian.innerHTML = "当前时间：<span style=color:#f;margin-right:8px;>"+hmf+"</span>"+nyrx;
+}, 1000);
+</script>
+<script type="text/javascript">
+var u = navigator.userAgent, app = navigator.appVersion;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+if(isiOS){
+document.querySelector(".bottom").style.paddingBottom="15px";
+}
+window.addEventListener("message",(event)=>{
+document.getElementById('jlcx').style.height = event.data.msgcx + 'px';
+})
+</script>
+</body>
+</html>
