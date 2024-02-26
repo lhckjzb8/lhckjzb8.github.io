@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="UTF-8">
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="mobile-web-app-capable" content="yes">
-<title>记录查询</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="直播" />
+<link rel="apple-touch-icon" href="ico.jpg" />
+<link rel="icon" sizes="192x192" href="ico.jpg">
+<meta name="theme-color" content="#fc6162" />
+<title>老澳查询助手</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="ico.css">
+<script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
 <style>
-body{
-font-family: "微软雅黑";
-background-color: #fff;
-//background-image: linear-gradient(#FFB6C1, #fff, #fff,#fff, #fff);
-//height:100%;
-padding-bottom:15px;
-}
 font{
 background-color:#00ff00;
 color:#f00;
@@ -22,7 +23,7 @@ box-shadow: 0 0 0.5px 0 rgb(0, 0, 0, 0.5);
 width:100%;text-align: center;float: left;
 height:100%;margin-bottom:10px;background-color: #fff;
 }
-.kjjl,.top{
+.kjjl,.top1{
 display:block;
 width:100%;
 font-size: 13px;
@@ -33,10 +34,10 @@ line-height:28px;background-color: #fff;
 }
 .kjjl:nth-child(odd){background-color:rgb(0, 0, 0, 0.03);}/*奇数行背景色*/
 .kjjl:nth-child(even){background-color:#fff;}/*偶数行字体颜色*/
-.top{
+.top1{
 background-color:rgb(255, 182, 193 ,0.5);
 }
-.kjjl li,.top li{
+.kjjl li,.top1 li{
 display: inline-block;
 list-style-type: none;
 width:10.9%;
@@ -46,7 +47,7 @@ float: left;
 height:28px;
 line-height:28px;
 }
-.kjjl .sj,.top .sj{
+.kjjl .sj,.top1 .sj{
 width:23.7%;
 text-align: center;
 }
@@ -213,7 +214,30 @@ text-align: center;
 </style>
 </head>
 <body>
-<script type="text/javascript" src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+ <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(function(r) {
+        console.log('注册成功', r);
+      }).catch(function(err) {
+        console.error('err', err);
+      });
+    }
+  </script>
+<header><div class="top">
+<div class="topleft" id="shijian">当前时间：00:00:00 2024年01月01号星期日</div>
+<div class="topright"><span class="menu" onClick="div_none('menu-list');"></span></div>
+ <div class="menu-list" style="display:none;">
+ <div class="list-center" onClick="get('xg');">香港专区</div>
+ <div class="list-center"  onClick="get('xa');">新澳专区</div>
+ <div class="list-center" onClick="get('la');">老澳专区</div>
+ <div class="list-center" onClick="get('cx');">查询助手</div>
+ <div class="list-center" onClick="get('tj');">统计助手</div>
+ <div class="list-center" onClick="get('fs');">复试计算</div>
+</div>
+</div>
+</header>
+<div class="index"><div style="padding:10px 8px;">
+<div class="cxzs">
 <div class="color" onclick="se();"><li class="red">红色</li><li class="black">黑色</li><li class="blue">蓝色</li><li class="orange">金色</li><li class="mediumorchid">紫色</li><li class="salmon">粉色</li><li class="qc" id="qc">上色</li></div>
 <div class="lan">
 <div class="left">
@@ -233,7 +257,7 @@ text-align: center;
 <div class="tishi" id="wstqxs" style="display:none;"><div style="float: left;width: 50%;"><input type="checkbox" name="tqxq" id="tqxq" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">显示查询的下 <input type="text" id="xqs" name="xqs" style="color:#0000ff;text-align:center;width: 15px;height:10px;" value="1"> 期</span></div><div style="float: right;width: 50%;"><input type="checkbox" name="wstq" id="wstq" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">显示查询同尾期的期数</span></div></div>
 <div id=lotery-list>
 <div id=loading><img src="/js/loading.gif" width="100px" height="100px"><p style="padding-top:15px;">正在加载中...</p></div>
-<div class='top'><li class='sj'>年份-期数</li><li>平一</li><li>平二</li><li>平三</li><li>平四</li><li>平五</li><li>平六</li><li>特码</li></div><div id='top'></div>
+<div class='top1'><li class='sj'>年份-期数</li><li>平一</li><li>平二</li><li>平三</li><li>平四</li><li>平五</li><li>平六</li><li>特码</li></div><div id='top'></div>
 <div id="jl2024"></div>
 <div id="jl2023"></div>
 <div id="jl2022"></div>
@@ -781,14 +805,74 @@ copyToClipboard(text);
   }, 100);
 }
 //复制结束
-function g(){
-var g=document.body.scrollHeight+30;
-window.parent.postMessage({msgcx: g}, "*");
-window.parent.postMessage({msgxa: g}, "*");
-window.parent.postMessage({msgxg: g}, "*");
-window.parent.postMessage({msgla: g}, "*");
+</script>
+</div>
+</div>
+</div>
+<script>
+document.write('<script src="/js/riqi.js?'+Math.random()+'"><\/script>');
+document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');
+</script>
+<script>
+function get(a){
+if(a=="xg"){
+window.location.href = "index.html";
+} else if(a=="xa"){
+window.location.href = "xinao.html";
+} else if(a=="la"){
+window.location.href = "laoao.html";
+} else if(a=="cx"){
+window.location.href = "chaxun.html";
+} else if(a=="tj"){
+window.location.href = "tongji.html";
+} else if(a=="fs"){
+window.location.href = "fushi.html";
+} else {
+window.location.href = "/";
 }
+}
+</script>
+<script>
+function div_none(theclass){
+var allPageTags = new Array();
+var allPageTags = document.getElementsByTagName("div");
+for (i=0; i<allPageTags.length;i++){
+if(allPageTags[i].className == theclass){
+var obj = allPageTags[i];
+if(obj.style.display == "none"){
+obj.style.display = "";
 g();
+}else{
+obj.style.display = "none";
+g();
+}
+}
+}
+}
+function check1(i){
+                //方法一，用三元运算符
+                var num;
+                i<10?num="0"+i:num=i;
+                return num;
+}
+setInterval(function() {
+var date = new Date();
+var year = date.getFullYear(); 
+var moon = check1(date.getMonth()+1);//获取当前月份的日期 
+var day=check1(date.getDate());
+var sjrq=year+"-"+moon+"-"+day;
+var hour= date.getHours();//得到小时数
+var minute= date.getMinutes();//得到分钟数
+var second= date.getSeconds();//得到秒数
+hour=check1(hour);
+minute=check1(minute);
+second=check1(second);
+var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
+var week = weekArray[new Date(sjrq).getDay()];
+var hmf = hour + ":" + minute + ":" + second;
+var nyrx =year + "年" + moon +"月"+day+"日 星期"+week;
+shijian.innerHTML = "当前时间：<span style=color:#f;margin-right:8px;>"+hmf+"</span>"+nyrx;
+}, 1000);
 </script>
 </body>
 </html>
