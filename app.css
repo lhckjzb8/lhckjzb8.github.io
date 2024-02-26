@@ -6,6 +6,15 @@ font-size: 15px;
 width: 100%;
 height:100%;
 }
+a,a:visited {
+  color: inherit; /* 继承链接所在元素的字体颜色 */
+  text-decoration: none; /* 去掉下划线等文本修饰 */
+}
+.bbb{
+float: left;width: 100%;
+padding:15px 0;
+background-color:rgba(0,0,0,0.03);
+}
 .bjh{
 background-color:#EE7942;
 color:#fff;
@@ -139,7 +148,79 @@ display: inline-block;margin:5px 8px 0 8px;
 .indexkj .kj-hm h2{width: 100%;margin-top: 5px;margin-left:-3px;font-size: 20px; text-align: center;font-weight:normal;}
 .indexkj .kj-hm li{list-style-type: none;}
 .indexkj .kj-hm .sx{width: 40px;line-height: 35px;text-align: center;margin-left:-1px;font-size: 15px;}
-
+.indexkj .kj .f{
+float: left;
+border-top: 2px solid rgba(255,127,80,0.8);
+width: 100%;
+}
+.indexkj .kj .kjjl{
+float: left;
+width: 100%;
+}
+.indexkj .kj .kjjl .t{
+display: inline-block;float: left;
+    font-size: 18px;font-weight: bold;
+    color:#000;padding: 10px;
+}
+.indexkj .kj .kjjl .kjjlspan{
+float: right;margin-top:3px;padding: 10px;
+}
+.indexkj .kj .kjjl .kjjlspan span{
+margin:0 5px;
+padding:3px 8px;
+font-size: 14px;
+font-weight:normal;
+border: 1px solid #EE7942;border-radius: 8px;
+}
+.lotery-list .kjjl-left{
+float: left;
+border-top: 1px solid rgba(0,0,0,0.03);
+width: 100%;
+}
+.lotery-list .kj-hm h.wx{
+display: none;
+}
+.load-more{
+float: left;
+width: 100%;
+text-align: center;
+padding:15px 0;
+}
+.load-more span{
+color:#EE7942;
+background-color:rgba(265,0,0,0.03);
+border: solid 1px #EE7942;
+border-radius: 5px;
+padding:5px 50px;
+font-size: 16px;
+letter-spacing: 1px;
+}
+#kjYearList{
+float: left;
+//padding:0 10px;
+width: 100%;
+background-color:#fff;
+line-height: 30px;
+text-align: center;
+margin-bottom:10px;
+display: inline-block;
+text-align: center;
+}
+#kjYearList li{
+background-color:#fff;
+font-size: 13px;
+font-family: inherit;
+color: #666;
+list-style: none;
+display: inline-block;
+padding:1px 0;
+border: solid 1px #eee;
+border-radius: 5px;
+line-height: 20px;
+margin:0 1.5px;
+width: 14.6%;
+text-align: center;
+}
 .indexkj .nr{
 float: left;
 width: 100%;
