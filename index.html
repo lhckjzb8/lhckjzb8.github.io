@@ -228,7 +228,7 @@ var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android�
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 if(isiOS){
 document.querySelector(".bottom").style.paddingBottom="15px";
-document.querySelector(".bbb").style.paddingBottom="25px";
+//document.querySelector(".bbb").style.paddingBottom="25px";
 }
 window.addEventListener("message",(event)=>{
 document.getElementById('gsgltu').style.height = event.data.msggs + 'px';
