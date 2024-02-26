@@ -32,7 +32,7 @@
         console.error('err', err);
       });
     }
-  </script>
+  </script><span id=y></span>
 <header><div class="top">
 <div class="topleft" id="shijian">当前时间：00:00:00 2024年01月01号星期日</div>
 <div class="topright"><span class="menu" onClick="div_none('menu-list');"></span></div>
@@ -55,6 +55,7 @@
 document.getElementById('jlcxzs').src="xgcx.html";
 window.addEventListener("message",(event)=>{
 document.getElementById('jlcxzs').style.height = event.data.msgcxzs + 'px';
+document.getElementById('y').innerHTML=event.data.msgcxzs;
 })
 </script>
 <script>
