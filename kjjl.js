@@ -1,9 +1,14 @@
 function jl(a,b){
+var loadMoreBtn=document.getElementById('load-more');      
+loadMoreBtn.addEventListener('click', function() {
+get_lottery_list();
+});
 var sort=1;
 var type=b;
 var year = 2024;
 var page=1;
-var Size= 370;
+var Size= 10;
+var batchSize = 10;
 
 console.log(type);
 	var flag = 0;
@@ -60,6 +65,7 @@ sort = 1;
 flag = 0;
 flag1 = 0;
 flag2 = 0;
+Size= 10;
 get_lottery_list();
 });
 
@@ -74,7 +80,8 @@ else {num=i;}
 return num;          
 }
 var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
-       
+ 
+
 get_lottery_list();
 function get_lottery_list(){
 	$.ajax({
@@ -106,6 +113,7 @@ result += '<div style="float: right;"><div class="' + hm_ys(datas[i]['numberList
 			}
 		}
 	})
+Size += batchSize;
 }
 
 //大小排序
