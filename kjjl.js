@@ -1,6 +1,6 @@
-function jl(a){
+function jl(a,b){
 var sort=1;
-var type=1;
+var type=b;
 var year = 2024;
 var page=1;
 var Size= 370;
