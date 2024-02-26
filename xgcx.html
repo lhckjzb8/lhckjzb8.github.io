@@ -667,7 +667,7 @@ if(dddxxx=="dx"){
 var ddxx="dx";
 }
 shuju(u,y,ddxx);
-g();
+setTimeout(g,1000);
 }
 }
 kj();
@@ -716,13 +716,13 @@ if (flag == 0) {
 $('#qc').html('去色');
 $('#top').html("<div class='kjjl' style='background-color:#fff;'><li class='sj'  contenteditable></li><li style='width: 65.4%;' contenteditable></li><li><span class='h' contenteditable></span></li></div>");
 flag = 1;
-g();
+setTimeout(g,1000);
 } else {
 $('#qc').html('上色');
 $('#top').html('')
 qc.style.color = '';
 flag = 0;
-g();
+setTimeout(g,1000);
 };
 });
 var bc="red";
@@ -832,7 +832,7 @@ function g(){
 var gg=document.body.scrollHeight+30;
 window.parent.postMessage({msgcx: gg}, "*");
 }
-g();
+setTimeout(g,1000);
 </script>
 </body>
 </html>
