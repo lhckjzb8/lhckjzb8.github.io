@@ -1,13 +1,10 @@
 var xgwss="wss://zhibo3.yuexiawang.com";
 var xgjlurl="https://a6tk111.com/gallerynew/h5/lottery/search";
-var xgjlid=1;
 var xgsqurl="https://api.49lhapi.com/api/web/lottery/lastLotteryRecord?lotteryType=1";
 var xawss="wss://zhibo.yuexiawang.com";
-var xaurl="https://www.49wz888.com/site/h5/lottery/search";
-var xajlid=2;
+var xajlurl="https://www.49wz888.com/site/h5/lottery/search";
 var xasqurl="https://api.49lhapi.com/api/web/lottery/lastLotteryRecord?lotteryType=2";
 var laurl1="https://a6tkapi1.com/gallerynew/h5/index/lastLotteryRecord?lotteryType=2";
 var laurl2="https://live2.lhzzcenter.com/livedata/data_mo.json";
 var laurl3="https://live.lhzzcenter.com/livedata/data_mo.json";
 var lajlurl="https://a6tk111.com/gallerynew/h5/lottery/search";
-var lajlid=2;
