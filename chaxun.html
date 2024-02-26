@@ -48,10 +48,11 @@
 </header>
 <div class="index">
 <div style="padding:10px 8px;">
-<iframe id="jlcxzs" name="jlcxzs" class="jlcxzs" frameborder="0" scrolling="no" width="100%" height="100%" src="xgcx.html"></iframe>
+<iframe id="jlcxzs" name="jlcxzs" class="jlcxzs" frameborder="0" scrolling="no" width="100%" height="100%" src=""></iframe>
 </div>
 </div>
 <script type="text/javascript">
+document.getElementById('jlcxzs').src="xgcx.html";
 window.addEventListener("message",(event)=>{
 document.getElementById('jlcxzs').style.height = event.data.msgcxzs + 'px';
 })
