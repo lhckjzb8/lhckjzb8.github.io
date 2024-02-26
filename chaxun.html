@@ -97,5 +97,10 @@ var nyrx =year + "年" + moon +"月"+day+"日 星期"+week;
 shijian.innerHTML = "当前时间：<span style=color:#f;margin-right:8px;>"+hmf+"</span>"+nyrx;
 }, 1000);
 </script>
+<script type="text/javascript">
+window.addEventListener("message",(event)=>{
+document.getElementById('jlcx').style.height = event.data.msgcx + 'px';
+})
+</script>
 </body>
 </html>
