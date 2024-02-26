@@ -667,7 +667,7 @@ var ddxx="dx";
 }
 shuju(u,y,ddxx);
 }
-g();
+
 }
 kj();
 </script>
@@ -685,7 +685,6 @@ flag2 = 0;
 //if(xs>0){
 //if(xsli>0){
 tjxs.style.display = "";
-g();
 //}
 //} else {
 //$("#top").html("<p>查无数据！</p>");
@@ -825,10 +824,13 @@ copyToClipboard(text);
   }, 100);
 }
 //复制结束
+</script>
+<script language="javascript">
 function g(){
 var g=document.body.scrollHeight;
 window.parent.postMessage({msgcx: g}, "*");
 }
+	g();
 </script>
 </body>
 </html>
