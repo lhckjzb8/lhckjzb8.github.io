@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="mobile-web-app-capable" content="yes">
-<title>开</title>
+<title>统计助手</title>
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet" href="ico.css">
 <script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
@@ -55,36 +55,6 @@ window.location.href = "/";
 }
 }
 </script>
-<script>
-    // 事件委托的核心原理：给父节点添加侦听器，利用冒泡影响每一个子节点
-    var allItemList = document.querySelectorAll("#kjYearList li");
-for (var i=11;i<allItemList.length-1;i++) {
-allItemList[i].style.display = "none";
-}
-
-function yearxs() {
-for (var i=12;i<allItemList.length-1;i++) {
-if (allItemList[i].style.display == "none") {
-allItemList[i].style.display = "";
-yearlistxs.innerHTML = "<span style='color:#f00;'>隐藏- -</span>";
-} else {
-allItemList[i].style.display = "none";
-yearlistxs.innerHTML = "<span style='color:#f00;'>更多++</span>"
-}
-}
-}
-
-    for (var i=0;i<allItemList.length;i++) {
-allItemList[i].index=i;  //定义循环的每一个i的值                 
-allItemList[i].onmouseover=function() {
-for (var z=0;z<allItemList.length;z++) { 
-allItemList[z].style.color="#666";
-allItemList[z].style.backgroundColor="#fff";
-}
-allItemList[this.index].style.color="#D2691E";
-allItemList[this.index].style.backgroundColor="#FFFAFA";
-}}
-  </script>
 <script>
 function div_none(theclass){
 var allPageTags = new Array();
@@ -138,6 +108,5 @@ window.addEventListener("message",(event)=>{
 document.getElementById('fushi').style.height = event.data.msgfs + 'px';
 })
 </script>
-<div class="bbb"></div>
 </body>
 </html>
