@@ -614,7 +614,6 @@ resulttj += sj[0]+","+checkqs(datas[i].period)+","+zhtj+"<br>\n";
 }
 }}}
 				$(y).append(result);
-g();
 $("#tjxs").on('click', function() {
 $('#show').html('');
 $('#show').append(resulttj);
@@ -668,6 +667,7 @@ var ddxx="dx";
 }
 shuju(u,y,ddxx);
 }
+g();
 }
 kj();
 </script>
@@ -829,7 +829,6 @@ function g(){
 var g=document.body.scrollHeight+30;
 window.parent.postMessage({msgcx: g}, "*");
 }
-g();
 </script>
 </body>
 </html>
