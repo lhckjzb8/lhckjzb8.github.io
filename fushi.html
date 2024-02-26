@@ -1,13 +1,26 @@
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta name="referrer" content="never">
-<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta charset="UTF-8">
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="直播" />
+<link rel="apple-touch-icon" href="ico.jpg" />
+<link rel="icon" sizes="192x192" href="ico.jpg">
+<meta name="theme-color" content="#fc6162" />
 <script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
 <title>复试计算</title>
+	<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(function(r) {
+        console.log('注册成功', r);
+      }).catch(function(err) {
+        console.error('err', err);
+      });
+    }
+	</script>
 <style>
 .icon_fushi_01 {
 	width: 1rem;
