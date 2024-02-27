@@ -77,6 +77,21 @@ kjjg=kjhm.split(",");
 var aa=kjjg[0].replace("2024","");
 var bb=kjjg[8].replace("2024","");
 if(kjjg[1].length>1 && isNaN(kjjg[2]) || kjjg[2].length>1 && isNaN(kjjg[3]) || kjjg[3].length>1 && isNaN(kjjg[4]) || kjjg[4].length>1 && isNaN(kjjg[5]) || kjjg[5].length>1 && isNaN(kjjg[6]) || kjjg[6].length>1 && isNaN(kjjg[7]) || kjjg[7].length>1 && aa==bb){run();};
+if(kjjg[7].length>1 && aa==bb){
+          var kjshow=setTimeout(function (){
+            $("#kj-sj").hide();
+            $("#kj-hm").hide();
+            $("#kj-sjts").show();
+            if(c=="xg"){
+                jl(xgjlurl,1);
+            } else if(c=="xa"){
+                jl(xajlurl,2);
+            } else {
+                jl(lajlurl,2);
+            }
+                clearTimeout(kjshow);
+            },10000);
+      }
 q.innerHTML = "2024"+kjjg[0];
 nextq.innerHTML = "2024"+kjjg[8].replace("2024","");
 nextsj.innerHTML = "2024-"+kjjg[9]+"-"+kjjg[10]+" 星期"+kjjg[11];
@@ -334,7 +349,9 @@ var hour= d.getHours();//得到小时数
 var minute= d.getMinutes();//得到分钟数
 hour=check(hour);
 minute=check(minute);
-if(hour == 21 && minute>=33 && minute<=36){
+var hao = hm.replace(/\s*/g,"");
+var haojg=hao.split(",");
+if(hour == 21 && minute>=33 && minute<=36 && isNaN(haojg[6])){
 $.ajax({
   type:'get',
   url: laurl2,
@@ -429,7 +446,16 @@ var hh = hm.replace(/\s*/g,"");
 var hhjg=hh.split(",");
 var zz="中";
 if(hhjg[6]>0)
-{run();clearInterval(hm7sxsy);}
+{
+run();
+            var kjshow=setTimeout(function (){
+            $("#kj-sj").hide();
+            $("#kj-hm").hide();
+            $("#kj-sjts").show();
+                jl(lajlurl,2);
+                clearTimeout(kjshow);
+            },10000);
+clearInterval(hm7sxsy);}
 };
 
 }
@@ -462,16 +488,6 @@ function countTime(c) {
          shi.innerHTML = h;
          fen.innerHTML = m;
          miao.innerHTML = s;
-            $("#kj-sj").hide();
-            $("#kj-hm").hide();
-            $("#kj-sjts").show();
-            if(c=="xg"){
-                jl(xgjlurl,1);
-            } else if(c=="xa"){
-                jl(xajlurl,2);
-            } else {
-                jl(lajlurl,2);
-            }
        } else {
          tian.innerHTML = "•";
          shi.innerHTML = "开";
