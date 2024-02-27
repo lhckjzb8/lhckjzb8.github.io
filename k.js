@@ -88,7 +88,7 @@ loadXMLDoc(b);//上期时间
 }
 //倒计时
 jzsj="2024-"+kjjg[9]+"-"+kjjg[10]+" 21:31:01";//设置截止时间
-countTime();
+countTime(c);
 //数据显示
 for (i = 0; i < kjjg.length; i++) {
 if(kjjg[i].length<1){kjjg[i+1]="00";};
@@ -365,7 +365,7 @@ xmlhttp.send();
 
 //倒计时
 setTimeout(function() {
-countTime();},2000);
+countTime(c);},2000);
 
 //音效
 var hm1sxsy=setInterval(function (){
