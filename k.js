@@ -437,7 +437,7 @@ if(hhjg[6]>0)
 
 
 //倒计时
-function countTime() {
+function countTime(c) {
         var date = new Date();
         var now = date.getTime();        
         var endDate = new Date(jzsj);
