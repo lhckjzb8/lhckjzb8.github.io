@@ -462,6 +462,13 @@ function countTime() {
          shi.innerHTML = h;
          fen.innerHTML = m;
          miao.innerHTML = s;
+            if(c=="xg"){
+                jl(xgjlurl,1);
+            } else if(c=="xa"){
+                jl(xajlurl,2);
+            } else {
+                jl(lajlurl,2);
+            }
        } else {
          tian.innerHTML = "•";
          shi.innerHTML = "开";
