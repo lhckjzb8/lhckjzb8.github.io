@@ -462,6 +462,9 @@ function countTime() {
          shi.innerHTML = h;
          fen.innerHTML = m;
          miao.innerHTML = s;
+            $("#kj-sj").hide();
+            $(".kjhm").hide();
+            $("#kj-sjts").show();
             if(c=="xg"){
                 jl(xgjlurl,1);
             } else if(c=="xa"){
@@ -474,6 +477,9 @@ function countTime() {
          shi.innerHTML = "开";
          fen.innerHTML = "奖";
          miao.innerHTML = "中";
+            $("#kj-sj").show();
+            $(".kjhm").show();
+            $("#kj-sjts").hide();
         } 
 setTimeout(countTime, 1000);
 }
