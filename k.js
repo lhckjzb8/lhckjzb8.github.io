@@ -463,7 +463,7 @@ function countTime() {
          fen.innerHTML = m;
          miao.innerHTML = s;
             $("#kj-sj").hide();
-            $(".kjhm").hide();
+            $("#kj-hm").hide();
             $("#kj-sjts").show();
             if(c=="xg"){
                 jl(xgjlurl,1);
@@ -478,7 +478,7 @@ function countTime() {
          fen.innerHTML = "奖";
          miao.innerHTML = "中";
             $("#kj-sj").show();
-            $(".kjhm").show();
+            $("#kj-hm").show();
             $("#kj-sjts").hide();
         } 
 setTimeout(countTime, 1000);
