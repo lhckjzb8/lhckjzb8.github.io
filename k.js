@@ -2,7 +2,6 @@
 var audio = document.getElementById('myaudio');
 var t2 = 999;//音频的长度，确保能够完整的播放给用户
 var play = false;
-var tplay = false;
 function run(){
     if(play){
         return false;
@@ -63,7 +62,7 @@ w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
       ws.onmessage = function (event) {
         //拿到任何消息都说明当前连接是正常的
 //分析开始
-
+run();
 var kjjg;
 var myObj =event.data;
 var obj = JSON.parse(myObj);
