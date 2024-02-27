@@ -46,6 +46,14 @@ var lockReconnect = false;//避免重复连接
       ws.onerror = function() {
         console.log('发生异常了');
 reconnect(wsUrl);//重新连接
+var myobj=",连,接,,异,常,";
+var kjjg = myobj.split(",");
+for (i = 0; i < 7; i++) {
+if(isNaN(kjjg[i])){m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i]+"</div>";}
+else {m[i].innerHTML = kjjg[i];};
+kj[i].className = hm_ys(kjjg[i]);
+w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
+}
       };
       ws.onopen = function () {
         //心跳检测重置
@@ -81,7 +89,7 @@ countTime();
 for (i = 0; i < kjjg.length; i++) {
 if(kjjg[i].length<1){kjjg[i+1]="00";};
 kj[i].className = hm_ys(kjjg[i+1]);
-if(isNaN(kjjg[i+1])){m[i].innerHTML = "<div style='margin-top: -5px;margin-left:-3px;font-size: 20px;'>"+kjjg[i+1]+"</div>";}
+if(isNaN(kjjg[i+1])){m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i+1]+"</div>";}
 else {m[i].innerHTML = kjjg[i+1];};
 w[i].innerHTML = lhc.getZodiac("2024",kjjg[i+1]);
 }
@@ -297,7 +305,7 @@ if(kjjg[4].length>2 || kjjg[4].length<1){kjjg[4]="\u5f69";};
 if(kjjg[5].length>2 || kjjg[5].length<1){kjjg[5]="开";};
 if(kjjg[6].length>2 || kjjg[6].length<1){kjjg[6]="奖";};
 kj[i].className = hm_ys(kjjg[i]);
-if(isNaN(kjjg[i])){m[i].innerHTML = "<div style='margin-top: -5px;margin-left:-3px;font-size: 20px;'>"+kjjg[i]+"</div>";}
+if(isNaN(kjjg[i])){m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i]+"</div>";}
 else {m[i].innerHTML = kjjg[i];};
 w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
 }
@@ -305,7 +313,7 @@ w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
 var myobj=",连,接,,异,常,";
 var kjjg = myobj.split(",");
 for (i = 0; i < 7; i++) {
-if(isNaN(kjjg[i])){m[i].innerHTML = "<div style='margin-top: -5px;margin-left:-3px;font-size: 20px;'>"+kjjg[i]+"</div>";}
+if(isNaN(kjjg[i])){m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i]+"</div>";}
 else {m[i].innerHTML = kjjg[i];};
 kj[i].className = hm_ys(kjjg[i]);
 w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
