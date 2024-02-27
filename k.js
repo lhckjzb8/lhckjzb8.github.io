@@ -322,7 +322,7 @@ var hour= d.getHours();//得到小时数
 var minute= d.getMinutes();//得到分钟数
 hour=check(hour);
 minute=check(minute);
-if(hour == 21 && minute>=33 && minute<=35){
+if(hour == 21 && minute>=33 && minute<=36){
 $.ajax({
   type:'get',
   url: laurl2,
