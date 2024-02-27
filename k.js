@@ -15,7 +15,7 @@ function run(){
         audio.muted = true;//播放完毕，开启静音状态
     },t2);
 };
-function k(a,b){
+function k(a,b,c){
 var kj = new Array();
 var m = new Array();
 var w = new Array();
@@ -24,7 +24,6 @@ kj[i] = document.getElementById(("kj" + String(i + 1)));
 m[i] = document.getElementById(("m" + String(i + 1)));
 w[i] = document.getElementById(("w" + String(i + 1)));
 }
-var b=b;
 var lockReconnect = false;//避免重复连接
     var ws;
     var tt;
@@ -63,12 +62,17 @@ w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
       ws.onmessage = function (event) {
         //拿到任何消息都说明当前连接是正常的
 //分析开始
-run();
 var kjjg;
 var myObj =event.data;
 var obj = JSON.parse(myObj);
 var kjobj=trim(obj.k);
-var kjhm= kjobj.replace("四,九,图,库,开,奖,快","\u9999,\u6e2f,\u516d,\u5408,\u5f69,开,奖").replace("九,图,库,开,奖,快","\u6e2f,\u516d,\u5408,\u5f69,开,奖").replace("图,库,开,奖,快","\u516d,\u5408,\u5f69,开,奖").replace("库,开,奖,快","\u6e2f,\u516d,开,奖").replace("开,奖,快","\u6e2f,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
+if(c=="xg"){
+var kjhm= kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
+} else if(c=="xa"){
+var kjhm= kjobj.replace("四,九,图,库,开,奖,快","新,澳,六,合,彩,开,奖").replace("九,图,库,开,奖,快","新,澳,六,合,开,奖").replace("图,库,开,奖,快","新,澳,彩,开,奖").replace("库,开,奖,快","新,澳,开,奖").replace("开,奖,快","澳,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
+} else {
+var kjhm= kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
+}
 kjjg=kjhm.split(",");
 var aa=kjjg[0].replace("2024","");
 var bb=kjjg[8].replace("2024","");
@@ -226,8 +230,8 @@ myObj = Obj.data;
 // 返回名字列所有值
 sj=myObj.lotteryTime+" 21:30:00";
 var hm1 =myObj.numberList[0].number+','+myObj.numberList[1].number+','+myObj.numberList[2].number+','+myObj.numberList[3].number+','+myObj.numberList[4].number+','+myObj.numberList[5].number+','+myObj.numberList[6].number;
-var hm2=hm1.replace("澳,门,最,快,开,奖,网","\u8001,\u6fb3,\u516d,\u5408,\u5f69,开,奖").replace("门,最,快,开,奖,网","\u6fb3,\u516d,\u5408,\u5f69,开,奖").replace("最,快,开,奖,网","\u516d,\u5408,\u5f69,开,奖").replace("快,开,奖,网","\u6fb3,\u516d,开,奖").replace("开,奖,网","\u6fb3,开,奖").replace("奖,网","开,奖").replace("网","奖");
-hm=hm2.replace("澳,六,图,库,开,奖,快","\u8001,\u6fb3,\u516d,\u5408,\u5f69,开,奖").replace("六,图,库,开,奖,快","\u6fb3,\u516d,\u5408,\u5f69,开,奖").replace("图,库,开,奖,快","\u516d,\u5408,\u5f69,开,奖").replace("库,开,奖,快","\u6fb3,\u516d,开,奖").replace("开,奖,快","\u6fb3,开,奖").replace("奖,快","开,奖").replace("快","奖");
+var hm2=hm1.replace("澳,门,最,快,开,奖,网","老,澳,六,合,彩,开,奖").replace("门,最,快,开,奖,网","老,澳,六,合,开,奖").replace("最,快,开,奖,网","老,澳,彩,开,奖").replace("快,开,奖,网","澳,彩,开,奖").replace("开,奖,网","澳,开,奖").replace("奖,网","开,奖").replace("网","奖");
+hm=hm2.replace("澳,六,图,库,开,奖,快","老,澳,六,合,彩,开,奖").replace("六,图,库,开,奖,快","老,澳,六,合,开,奖").replace("图,库,开,奖,快","老,澳,彩,开,奖").replace("库,开,奖,快","澳,彩,开,奖").replace("开,奖,快","澳,开,奖").replace("奖,快","开,奖").replace("快","奖");
 qishu=myObj.year+myObj.period;
 }
 
