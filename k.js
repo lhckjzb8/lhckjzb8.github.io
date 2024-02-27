@@ -27,6 +27,7 @@ w[i] = document.getElementById(("w" + String(i + 1)));
 var b=b;
 var lockReconnect = false;//避免重复连接
     var ws;
+    var tt;
     var wsUrl = a+":"+[880,881,882,883,884,885,886,887,889][Math.floor(9*Math.random())]+"/Ws.ashx?"+Math.random();
     function createWebSocket() {
       try {
