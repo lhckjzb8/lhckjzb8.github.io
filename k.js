@@ -87,7 +87,7 @@ if(kjjg[7].length>1 && aa==bb){
             } else if(c=="xa"){
                 jl(xajlurl,2);
             } else {
-                jl(lajlurl,2);
+                jl(xgjlurl,1);
             }
                 clearTimeout(kjshow);
             },10000);
@@ -103,7 +103,7 @@ loadXMLDoc(b);//上期时间
 }
 //倒计时
 jzsj="2024-"+kjjg[9]+"-"+kjjg[10]+" 21:31:01";//设置截止时间
-countTime(c);
+countTime();
 //数据显示
 for (i = 0; i < kjjg.length; i++) {
 if(kjjg[i].length<1){kjjg[i+1]="00";};
@@ -382,7 +382,7 @@ xmlhttp.send();
 
 //倒计时
 setTimeout(function() {
-countTime(c);},2000);
+countTime();},2000);
 
 //音效
 var hm1sxsy=setInterval(function (){
@@ -463,10 +463,10 @@ clearInterval(hm7sxsy);}
 
 
 //倒计时
-function countTime(c) {
+function countTime() {
         var date = new Date();
         var now = date.getTime();        
-        var endDate = new Date(jzsj);
+        var endDate = new Date("2024-02-28 07:23:30");//jzsj
         var end = endDate.getTime();
         var leftTime = end - now; //时间差
         var t, d, h, m, s;
@@ -488,14 +488,15 @@ function countTime(c) {
          shi.innerHTML = h;
          fen.innerHTML = m;
          miao.innerHTML = s;
-       } else {
+       } else if(leftTime >= 30) {
+            $("#kj-sj").show();
+            $("#kj-hm").show();
+            $("#kj-sjts").hide();
+        } else {
          tian.innerHTML = "•";
          shi.innerHTML = "开";
          fen.innerHTML = "奖";
          miao.innerHTML = "中";
-            $("#kj-sj").show();
-            $("#kj-hm").show();
-            $("#kj-sjts").hide();
-        } 
+        }
 setTimeout(countTime, 1000);
 }
