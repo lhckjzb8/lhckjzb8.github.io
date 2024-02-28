@@ -9,7 +9,7 @@
 body{
 margin:0;
 padding:0;
-font-size: 15px;
+font-size: 15px;font-family:Arial,Helvetica,sans-serif;
 width: 100%;
 }
 .kj-left{
@@ -122,9 +122,9 @@ display: inline-block;margin:5px 8px 0 8px;
 var urlid = location.search;
 var strxmlurl = urlid.substr(1);
 if(strxmlurl == "xg"){
-k(xgwss,xgsqurl);
+k(xgwss,xgsqurl,xg);
 } else if(strxmlurl == "xa"){
-k(xawss,xasqurl);
+k(xawss,xasqurl,xa);
 $('#kjico').removeClass('kj-right xg').addClass('kj-right xa');
 } else if(strxmlurl == "la"){
 lk(laurl1,laurl2,laurl3);
