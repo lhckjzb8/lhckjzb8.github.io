@@ -98,7 +98,7 @@ function get_lottery_list(){
 			if (arrLen > 0) {
 				$('.lotery-list').html('');
 if(year==2024&&sort==1){
-var ii=1;
+var ii=0;
 } else{
 var ii=0;
 }
@@ -137,10 +137,15 @@ function get_lottery_list_daxiao(){
 			if (arrLen > 0) {
 				$('.lotery-list').html('');
 if(year==2024&&sort==1){
-var ii=1;
+var ii=0;
 } else{
 var ii=0;
 }
+if(Size-arrLen>10){
+$(".load-more").hide();
+} else {
+$(".load-more").show();
+} 
 				for (var i = ii; i < arrLen; i++) {
 var tm=datas[i].numberList[6].number+","+datas[i].numberList[6].shengXiao+","+datas[i].numberList[6].color+","+datas[i].numberList[6].wuXing+"/";
 //大小排序
