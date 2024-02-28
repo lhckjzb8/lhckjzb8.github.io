@@ -479,7 +479,7 @@ clearInterval(hm7sxsy);}
 function countTime() {
         var date = new Date();
         var now = date.getTime();        
-        var endDate = new Date("2024-02-28 07:25:30");//jzsj
+        var endDate = new Date(jzsj);
         var end = endDate.getTime();
         var leftTime = end - now; //时间差
         var t, d, h, m, s;
