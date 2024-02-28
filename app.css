@@ -193,6 +193,46 @@ width: 100%;
 .lotery-list .kj-hm h.wx{
 display: none;
 }
+.lotery{
+//padding:0 10px;
+}
+.lotery .kj{
+border-top: 2px solid #F8F8FF;
+padding-top:5px;
+margin:0;
+width: 100%;
+display: inline-block;
+}
+.lotery .kj .kj-left{
+float: left;
+}
+.lotery .kj .kj-right{
+float: right;
+}
+.lotery .kj .kj-sj{
+padding-left:7px;line-height: 26px;font-size: 13px;
+}
+.lotery .kj .kj-sj .h{
+color:#f43;
+}
+.lotery .kj .kj-sj .d{
+color:#808080;margin-left:3px;
+}
+.lotery .kj .kj-hm{
+width: 70%;
+display: inline-block;
+margin:0 5px 0 5px;
+}
+.lotery .kj .kj-hm h2{width: 100%;margin-top: 3.8px;margin-left:-2.2px;font-size: 16px; text-align: center;font-weight:normal;}
+.lotery .kj .kj-hm li{list-style-type: none;}
+.lotery .kj .kj-hm .sx{width: 30px;line-height: 22px;text-align: center;margin-left:-1.5px;font-size: 13px;}
+.lotery .kj p{
+margin: 0px;
+margin-left:-3px;
+}
+.lotery .kj .kj-hm h.wx{
+display: none;
+}
 .load-more{
 float: left;
 width: 100%;
