@@ -488,11 +488,10 @@ function countTime() {
          shi.innerHTML = h;
          fen.innerHTML = m;
          miao.innerHTML = s;
-       } else if(leftTime >= 30) {
+       } else {
             $("#kj-sj").show();
             $("#kj-hm").show();
             $("#kj-sjts").hide();
-        } else {
          tian.innerHTML = "•";
          shi.innerHTML = "开";
          fen.innerHTML = "奖";
