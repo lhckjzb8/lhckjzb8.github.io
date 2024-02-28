@@ -55,10 +55,11 @@
     <span class="t-dv">:</span>
     <span class="t-num" id="miao">00</span>
 </div>
-<div class="kj-sj">第<span id="q" class="h">2024000</span>期<span id="sqsj" class="d">2024-00-00 星期日</span></div>
+<div class="kj-sj" id="kj-sjts">开奖日 21:30 与开奖现场同步直播</div>
+<div class="kj-sj" id="kj-sj">第<span id="q" class="h">2024000</span>期<span id="sqsj" class="d">2024-00-00 星期日</span></div>
 </div>
 <div class="kj-right xa"></div>
-<div class="kj-hm">
+<div class="kj-hm" id="kj-hm">
     <div style="float: left;width:13.5%;"><div class="hm" id="kj1">
         <h2><span id=m1>00</span></h2></div>
 <div class="sx"><span id=w1>中</span></div>
@@ -89,6 +90,11 @@
 <div class="sx"><span id=w7>中</span></div>
     </div>  
 </div>
+<script>
+            $("#kj-sj").hide();
+            $("#kj-hm").hide();
+            $("#kj-sjts").show();
+</script>
 <div class=f></div>
 <div class="kjjl"><div class="t"><div class="kjjlico"></div>历史开奖 </div><div class="kjjlspan"><span id=sort>降序</span> <span id=wuxing>五行</span> <span id=daxiao>大小序</span></div></div>
 <div id="kjYearList">
@@ -123,9 +129,9 @@ document.write('<script src="/js/riqi.js?'+Math.random()+'"><\/script>');
 document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');
 </script>
 <script src="cdm.js"></script>
-<script src="k.js"></script>
 <script src="kjrq.js"></script>
 <script src="kjjl.js"></script>
+<script src="k.js"></script>
 <script>
 var kjriqi="ao";
 riqi(kjriqi);
