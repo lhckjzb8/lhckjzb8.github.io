@@ -3,12 +3,18 @@ var loadMoreBtn=document.getElementById('load-more');
 loadMoreBtn.addEventListener('click', function() {
 get_lottery_list();
 });
+var dxloadMoreBtn=document.getElementById('dxload-more');      
+dxloadMoreBtn.addEventListener('click', function() {
+get_lottery_list_daxiao();
+});
 var sort=1;
 var type=b;
 var year = 2024;
 var page=1;
 var Size= 10;
 var batchSize = 10;
+var dxSize= 10;
+var dxbatchSize = 10;
 
 console.log(type);
 	var flag = 0;
@@ -29,6 +35,8 @@ console.log(type);
 		if (flag1 == 0) {
 			sort = 0;
 			$(this).html('升序');
+			Size= 10;
+			dxSize= 10;
 			get_lottery_list();
 			flag1 = 1;
 			$(daxiao).html('大小序');
@@ -36,6 +44,8 @@ console.log(type);
 		} else {
 			sort = 1;
 			$(this).html('降序');
+			Size= 10;
+			dxSize= 10;
 			get_lottery_list();
 			flag1 = 0;
 			$(daxiao).html('大小序');
@@ -47,10 +57,14 @@ console.log(type);
 	$('#daxiao').on('click', function() {
 		if (flag2 == 0) {
 			$(this).html('落球序');
+			Size= 10;
+			dxSize= 10;
 			get_lottery_list_daxiao();
 			flag2 = 1;
 		} else {
 			$(this).html('大小序');
+			Size= 10;
+			dxSize= 10;
 			get_lottery_list();
 			flag2 = 0;
 		}
@@ -66,6 +80,7 @@ flag = 0;
 flag1 = 0;
 flag2 = 0;
 Size= 10;
+dxSize= 10;
 get_lottery_list();
 });
 
@@ -84,6 +99,8 @@ var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
 
 get_lottery_list();
 function get_lottery_list(){
+$("#dxload-more").hide();
+$("#load-more").show();
 	$.ajax({
 		type: 'GET',
 		//url: 'https://www.49wz888.com/site/h5/lottery/search?pageSize='+Size+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
@@ -103,17 +120,36 @@ var ii=0;
 var ii=0;
 }
 if(Size-arrLen>10){
-$(".load-more").hide();
+$("#load-more").hide();
 } else {
-$(".load-more").show();
+$("#load-more").show();
 } 
+
 				for (var i = ii; i < arrLen; i++) {
-result += '<div class="kjjl-left"><div class="kj-sj">第<span class="h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<span class="d">' + datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","") + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</span></div></div>';
-result += '<div class="kj-hm">';
-result += '<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][0]['number']) +'"><h2><span>' + datas[i]['numberList'][0]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][0]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][0]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][1]['number']) +'"><h2><span>' + datas[i]['numberList'][1]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][1]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][1]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][2]['number']) +'"><h2><span>' + datas[i]['numberList'][2]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][2]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][2]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][3]['number']) +'"><h2><span>' + datas[i]['numberList'][3]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][3]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][3]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][4]['number']) +'"><h2><span>' + datas[i]['numberList'][4]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][4]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][4]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][5]['number']) +'"><h2><span>' + datas[i]['numberList'][5]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][5]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][5]['wuXing'] + '</h></span></div></div>';
-result += '<div style="float: left;margin-top: 28px;width:5.5%;font-size: 10px;text-align: center;">➕</div>'
-result += '<div style="float: right;"><div class="' + hm_ys(datas[i]['numberList'][6]['number']) +'"><h2><span>' + datas[i]['numberList'][6]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][6]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][6]['wuXing'] + '</h></span></div></div></div>';
-				}
+var yuefen1=datas[i].lotteryTime.split("年");
+var yuefen=yuefen1[1].replace("月","-").replace("日","");
+result +='<div class="lotery-kj">';
+result +='<div class="lotery-kj-sj lotery-kj-left">';
+result +='第<span id="q" class="lotery-h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<p id="sqsj" class="lotery-d">' + yuefen + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</p>';
+result +='</div>';
+result +='<div class="lotery-kj-hm lotery-kj-right">';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][0]['number']) +'"><h2><span>' + datas[i]['numberList'][0]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][0]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][0]['wuXing'] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][1]['number']) +'"><h2><span>' + datas[i]['numberList'][1]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][1]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][1]['wuXing'] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][2]['number']) +'"><h2><span>' + datas[i]['numberList'][2]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][2]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][2]['wuXing'] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][3]['number']) +'"><h2><span>' + datas[i]['numberList'][3]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][3]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][3]['wuXing'] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][4]['number']) +'"><h2><span>' + datas[i]['numberList'][4]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][4]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][4]['wuXing'] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][5]['number']) +'"><h2><span>' + datas[i]['numberList'][5]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][5]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][5]['wuXing'] + '</h></span></div></div>';
+result +='<div style="float: left;margin-top: 28px;width:3.75%;font-size: 10px;text-align: center;">➕</div>';
+result +='<div style="float: right;"><div class="' + hm_ys(datas[i]['numberList'][6]['number']) +'"><h2><span>' + datas[i]['numberList'][6]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][6]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][6]['wuXing'] + '</h></span></div></div>';
+result +='</div>';
+result +='</div>';
+//result += '<div class="kjjl-left"><div class="kj-sj">第<span class="h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<span class="d">' + datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","") + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</span></div></div>';
+//result += '<div class="kj-hm">';
+//result += '<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][0]['number']) +'"><h2><span>' + datas[i]['numberList'][0]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][0]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][0]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][1]['number']) +'"><h2><span>' + datas[i]['numberList'][1]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][1]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][1]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][2]['number']) +'"><h2><span>' + datas[i]['numberList'][2]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][2]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][2]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][3]['number']) +'"><h2><span>' + datas[i]['numberList'][3]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][3]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][3]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][4]['number']) +'"><h2><span>' + datas[i]['numberList'][4]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][4]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][4]['wuXing'] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][5]['number']) +'"><h2><span>' + datas[i]['numberList'][5]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][5]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][5]['wuXing'] + '</h></span></div></div>';
+//result += '<div style="float: left;margin-top: 28px;width:5.5%;font-size: 10px;text-align: center;">➕</div>'
+//result += '<div style="float: right;"><div class="' + hm_ys(datas[i]['numberList'][6]['number']) +'"><h2><span>' + datas[i]['numberList'][6]['number'] +'</span></h2></div><div class="sx"><span>' + datas[i]['numberList'][6]['shengXiao'] + '<h class="wx">/' + datas[i]['numberList'][6]['wuXing'] + '</h></span></div></div></div>';
+        }
+
 				$('.lotery-list').append(result);
 			}
 		}
@@ -123,10 +159,12 @@ Size += batchSize;
 
 //大小排序
 function get_lottery_list_daxiao(){
+$("#load-more").hide();
+$("#dxload-more").show();
 	$.ajax({
 		type: 'GET',
-		//url: 'https://www.49wz888.com/site/h5/lottery/search?pageSize='+Size+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
-		url: a+'?pageSize='+Size+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
+		//url: 'https://www.49wz888.com/site/h5/lottery/search?pageSize='+dxSize+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
+		url: a+'?pageSize='+dxSize+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
 		dataType: 'json',
 		sync: false,
 		beforeSend:loading,
@@ -141,12 +179,14 @@ var ii=0;
 } else{
 var ii=0;
 }
-if(Size-arrLen>10){
-$(".load-more").hide();
+if(dxSize-arrLen>10){
+$("#dxload-more").hide();
 } else {
-$(".load-more").show();
-} 
+$("#dxload-more").show();
+}  
 				for (var i = ii; i < arrLen; i++) {
+var yuefen1=datas[i].lotteryTime.split("年");
+var yuefen=yuefen1[1].replace("月","-").replace("日","");
 var tm=datas[i].numberList[6].number+","+datas[i].numberList[6].shengXiao+","+datas[i].numberList[6].color+","+datas[i].numberList[6].wuXing+"/";
 //大小排序
 var dx=datas[i].numberList;
@@ -161,16 +201,32 @@ var hm4=hmfz[3].split(",");
 var hm5=hmfz[4].split(",");
 var hm6=hmfz[5].split(",");
 var hm7=tm.replace("/","").split(",");
-result += '<div class="kjjl-left"><div class="kj-sj">第<span class="h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<span class="d">' + datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","") + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</span></div></div>';
-result += '<div class="kj-hm">';
-result += '<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm1[0]) +'"><h2><span>' + hm1[0] +'</span></h2></div><div class="sx"><span>' + hm1[1] + '<h class="wx">/' + hm1[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm2[0]) +'"><h2><span>' + hm2[0] +'</span></h2></div><div class="sx"><span>' + hm2[1] + '<h class="wx">/' + hm2[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm3[0]) +'"><h2><span>' + hm3[0] +'</span></h2></div><div class="sx"><span>' + hm3[1] + '<h class="wx">/' + hm3[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm4[0]) +'"><h2><span>' + hm4[0] +'</span></h2></div><div class="sx"><span>' + hm4[1] + '<h class="wx">/' + hm4[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm5[0]) +'"><h2><span>' + hm5[0] +'</span></h2></div><div class="sx"><span>' + hm5[1] + '<h class="wx">/' + hm5[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm6[0]) +'"><h2><span>' + hm6[0] +'</span></h2></div><div class="sx"><span>' + hm6[1] + '<h class="wx">/' + hm6[3] + '</h></span></div></div>';
-result += '<div style="float: left;margin-top: 28px;width:5.5%;font-size: 10px;text-align: center;">➕</div>'
-result += '<div style="float: right;"><div class="' + hm_ys(hm7[0]) +'"><h2><span>' + hm7[0] +'</span></h2></div><div class="sx"><span>' + hm7[1] + '<h class="wx">/' + hm7[3] + '</h></span></div></div></div>';
+result +='<div class="lotery-kj">';
+result +='<div class="lotery-kj-sj lotery-kj-left">';
+result +='第<span id="q" class="lotery-h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<p id="sqsj" class="lotery-d">' + yuefen + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</p>';
+result +='</div>';
+result +='<div class="lotery-kj-hm lotery-kj-right">';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm1[0]) +'"><h2><span>' + hm1[0] +'</span></h2></div><div class="lotery-sx"><span>' + hm1[1] + '<br><h class="wx">' + hm1[3] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm2[0]) +'"><h2><span>' + hm2[0] +'</span></h2></div><div class="lotery-sx"><span>' + hm2[1] + '<br><h class="wx">' + hm2[3] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm3[0]) +'"><h2><span>' + hm3[0] +'</span></h2></div><div class="lotery-sx"><span>' + hm3[1] + '<br><h class="wx">' + hm3[3] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm4[0]) +'"><h2><span>' + hm4[0] +'</span></h2></div><div class="lotery-sx"><span>' + hm4[1] + '<br><h class="wx">' + hm4[3] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm5[0]) +'"><h2><span>' + hm5[0] +'</span></h2></div><div class="lotery-sx"><span>' + hm5[1] + '<br><h class="wx">' + hm5[3] + '</h></span></div></div>';
+result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm6[0]) +'"><h2><span>' + hm6[0] +'</span></h2></div><div class="lotery-sx"><span>' + hm6[1] + '<br><h class="wx">' + hm6[3] + '</h></span></div></div>';
+result +='<div style="float: left;margin-top: 28px;width:3.75%;font-size: 10px;text-align: center;">➕</div>';
+result +='<div style="float: right;"><div class="' + hm_ys(hm7[0]) +'"><h2><span>' + hm7[0] +'</span></h2></div><div class="lotery-sx"><span>' + hm7[1] + '<br><h class="wx">' + hm7[3] + '</h></span></div></div>';
+result +='</div>';
+result +='</div>';
+//result += '<div class="kjjl-left"><div class="kj-sj">第<span class="h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<span class="d">' + datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","") + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</span></div></div>';
+//result += '<div class="kj-hm">';
+//result += '<div style="float: left;width:13.5%;"><div class="' + hm_ys(hm1[0]) +'"><h2><span>' + hm1[0] +'</span></h2></div><div class="sx"><span>' + hm1[1] + '<h class="wx">/' + hm1[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm2[0]) +'"><h2><span>' + hm2[0] +'</span></h2></div><div class="sx"><span>' + hm2[1] + '<h class="wx">/' + hm2[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm3[0]) +'"><h2><span>' + hm3[0] +'</span></h2></div><div class="sx"><span>' + hm3[1] + '<h class="wx">/' + hm3[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm4[0]) +'"><h2><span>' + hm4[0] +'</span></h2></div><div class="sx"><span>' + hm4[1] + '<h class="wx">/' + hm4[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm5[0]) +'"><h2><span>' + hm5[0] +'</span></h2></div><div class="sx"><span>' + hm5[1] + '<h class="wx">/' + hm5[3] + '</h></span></div></div><div style="float: left;width:13.5%;"><div class="' + hm_ys(hm6[0]) +'"><h2><span>' + hm6[0] +'</span></h2></div><div class="sx"><span>' + hm6[1] + '<h class="wx">/' + hm6[3] + '</h></span></div></div>';
+//result += '<div style="float: left;margin-top: 28px;width:5.5%;font-size: 10px;text-align: center;">➕</div>'
+//result += '<div style="float: right;"><div class="' + hm_ys(hm7[0]) +'"><h2><span>' + hm7[0] +'</span></h2></div><div class="sx"><span>' + hm7[1] + '<h class="wx">/' + hm7[3] + '</h></span></div></div></div>';
 				}
 				$('.lotery-list').append(result);
 			}
 		}
 	})
+dxSize += dxbatchSize;
 }
 function loading(){
 $('.lotery-list').html('<div style="padding:15px;text-align: center;font-size: 14px;"><img src="/js/loading.gif" width="100px" height="100px"><p style="padding-top:15px;">正在加载中...</p></div>');
