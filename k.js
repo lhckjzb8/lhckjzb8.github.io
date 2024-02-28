@@ -74,6 +74,11 @@ var kjhm= kjobj.replace("四,九,图,库,开,奖,快","新,澳,六,合,彩,开,�
 var kjhm= kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
 }
 kjjg=kjhm.split(",");
+          if(isNaN(kjjg[1])||kjjg[1].length<=1){
+            $("#kj-sj").show();
+            $("#kj-hm").show();
+            $("#kj-sjts").hide();
+      }
 var aa=kjjg[0].replace("2024","");
 var bb=kjjg[8].replace("2024","");
 if(kjjg[1].length>1 && isNaN(kjjg[2]) || kjjg[2].length>1 && isNaN(kjjg[3]) || kjjg[3].length>1 && isNaN(kjjg[4]) || kjjg[4].length>1 && isNaN(kjjg[5]) || kjjg[5].length>1 && isNaN(kjjg[6]) || kjjg[6].length>1 && isNaN(kjjg[7]) || kjjg[7].length>1 && aa==bb){run();};
@@ -108,11 +113,6 @@ countTime();
 for (i = 0; i < kjjg.length; i++) {
 if(kjjg[i].length<1){kjjg[i+1]="00";};
 kj[i].className = hm_ys(kjjg[i+1]);
-          if(isNaN(kjjg[0])){
-            $("#kj-sj").show();
-            $("#kj-hm").show();
-            $("#kj-sjts").hide();
-      }
 if(isNaN(kjjg[i+1])){m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i+1]+"</div>";}
 else {m[i].innerHTML = kjjg[i+1];};
 w[i].innerHTML = lhc.getZodiac("2024",kjjg[i+1]);
