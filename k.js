@@ -74,7 +74,7 @@ var kjhm= kjobj.replace("四,九,图,库,开,奖,快","新,澳,六,合,彩,开,�
 var kjhm= kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
 }
 kjjg=kjhm.split(",");
-          if(isNaN(kjjg[1])||kjjg[1].length<=1){
+          if(isNaN(kjjg[1]) || isNaN(kjjg[7])){
             $("#kj-sj").show();
             $("#kj-hm").show();
             $("#kj-sjts").hide();
@@ -329,7 +329,7 @@ if(kjjg[4].length>2 || kjjg[4].length<1){kjjg[4]="\u5f69";};
 if(kjjg[5].length>2 || kjjg[5].length<1){kjjg[5]="开";};
 if(kjjg[6].length>2 || kjjg[6].length<1){kjjg[6]="奖";};
 kj[i].className = hm_ys(kjjg[i]);
-      if(isNaN(kjjg[0])){
+      if(isNaN(kjjg[0]) || isNaN(kjjg[6])){
             $("#kj-sj").show();
             $("#kj-hm").show();
             $("#kj-sjts").hide();
