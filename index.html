@@ -55,10 +55,11 @@
     <span class="t-dv">:</span>
     <span class="t-num" id="miao">00</span>
 </div>
-<div class="kj-sj">第<span id="q" class="h">2024000</span>期<span id="sqsj" class="d">2024-00-00 星期日</span></div>
+<div class="kj-sj" id="kj-sjts">开奖日 21:30 与开奖现场同步直播</div>
+<div class="kj-sj" id="kj-sj">第<span id="q" class="h">2024000</span>期<span id="sqsj" class="d">2024-00-00 星期日</span></div>
 </div>
 <div class="kj-right xg"></div>
-<div class="kj-hm">
+<div class="kj-hm" id="kj-hm">
     <div style="float: left;width:13.5%;"><div class="hm" id="kj1">
         <h2><span id=m1>00</span></h2></div>
 <div class="sx"><span id=w1>中</span></div>
@@ -89,7 +90,14 @@
 <div class="sx"><span id=w7>中</span></div>
     </div>  
 </div>
+<script>
+            $("#kj-sj").hide();
+            $("#kj-hm").hide();
+            $("#kj-sjts").show();
+</script>
 <div class=f></div>
+<div id=xakj></div>
+<div id=lakj></div>
 <div class="kjjl"><div class="t"><div class="kjjlico"></div>历史开奖 </div><div class="kjjlspan"><span id=sort>降序</span> <span id=wuxing>五行</span> <span id=daxiao>大小序</span></div></div>
 <div id="kjYearList">
 <li><a>2024年</a></li><li><a>2023年</a></li><li><a>2022年</a></li><li><a>2021年</a></li><li><a>2020年</a></li><li><a>2019年</a></li><li><a>2018年</a></li><li><a>2017年</a></li><li><a>2016年</a></li><li><a>2015年</a></li><li><a>2014年</a></li><li><a>2013年</a></li><li><a>2012年</a></li><li><a>2011年</a></li><li><a>2010年</a></li><li><a>2009年</a></li><li><a>2008年</a></li><li><a>2007年</a></li><li><a>2006年</a></li><li><a>2005年</a></li><li><a>2004年</a></li><li><a>2003年</a></li><li><a>2002年</a></li><li><a>2001年</a></li><li><a>2000年</a></li><li><a>1999年</a></li><li><a>1998年</a></li><li><a>1997年</a></li><li><a>1996年</a></li><li><a>1995年</a></li><li><a>1994年</a></li><li><a>1993年</a></li><li><a>1992年</a></li><li><a>1991年</a></li><li><a>1990年</a></li><li><a>1989年</a></li><li><a>1988年</a></li><li><a>1987年</a></li><li><a>1986年</a></li><li><a>1985年</a></li><li><a>1984年</a></li><li><a>1983年</a></li><li><a>1982年</a></li><li><a>1981年</a></li><li><a>1980年</a></li><li><a>1979年</a></li><li><a>1978年</a></li><li><a>1977年</a></li><li><a>1976年</a></li><li style="color:#f00;" onClick="yearxs();" id="yearlistxs">更多++</li>
@@ -123,9 +131,9 @@ document.write('<script src="/js/riqi.js?'+Math.random()+'"><\/script>');
 document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');
 </script>
 <script src="cdm.js"></script>
-<script src="k.js"></script>
 <script src="kjrq.js"></script>
 <script src="kjjl.js"></script>
+<script src="k.js"></script>
 <script>
 var kjriqi="xg";
 riqi(kjriqi);
@@ -221,6 +229,48 @@ var hmf = hour + ":" + minute + ":" + second;
 var nyrx =year + "年" + moon +"月"+day+"日 星期"+week;
 shijian.innerHTML = "当前时间：<span style=color:#f;margin-right:8px;>"+hmf+"</span>"+nyrx;
 }, 1000);
+</script>
+<script type="text/javascript">
+    function getTime() {
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;   //当小时数小于10时，在前面补0，下面同理
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s;
+        }
+    if(syaokjxs="yes"){
+xakjks=setInterval(function() {
+var xakjsj=getTime();
+if(xakjsj>=xakjkssj && xakjsj<=xakjjssj){
+$("#xakj").html('<div><iframe width="100%" height="183px" frameborder="0" scrolling="no" src="https://lhckjzb8.github.io/k.html?xa"></iframe></div><div class="f"></div>');
+clearInterval(xakjks);
+}
+},1000);
+xakjjs=setInterval(function() {
+var xakjsj=getTime();
+if(xakjsj==xakjjssj){
+$("#xakj").html('');
+clearInterval(xakjjs);
+}
+},1000);
+lakjks=setInterval(function() {
+var lakjsj=getTime();
+if(lakjsj>=lakjkssj && lakjsj<=lakjjssj){
+$("#xakj").html('<div><iframe width="100%" height="183px" frameborder="0" scrolling="no" src="https://lhckjzb8.github.io/k.html?la"></iframe></div><div class="f"></div>');
+clearInterval(lakjks);
+}
+},1000);
+lakjjs=setInterval(function() {
+var lakjsj=getTime();
+if(lakjsj==lakjjssj){
+$("#xakj").html('');
+clearInterval(lakjjs);
+}
+},1000);
+    }
 </script>
 <script type="text/javascript">
 var u = navigator.userAgent, app = navigator.appVersion;
