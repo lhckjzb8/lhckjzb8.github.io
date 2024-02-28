@@ -108,6 +108,11 @@ countTime();
 for (i = 0; i < kjjg.length; i++) {
 if(kjjg[i].length<1){kjjg[i+1]="00";};
 kj[i].className = hm_ys(kjjg[i+1]);
+          if(isNaN(kjjg[0])){
+            $("#kj-sj").show();
+            $("#kj-hm").show();
+            $("#kj-sjts").hide();
+      }
 if(isNaN(kjjg[i+1])){m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i+1]+"</div>";}
 else {m[i].innerHTML = kjjg[i+1];};
 w[i].innerHTML = lhc.getZodiac("2024",kjjg[i+1]);
@@ -324,8 +329,16 @@ if(kjjg[4].length>2 || kjjg[4].length<1){kjjg[4]="\u5f69";};
 if(kjjg[5].length>2 || kjjg[5].length<1){kjjg[5]="开";};
 if(kjjg[6].length>2 || kjjg[6].length<1){kjjg[6]="奖";};
 kj[i].className = hm_ys(kjjg[i]);
-if(isNaN(kjjg[i])){m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i]+"</div>";}
-else {m[i].innerHTML = kjjg[i];};
+      if(isNaN(kjjg[0])){
+            $("#kj-sj").show();
+            $("#kj-hm").show();
+            $("#kj-sjts").hide();
+      }
+if(isNaN(kjjg[i])){
+    m[i].innerHTML = "<div style='margin-top: -1px;font-size: 20px;'>"+kjjg[i]+"</div>";
+} else {
+    m[i].innerHTML = kjjg[i];
+};
 w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
 }
 } else if(xmlhttp.readyState==4){
@@ -489,9 +502,6 @@ function countTime() {
          fen.innerHTML = m;
          miao.innerHTML = s;
        } else {
-            $("#kj-sj").show();
-            $("#kj-hm").show();
-            $("#kj-sjts").hide();
          tian.innerHTML = "•";
          shi.innerHTML = "开";
          fen.innerHTML = "奖";
