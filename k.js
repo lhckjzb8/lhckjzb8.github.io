@@ -364,7 +364,8 @@ hour=check(hour);
 minute=check(minute);
 var hao = hm.replace(/\s*/g,"");
 var haojg=hao.split(",");
-if(hour == 21 && minute>=33 && minute<=36 && isNaN(haojg[6])){
+if(hour == 21 && minute>=33 && minute<=36){
+    if(isNaN(haojg[6])){
 $.ajax({
   type:'get',
   url: laurl2,
@@ -380,6 +381,7 @@ xmlhttp.send();
      }
    }
 });
+}
 }
 },1000);
 
