@@ -1,20 +1,22 @@
 function jl(a,b){
-var loadMoreBtn=document.getElementById('load-more');      
-loadMoreBtn.addEventListener('click', function() {
-get_lottery_list();
-});
-var dxloadMoreBtn=document.getElementById('dxload-more');      
-dxloadMoreBtn.addEventListener('click', function() {
-get_lottery_list_daxiao();
-});
 var sort=1;
 var type=b;
 var year = 2024;
 var page=1;
 var Size= 10;
-var batchSize = 10;
+var batchSize = 50;
 var dxSize= 10;
-var dxbatchSize = 10;
+var dxbatchSize = 50;
+var loadMoreBtn=document.getElementById('load-more');      
+loadMoreBtn.addEventListener('click', function() {
+Size += batchSize;
+get_lottery_list();
+});
+var dxloadMoreBtn=document.getElementById('dxload-more');      
+dxloadMoreBtn.addEventListener('click', function() {
+dxSize += dxbatchSize;
+get_lottery_list_daxiao();
+});
 
 console.log(type);
 	var flag = 0;
@@ -119,12 +121,6 @@ var ii=0;
 } else{
 var ii=0;
 }
-if(Size-arrLen>10){
-$("#load-more").hide();
-} else {
-$("#load-more").show();
-} 
-
 				for (var i = ii; i < arrLen; i++) {
 var yuefen1=datas[i].lotteryTime.split("年");
 var yuefen=yuefen1[1].replace("月","-").replace("日","");
@@ -151,10 +147,14 @@ result +='</div>';
         }
 
 				$('.lotery-list').append(result);
+if(arrLen-Size<0){
+$("#load-more").hide();
+} else {
+$("#load-more").show();
+}
 			}
 		}
 	})
-Size += batchSize;
 }
 
 //大小排序
@@ -179,11 +179,6 @@ var ii=0;
 } else{
 var ii=0;
 }
-if(dxSize-arrLen>10){
-$("#dxload-more").hide();
-} else {
-$("#dxload-more").show();
-}  
 				for (var i = ii; i < arrLen; i++) {
 var yuefen1=datas[i].lotteryTime.split("年");
 var yuefen=yuefen1[1].replace("月","-").replace("日","");
@@ -223,10 +218,14 @@ result +='</div>';
 //result += '<div style="float: right;"><div class="' + hm_ys(hm7[0]) +'"><h2><span>' + hm7[0] +'</span></h2></div><div class="sx"><span>' + hm7[1] + '<h class="wx">/' + hm7[3] + '</h></span></div></div></div>';
 				}
 				$('.lotery-list').append(result);
+if(arrLen-dxSize<0){
+$("#dxload-more").hide();
+} else {
+$("#dxload-more").show();
+}
 			}
 		}
 	})
-dxSize += dxbatchSize;
 }
 function loading(){
 $('.lotery-list').html('<div style="padding:15px;text-align: center;font-size: 14px;"><img src="/js/loading.gif" width="100px" height="100px"><p style="padding-top:15px;">正在加载中...</p></div>');
