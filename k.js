@@ -96,7 +96,7 @@ if(kjjg[7].length>1 && aa==bb){
                 jl(xgjlurl,1);
             }
                 clearTimeout(kjshow);
-            },10000);
+            },30000);
       }
 q.innerHTML = "2024"+kjjg[0];
 nextq.innerHTML = "2024"+kjjg[8].replace("2024","");
@@ -470,7 +470,7 @@ run();
             $("#kj-sjts").show();
                 jl(lajlurl,2);
                 clearTimeout(kjshow);
-            },10000);
+            },30000);
 clearInterval(hm7sxsy);}
 };
 
