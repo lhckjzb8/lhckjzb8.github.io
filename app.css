@@ -293,6 +293,7 @@ background-color: #fff;
     color:#808080;margin-left:13px;
 }
 .bottom{
+display:none;
 width: 100%;
 position: fixed;
 bottom:0;
