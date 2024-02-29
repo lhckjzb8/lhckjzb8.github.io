@@ -67,8 +67,6 @@ display: inline-block;margin:5px 8px 0 8px;
 </style>
 <link rel="stylesheet" href="ico.css">
 <script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
-<script src="cdm.js"></script>
-<script src="k.js"></script>
 </head>
 <body style="background-image: url("");">
 <!--开奖直播-->
@@ -117,7 +115,10 @@ display: inline-block;margin:5px 8px 0 8px;
 <div class="sx"><span id=w7>中</span></div>
     </div>  
 </div>
+<audio src="/js/sound.mp3" muted autoplay loop id="myaudio" style="display: none"></audio>
 <script>document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');</script>
+<script src="cdm.js"></script>
+<script src="k.js"></script>
 <script>
 var urlid = location.search;
 var strxmlurl = urlid.substr(1);
