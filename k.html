@@ -67,6 +67,7 @@ display: inline-block;margin:5px 8px 0 8px;
 </style>
 <link rel="stylesheet" href="ico.css">
 <script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+<script src="api.js"></script>
 </head>
 <body style="background-image: url("");">
 <!--开奖直播-->
@@ -123,15 +124,15 @@ display: inline-block;margin:5px 8px 0 8px;
 var urlid = location.search;
 var strxmlurl = urlid.substr(1);
 if(strxmlurl == "xg"){
-k(xgwss,xgsqurl,xg);
+k(xgwss,xgsqurl,"xg");
 } else if(strxmlurl == "xa"){
-k(xawss,xasqurl,xa);
+k(xawss,xasqurl,"xa");
 $('#kjico').removeClass('kj-right xg').addClass('kj-right xa');
 } else if(strxmlurl == "la"){
 lk(laurl1,laurl2,laurl3);
 $('#kjico').removeClass('kj-right xg').addClass('kj-right la');
 } else {
-k(xgwss,xgsqurl);
+k(xgwss,xgsqurl,"xg");
 }
 </script>
 </body>
