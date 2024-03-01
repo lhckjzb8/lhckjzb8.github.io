@@ -402,7 +402,7 @@ document.addEventListener('visibilitychange', function() {
 var isHidden = document.hidden;
 if (isHidden) {//切离该页面时执行
 } else {//切换到该页面时执行
-xmlhttp.open("GET", laurl+Math.random(), true);
+xmlhttp.open("GET", laurl1+Math.random(), true);
 xmlhttp.send();
 }
 });
