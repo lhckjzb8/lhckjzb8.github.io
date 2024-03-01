@@ -228,7 +228,7 @@ $("#dxload-more").show();
 	})
 }
 function loading(){
-$('.lotery-list').html('<div style="padding:15px;text-align: center;font-size: 14px;"><img src="/js/loading.gif" width="100px" height="100px"><p style="padding-top:15px;">正在加载中...</p></div>');
+$('.lotery-list').html('<div style="padding:15px;text-align: center;font-size: 14px;"><img src="/js/loading.gif" width="80px" height="80px"><br>正在加载中...</div>');
 }
 function getQueryStringArgs() {
 	//取得查询字符串并去掉开头的问号
