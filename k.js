@@ -387,9 +387,8 @@ hour=check(hour);
 minute=check(minute);
 if(hour == 21 && minute>=33 && minute<=36){
 aurl = new Array();
-aurl[0]=laurl1;
-aurl[1]=laurl2;
-aurl[2]=laurl3;
+aurl[0]=laurl2;
+aurl[1]=laurl3;
 iurl = Math.random() * aurl.length;
 iurl = Math.floor(iurl);
 xmlhttp.open("GET", aurl[iurl]+Math.random(), true);
