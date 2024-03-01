@@ -215,7 +215,7 @@ var myObj;
 var sj;
 var hm;
 var qishu;
-var laurl=a+"&a=";
+var laurl1=a+"&a=";
 var laurl2=b+"?";
 var laurl3=c+"?";
 //连接数据
@@ -375,7 +375,7 @@ w[i].innerHTML = lhc.getZodiac("2024",kjjg[i]);
 }
 }
 };
-xmlhttp.open("GET", laurl+Math.random(), true);
+xmlhttp.open("GET", laurl1+Math.random(), true);
 xmlhttp.send();
 
 
@@ -386,21 +386,14 @@ var minute= d.getMinutes();//得到分钟数
 hour=check(hour);
 minute=check(minute);
 if(hour == 21 && minute>=33 && minute<=36){
-$.ajax({
-  type:'get',
-  url: laurl2,
-  dataType: 'jsonp',
-  timeout: 1000,
-  complete: function (res) {
-     if (res.status == 200) {
-xmlhttp.open("GET", laurl2+Math.random(), true);
+aurl = new Array();
+aurl[0]=laurl1;
+aurl[1]=laurl2;
+aurl[2]=laurl3;
+iurl = Math.random() * aurl.length;
+iurl = Math.floor(iurl);
+xmlhttp.open("GET", aurl[iurl]+Math.random(), true);
 xmlhttp.send();
-     } else {
-xmlhttp.open("GET", laurl3+Math.random(), true);
-xmlhttp.send();
-     }
-   }
-});
 }
 },1000);
 
