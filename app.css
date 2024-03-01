@@ -28,6 +28,11 @@ float: left;width: 100%;
 padding:15px 0;
 background-color:rgba(0,0,0,0.03);
 }
+#loading {
+position: fixed;
+  justify-content: center;
+  align-items: center;
+}
 .bjh{
 background-color:#EE7942;
 color:#fff;
