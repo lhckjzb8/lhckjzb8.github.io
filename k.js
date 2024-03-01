@@ -306,7 +306,8 @@ var xq=+qishu+1;
 jzsj="2024-"+sjjg[1]+"-"+sjjg[2]+" "+dt;//设置截止时间
 nextq.innerHTML = xq;
 nextsj.innerHTML = "2024-"+sjjg[1]+"-"+sjjg[2]+" 星期"+week;
-
+//倒计时
+countTime();
 var d = new Date();
 var day=d.getDate();
 var hour= d.getHours();//得到小时数
@@ -405,10 +406,6 @@ xmlhttp.open("GET", laurl1+Math.random(), true);
 xmlhttp.send();
 }
 });
-
-//倒计时
-setTimeout(function() {
-countTime();},2000);
 
 //音效
 var hm1sxsy=setInterval(function (){
