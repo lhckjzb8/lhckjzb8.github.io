@@ -246,6 +246,28 @@ if(typeof qq[5] === "undefined"){qq[5]="开";};
 if(typeof qq[6] === "undefined"){qq[6]="奖";};
 hm=qq[0]+","+qq[1]+","+qq[2]+","+qq[3]+","+qq[4]+","+qq[5]+","+qq[6];
 qishu=myObj.expect;
+} else if(Obj.t == "1000"){
+myObj = trim(Obj.k);
+var nyhm=myObj.split(",");
+function getNextDate1(dayStr){
+    var dd = new Date(dayStr);
+    dd.setDate(dd.getDate()-1);
+    var y = dd.getFullYear(); 
+    var m = check(dd.getMonth()+1);//获取当前月份的日期 
+    var d = check(dd.getDate()); 
+    return y+"-"+m+"-"+d; 
+};
+var sj1="2024-"+nyhm[9]+"-"+nyhm[10];
+sj=getNextDate1(sj1)+" "+nyhm[12];
+if(typeof nyhm[1] === "undefined"){nyhm[1]="\u8001";};
+if(typeof nyhm[2] === "undefined"){nyhm[2]="\u6fb3";};
+if(typeof nyhm[3] === "undefined"){nyhm[3]="\u516d";};
+if(typeof nyhm[4] === "undefined"){nyhm[4]="\u5408";};
+if(typeof nyhm[5] === "undefined"){nyhm[5]="\u5f69";};
+if(typeof nyhm[6] === "undefined"){nyhm[6]="开";};
+if(typeof nyhm[7] === "undefined"){nyhm[7]="奖";};
+hm=nyhm[1]+","+nyhm[2]+","+nyhm[3]+","+nyhm[4]+","+nyhm[5]+","+nyhm[6]+","+nyhm[7];
+qishu="2024"+nyhm[0];
 } else {
 myObj = Obj.data;
 // 返回名字列所有值
@@ -363,10 +385,7 @@ var hour= d.getHours();//得到小时数
 var minute= d.getMinutes();//得到分钟数
 hour=check(hour);
 minute=check(minute);
-var hao = hm.replace(/\s*/g,"");
-var haojg=hao.split(",");
 if(hour == 21 && minute>=33 && minute<=36){
-    if(isNaN(haojg[6])){
 $.ajax({
   type:'get',
   url: laurl2,
@@ -382,7 +401,6 @@ xmlhttp.send();
      }
    }
 });
-}
 }
 },1000);
 
