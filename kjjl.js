@@ -2,22 +2,49 @@ function jl(a,b){
 var sort=1;
 var type=b;
 var year = 2024;
+var years=2024;
 var page=1;
 var Size= 10;
 var batchSize = 50;
 var dxSize= 10;
 var dxbatchSize = 50;
-var loadMoreBtn=document.getElementById('load-more');      
-loadMoreBtn.addEventListener('click', function() {
+/*监听加载更多*/
+$(document).on('click', '#load-more', function () {
 Size += batchSize;
 get_lottery_list();
 });
-var dxloadMoreBtn=document.getElementById('dxload-more');      
-dxloadMoreBtn.addEventListener('click', function() {
+$(document).on('click', '#xiayinian', function () {
+Size=15;
+year1=year-1;
+years=year1;
+year=year1;
+get_lottery_list();
+});
+$(document).on('click', '#huidao', function () {
+$('.lotery-list').html('');
+Size=10;
+year=2024;
+get_lottery_list();
+window.scrollTo(0, 0);
+});
+$(document).on('click', '#dxload-more', function () {
 dxSize += dxbatchSize;
 get_lottery_list_daxiao();
 });
-
+$(document).on('click', '#dxxiayinian', function () {
+dxSize=15;
+year1=year-1;
+years=year1;
+year=year1;
+get_lottery_list_daxiao();
+});
+$(document).on('click', '#dxhuidao', function () {
+$('.lotery-list').html('');
+dxSize=10;
+year=2024;
+get_lottery_list_daxiao();
+window.scrollTo(0, 0);
+});
 console.log(type);
 	var flag = 0;
 	$('#wuxing').on('click', function() {
@@ -37,6 +64,10 @@ console.log(type);
 		if (flag1 == 0) {
 			sort = 0;
 			$(this).html('升序');
+			$('.lotery-list').html('');
+			if(years<2024){
+			year = 2024;
+			}
 			Size= 10;
 			dxSize= 10;
 			get_lottery_list();
@@ -46,6 +77,10 @@ console.log(type);
 		} else {
 			sort = 1;
 			$(this).html('降序');
+			$('.lotery-list').html('');
+			if(years<2024){
+			year = 2024;
+			}
 			Size= 10;
 			dxSize= 10;
 			get_lottery_list();
@@ -59,30 +94,41 @@ console.log(type);
 	$('#daxiao').on('click', function() {
 		if (flag2 == 0) {
 			$(this).html('落球序');
+			$('.lotery-list').html('');
+			if(years<2024){
+			year = 2024;
+			}
 			Size= 10;
 			dxSize= 10;
 			get_lottery_list_daxiao();
 			flag2 = 1;
 		} else {
 			$(this).html('大小序');
+			$('.lotery-list').html('');
+			if(years<2024){
+			year = 2024;
+			}
 			Size= 10;
 			dxSize= 10;
 			get_lottery_list();
 			flag2 = 0;
 		}
 	});
+
 $("#kjYearList").on("click","a",function(){
 		year = parseInt($(this).text());
 		//location.search = year;
 $('#sort').html('降序');
 $('#daxiao').html('大小序');
 $('.wx').removeClass('active');
+$('.lotery-list').html('');
 sort = 1;
 flag = 0;
 flag1 = 0;
 flag2 = 0;
 Size= 10;
 dxSize= 10;
+years=2024;
 get_lottery_list();
 });
 
@@ -101,32 +147,44 @@ var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
 
 get_lottery_list();
 function get_lottery_list(){
+$("#dxxiayinian").hide();
+$("#dxhuidao").hide();
 $("#dxload-more").hide();
-$("#load-more").show();
+$("#dxloadmore").hide();
+$("#xiayinian").hide();
+$("#huidao").hide();
+$("#load-more").hide();
+$("#loadmore").show();
+$(".loading-mask").show();
 	$.ajax({
 		type: 'GET',
-		//url: 'https://www.49wz888.com/site/h5/lottery/search?pageSize='+Size+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
 		url: a+'?pageSize='+Size+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
 		dataType: 'json',
 		sync: false,
-		beforeSend:loading,
+		//beforeSend:loading,
 		success: function(data) {
 			var arrLen = data.data.recordList.length;
 			var datas = data.data.recordList;
 			var result = '';
 			if (arrLen > 0) {
-				$('.lotery-list').html('');
+				//$('.lotery-list').html('');
 if(year==2024&&sort==1){
 var ii=0;
 } else{
 var ii=0;
 }
-				for (var i = ii; i < arrLen; i++) {
+
+if(Size<batchSize){
+var iii=0;
+} else {
+var iii=Size-batchSize;
+}
+				for (var i = iii; i < arrLen; i++) {
 var yuefen1=datas[i].lotteryTime.split("年");
 var yuefen=yuefen1[1].replace("月","-").replace("日","");
 result +='<div class="lotery-kj">';
 result +='<div class="lotery-kj-sj lotery-kj-left">';
-result +='第<spanclass="lotery-h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<p class="lotery-d">' + yuefen + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</p>';
+result +='第<span class="lotery-h">' + datas[i]['year']+check(datas[i]['period']) + '</span>期<p class="lotery-d">' + yuefen + " 星期" +weekArray[new Date(datas[i]['lotteryTime'].replace("年","-").replace("月","-").replace("日","")).getDay()] +'</p>';
 result +='</div>';
 result +='<div class="lotery-kj-hm lotery-kj-right">';
 result +='<div style="float: left;width:13.5%;"><div class="' + hm_ys(datas[i]['numberList'][0]['number']) +'"><h2><span>' + datas[i]['numberList'][0]['number'] +'</span></h2></div><div class="lotery-sx"><span>' + datas[i]['numberList'][0]['shengXiao'] + '<br><h class="wx">' + datas[i]['numberList'][0]['wuXing'] + '</h></span></div></div>';
@@ -147,39 +205,67 @@ result +='</div>';
         }
 
 				$('.lotery-list').append(result);
-if(arrLen-Size<0){
+$(".loading-mask").hide();
+//if(arrLen-Size<0){
+//$("#load-more").hide();
+//} else {
+//$("#load-more").show();
+//}
+if(Size>arrLen){
+$("#xiayinian").html('<span style="margin-right:10px;padding:5px 50px;">加载 '+(year-1)+'年</span>');
 $("#load-more").hide();
+$("#xiayinian").show();
 } else {
 $("#load-more").show();
+}
+if(year<2024&&Size>=15){
+$("#huidao").show();
+$("#load-more").html('<span style="margin-right:10px;padding:5px 50px;">加载更多</span>');
+$("#huidao").html('<span style="padding:3px 3px;background-color: #EE7942;color:#fff;letter-spacing: 0px;">加载 2024年</span>');
+} else {
+$("#huidao").hide();
 }
 			}
 		}
 	})
+$("#loading-cuowu").html("记录无法加载");
 }
 
 //大小排序
 function get_lottery_list_daxiao(){
+$("#xiayinian").hide();
+$("#huidao").hide();
 $("#load-more").hide();
-$("#dxload-more").show();
+$("#loadmore").hide();
+$("#dxxiayinian").hide();
+$("#dxhuidao").hide();
+$("#dxload-more").hide();
+$("#dxloadmore").show();
+$(".loading-mask").show();
 	$.ajax({
 		type: 'GET',
-		//url: 'https://www.49wz888.com/site/h5/lottery/search?pageSize='+dxSize+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
 		url: a+'?pageSize='+dxSize+'&year='+year+'&sort='+sort+'&lotteryType='+type+'&t=' + new Date().getTime(),
 		dataType: 'json',
 		sync: false,
-		beforeSend:loading,
+		//beforeSend:loading,
 		success: function(data) {
 			var arrLen = data.data.recordList.length;
 			var datas = data.data.recordList;
 			var result = '';
 			if (arrLen > 0) {
-				$('.lotery-list').html('');
+				//$('.lotery-list').html('');
 if(year==2024&&sort==1){
 var ii=0;
 } else{
 var ii=0;
 }
-				for (var i = ii; i < arrLen; i++) {
+if(dxSize<dxbatchSize){
+var iii=0;
+} else {
+var iii=dxSize-dxbatchSize;
+}
+
+				for (var i = iii; i < arrLen; i++) {
 var yuefen1=datas[i].lotteryTime.split("年");
 var yuefen=yuefen1[1].replace("月","-").replace("日","");
 var tm=datas[i].numberList[6].number+","+datas[i].numberList[6].shengXiao+","+datas[i].numberList[6].color+","+datas[i].numberList[6].wuXing+"/";
@@ -218,40 +304,32 @@ result +='</div>';
 //result += '<div style="float: right;"><div class="' + hm_ys(hm7[0]) +'"><h2><span>' + hm7[0] +'</span></h2></div><div class="sx"><span>' + hm7[1] + '<h class="wx">/' + hm7[3] + '</h></span></div></div></div>';
 				}
 				$('.lotery-list').append(result);
-if(arrLen-dxSize<0){
+$(".loading-mask").hide();
+//if(arrLen-dxSize<0){
+//$("#dxload-more").hide();
+//} else {
+//$("#dxload-more").show();
+//}
+if(dxSize>arrLen){
+$("#dxxiayinian").html('<span style="margin-right:10px;padding:5px 50px;">加载 '+(year-1)+'年</span>');
 $("#dxload-more").hide();
+$("#dxxiayinian").show();
 } else {
 $("#dxload-more").show();
+}
+if(year<2024&&dxSize>=15){
+$("#dxhuidao").show();
+$("#dxload-more").html('<span style="margin-right:10px;padding:5px 50px;">加载更多</span>');
+$("#dxhuidao").html('<span style="padding:3px 3px;background-color: #EE7942;color:#fff;letter-spacing: 0px;">加载 2024年</span>');
+} else {
+$("#dxhuidao").hide();
 }
 			}
 		}
 	})
+$("#loading-cuowu").html("记录无法加载");
 }
 function loading(){
-$('.lotery-list').html('<div style="padding:15px;text-align: center;font-size: 14px;"><img src="/js/loading.gif" width="80px" height="80px"><br>正在加载中...</div>');
-}
-function getQueryStringArgs() {
-	//取得查询字符串并去掉开头的问号
-	var qs = (location.search.length > 0 ? location.search.substring(1) : ""),
-		//保存数据的对象
-		args = {},
-		//取得每一项
-		items = qs.length ? qs.split("&") : [],
-		item = null,
-		name = null,
-		value = null,
-		//在for 循环中使用
-		i = 0,
-		len = items.length;
-	//逐个将每一项添加到args 对象中
-	for (i = 0; i < len; i++) {
-		item = items[i].split("=");
-		name = decodeURIComponent(item[0]);
-		value = decodeURIComponent(item[1]);
-		if (name.length) {
-			args[name] = value;
-		}
-	}
-	return args;
+$('.lotery-list').html('<div id="loading1" style="width: 100%;"><div style="padding:15px;text-align: center;font-size: 14px;"><img src="/js/loading.gif" width="80px" height="80px"><br>正在加载中...</div></div>');
 }
 }
