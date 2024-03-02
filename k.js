@@ -68,11 +68,11 @@ var myObj =event.data;
 var obj = JSON.parse(myObj);
 var kjobj=trim(obj.k);
 if(c=="xg"){
-var kjhm= kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
+var kjhm = kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("主,持,人,介,绍,嘉,宾","香,港,六,合,彩,开,奖").replace("持,人,介,绍,嘉,宾","香,港,六,合,开,奖").replace("人,介,绍,嘉,宾","香,港,彩,开,奖").replace("介,绍,嘉,宾","港,彩,开,奖").replace("绍,嘉,宾","港,开,奖").replace("嘉,宾","开,奖").replace("宾","奖").replace("马,上,开,始,摇,奖,啦","香,港,六,合,彩,开,奖").replace("上,开,始,摇,奖,啦","香,港,六,合,开,奖").replace("开,始,摇,奖,啦","香,港,彩,开,奖").replace("始,摇,奖,啦","港,彩,开,奖").replace("摇,奖,啦","港,开,奖").replace("奖,啦","开,奖").replace("啦","奖");
 } else if(c=="xa"){
 var kjhm= kjobj.replace("四,九,图,库,开,奖,快","新,澳,六,合,彩,开,奖").replace("九,图,库,开,奖,快","新,澳,六,合,开,奖").replace("图,库,开,奖,快","新,澳,彩,开,奖").replace("库,开,奖,快","新,澳,开,奖").replace("开,奖,快","澳,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
 } else {
-var kjhm= kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("啦","中");
+var kjhm = kjobj.replace("四,九,图,库,开,奖,快","香,港,六,合,彩,开,奖").replace("九,图,库,开,奖,快","香,港,六,合,开,奖").replace("图,库,开,奖,快","香,港,彩,开,奖").replace("库,开,奖,快","港,彩,开,奖").replace("开,奖,快","港,开,奖").replace("奖,快","开,奖").replace("快","奖").replace("主,持,人,介,绍,嘉,宾","香,港,六,合,彩,开,奖").replace("持,人,介,绍,嘉,宾","香,港,六,合,开,奖").replace("人,介,绍,嘉,宾","香,港,彩,开,奖").replace("介,绍,嘉,宾","港,彩,开,奖").replace("绍,嘉,宾","港,开,奖").replace("嘉,宾","开,奖").replace("宾","奖").replace("马,上,开,始,摇,奖,啦","香,港,六,合,彩,开,奖").replace("上,开,始,摇,奖,啦","香,港,六,合,开,奖").replace("开,始,摇,奖,啦","香,港,彩,开,奖").replace("始,摇,奖,啦","港,彩,开,奖").replace("摇,奖,啦","港,开,奖").replace("奖,啦","开,奖").replace("啦","奖");
 }
 kjjg=kjhm.split(",");
           if(isNaN(kjjg[1]) || isNaN(kjjg[7])){
@@ -266,7 +266,8 @@ if(typeof nyhm[4] === "undefined"){nyhm[4]="\u5408";};
 if(typeof nyhm[5] === "undefined"){nyhm[5]="\u5f69";};
 if(typeof nyhm[6] === "undefined"){nyhm[6]="开";};
 if(typeof nyhm[7] === "undefined"){nyhm[7]="奖";};
-hm=nyhm[1]+","+nyhm[2]+","+nyhm[3]+","+nyhm[4]+","+nyhm[5]+","+nyhm[6]+","+nyhm[7];
+var hm95=nyhm[1]+","+nyhm[2]+","+nyhm[3]+","+nyhm[4]+","+nyhm[5]+","+nyhm[6]+","+nyhm[7];
+hm=hm95.replace("九,五,开,奖,网,最,快","老,澳,六,合,彩,开,奖").replace("五,开,奖,网,最,快","老,澳,六,合,开,奖").replace("开,奖,网,最,快","老,澳,彩,开,奖").replace("奖,网,最,快","澳,彩,开,奖").replace("网,最,快","澳,开,奖").replace("最,快","开,奖").replace("快","奖");
 qishu="2024"+nyhm[0];
 } else {
 myObj = Obj.data;
