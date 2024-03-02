@@ -102,9 +102,39 @@
 <div id="kjYearList">
 <li><a>2024年</a></li><li><a>2023年</a></li><li><a>2022年</a></li><li><a>2021年</a></li><li><a>2020年</a></li><li><a>2019年</a></li><li><a>2018年</a></li><li><a>2017年</a></li><li><a>2016年</a></li><li><a>2015年</a></li><li><a>2014年</a></li><li><a>2013年</a></li><li><a>2012年</a></li><li><a>2011年</a></li><li><a>2010年</a></li><li><a>2009年</a></li><li><a>2008年</a></li><li><a>2007年</a></li><li><a>2006年</a></li><li><a>2005年</a></li><li><a>2004年</a></li><li><a>2003年</a></li><li><a>2002年</a></li><li><a>2001年</a></li><li><a>2000年</a></li><li><a>1999年</a></li><li><a>1998年</a></li><li><a>1997年</a></li><li><a>1996年</a></li><li><a>1995年</a></li><li><a>1994年</a></li><li><a>1993年</a></li><li><a>1992年</a></li><li><a>1991年</a></li><li><a>1990年</a></li><li><a>1989年</a></li><li><a>1988年</a></li><li><a>1987年</a></li><li><a>1986年</a></li><li><a>1985年</a></li><li><a>1984年</a></li><li><a>1983年</a></li><li><a>1982年</a></li><li><a>1981年</a></li><li><a>1980年</a></li><li><a>1979年</a></li><li><a>1978年</a></li><li><a>1977年</a></li><li><a>1976年</a></li><li style="color:#f00;" onClick="yearxs();" id="yearlistxs">更多++</li>
 </div>
+<script>
+    // 事件委托的核心原理：给父节点添加侦听器，利用冒泡影响每一个子节点
+    var allItemList = document.querySelectorAll("#kjYearList li");
+for (var i=11;i<allItemList.length-1;i++) {
+allItemList[i].style.display = "none";
+}
+
+function yearxs() {
+for (var i=12;i<allItemList.length-1;i++) {
+if (allItemList[i].style.display == "none") {
+allItemList[i].style.display = "";
+yearlistxs.innerHTML = "<span style='color:#f00;'>隐藏- -</span>";
+} else {
+allItemList[i].style.display = "none";
+yearlistxs.innerHTML = "<span style='color:#f00;'>更多++</span>"
+}
+}
+}
+
+    for (var i=0;i<allItemList.length;i++) {
+allItemList[i].index=i;  //定义循环的每一个i的值                 
+allItemList[i].onmouseover=function() {
+for (var z=0;z<allItemList.length;z++) { 
+allItemList[z].style.color="#666";
+allItemList[z].style.backgroundColor="#fff";
+}
+allItemList[this.index].style.color="#D2691E";
+allItemList[this.index].style.backgroundColor="#FFFAFA";
+}}
+  </script>
 <div class="lotery-list"></div>
-<div id="load-more" class="load-more"><span>加载更多</span></div>
-<div id="dxload-more" class="load-more" style="display: none;"><span>加载更多</span></div>
+<div class="load-more" id="loadmore" style="display: none;"><label  id="load-more" style="display: none;"><span>加载更多</span></label><label  id="xiayinian" style="display: none;"></label><label id="huidao" style="display: none;"></label></div>
+<div class="load-more" id="dxloadmore" style="display: none;"><label  id="dxload-more" style="display: none;"><span>加载更多</span></label><label  id="dxxiayinian" style="display: none;"></label><label id="dxhuidao" style="display: none;"></label></div>
 </div>
 <!--开奖日期-->
 <div class="nr">
@@ -126,7 +156,23 @@
 <div class="bottom-center bjb" onClick="get('la');"><div class="aoh"></div>老澳彩</div>
 </div>
 </div>
+//加载动画
+    <div class="loading-mask">
+      <div class="loading-box">
+        <div class="loadingio-spinner-ellipsis">
+          <div class="ldio">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <span id="loading-cuowu">正在加载中...</span>
+      </div>
+    </div>
 <audio src="/js/sound.mp3" muted autoplay loop id="myaudio" style="display: none"></audio>
+<div class="bbb"></div>
 <script>
 document.write('<script src="/js/riqi.js?'+Math.random()+'"><\/script>');
 document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');
@@ -161,36 +207,6 @@ window.location.href = "/";
 }
 }
 </script>
-<script>
-    // 事件委托的核心原理：给父节点添加侦听器，利用冒泡影响每一个子节点
-    var allItemList = document.querySelectorAll("#kjYearList li");
-for (var i=11;i<allItemList.length-1;i++) {
-allItemList[i].style.display = "none";
-}
-
-function yearxs() {
-for (var i=12;i<allItemList.length-1;i++) {
-if (allItemList[i].style.display == "none") {
-allItemList[i].style.display = "";
-yearlistxs.innerHTML = "<span style='color:#f00;'>隐藏- -</span>";
-} else {
-allItemList[i].style.display = "none";
-yearlistxs.innerHTML = "<span style='color:#f00;'>更多++</span>"
-}
-}
-}
-
-    for (var i=0;i<allItemList.length;i++) {
-allItemList[i].index=i;  //定义循环的每一个i的值                 
-allItemList[i].onmouseover=function() {
-for (var z=0;z<allItemList.length;z++) { 
-allItemList[z].style.color="#666";
-allItemList[z].style.backgroundColor="#fff";
-}
-allItemList[this.index].style.color="#D2691E";
-allItemList[this.index].style.backgroundColor="#FFFAFA";
-}}
-  </script>
 <script>
 function div_none(theclass){
 var allPageTags = new Array();
@@ -285,8 +301,5 @@ window.addEventListener("message",(event)=>{
 document.getElementById('gsgltu').style.height = event.data.msggs + 'px';
 })
 </script>
-
-
-<div class="bbb"></div>
 </body>
 </html>
