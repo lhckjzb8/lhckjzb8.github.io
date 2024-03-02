@@ -1,4 +1,4 @@
-var cacheName = 'Pwa~2024.021';
+var cacheName = 'Pwa~2024.022';
 var cacheFiles = [
   '/index.html',
   '/laoao.html',
