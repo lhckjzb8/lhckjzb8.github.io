@@ -23,6 +23,7 @@ var cacheFiles = [
   '/kjrq.js',
   '/cdm.js',
   '/js/sound.mp3',
+  '/js/kjfc.gif',
   '/js/loading.gif'
 ];
 
