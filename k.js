@@ -508,15 +508,18 @@ function countTime() {
           if(m < 10) {
             m = "0" + m;
           } 
-         tian.innerHTML = t;
-         shi.innerHTML = h;
-         fen.innerHTML = m;
-         miao.innerHTML = s;
+        $(".kj-djs).html('<span class="t-num" id="tian">'+t+'</span><span class="t-tian">天</span><span class="t-num" id="shi">'+h+'</span><span class="t-dv">:</span><span class="t-num" id="fen">'+m+'</span><span class="t-dv">:</span><span class="t-num" id="miao">'+s+'</span>')
+         //tian.innerHTML = t;
+         //shi.innerHTML = h;
+         //fen.innerHTML = m;
+         //miao.innerHTML = s;
        } else {
-         tian.innerHTML = "•";
-         shi.innerHTML = "开";
-         fen.innerHTML = "奖";
-         miao.innerHTML = "中";
+        $(".kj-djs).html('<img src="kjfc.gif" style="width:50px; height:50px;vertical-align: middle;"><span style="letter-spacing: 1px;padding:2px 8px;background-color: #fc6162;border-radius: 5px;font-size: 20px;font-weight: 600;color: #fff;
+border: 1px solid rgba(0,0,0,0.1);">正在同步开奖</span>')
+         //tian.innerHTML = "•";
+         //shi.innerHTML = "开";
+         //fen.innerHTML = "奖";
+         //miao.innerHTML = "中";
         }
 setTimeout(countTime, 1000);
 }
