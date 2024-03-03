@@ -168,7 +168,7 @@ line-height:21px;
 margin-bottom:6px;
 border-radius: 5px;
 }
-#loading{width: 100%;
+#loading1{width: 100%;
 display:none;padding:15px 0;text-align: center;font-size: 14px;z-index:1;position: absolute;left:0;
 }
 .tishi{
@@ -256,7 +256,6 @@ text-align: center;
 <div class="tishi" id="fhcxqs" style="display:none;"><div style="float: right;width: 50%;"><input type="checkbox" name="fhqs" id="fhqs" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">仅显示查询符合的期数</span></div></div>
 <div class="tishi" id="wstqxs" style="display:none;"><div style="float: left;width: 50%;"><input type="checkbox" name="tqxq" id="tqxq" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">显示查询的下 <input type="text" id="xqs" name="xqs" style="color:#0000ff;text-align:center;width: 15px;height:10px;" value="1"> 期</span></div><div style="float: right;width: 50%;"><input type="checkbox" name="wstq" id="wstq" onclick="kj();" style="vertical-align: middle;"> <span style="vertical-align: middle;">显示查询同尾期的期数</span></div></div>
 <div id=lotery-list>
-<div id=loading><img src="/js/loading.gif" width="80px" height="80px"><br>正在加载中...</br></div>
 <div class='top1'><li class='sj'>年份-期数</li><li>平一</li><li>平二</li><li>平三</li><li>平四</li><li>平五</li><li>平六</li><li>特码</li></div><div id='top'></div>
 <div id="jl2024"></div>
 <div id="jl2023"></div>
@@ -308,7 +307,21 @@ text-align: center;
 <div id="jl1977"></div>
 <div id="jl1976"></div>
 </div>
-
+<!--加载动画-->
+    <div class="loading-mask" id="loading">
+      <div class="loading-box">
+        <div class="loadingio-spinner-ellipsis">
+          <div class="ldio">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <span>正在加载中...</span>
+      </div>
+    </div>
 <script type="text/javascript" src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
 function checkqs(i){
@@ -711,7 +724,6 @@ tjxs.style.display = "";
 //}
 //} else {
 //$("#top").html("<p>查无数据！</p>");
-//g();
 //}
 })
 </script>
@@ -883,10 +895,8 @@ if(allPageTags[i].className == theclass){
 var obj = allPageTags[i];
 if(obj.style.display == "none"){
 obj.style.display = "";
-g();
 }else{
 obj.style.display = "none";
-g();
 }
 }
 }
