@@ -1,15 +1,1 @@
-var xgwss="wss://zhibo3.yuexiawang.com";
-var xgjlurl="https://a6tk111.com/gallerynew/h5/lottery/search";
-var xgsqurl="https://api.49lhapi.com/api/web/lottery/lastLotteryRecord?lotteryType=1";
-var xawss="wss://zhibo.yuexiawang.com";
-var xajlurl="https://www.49wz888.com/site/h5/lottery/search";
-var xasqurl="https://api.49lhapi.com/api/web/lottery/lastLotteryRecord?lotteryType=2";
-var laurl1="https://a6tkapi1.com/gallerynew/h5/index/lastLotteryRecord?lotteryType=2";
-var laurl2="https://sdkj.kjjw.app/oldam.json";
-var laurl3="https://live2.lhzzcenter.com/livedata/data_mo.json";
-var lajlurl="https://a6tk111.com/gallerynew/h5/lottery/search";
-var syaokjxs="yes";
-var xakjkssj="21:30:30";
-var xakjjssj="21:33:15";
-var lakjkssj="21:33:15";
-var lakjjssj="21:36:20";
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('n="b://o.c.0";p="3://d.e.0/f/5/4/8";q="3://6.g.0/6/h/4/9?a=1";r="b://s.c.0";t="3://d.e.0/f/5/4/8";u="3://6.g.0/6/h/4/9?a=2";v="3://w.0/i/5/x/9?a=2";y="3://z.A.B/C.j";D="3://E.F.0/G/H.j";I="3://J.0/i/5/4/8";K="L";M="7:k:k";N="7:l:m";O="7:l:m";P="7:Q:R";$(".S").T();',56,56,'com|||https|lottery|h5|api|21|search|lastLotteryRecord|lotteryType|wss|yuexiawang|www|49wz888|site|49lhapi|web|gallerynew|json|30|33|15|xgwss|zhibo3|xgjlurl|xgsqurl|xawss|zhibo|xajlurl|xasqurl|laurl1|a6tkapi1|index|laurl2|sdkj|kjjw|app|oldam|laurl3|live2|lhzzcenter|livedata|data_mo|lajlurl|a6tk111|syaokjxs|yes|xakjkssj|xakjjssj|lakjkssj|lakjjssj|36|20|bottom|hide'.split('|'),0,{}))
