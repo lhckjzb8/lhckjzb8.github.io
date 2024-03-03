@@ -17,21 +17,13 @@
 <script src="api.js"></script>
 </head>
 <body>
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').then(function(r) {
-        console.log('注册成功', r);
-      }).catch(function(err) {
-        console.error('err', err);
-      });
-    }
-  </script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('"1"5 2&&2.1.6("./7.8").9(3(0){4.a("注册成功",0)}).b(3(0){4.c("d",0)});',14,14,'r|serviceWorker|navigator|function|console|in|register|sw|js|then|log|catch|error|err'.split('|'),0,{}))</script>
 <header><div class="top">
 <div class="topleft" id="shijian">当前时间：00:00:00 2024年01月01号星期日</div>
 <div class="topright"><span class="menu" onClick="div_none('menu-list');"></span></div>
  <div class="menu-list" style="display:none;">
  <div class="list-center" onClick="get('xg');">香港专区</div>
- <div class="list-center"  onClick="get('xa');">新澳专区</div>
+ <div class="list-center" onClick="get('xa');">新澳专区</div>
  <div class="list-center" onClick="get('la');">老澳专区</div>
  <div class="list-center" onClick="get('cx');">查询助手</div>
  <div class="list-center" onClick="get('tj');">统计助手</div>
@@ -102,36 +94,7 @@
 <div id="kjYearList">
 <li><a>2024年</a></li><li><a>2023年</a></li><li><a>2022年</a></li><li><a>2021年</a></li><li><a>2020年</a></li><li><a>2019年</a></li><li><a>2018年</a></li><li><a>2017年</a></li><li><a>2016年</a></li><li><a>2015年</a></li><li><a>2014年</a></li><li><a>2013年</a></li><li><a>2012年</a></li><li><a>2011年</a></li><li><a>2010年</a></li><li><a>2009年</a></li><li><a>2008年</a></li><li><a>2007年</a></li><li><a>2006年</a></li><li><a>2005年</a></li><li><a>2004年</a></li><li><a>2003年</a></li><li><a>2002年</a></li><li><a>2001年</a></li><li><a>2000年</a></li><li><a>1999年</a></li><li><a>1998年</a></li><li><a>1997年</a></li><li><a>1996年</a></li><li><a>1995年</a></li><li><a>1994年</a></li><li><a>1993年</a></li><li><a>1992年</a></li><li><a>1991年</a></li><li><a>1990年</a></li><li><a>1989年</a></li><li><a>1988年</a></li><li><a>1987年</a></li><li><a>1986年</a></li><li><a>1985年</a></li><li><a>1984年</a></li><li><a>1983年</a></li><li><a>1982年</a></li><li><a>1981年</a></li><li><a>1980年</a></li><li><a>1979年</a></li><li><a>1978年</a></li><li><a>1977年</a></li><li><a>1976年</a></li><li style="color:#f00;" onClick="yearxs();" id="yearlistxs">更多++</li>
 </div>
-<script>
-    // 事件委托的核心原理：给父节点添加侦听器，利用冒泡影响每一个子节点
-    var allItemList = document.querySelectorAll("#kjYearList li");
-for (var i=11;i<allItemList.length-1;i++) {
-allItemList[i].style.display = "none";
-}
-
-function yearxs() {
-for (var i=12;i<allItemList.length-1;i++) {
-if (allItemList[i].style.display == "none") {
-allItemList[i].style.display = "";
-yearlistxs.innerHTML = "<span style='color:#f00;'>隐藏- -</span>";
-} else {
-allItemList[i].style.display = "none";
-yearlistxs.innerHTML = "<span style='color:#f00;'>更多++</span>"
-}
-}
-}
-
-    for (var i=0;i<allItemList.length;i++) {
-allItemList[i].index=i;  //定义循环的每一个i的值                 
-allItemList[i].onmouseover=function() {
-for (var z=0;z<allItemList.length;z++) { 
-allItemList[z].style.color="#666";
-allItemList[z].style.backgroundColor="#fff";
-}
-allItemList[this.index].style.color="#D2691E";
-allItemList[this.index].style.backgroundColor="#FFFAFA";
-}}
-  </script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('4(9 2=j.k("#m n"),i=o;i<2.5-1;i++)2[i].3.6="a";c p(){4(9 l=q;l<2.5-1;l++)"a"==2[l].3.6?(2[l].3.6="",d.e="<7 3=\'8:#f;\'>隐藏- -</7>"):(2[l].3.6="a",d.e="<7 3=\'8:#f;\'>更多++</7>")}4(i=0;i<2.5;i++)2[i].b=i,2[i].r=c(){4(9 l=0;l<2.5;l++)2[l].3.8="#s",2[l].3.g="#t";2[h.b].3.8="#u",2[h.b].3.g="#v"};',32,32,'||allItemList|style|for|length|display|span|color|var|none|index|function|yearlistxs|innerHTML|f00|backgroundColor|this||document|querySelectorAll||kjYearList|li|11|yearxs|12|onmouseover|666|fff|D2691E|FFFAFA'.split('|'),0,{}))</script>
 <div class="lotery-list"></div>
 <div class="load-more" id="loadmore" style="display: none;"><label  id="load-more" style="display: none;"><span>加载更多</span></label><label  id="xiayinian" style="display: none;"></label><label id="huidao" style="display: none;"></label></div>
 <div class="load-more" id="dxloadmore" style="display: none;"><label  id="dxload-more" style="display: none;"><span>加载更多</span></label><label  id="dxxiayinian" style="display: none;"></label><label id="dxhuidao" style="display: none;"></label></div>
@@ -173,133 +136,13 @@ allItemList[this.index].style.backgroundColor="#FFFAFA";
     </div>
 <audio src="/js/sound.mp3" muted autoplay loop id="myaudio" style="display: none"></audio>
 <div class="bbb"></div>
-<script>
-document.write('<script src="/js/riqi.js?'+Math.random()+'"><\/script>');
-document.write('<script src="/js/api.js?'+Math.random()+'"><\/script>');
-</script>
+<script>eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.3(\'<0 4="/1/7.1?\'+5.6()+\'"><\\/0>\'),2.3(\'<0 4="/1/8.1?\'+5.6()+\'"><\\/0>\');',9,9,'script|js|document|write|src|Math|random|riqi|api'.split('|'),0,{}))</script>
 <script src="cdm.js"></script>
 <script src="kjrq.js"></script>
-<script src="kjjl.js"></script>
-<script src="k.js"></script>
-<script>
-var kjriqi="xg";
-riqi(kjriqi);
-k(xgwss,xgsqurl,"xg");
-jl(xgjlurl,1);
-var iframe = document.getElementById("gsgltu");
-iframe.src ="/gs.html";
-
-function get(a){
-if(a=="xg"){
-window.location.href = "index.html";
-} else if(a=="xa"){
-window.location.href = "xinao.html";
-} else if(a=="la"){
-window.location.href = "laoao.html";
-} else if(a=="cx"){
-window.location.href = "chaxun.html";
-} else if(a=="tj"){
-window.location.href = "tongji.html";
-} else if(a=="fs"){
-window.location.href = "fushi.html";
-} else {
-window.location.href = "/";
-}
-}
-</script>
-<script>
-function div_none(theclass){
-var allPageTags = new Array();
-var allPageTags = document.getElementsByTagName("div");
-for (i=0; i<allPageTags.length;i++){
-if(allPageTags[i].className == theclass){
-var obj = allPageTags[i];
-if(obj.style.display == "none"){
-obj.style.display = "";
-}else{
-obj.style.display = "none";
-}
-}
-}
-}
-function check1(i){
-                //方法一，用三元运算符
-                var num;
-                i<10?num="0"+i:num=i;
-                return num;
-}
-setInterval(function() {
-var date = new Date();
-var year = date.getFullYear(); 
-var moon = check1(date.getMonth()+1);//获取当前月份的日期 
-var day=check1(date.getDate());
-var sjrq=year+"-"+moon+"-"+day;
-var hour= date.getHours();//得到小时数
-var minute= date.getMinutes();//得到分钟数
-var second= date.getSeconds();//得到秒数
-hour=check1(hour);
-minute=check1(minute);
-second=check1(second);
-var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
-var week = weekArray[new Date(sjrq).getDay()];
-var hmf = hour + ":" + minute + ":" + second;
-var nyrx =year + "年" + moon +"月"+day+"日 星期"+week;
-shijian.innerHTML = "当前时间：<span style=color:#f;margin-right:8px;>"+hmf+"</span>"+nyrx;
-}, 1000);
-</script>
-<script type="text/javascript">
-    function getTime() {
-            var time = new Date();
-            var h = time.getHours();
-            h = h < 10 ? '0' + h : h;   //当小时数小于10时，在前面补0，下面同理
-            var m = time.getMinutes();
-            m = m < 10 ? '0' + m : m;
-            var s = time.getSeconds();
-            s = s < 10 ? '0' + s : s;
-            return h + ':' + m + ':' + s;
-        }
-    if(syaokjxs="yes"){
-xakjks=setInterval(function() {
-var xakjsj=getTime();
-if(xakjsj>=xakjkssj && xakjsj<=xakjjssj){
-$("#syxakj").html('<div><iframe width="100%" height="183px" frameborder="0" scrolling="no" src="k.html?xa"></iframe></div><div class="f"></div>');
-clearInterval(xakjks);
-}
-},1000);
-xakjjs=setInterval(function() {
-var xakjsj=getTime();
-if(xakjsj==xakjjssj){
-$("#syxakj").html('');
-clearInterval(xakjjs);
-}
-},1000);
-lakjks=setInterval(function() {
-var lakjsj=getTime();
-if(lakjsj>=lakjkssj && lakjsj<=lakjjssj){
-$("#sylakj").html('<div><iframe width="100%" height="183px" frameborder="0" scrolling="no" src="k.html?la"></iframe></div><div class="f"></div>');
-clearInterval(lakjks);
-}
-},1000);
-lakjjs=setInterval(function() {
-var lakjsj=getTime();
-if(lakjsj==lakjjssj){
-$("#sylakj").html('');
-clearInterval(lakjjs);
-}
-},1000);
-    }
-</script>
-<script type="text/javascript">
-var u = navigator.userAgent, app = navigator.appVersion;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-if(isiOS){
-document.querySelector(".bottom").style.paddingBottom="15px";
-//document.querySelector(".bbb").style.paddingBottom="25px";
-}
-window.addEventListener("message",(event)=>{
-document.getElementById('gsgltu').style.height = event.data.msggs + 'px';
-})
-</script>
+<script>eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.3(\'<0 4="/1/7.1?\'+5.6()+\'"><\\/0>\'),2.3(\'<0 4="/1/8.1?\'+5.6()+\'"><\\/0>\');',9,9,'script|js|document|write|src|Math|random|kjjl|k'.split('|'),0,{}))</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('3 4="2";6(4),k(7,8,"2"),9(a,1);3 5=b.c("d");e f(l){g.h.i="2"==l?"j.0":"m"==l?"n.0":"o"==l?"p.0":"q"==l?"r.0":"s"==l?"t.0":"u"==l?"v.0":"/"}5.w="/x.0";',34,34,'html||xg|var|kjriqi|iframe|riqi|xgwss|xgsqurl|jl|xgjlurl|document|getElementById|gsgltu|function|get|window|location|href|index|||xa|xinao|la|laoao|cx|chaxun|tj|tongji|fs|fushi|src|gs'.split('|'),0,{}))</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('5 g(e){7 n,t=3 8,t=h.j("k");l(i=0;i<t.m;i++)t[i].o==e&&("9"==(n=t[i]).4.6?n.4.6="":n.4.6="9")}5 2(e){e=e<p?"0"+e:e;q e}r(5(){7 e=3 b,n=e.u(),t=2(e.v()+1),a=2(e.w()),c=n+"-"+t+"-"+a,i=e.x(),s=e.y(),e=e.z(),e=(i=2(i))+":"+(s=2(s))+":"+(e=2(e)),c=n+"年"+t+"月"+a+"日 星期"+3 8("日","一","二","三","四","五","六")[3 b(c).A()];B.C="当前时间：<d 4=D:#f;E-F:G;>"+e+"</d>"+c},H);',44,44,'||check1|new|style|function|display|var|Array|none||Date||span|||div_none|document||getElementsByTagName|div|for|length||className|10|return|setInterval|||getFullYear|getMonth|getDate|getHours|getMinutes|getSeconds|getDay|shijian|innerHTML|color|margin|right|8px|1e3'.split('|'),0,{}))</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('3 4(){9 e=x y,a=(a=e.z())<b?"0"+a:a,s=(s=e.A())<b?"0"+s:s,e=e.B();C a+":"+s+":"+(e=e<b?"0"+e:e)}D="E",c=5(3(){9 e=4();e>=F&&e<=d&&($("#g").2(\'<1><6 h="i%" j="l" m="0" n="o" p="k.2?G"></6></1><1 q="f"></1>\'),7(c))},8),r=5(3(){4()==d&&($("#g").2(""),7(r))},8),t=5(3(){9 e=4();e>=H&&e<=u&&($("#v").2(\'<1><6 h="i%" j="l" m="0" n="o" p="k.2?I"></6></1><1 q="f"></1>\'),7(t))},8),w=5(3(){4()==u&&($("#v").2(""),7(w))},8);',45,45,'|div|html|function|getTime|setInterval|iframe|clearInterval|1e3|var||10|xakjks|xakjjssj|||syxakj|width|100|height||183px|frameborder|scrolling|no|src|class|xakjjs||lakjks|lakjjssj|sylakj|lakjjs|new|Date|getHours|getMinutes|getSeconds|return|syaokjxs|yes|xakjkssj|xa|lakjkssj|la'.split('|'),0,{}))</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 u=0.7,8=0.9,a=-1<u.2("b")||-1<u.2("c"),3=!!u.d(/\\(i[^;]+;( f;)? g.+h j k/);3&&(4.l(".m").5.n="o"),p.q("r",e=>{4.s("t").5.v=e.w.x+"y"});',35,35,'navigator||indexOf|isiOS|document|style|var|userAgent|app|appVersion|isAndroid|Android|Linux|match||U|CPU|Mac||OS|X|querySelector|bottom|paddingBottom|15px|window|addEventListener|message|getElementById|gsgltu||height|data|msggs|px'.split('|'),0,{}))</script>
 </body>
 </html>
