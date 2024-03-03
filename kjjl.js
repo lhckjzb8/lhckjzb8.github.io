@@ -212,7 +212,7 @@ $(".loading-mask").hide();
 //$("#load-more").show();
 //}
 if(Size>arrLen){
-$("#xiayinian").html('<span style="margin-right:10px;padding:5px 50px;">加载 '+(year-1)+'年</span>');
+$("#xiayinian").html('<span style="padding:5px 50px;">加载 '+(year-1)+'年</span>');
 $("#load-more").hide();
 $("#xiayinian").show();
 } else {
@@ -220,8 +220,8 @@ $("#load-more").show();
 }
 if(year<2024&&Size>=15){
 $("#huidao").show();
-$("#load-more").html('<span style="margin-right:10px;padding:5px 50px;">加载更多</span>');
-$("#huidao").html('<span style="padding:3px 3px;background-color: #EE7942;color:#fff;letter-spacing: 0px;">加载 2024年</span>');
+$("#load-more").html('<span style="padding:5px 50px;">加载更多</span>');
+$("#huidao").html('<span style="margin-left:10px;padding:3px 3px;background-color: #EE7942;color:#fff;letter-spacing: 0px;">加载 2024年</span>');
 } else {
 $("#huidao").hide();
 }
@@ -311,7 +311,7 @@ $(".loading-mask").hide();
 //$("#dxload-more").show();
 //}
 if(dxSize>arrLen){
-$("#dxxiayinian").html('<span style="margin-right:10px;padding:5px 50px;">加载 '+(year-1)+'年</span>');
+$("#dxxiayinian").html('<span style="padding:5px 50px;">加载 '+(year-1)+'年</span>');
 $("#dxload-more").hide();
 $("#dxxiayinian").show();
 } else {
@@ -319,8 +319,8 @@ $("#dxload-more").show();
 }
 if(year<2024&&dxSize>=15){
 $("#dxhuidao").show();
-$("#dxload-more").html('<span style="margin-right:10px;padding:5px 50px;">加载更多</span>');
-$("#dxhuidao").html('<span style="padding:3px 3px;background-color: #EE7942;color:#fff;letter-spacing: 0px;">加载 2024年</span>');
+$("#dxload-more").html('<span style="padding:5px 50px;">加载更多</span>');
+$("#dxhuidao").html('<span style="margin-left:10px;padding:3px 3px;background-color: #EE7942;color:#fff;letter-spacing: 0px;">加载 2024年</span>');
 } else {
 $("#dxhuidao").hide();
 }
