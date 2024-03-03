@@ -73,9 +73,7 @@ li img {
 <script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body onselectstart="javascript:return(false);" oncontextmenu="javascript:return(false);">
-<script type="text/javascript">
-document.write('<script src="/js/gs.js?'+Math.random()+'"><\/script>');
-</script>
+<script type="text/javascript">eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.3(\'<0 4="/1/5.1?\'+6.7()+\'"><\\/0>\');',8,8,'script|js|document|write|src|gs|Math|random'.split('|'),0,{}))</script>
 <div style="display:table;">
 <div id="outerdiv" style="position:fixed;top:-0px;left:0px;background:rgba(0,0,0,0.3);z-index:2;width:100%;height:100%;display:none;overflow-y: scroll;
 2 -webkit-overflow-scrolling: touch;">
@@ -87,106 +85,10 @@ document.write('<script src="/js/gs.js?'+Math.random()+'"><\/script>');
 
 </div>
 
-<script>
-function isEven(num) {
-  return num % 2 === 0;
-}
-var kk=k.split(",");
-
-var zuobj=zu.split(",");
-var zdobj=zd.split(",");
-
-var obj=imgurl.split(",");
-
-var obj2=imgurl2.split(",");
-
-if(kk[0]=="yes"){
-var zdresult = '';
-$('.zdlist').html('');
-if(zuobj.length == zdobj.length){
-for (i = 0; i < zdobj.length; i++) {
-if(isEven(i)==true){var imgi="imgl";} else {var imgi="imgr";};
-if(zuobj[i]==obj[0]){var cs="ze";} else {var cs="";};
-zdresult +='<li class="'+imgi+'"><span class="'+cs+'"></span><img id="imga'+i+'" src ="https://'+zuobj[i]+'.com/'+zdobj[i]+'?'+Math.random()+'" onclick="showBgImg(this)"><p style="color:#f00;">重点关注</p><div id="imga'+i+'a" class="modala" onclick="closeImg(this)"><div class="modal"><span style="z-index:1;position: absolute;padding:18px 55px;right:3%;top:493px;border-radius: 30px 0 8px 0;filter: blur(5px);background:#fff;"></span><img id="imga'+i+'aa"></div></div></li>';
-}
-} else {$('.zdlist').html('<div style="padding:15px;margin-left: 45px;color:#0000ff;">重点关注出错，请检查地址或图片。</div>');};
-$('.zdlist').append(zdresult);
-}
-//
-
-var result = '';
-$('.imglist').html('');
-if(kk[1]=="yes"){
-for (i = 1; i < obj.length; i++) {
-if(isEven(i)==true){var imgi="imgr";} else {var imgi="imgl";};
-result +='<li class="'+imgi+'"><span class="ze"></span><img id="imgb'+i+'" src ="https://'+obj[0]+'.com/'+obj[i]+'?'+Math.random()+'" onclick="showBgImg(this)"><p>公式图'+[i]+'</p><div id="imgb'+i+'a" class="modala" onclick="closeImg(this)"><div class="modal" ><span style="z-index:1;position: absolute;padding:18px 55px;right:3%;top:493px;border-radius: 30px 0 8px 0;filter: blur(5px);background:#fff;"></span><img id="imgb'+i+'aa"></div></div></li>';
-}
-var objlength = obj.length -1;
-} else {var objlength = 0;};
-if(kk[2]=="yes"){
-for (i = 1; i < obj2.length; i++) {
-if(isEven(i+objlength)==true){var imgi="imgr";} else {var imgi="imgl";};
-result +='<li class="'+imgi+'"><img id="imgc'+i+'" src ="https://'+obj2[0]+'.com/'+obj2[i]+'?'+Math.random()+'" onclick="showBgImg(this)"><p>公式图'+[i+objlength]+'</p><div id="imgc'+i+'a" class="modala" onclick="closeImg(this)"><div class="modal" ><span style="z-index:1;position: absolute;padding:18px 55px;right:3%;top:493px;border-radius: 30px 0 8px 0;filter: blur(5px);background:#fff;"></span><img id="imgc'+i+'aa"></div></div></li>';
-}
-}
-$('.imglist').append(result);
-</script>
-
-<script>
-function showBgImg(e) {
-var outerdiv = document.getElementById("outerdiv");
-outerdiv.style.display = 'block';
-var id=e.id+"a";
-var modal = document.getElementById(id);
-modal.style.display = 'block';
-var ida=e.id+"aa";
-var modala = document.getElementById(ida);
-var imgtop=e.getBoundingClientRect().top;
-if(imgtop>ktop){var htop=-550;} else if(imgtop<50){var htop=-235;} else {var htop=-400;}
-    var src = e.src;//获取当前点击的pimg元素中的src属性
-    $(modala).attr("src", src);//设置#bigimg元素的src属性
-        /*获取当前点击图片的真实大小，并显示弹出层及大图*/
-    $("<img/>").attr("src", src).load(function(){
-        var windowW = $(window).width();//获取当前窗口宽度
-        var windowH = $(window).height();//获取当前窗口高度
-        var realWidth = this.width;//获取图片真实宽度
-        var realHeight = this.height;//获取图片真实高度
-        var imgWidth, imgHeight;
-        var scale = 0.9;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
-        if(realHeight>windowH*scale) {//判断图片高度
-            imgHeight = windowH*scale;//如大于窗口高度，图片高度进行缩放
-            imgWidth = imgHeight/realHeight*realWidth;//等比例缩放宽度
-            if(imgWidth<windowW*scale) {//如宽度小于缩放宽度
-                imgWidth = windowW*scale;//再对宽度进行扩大
-            }
-            if(imgWidth>windowW*scale) {//如宽度扔大于窗口宽度
-                imgWidth = windowW*scale;//再对宽度进行缩放
-            }
-        } else if(realWidth>windowW*scale) {//如图片高度合适，判断图片宽度
-            imgWidth = windowW*scale;//如大于窗口宽度，图片宽度进行缩放
-            imgHeight = imgWidth/realWidth*realHeight;//等比例缩放高度
-        } else {//如果图片真实高度和宽度都符合要求，高宽不变
-            imgWidth = realWidth;
-            imgHeight = realHeight;
-        }
-$(modala).css("width",imgWidth);//以最终的宽度对图片缩放
-$(modal).css({"left":0,"margin-top":htop});//设置#innerdiv的left属性
-    });
-	}
-
-function closeImg(e) {
-var outerdiv = document.getElementById("outerdiv");
-outerdiv.style.display = 'none';
-var id=e.id.replace("aa","a");
-var modal = document.getElementById(id);
-modal.style.display = 'none';
-}
-</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1d j(i){1e i%2==0}l m=k.g(","),n=1f.g(","),o=1g.g(","),9=1h.g(","),q=1i.g(",");r("v"==m[0]){l 17,w="";r($(".x").y(""),n.b==o.b)A(i=0;i<o.b;i++)8=1==j(i)?"B":"C",w+=\'<c 5="\'+8+\'"><6 5="\'+(17=n[i]==9[0]?"18":"")+\'"></6><d 7="D\'+i+\'" E ="F://\'+n[i]+".G/"+o[i]+"?"+H.I()+\'" e="J(f)"><p h="19:#1j;">重点关注</p><4 7="D\'+i+\'a" 5="K" e="L(f)"><4 5="M"><6 h="z-N:1;O: P;s:Q R;S:3%;T:U;V-W: X 0 Y 0;Z: 10(11);12:#13;"></6><d 7="D\'+i+\'14"></4></4></c>\';1a $(".x").y(\'<4 h="s:1k;1l-1m: 1n;19:#1o;">重点关注出错，请检查地址或图片。</4>\');$(".x").1b(w)}l 8,t="";r($(".1c").y(""),"v"==m[1]){A(i=1;i<9.b;i++)8=1==j(i)?"C":"B",t+=\'<c 5="\'+8+\'"><6 5="18"></6><d 7="15\'+i+\'" E ="F://\'+9[0]+".G/"+9[i]+"?"+H.I()+\'" e="J(f)"><p>公式图\'+[i]+\'</p><4 7="15\'+i+\'a" 5="K" e="L(f)"><4 5="M" ><6 h="z-N:1;O: P;s:Q R;S:3%;T:U;V-W: X 0 Y 0;Z: 10(11);12:#13;"></6><d 7="15\'+i+\'14"></4></4></c>\';l u=9.b-1}1a u=0;r("v"==m[2])A(i=1;i<q.b;i++)8=1==j(i+u)?"C":"B",t+=\'<c 5="\'+8+\'"><d 7="16\'+i+\'" E ="F://\'+q[0]+".G/"+q[i]+"?"+H.I()+\'" e="J(f)"><p>公式图\'+[i+u]+\'</p><4 7="16\'+i+\'a" 5="K" e="L(f)"><4 5="M" ><6 h="z-N:1;O: P;s:Q R;S:3%;T:U;V-W: X 0 Y 0;Z: 10(11);12:#13;"></6><d 7="16\'+i+\'14"></4></4></c>\';$(".1c").1b(t);',62,87,'||||div|class|span|id|imgi|obj||length|li|img|onclick|this|split|style||isEven||var|kk|zuobj|zdobj||obj2|if|padding|result|objlength|yes|zdresult|zdlist|html||for|imgl|imgr|imga|src|https|com|Math|random|showBgImg|modala|closeImg|modal|index|position|absolute|18px|55px|right|top|493px|border|radius|30px|8px|filter|blur|5px|background|fff|aa|imgb|imgc|cs|ze|color|else|append|imglist|function|return|zu|zd|imgurl|imgurl2|f00|15px|margin|left|45px|0000ff'.split('|'),0,{}))</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('5 u(t){1.2("c").3.4="f";6 e=t.7+"a",l=1.2(e);l.3.4="f";6 s,e=t.7+"g",a=1.2(e),e=t.v().h;s=e>w?-x:e<y?-z:-A;t=t.8;$(a).j("8",t),$("<B/>").j("8",t).C(5(){6 t,e=$(k).b(),d=$(k).m(),n=p.b,i=p.m,o=.9;d*o<i?((t=d*o/i*n)<e*o&&(t=e*o),e*o<t&&(t=e*o)):e*o<n?t=e*o:t=n,$(a).q("b",t),$(l).q({D:0,"E-h":s})})}5 F(t){1.2("c").3.4="r";t=t.7.G("g","a");1.2(t).3.4="r"}',43,43,'|document|getElementById|style|display|function|var|id|src|||width|outerdiv|||block|aa|top||attr|window||height|||this|css|none|||showBgImg|getBoundingClientRect|ktop|550|50|235|400|img|load|left|margin|closeImg|replace'.split('|'),0,{}))</script>
 <script language="javascript">
-setTimeout(function g(){
-var g=document.body.scrollHeight;
-window.parent.postMessage({msggs: g}, "*");
-},500)
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1(2(){3 0=4.5.6;7.8.9({a:0},"*")},b);',12,12,'e|setTimeout|function|var|document|body|scrollHeight|window|parent|postMessage|msggs|500'.split('|'),0,{}))
 </script>
 </body>
 </html>
