@@ -23,7 +23,7 @@ a,a:visited {
   color: inherit; /* 继承链接所在元素的字体颜色 */
   text-decoration: none; /* 去掉下划线等文本修饰 */
 }
-.bbb{
+.bbb1{
 float: left;width: 100%;
 padding:15px 0;
 background-color:rgba(0,0,0,0.03);
