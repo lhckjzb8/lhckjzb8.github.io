@@ -76,7 +76,6 @@ li img {
 <script type="text/javascript">
 document.write('<script src="/js/gs.js?'+Math.random()+'"><\/script>');
 </script>
-<div class="loading-mask" style="padding-top:50%;width: 100%;position: fixed;text-align: center;font-size: 14px;"><img src="/.well-known/loading.gif" width="100px" height="100px"><p style="padding-top:15px;">正在加载中...</p></div>
 <div style="display:table;">
 <div id="outerdiv" style="position:fixed;top:-0px;left:0px;background:rgba(0,0,0,0.3);z-index:2;width:100%;height:100%;display:none;overflow-y: scroll;
 2 -webkit-overflow-scrolling: touch;">
@@ -183,11 +182,6 @@ var modal = document.getElementById(id);
 modal.style.display = 'none';
 }
 </script>
-<script>$(document).ready(function () {
-    setTimeout(function () {
-      $("body>.loading-mask").hide();
-    }, 1000)
-  });</script>
 <script language="javascript">
 setTimeout(function g(){
 var g=document.body.scrollHeight;
