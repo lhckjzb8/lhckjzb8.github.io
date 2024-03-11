@@ -10,13 +10,149 @@
 <link rel="apple-touch-icon" href="ico.jpg" />
 <link rel="icon" sizes="192x192" href="ico.jpg">
 <meta name="theme-color" content="#fc6162" />
-<title>统计助手</title>
+<title>号码统计助手</title>
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet" href="ico.css">
 <script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+<style>
+ul,li{
+list-style: none;
+padding:0;
+margin:0;
+display: inline-block;
+}
+#list li{
+width: 60px;
+text-align: center;
+}
+ #tab-list{
+float: left;
+width: 100%;
+padding: 6px 0;
+border-bottom: 2px solid #EE7942;
+box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+background-color: #fff;
+ }
+ #tab-list .show{
+display: block;
+margin:0 3px;
+ }
+ #tab-list .hidden{
+display: none;
+margin:0 3px;
+ }
+#tab-list input{
+border: none;
+box-shadow: 0px 0px 1.5px 0px rgba(0,0,0,0.3);
+display: inline-block;
+text-align: center;
+font-size: 14px;
+padding: 0;
+border-radius: 2px;
+ }
+
+#tab-list .left{
+//width: 100%;
+text-align: center;
+float: left;
+//margin-right:2px;
+margin-bottom:2px;
+ }
+#tab-list .right{
+float: right;
+ }
+#tab-list .ws input{
+background-color:rgba(0,0,0,0.05);
+width: 33px;
+height: 25px;
+line-height: 25px;
+ }
+#tab-list .ds input{
+background-color:#fff;
+width: 33px;
+height: 25px;
+line-height: 25px;
+ }
+#tab-list .bs input{
+width: 33px;
+height: 55px;
+line-height: 55px;
+ }
+#tab-list .sx input{
+background-color:rgba(233,150,122,0.05);
+width: 33px;
+height: 25px;
+line-height: 25px;
+ }
+#tab-list .hs input{
+background-color:rgba(233,150,122,0.05);
+width: 40.3px;
+height: 25px;
+line-height: 25px;
+ }
+.tjhm{
+float: left;
+width: 100%;
+padding: 5px 0;
+border-radius: 0 0 8px 8px ;
+box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+background-color: #fff;
+margin-bottom:8px;
+display: inline-block;
+}
+.tjhm .tj{
+float: left;
+width: 100%;
+}
+.tjhm .tj .t{
+display: inline-block;float: left;
+    font-size: 18px;font-weight: bold;
+    color:#000;padding: 10px;
+}
+.tjhm .tj .tjspan{
+float: right;margin-top:3px;
+padding: 5px 6px;
+}
+.tjhm .tj .tjspan input{
+margin-left:11px;
+padding:5px 10px;
+font-size: 14px;
+font-weight:normal;
+border: 1px solid #EE7942;
+background-color: #FF6347;
+color:#fff;
+border-radius: 2px;
+}
+.tjhm .tj .tjspan .input{
+margin-left:6px;
+padding:2px 5px;
+font-size: 13px;
+font-weight:normal;
+border: 1px solid #EE7942;
+background-color: #fff;
+border-radius: 2px;
+color:#000;
+}
+.tjhm textarea {
+  width: 93%;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  resize: vertical;
+  padding:8px 5px;
+}
+.tjhm .shuru {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.tjhm .shuru .a{
+border-radius: 2px;
+background-color: #fff;color:#000;border:1px solid #FFA500;padding:1px 5px;font-size: 12px;
+}
+</style>
 </head>
 <body>
- <script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('"1"5 2&&2.1.6("./7.8").9(3(0){4.a("注册成功",0)}).b(3(0){4.c("d",0)});',14,14,'r|serviceWorker|navigator|function|console|in|register|sw|js|then|log|catch|error|err'.split('|'),0,{}))</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('"1"5 2&&2.1.6("./7.8").9(3(0){4.a("注册成功",0)}).b(3(0){4.c("d",0)});',14,14,'r|serviceWorker|navigator|function|console|in|register|sw|js|then|log|catch|error|err'.split('|'),0,{}))</script>
 <header><div class="top">
 <div class="topleft" id="shijian">当前时间：00:00:00 2024年01月01号星期日</div>
 <div class="topright"><span class="menu" onClick="div_none('menu-list');"></span></div>
@@ -30,13 +166,362 @@
 </div>
 </div>
 </header>
+<FORM name=form2>
+<INPUT title=01, type=hidden value=01 name=n_01>
+<INPUT title=02, type=hidden value=02 name=n_02> 
+<INPUT title=03, type=hidden value=03 name=n_03> 
+<INPUT title=04, type=hidden value=04 name=n_04> 
+<INPUT title=05, type=hidden value=05 name=n_05> 
+<INPUT title=06, type=hidden value=06 name=n_06> 
+<INPUT title=07, type=hidden value=07 name=n_07> 
+<INPUT title=08, type=hidden value=08 name=n_08> 
+<INPUT title=09, type=hidden value=09 name=n_09> 
+<INPUT title=10, type=hidden value=10 name=n_10> 
+<INPUT title=11, type=hidden value=11 name=n_11> 
+<INPUT title=12, type=hidden value=12 name=n_12> 
+<INPUT title=13, type=hidden value=13 name=n_13> 
+<INPUT title=14, type=hidden value=14 name=n_14> 
+<INPUT title=15, type=hidden value=15 name=n_15> 
+<INPUT title=16, type=hidden value=16 name=n_16> 
+<INPUT title=17, type=hidden value=17 name=n_17> 
+<INPUT title=18, type=hidden value=18 name=n_18> 
+<INPUT title=19, type=hidden value=19 name=n_19> 
+<INPUT title=20, type=hidden value=20 name=n_20> 
+<INPUT title=21, type=hidden value=21 name=n_21> 
+<INPUT title=22, type=hidden value=22 name=n_22> 
+<INPUT title=23, type=hidden value=23 name=n_23> 
+<INPUT title=24, type=hidden value=24 name=n_24> 
+<INPUT title=25, type=hidden value=25 name=n_25> 
+<INPUT title=26, type=hidden value=26 name=n_26> 
+<INPUT title=27, type=hidden value=27 name=n_27> 
+<INPUT title=28, type=hidden value=28 name=n_28> 
+<INPUT title=29, type=hidden value=29 name=n_29> 
+<INPUT title=30, type=hidden value=30 name=n_30> 
+<INPUT title=31, type=hidden value=31 name=n_31> 
+<INPUT title=32, type=hidden value=32 name=n_32> 
+<INPUT title=33, type=hidden value=33 name=n_33> 
+<INPUT title=34, type=hidden value=34 name=n_34> 
+<INPUT title=35, type=hidden value=35 name=n_35> 
+<INPUT title=36, type=hidden value=36 name=n_36> 
+<INPUT title=37, type=hidden value=37 name=n_37> 
+<INPUT title=38, type=hidden value=38 name=n_38> 
+<INPUT title=39, type=hidden value=39 name=n_39> 
+<INPUT title=40, type=hidden value=40 name=n_40> 
+<INPUT title=41, type=hidden value=41 name=n_41> 
+<INPUT title=42, type=hidden value=42 name=n_42> 
+<INPUT title=43, type=hidden value=43 name=n_43> 
+<INPUT title=44, type=hidden value=44 name=n_44> 
+<INPUT title=45, type=hidden value=45 name=n_45> 
+<INPUT title=46, type=hidden value=46 name=n_46> 
+<INPUT title=47, type=hidden value=47 name=n_47> 
+<INPUT title=48, type=hidden value=48 name=n_48> 
+<INPUT title=49, type=hidden value=49 name=n_49> 
+<INPUT title=1, type=hidden value=1 name=n_1> 
+<INPUT title=2, type=hidden value=2 name=n_2> 
+<INPUT title=3, type=hidden value=3 name=n_3> 
+<INPUT title=4, type=hidden value=4 name=n_4>
+<INPUT title=5, type=hidden value=5 name=n_5>
+<INPUT title=6, type=hidden value=6 name=n_6> 
+<INPUT title=7, type=hidden value=7 name=n_7> 
+<INPUT title=8, type=hidden value=8 name=n_8> 
+<INPUT title=9, type=hidden value=9 name=n_9>
+</FORM>
+<form name=form>
 <div class="index">
-<div style="padding:10px;">
-开发中
+<div class="indexkj" style="width: 100%;padding:10px 0;">
+<div style="padding:0 10px;">
+<!---->
+<div class="mun" id="list">
+<li class="lan bjh">常用属性</li><li class="lan bjb">其他属性</li>
+</div>
+<!---->
+<div id="tab-list">
+<ul class="show">
+<!---->
+<table>
+    <tr>
+<td colspan="2">
+<div class="left ws">
+<INPUT title=01,03,05,07,09,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49, onclick="addText('单,');" type=button value=单 name=n_单>
+<INPUT title=02,04,06,08,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48, onclick="addText('双,');" type=button value=双 name=n_双>
+<INPUT title=25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49, onclick="addText('大,');" type=button value=大 name=n_大>
+<INPUT title=01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24, onclick="addText('小,');" type=button value=小 name=n_小>
+</div>
+<div class="right ds">
+<INPUT title=02,03,10,11,24,25,32,33,40,41, onclick="addText('金,');" type=button value=金 name=n_金> 
+<INPUT title=06,07,14,15,22,23,36,37,44,45, onclick="addText('木,');" type=button value=木 name=n_木> 
+<INPUT title=12,13,20,21,28,29,42,43,, onclick="addText('水,');" type=button value=水 name=n_水> 
+<INPUT title=01,08,09,16,17,30,31,38,39,46,47, onclick="addText('火,');" type=button value=火 name=n_火> 
+<INPUT title=04,05,18,19,26,27,34,35,48,49, onclick="addText('土,');" type=button value=土 name=n_土>
+</div>
+</td>
+</tr>
+    <tr>
+<td colspan="2">
+<div class="left ws">
+<INPUT title=01,03,05,07,09,10,12,14,16,18,21,23,25,27,29,30,32,34,36,38,41,43,45,47,49, onclick="addText('合单,');" type=button value=合单 name=n_合单>
+<INPUT title=02,04,06,08,11,13,15,17,19,20,22,24,26,28,31,33,35,37,39,40,42,44,46,48, onclick="addText('合双,');" type=button value=合双 name=n_合双>
+</div>
+<div class="right ds">
+<INPUT title=01,02,03,04,05,06,07, onclick="addText('1段,');" type=button value=1段 name=n_1段>
+<INPUT title=08,09,10,11,12,13,14, onclick="addText('2段,');" type=button value=2段 name=n_2段> 
+
+<INPUT title=15,16,17,18,19,20,21, onclick="addText('3段,');" type=button value=3段 name=n_3段> 
+
+<INPUT title=22,23,24,25,26,27,28, onclick="addText('4段,');" type=button value=4段 name=n_4段> 
+
+<INPUT title=29,30,31,32,33,34,35, onclick="addText('5段,');" type=button value=5段 name=n_5段> 
+
+<INPUT title=36,37,38,39,40,41,42, onclick="addText('6段,');" type=button value=6段 name=n_6段> 
+
+<INPUT title=43,44,45,46,47,48,49, onclick="addText('7段,');" type=button value=7段 name=n_7段>
+</div>
+</td>
+</tr>
+    <tr>
+<td colspan="2">
+<div class="left ds">
+<INPUT style="background-color: #FF0000;color: #FFF;" onclick="addText('鼠,兔,马,鸡,');" type=button value=红肖 name=n_红肖>
+<INPUT style="background-color: #0000FF;color: #FFF;" onclick="addText('虎,蛇,猴,猪,');" type=button value=蓝肖 name=n_蓝肖>
+<INPUT style="background-color: #1E8449;color: #FFF;" onclick="addText('牛,龙,羊,狗,');" type=button value=绿肖 name=n_绿肖>
+<INPUT onclick="addText('鼠,虎,龙,马,猴,狗,');" type=button value=单肖 name=n_单肖>
+<INPUT onclick="addText('牛,兔,蛇,羊,鸡,猪,');" type=button value=双肖 name=n_双肖>
+</div>
+<div class="right ds">
+<INPUT onclick="addText('牛,马,羊,鸡,狗,猪,');" type=button value=家肖 name=n_家肖> 
+<INPUT onclick="addText('鼠,虎,龙,猴,蛇,兔,');" type=button value=野肖 name=n_野肖> 
+<INPUT onclick="addText('兔,蛇,鸡,');" type=button value=琴 name=n_琴>
+<INPUT onclick="addText('鼠,牛,狗,');" type=button value=棋 name=n_棋>
+</div>
+</td>
+</tr>
+    <tr>
+<td>
+<div class="bs">
+<INPUT title=01,02,07,08,12,13,18,19,23,24,29,30,34,35,40,45,46, style="background-color: #FF0000;color: #FFF;" onclick="addText('红波,');" type=button value=红波 name=n_红波> 
+<INPUT title=03,04,09,10,14,15,20,25,26,31,36,37,41,42,47,48, onclick="addText('蓝波,');" style="background-color: #0000FF;color: #FFF;" type=button value=蓝波 name=n_蓝波>
+<INPUT title=05,06,11,16,17,21,22,27,28,32,33,38,39,43,44,49,  onclick="addText('绿波,');" style="background-color: #1E8449;color: #FFF;" type=button value=绿波 name=n_绿波>
+</div>
+</td>
+<td>
+<div class="ds" style="margin-bottom:5px;">
+<INPUT onclick="addText('牛,兔,龙,马,猴,猪,');" type=button value=天肖 name=n_天肖> 
+<INPUT onclick="addText('鼠,虎,蛇,羊,鸡,狗,');" type=button value=地肖 name=n_地肖> 
+<INPUT onclick="addText('鼠,牛,虎,龙,马,猴,狗,');" type=button value=男肖 name=n_男肖>
+<INPUT onclick="addText('兔,蛇,羊,鸡,猪,');" type=button value=女肖 name=n_女肖>
+<INPUT onclick="addText('虎,龙,马,');" type=button value=书 name=n_书>
+<INPUT onclick="addText('羊,猴,猪,');" type=button value=画 name=n_画>
+</div>
+<div class="ds">
+<INPUT title=01,07,13,19,23,29,35,45, onclick="addText('红单,');" type=button value=红单 name=n_红单 style="background-color: #FF0000;color: #FFF;"> 
+<INPUT title=02,08,12,18,24,30,34,40,46, onclick="addText('红双,');" type=button value=红双 name=n_红双 style="background-color: #FF0000;color: #FFF;"> 
+<INPUT title=03,09,15,25,31,37,41,47, onclick="addText('蓝单,');" type=button value=蓝单 name=n_兰单 style="background-color: #0000FF;color: #FFF;">
+<INPUT title=04,10,14,20,26,36,42,48, onclick="addText('蓝双,');" type=button value=蓝双 name=n_兰双 style="background-color: #0000FF;color: #FFF;">
+<INPUT title=05,11,17,21,27,33,39,43,49, onclick="addText('绿单,');" type=button value=绿单 name=n_绿单 style="background-color: #1E8449;color: #FFF;"> 
+<INPUT title=06,16,22,28,32,38,44, onclick="addText('绿双,');" type=button value=绿双 name=n_绿双 style="background-color: #1E8449;color: #FFF;">
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="left sx">
+<INPUT title=05,17,29,41, onclick="addText('鼠,');" type=button value=鼠 name=n_鼠>
+<INPUT title=04,16,28,40, onclick="addText('牛,');" type=button value=牛 name=n_牛> 
+<INPUT title=03,15,27,39, onclick="addText('虎,');" type=button value=虎 name=n_虎> 
+<INPUT title=02,14,26,38, onclick="addText('兔,');" type=button value=兔 name=n_兔>
+</div>
+<div class="right ds">
+<INPUT title=01,02,03,04,05,06,07,08,09, onclick="addText('0头,');" type=button value=0头 name=n_0头> 
+<INPUT title=10,11,12,13,14,15,16,17,18,19, onclick="addText('1头,');" type=button value=1头 name=n_1头> 
+<INPUT title=20,21,22,23,24,25,26,27,28,29, onclick="addText('2头,');" type=button value=2头 name=n_2头> 
+<INPUT title=30,31,32,33,34,35,36,37,38,39, onclick="addText('3头,');" type=button value=3头 name=n_3头> 
+<INPUT title=40,41,42,43,44,45,46,47,48,49, onclick="addText('4头,');" type=button value=4头 name=n_4头>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="left sx">
+<INPUT title=01,13,25,37,49, onclick="addText('龙,');" type=button value=龙 name=n_龙> 
+<INPUT title=12,24,36,48, onclick="addText('蛇,');" type=button value=蛇 name=n_蛇> 
+<INPUT title=11,23,35,47, onclick="addText('马,');" type=button value=马 name=n_马>
+<INPUT title=10,22,34,46, onclick="addText('羊,');" type=button value=羊 name=n_羊>
+</div>
+<div class="right ws">
+<INPUT title=10,20,30,40, onclick="addText('0尾,');" type=button value=0尾 name=n_0尾> 
+<INPUT title=01,11,21,31,41, onclick="addText('1尾,');" type=button value=1尾 name=n_1尾> 
+<INPUT title=02,12,22,32,42, onclick="addText('2尾,');" type=button value=2尾 name=n_2尾> 
+<INPUT title=03,13,23,33,43, onclick="addText('3尾,');" type=button value=3尾 name=n_3尾> 
+<INPUT title=04,14,24,34,44, onclick="addText('4尾,');" type=button value=4尾 name=n_4尾>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="left sx">
+<INPUT title=09,21,33,45, onclick="addText('猴,');" type=button value=猴 name=n_猴> 
+<INPUT title=08,20,32,44, onclick="addText('鸡,');" type=button value=鸡 name=n_鸡> 
+<INPUT title=07,19,31,43, onclick="addText('狗,');" type=button value=狗 name=n_狗> 
+<INPUT title=06,18,30,42, onclick="addText('猪,');" type=button value=猪 name=n_猪>
+</div>
+<div class="right ws">
+<INPUT title=05,15,25,35,45, onclick="addText('5尾,');" type=button value=5尾 name=n_5尾>
+<INPUT title=06,16,26,36,46, onclick="addText('6尾,');" type=button value=6尾 name=n_6尾> 
+<INPUT title=07,17,27,37,47, onclick="addText('7尾,');" type=button value=7尾 name=n_7尾> 
+<INPUT title=08,18,28,38,48, onclick="addText('8尾,');" type=button value=8尾 name=n_8尾> 
+<INPUT title=09,19,29,39,49, onclick="addText('9尾,');" type=button value=9尾 name=n_9尾>
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<ul class="hidden">
+<table>
+<tr>
+<td class="ds">
+<INPUT title=01,10, onclick="addText('1合,');" type=button value=1合 name=n_1合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=02,11,20, onclick="addText('2合,');" type=button value=2合 name=n_2合 style="background-color:rgba(0,0,0,0.05);"> 
+
+<INPUT title=03,12,21,30, onclick="addText('3合,');" type=button value=3合 name=n_3合 style="background-color:rgba(0,0,0,0.05);"> 
+
+<INPUT title=04,13,22,31,40, onclick="addText('4合,');" type=button value=4合 name=n_4合 style="background-color:rgba(0,0,0,0.05);"> 
+
+<INPUT title=05,14,23,32,41, onclick="addText('5合,');" type=button value=5合 name=n_5合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=07,08,09,16,17,18,19,25,26,27,28,29,34,35,36,37,38,39,43,44,45,46,47,48,49, onclick="addText('合大,');" type=button value=合大 name=n_合大> 
+<INPUT title=05,06,07,08,09,15,16,17,18,19,25,26,27,28,29,35,36,37,38,39,45,46,47,48,49, onclick="addText('尾大,');" type=button value=尾大 name=n_尾大> 
+<INPUT title=25,27,29,31,33,35,37,39,41,43,45,47,49, onclick="addText('大单,');" type=button value=大单 name=n_大单> 
+<INPUT title=26,28,30,32,34,36,38,40,42,44,46,48, onclick="addText('大双,');" type=button value=大双 name=n_大双>
+</td>
+</tr>
+<tr>
+<td class="ds">
+<INPUT title=06,15,24,33,42, onclick="addText('6合,');" type=button value=6合 name=n_6合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=07,16,25,34,43, onclick="addText('7合,');" type=button value=7合 name=n_7合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=08,17,26,35,44, onclick="addText('8合,');" type=button value=8合 name=n_8合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=09,18,27,36,45, onclick="addText('9合,');" type=button value=9合 name=n_9合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=19,28,37,46, onclick="addText('10合,');" type=button value=10合 name=n_10合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=01,02,03,04,05,06,10,11,12,13,14,15,20,21,22,23,24,30,31,32,33,40,41,42, onclick="addText('合小,');" type=button value=合小 name=n_合小> 
+<INPUT title=01,02,03,04,10,11,12,13,14,20,21,22,23,24,30,31,32,33,34,40,41,42,43,44, onclick="addText('尾小,');" type=button value=尾小 name=n_尾小> 
+<INPUT title=01,03,05,07,09,11,13,15,17,19,21,23, onclick="addText('小单,');" type=button value=小单 name=n_小单> 
+<INPUT title=02,04,06,08,10,12,14,16,18,20,22,24, onclick="addText('小双,');" type=button value=小双 name=n_小双>
+</td>
+</tr>
+<tr>
+<td class="ds">
+<INPUT title=29,38,47, onclick="addText('11合,');" type=button value=11合 name=n_11合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=39,48, onclick="addText('12合,');" type=button value=12合 name=n_12合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=49, onclick="addText('13合,');" type=button value=13合 name=n_13合 style="background-color:rgba(0,0,0,0.05);">
+<INPUT onclick="addText('兔,龙,蛇,马,羊,猴,');" type=button value=日肖 name=n_日肖>
+<INPUT onclick="addText('鼠,牛,虎,鸡,狗,猪,');" type=button value=夜肖 name=n_夜肖>
+<INPUT onclick="addText('鼠,牛,龙,蛇,猴,鸡,');" type=button value=左肖 name=n_左肖>
+<INPUT onclick="addText('虎,兔,马,羊,狗,猪,');" type=button value=右肖 name=n_右肖>
+<INPUT onclick="addText('兔,龙,蛇,马,羊,鸡,');" type=button value=美肖 name=n_美肖>
+<INPUT onclick="addText('鼠,牛,虎,猴,狗,猪,');" type=button value=丑肖 name=n_丑肖>
+</td>
+</tr>
+<tr>
+<td class="ds">
+<INPUT onclick="addText('猴,鸡,');" type=button value=金肖 name=n_金肖>
+<INPUT onclick="addText('虎,兔,');" type=button value=木肖 name=n_木肖>
+<INPUT onclick="addText('鼠,猪,');" type=button value=水肖 name=n_水肖>
+<INPUT onclick="addText('马,蛇,');" type=button value=火肖 name=n_火肖>
+<INPUT onclick="addText('牛,龙,羊,狗,');" type=button value=土肖 name=n_土肖>
+<INPUT onclick="addText('鼠,龙,蛇,马,猪,狗,');" type=button value=阴肖 name=n_阴肖>
+<INPUT onclick="addText('牛,虎,兔,羊,猴,鸡,');" type=button value=阳肖 name=n_阳肖>
+<INPUT onclick="addText('兔,龙,蛇,马,羊,鸡,');" type=button value=吉肖 name=n_吉肖>
+<INPUT onclick="addText('鼠,牛,虎,猴,狗,猪,');" type=button value=凶肖 name=n_凶肖>
+</td>
+</tr>
+<tr>
+<td class="hs">
+<INPUT title=19,28,37,46, onclick="addText('0合尾,');" type=button value=0合尾 name=n_0合尾> 
+<INPUT title=01,10,29,38,47, onclick="addText('1合尾,');" type=button value=1合尾 name=n_1合尾> 
+
+<INPUT title=02,11,20,39,48, onclick="addText('2合尾,');" type=button value=2合尾 name=n_2合尾> 
+
+<INPUT title=03,12,21,30,49, onclick="addText('3合尾,');" type=button value=3合尾 name=n_3合尾> 
+
+<INPUT title=04,13,22,31,40, onclick="addText('4合尾,');" type=button value=4合尾 name=n_4合尾>
+<INPUT onclick="addText('兔,虎,龙,');" type=button value=春 name=n_春 style="background-color:#fff;width: 33px;">
+<INPUT onclick="addText('马,蛇,羊,');" type=button value=夏 name=n_夏 style="background-color:#fff;width: 33px;">
+<INPUT onclick="addText('牛,虎,马,狗,猪,');" type=button value=胆大 name=n_胆大 style="background-color:#fff;width: 33px;">
+</td>
+</tr>
+<tr>
+<td class="hs">
+<INPUT title=05,14,23,32,41, onclick="addText('5合尾,');" type=button value=5合尾 name=n_5合尾> 
+ <INPUT title=06,15,24,33,42, onclick="addText('6合尾,');" type=button value=6合尾 name=n_6合尾>
+ <INPUT title=07,16,25,34,43, onclick="addText('7合尾,');" type=button value=7合尾 name=n_7合尾>
+<INPUT title=08,17,26,35,44, onclick="addText('8合尾,');" type=button value=8合尾 name=n_8合尾> 
+<INPUT title=09,18,27,36,45, onclick="addText('9合尾,');" type=button value=9合尾 name=n_9合尾>
+<INPUT onclick="addText('鸡,猴,狗,');" type=button value=秋 name=n_秋 style="background-color:#fff;width: 33px;">
+<INPUT onclick="addText('鼠,牛,猪,');" type=button value=冬 name=n_冬 style="background-color:#fff;width: 33px;">
+<INPUT onclick="addText('鼠,兔,龙,羊,鸡,');" type=button value=胆小 name=n_胆小 style="background-color:#fff;width: 33px;">
+</td>
+</tr>
+<tr>
+<td class="hs">
+<INPUT title=01,03,05,07,09, onclick="addText('0头单,');" type=button value=0头单 name=n_0头单> 
+<INPUT title=11,13,15,17,19, onclick="addText('1头单,');" type=button value=1头单 name=n_1头单> 
+<INPUT title=21,23,25,27,29, onclick="addText('2头单,');" type=button value=2头单 name=n_2头单> 
+<INPUT title=31,33,35,37,39, onclick="addText('3头单,');" type=button value=3头单 name=n_3头单> 
+<INPUT title=41,43,45,47,49, onclick="addText('4头单,');" type=button value=4头单 name=n_4头单>
+<INPUT onclick="addText('鼠,兔,马,鸡,');" type=button value=天 name=n_天 style="background-color:#fff;width: 33px;">
+<INPUT onclick="addText('牛,龙,羊,狗,');" type=button value=地 name=n_地 style="background-color:#fff;width: 33px;">
+<INPUT onclick="addText('虎,蛇,猴,猪,');" type=button value=人 name=n_人 style="background-color:#fff;width: 33px;">
+</td>
+</tr>
+<tr>
+<td class="hs">
+<INPUT title=02,04,06,08, onclick="addText('0头双,');" type=button value=0头双 name=n_0头双> 
+<INPUT title=10,12,14,16,18, onclick="addText('1头双,');" type=button value=1头双 name=n_1头双> 
+<INPUT title=20,22,24,26,28, onclick="addText('2头双,');" type=button value=2头双 name=n_2头双> 
+<INPUT title=30,32,34,36,38, onclick="addText('3头双,');" type=button value=3头双 name=n_3头双> 
+<INPUT title=40,42,44,46,48, onclick="addText('4头双,');" type=button value=4头双 name=n_4头双>
+</td>
+</tr>
+<tr>
+<td class="ds">
+<INPUT title=01,02,03,04,05,06,07,08,09, onclick="addText('1门,');" type=button value=1门 name=n_1门> 
+<INPUT title=10,11,12,13,14,15,16,17,18, onclick="addText('2门,');" type=button value=2门 name=n_2门> 
+<INPUT title=19,20,21,22,23,24,25,26,27, onclick="addText('3门,');" type=button value=3门 name=n_3门> 
+<INPUT title=28,29,30,31,32,33,34,35,36,37, onclick="addText('4门,');" type=button value=4门 name=n_4门> 
+<INPUT title=38,39,40,41,42,43,44,45,46,47,48,49, onclick="addText('5门,');" type=button value=5门 name=n_5门>
+<INPUT title=31,32,33,34,35,36,37,38,39,40,41,42, onclick="addText('东段,');" type=button value=东段 name=n_东段>
+<INPUT title=07,08,09,10,11,12,13,14,15,16,17,18, onclick="addText('西段,');" type=button value=西段 name=n_西段>
+<INPUT title=19,20,21,22,23,24,25,26,27,28,29,30, onclick="addText('南段,');" type=button value=南段 name=n_南段>
+<INPUT title=01,02,03,04,05,06,43,44,45,46,47,48,49, onclick="addText('北段,');" type=button value=北段 name=n_北段>
+</td>
+</tr>
+</table>
+</ul>
+</div>
+<div class="tjhm">
+<div class="tj"><div class="t"><div class="tjsrico"></div>输入数据 </div><div class="tjspan"><INPUT onclick=resetinput(); type=button value=清空></div></div>
+<div class="shuru"><textarea name=inputtxt wrap=PHYSICAL style="height:173px;" placeholder="输入数据..." onClick="makeReadOnly()" id=nrname></textarea></div>
+<div class="tj"><div class="t"><div class="tjico"></div>统计结果 </div><div class="tjspan"><INPUT onclick=resetinputtj(); type=button value=清空 class="input"><INPUT type=button value=暂存 
+ onClick="div_none('a2');" name="a2" class="input"><INPUT  onclick="countma();" type=button value=号统><INPUT onclick="countstyle('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪');" type=button value=肖统></div></div>
+<div class="shuru"><div style="float: right;margin-top: 3px;margin-left: 70%;position: absolute;z-index:1;"><input type=button value=编辑 class="a" onClick="switchUser();"></input><input type=button value=复制 class="a" style="margin-left:5px;" onClick="copyName();"></input></div>
+      <textarea name=resultstxt style="height:118px;" wrap=PHYSICAL placeholder="统计结果…" readOnly=true id=tjname onpropertychange="setHeight(this);" onmouseover="setHeight(this);" 
+onpaste="setHeight(this);" oninput="setHeight(this);"></textarea>
+    </div>
+<!--暂存-->
+<div style="display:none;" class="a2">
+<div class="tj"><div class="t"><div class="tjsrico"></div>暂存 </div><div class="tjspan"><INPUT onclick=resetinputzc(); type=button value=清空 class="input"><INPUT  onclick="cunma();" type=button value=号统><INPUT onclick="cunqt('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪');" type=button value=肖统></div></div>
+<div class="shuru"><textarea name=zancuntxt wrap=PHYSICAL placeholder="暂存…" style="height:173px;" onClick="makeReadOnly();"></textarea>
+    </div></div>
+</div>
+<!---->
 </div>
 </div>
-<script>eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.3(\'<0 4="/1/7.1?\'+5.6()+\'"><\\/0>\');2.3(\'<0 4="/1/8.1?\'+5.6()+\'"><\\/0>\');',9,9,'script|js|document|write|src|Math|random|riqi|api'.split('|'),0,{}))</script>
+</div>
+</form>
+<div class="bbb"></div>
+<script type="text/javascript">eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1 d(){2.f.4=0,2.g.4=0}h.i=1(){5(6 e=2.7("j-8"),t=2.7("8").9("k"),o=e.9("l"),n=0;n<t.a;n++)t[n].b=n,t[n].m=1(){!1(e){5(6 n=0;n<t.a;n++)t[n].3="c p",o[n].3="q";t[e].3="c r",o[e].3="s",0}(u.b)}};',31,31,'|function|document|className|scrollTop|for|var|getElementById|list|getElementsByTagName|length|num|lan|topFunction||body|documentElement|window|onload|tab|li|ul|onmouseover|||bjb|hidden|bjh|show||this'.split('|'),0,{}))</script>
+<script type="text/javascript">eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('3 9(e){a t="#l";b o=1.c("m");o.d=e,o.2.f=t,1.5.g(o),o.p(),1.q("r"),1.5.s(o);b n=1.c("u");n.v="复制成功!",n.2.w="x",n.2.y="z",n.2.A="B%",n.2.f=t,n.2.C="#D",n.2.E="F",1.5.g(n),G(()=>{n.H()},I)}3 J(){9(1.6("7").d)}3 K(){1.6("7").L=!0}3 M(){N e=1.6("7");a t=e.h("4");i.j("切换前状态："+8(t)),k===t?e.O("4","4"):e.P("4");t=e.h("4");i.j("切换后状态："+8(t))}3 8(e){Q k===e?"读写":"只读"}',53,53,'|document|style|function|readonly|body|getElementById|tjname|getStatus|copyToClipboard|var|const|createElement|value||background|appendChild|getAttribute|console|log|null|ff00ff|textarea|||select|execCommand|copy|removeChild||div|textContent|position|fixed|bottom|20px|right|36|color|fff|padding|8px|setTimeout|remove|3e3|copyName|makeReadOnly|readOnly|switchUser|let|setAttribute|removeAttribute|return'.split('|'),0,{}))</script>
 <script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2 3(0){4.5.6="7"==0?"8.1":"9"==0?"a.1":"b"==0?"c.1":"d"==0?"e.1":"f"==0?"g.1":"h"==0?"i.1":"/"}',19,19,'t|html|function|get|window|location|href|xg|index|xa|xinao|la|laoao|cx|chaxun|tj|tongji|fs|fushi'.split('|'),0,{}))</script>
 <script>eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('5 g(e){7 n,t=3 8,t=h.j("k");l(i=0;i<t.m;i++)t[i].o==e&&("9"==(n=t[i]).4.6?n.4.6="":n.4.6="9")}5 2(e){e=e<p?"0"+e:e;q e}r(5(){7 e=3 b,n=e.u(),t=2(e.v()+1),a=2(e.w()),c=n+"-"+t+"-"+a,i=e.x(),s=e.y(),e=e.z(),e=(i=2(i))+":"+(s=2(s))+":"+(e=2(e)),c=n+"年"+t+"月"+a+"日 星期"+3 8("日","一","二","三","四","五","六")[3 b(c).A()];B.C="当前时间：<d 4=D:#f;E-F:G;>"+e+"</d>"+c},H);',44,44,'||check1|new|style|function|display|var|Array|none||Date||span|||div_none|document||getElementsByTagName|div|for|length||className|10|return|setInterval|||getFullYear|getMonth|getDate|getHours|getMinutes|getSeconds|getDay|shijian|innerHTML|color|margin|right|8px|1e3'.split('|'),0,{}))</script>
+<script language="javascript">eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('9 E(t){5(3 n=t.13(/[a-14-Z\\.\\s\\-、　。，；,\':：()【】〖〗＝=（）\\r\\n\\t]{1,}/g,","),r="",e=0;e<n.4;e++)S<n.H(e)&&n.H(e)<15?r+=T.U(n.H(e)-S):r+=T.U(n.H(e));I r}9 16(t){3 n=","+6.7.B.j;","!=n.F(n.4-1)?6.7.B.j+=","+t:6.7.B.j+=t,V()}9 17(){6.7.B.j=""}9 18(t){t.W.X=t.19+"1a",g()}9 1b(){6.7.C.j="",6.7.C.W.X="1c",g()}9 1d(){6.7.P.j=""}9 1e(t){}9 J(t){t=t||[];5(3 n={},r=0;r<t.4;r++){3 e=t[r];1f 0===n[e]&&(n[e]=1)}5(r y t.4=0,n)t[t.4]=r;I t}9 K(t,n){I t-n}9 Q(t){5(3 n=t.z(","),r=k q(1g),e=0;e<r.4;e++)r[e]=0;5(e=0;e<n.4;e++)r[1h(n[e],10)]+=1;5(3 o=k q,e=1;e<=Y;e++)o.A(r[e]);(o=J(o)).R(K);5(3 u=0,a="【期】统计结果：",e=0;e<o.4;e++){5(3 f=o[e],l="\\n〖"+f+"次〗",i=0,m=1;m<=Y;m++)r[m]==f&&(i+=1,m<10&&(m="0"+m),l+=m+",");a+=l+="（"+i+"个）",u+=+i*f}I(a+="")+"\\n〖总"+u+"个〗"}3 G="红绿蓝兰金木水火土鼠牛虎兔龙蛇马羊猴鸡狗猪大小单双";9 V(){3 t=6.7.B.j;8(0<t.4){3 n="",r=(t=E(t+=",")).L(/\\d{1,}\\b[^次码个头尾合门段余]/g);8(M!=r){3 e=(r.11(",")+",").L(/\\d{1,}/g);8(M!=e){k q;5(3 o=0;o<e.4;o++)(u="w"+e[o])y 6.N&&(n+=6.N[u].D)}}t=t.z(",");5(3 u,o=0;o<t.4;o++)8((u="w"+t[o])y 6.7)n+=6.7[u].D;O 5(3 a=2;a<u.4;a++){3 f=u.F(a);-1!=G.x(f)&&(n+=6.7["w"+f].D)}6.7.C.j=Q(n)}}9 1i(t){3 n=t.z(","),r=6.7.B.j;8(0<r.4){5(3 e=(r=E(r+",")).z(","),o=k q,u=0;u<e.4;u++){3 a="w"+e[u];8(a y 6.7)o.A(e[u]);O 5(3 f=2;f<a.4;f++){3 l=a.F(f);-1!=G.x(l)&&o.A(l)}}5(3 i=k q(n.4),u=0;u<n.4;u++)i[u]=0;5(f=0;f<o.4;f++)8(-1!=t.x(o[f]))5(u=0;u<n.4;u++){3 m=n[u],c=o[f];8(1==c.4&&-1!="红绿蓝".x(c)&&(c+="波"),m==c){i[u]+=1;12}}5(3 h=k q,u=0;u<n.4;u++)h.A(i[u]);(h=J(h)).R(K);5(3 v=0,g="【期】统计结果：",u=0;u<h.4;u++){5(3 s=h[u],d="\\n〖"+s+"次〗",p=0,f=0;f<n.4;f++)i[f]==s&&(p+=1,d+=n[f]+",");g+=d+="（"+p+"个）",v+=+p*s}g+="",6.7.C.j=g+"\\n〖总"+v+"个〗"}}9 1j(){3 t=6.7.P.j;8(0<t.4){3 n="",r=(t=E(t+=",")).L(/\\d{1,}\\b[^次码个头尾合门段余]/g);8(M!=r){3 e=(r.11(",")+",").L(/\\d{1,}/g);8(M!=e){k q;5(3 o=0;o<e.4;o++)(u="w"+e[o])y 6.N&&(n+=6.N[u].D)}}t=t.z(",");5(3 u,o=0;o<t.4;o++)8((u="w"+t[o])y 6.7)n+=6.7[u].D;O 5(3 a=2;a<u.4;a++){3 f=u.F(a);-1!=G.x(f)&&(n+=6.7["w"+f].D)}6.7.C.j=Q(n)}}9 1k(t){3 n=t.z(","),r=6.7.P.j;8(0<r.4){5(3 e=(r=E(r+",")).z(","),o=k q,u=0;u<e.4;u++){3 a="w"+e[u];8(a y 6.7)o.A(e[u]);O 5(3 f=2;f<a.4;f++){3 l=a.F(f);-1!=G.x(l)&&o.A(l)}}5(3 i=k q(n.4),u=0;u<n.4;u++)i[u]=0;5(f=0;f<o.4;f++)8(-1!=t.x(o[f]))5(u=0;u<n.4;u++){3 m=n[u],c=o[f];8(1==c.4&&-1!="红绿蓝".x(c)&&(c+="波"),m==c){i[u]+=1;12}}5(3 h=k q,u=0;u<n.4;u++)h.A(i[u]);(h=J(h)).R(K);5(3 v=0,g="【期】统计结果：",u=0;u<h.4;u++){5(3 s=h[u],d="\\n〖"+s+"次〗",p=0,f=0;f<n.4;f++)i[f]==s&&(p+=1,d+=n[f]+",");g+=d+="（"+p+"个）",v+=+p*s}g+="",6.7.C.j=g+"\\n〖总"+v+"个〗"}}',62,83,'|||var|length|for|document|form|if|function||||||||||value|new||||||Array||||||n_|indexOf|in|split|push|inputtxt|resultstxt|title|ToCDB|charAt|lianstr|charCodeAt|return|unique|compareNumbers|match|null|form2|else|zancuntxt|tongji|sort|65248|String|fromCharCode|countma|style|height|49|||join|break|replace|zA|65375|addText|resetinput|setHeight|scrollHeight|px|resetinputtj|100px|resetinputzc|strtoarr|void|50|parseInt|countstyle|cunma|cunqt'.split('|'),0,{}))</script>
+<script type="text/javascript">eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('5 0=2.6,7=2.8,9=-1<0.3("a")||-1<0.3("b"),4=!!0.c(/\\(i[^;]+;( d;)? e.+f g h/);4&&(j.k(".l").m.n="o");',25,25,'u||navigator|indexOf|isiOS|var|userAgent|app|appVersion|isAndroid|Android|Linux|match|U|CPU|Mac|OS|X||document|querySelector|bottom|style|paddingBottom|15px'.split('|'),0,{}))</script>
 </body>
 </html>
