@@ -157,6 +157,9 @@ color:#000;
 border-radius: 2px;
 background-color: #fff;color:#000;border:1px solid #FFA500;padding:1px 5px;font-size: 12px;
 }
+ .tjhm .shuru .f{
+float: right;margin-top: 3px;margin-left: 70%;position: absolute;z-index:1;
+}
  .tjhm .tj .tjspan input:hover,.tjhm .tj .tjspan .input:hover,.tjhm .shuru .a:hover {
 color: #FFD700;
 border-radius: 2px;
@@ -165,17 +168,29 @@ box-shadow: 0px 0px 3px 0px rgba(138,43,226,1);
  .tjhm textarea:hover {
 border: 1px solid #EE7942;
 }
- @media only screen and (max-width:359px){
+@media only screen and (max-width:359px){
 *{
 font-size: 13px;
 }
 #tab-list .ws input,#tab-list .ds input,#tab-list .sx input,#tab-list .bs input{
-width: 27.3px;
+width: 29px;
 font-size: 12px;
 }
 #tab-list .hs input{
-width: 30px;
+width: 33px;
 font-size: 12px;
+}
+.tjhm .tj .tjspan input{
+margin-left:5px;
+padding:5px 5px;
+}
+.tjhm .tj .tjspan .input{
+margin-left:5px;
+padding:2px 4px;
+font-size: 12px;
+}
+.tjhm .shuru .f{
+margin-left: 66%;
 }
 }
 </style>
@@ -530,7 +545,7 @@ font-size: 12px;
 <div class="shuru"><textarea name=inputtxt wrap=PHYSICAL style="height:173px;" placeholder="输入数据..." onClick="makeReadOnly()" id=nrname></textarea></div>
 <div class="tj"><div class="t"><div class="tjico"></div>统计结果 </div><div class="tjspan"><INPUT onclick=resetinputtj(); type=button value=清空 class="input"><INPUT type=button value=暂存 
  onClick="div_none('a2');" name="a2" class="input"><INPUT  onclick="countma();" type=button value=号统><INPUT onclick="countstyle('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪');" type=button value=肖统></div></div>
-<div class="shuru"><div style="float: right;margin-top: 3px;margin-left: 70%;position: absolute;z-index:1;"><input type=button value=编辑 class="a" onClick="switchUser();"></input><input type=button value=复制 class="a" style="margin-left:5px;" onClick="copyName();"></input></div>
+<div class="shuru"><div class="f"><input type=button value=编辑 class="a" onClick="switchUser();"></input><input type=button value=复制 class="a" style="margin-left:5px;" onClick="copyName();"></input></div>
       <textarea name=resultstxt style="height:118px;" wrap=PHYSICAL placeholder="统计结果…" readOnly=true id=tjname onpropertychange="setHeight(this);" onmouseover="setHeight(this);" 
 onpaste="setHeight(this);" oninput="setHeight(this);"></textarea>
     </div>
