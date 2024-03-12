@@ -129,10 +129,6 @@ background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAY
 background-repeat:no-repeat;background-size:100%;
 }
 @media only screen and (max-width:359px){
-.indexkj{
-margin:0;
-padding:0;
-}
 .indexkj .kj-right{
 margin:3px 3px 0 0;
 padding:0;
