@@ -644,10 +644,6 @@ text-align: center;
     line-height: 14px;
 }
 @media only screen and (max-width:359px){
-.indexkj{
-margin:0;
-padding:0;
-}
 .indexkj .kj-right{
 margin:3px 3px 0 0;
 padding:0;
