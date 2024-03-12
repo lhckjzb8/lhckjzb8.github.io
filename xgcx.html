@@ -211,6 +211,27 @@ background-color: rgb(255, 165, 0, 0.3);
 text-align: center; 
     text-decoration: none;color: RosyBrown;
 }
+@media only screen and (max-width:359px){
+*{
+font-size: 12px;
+}
+.qtjl a{
+font-size: 13px;}
+.dqjl,.qtjl{
+font-size: 13px;
+padding:5px 8px;
+margin-right: 5%;
+  }
+.hao li,.q li{
+font-size: 12px;
+}
+.color li{
+padding:3px 8px;font-size: 12px;
+}
+.lan input{
+margin:0 0.5px;
+}
+}
 </style>
 </head>
 <body>
@@ -228,7 +249,9 @@ text-align: center;
 </div>
 </div>
 </header>
-<div class="index"><div style="padding:10px 8px;">
+<div class="index">
+<div class="indexk">
+<div class="indexkj">
 <div class="cxzs">
 <div class="color" onclick="se();"><li class="red">红色</li><li class="black">黑色</li><li class="blue">蓝色</li><li class="orange">金色</li><li class="mediumorchid">紫色</li><li class="salmon">粉色</li><li class="qc" id="qc">上色</li></div>
 <div class="lan">
@@ -299,6 +322,7 @@ text-align: center;
 <div id="jl1977"></div>
 <div id="jl1976"></div>
 </div>
+    </div>
 <!--加载动画-->
     <div class="loading-mask" id="loading">
       <div class="loading-box">
