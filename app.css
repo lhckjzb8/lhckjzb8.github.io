@@ -639,3 +639,48 @@ text-align: center;
     font-size: 12px;
     line-height: 14px;
 }
+@media only screen and (max-width:359px){
+.indexkj{
+margin:0;
+padding:0;
+}
+.indexkj .kj-right{
+margin:3px 3px 0 0;
+padding:0;
+}
+.indexkj .kj-sj{
+margin:0;
+margin-left:5px;
+padding:0 0 5px 0;
+}
+.indexkj .kj-sj .h{
+font-size: 13px;
+}
+.indexkj .kj-hm h2,.indexkj .kj-hm h2 span{
+font-size: 18px;
+margin-top: 5px;
+}
+.indexkj .kj-hm .sx{
+margin-left:-3.7px;
+}
+.hm,.hm-blue,.hm-red,.hm-green{
+  width: 35px;
+  height: 35px;
+}
+.indexkj .kj .kjjl .kjjlspan span{
+margin:0 3px;
+padding:3px 5px;
+}
+.lotery-kj .lotery-kj-sj{
+padding-left:1px;
+}
+.indexkj .nr{
+
+}
+.holidayCalendar{
+transform: scale(0.85);
+}
+*{
+font-size: 13px;
+}
+}
