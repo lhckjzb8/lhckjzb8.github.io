@@ -305,7 +305,7 @@ float: left;
 float: right;
 }
 .lotery-kj .lotery-kj-sj{
-margin-left:1.333vw;line-height: 7.333vw;font-size: 3.8vw;
+margin-left:1.333vw;line-height: 7.333vw;font-size: 3.8vw;margin-top:0.355vw;
 }
 .lotery-kj .lotery-kj-sj .lotery-h{
 color:#f43;margin:0 0.5px;
@@ -318,7 +318,7 @@ width: 70%;
 display: inline-block;
 margin:0 1.333vw 0 0.333vw;
 }
-.lotery-kj .lotery-kj-hm h2{width: 100%;margin-top: 1.18vw;margin-left:-0.63vw;font-size: 4.26vw; text-align: center;font-weight:normal;}
+.lotery-kj .lotery-kj-hm h2{width: 100%;margin-top: 1.18vw;margin-left:-0.66vw;font-size: 4.5vw; text-align: center;font-weight:normal;}
 .lotery-kj .lotery-kj-hm li{list-style-type: none;}
 .lotery-kj .lotery-kj-hm .lotery-sx{width: 8vw;line-height: 6.933vw;text-align: center;margin-left:-0.3vw;font-size: 3.8vw;}
 .lotery-kj p{
