@@ -31,7 +31,7 @@ display: inline-block;
 }
 #list li{
 width: 16vw;
- font-size: 4vw;
+font-size: 4vw;
 text-align: center;
 }
  #tab-list{
@@ -58,7 +58,7 @@ text-align: center;
 font-size: 3.733vw;
 padding: 0;
 border-radius: 2px;
- color:#000;
+color:#000;
  }
 table{
 width: 100%;
@@ -309,7 +309,7 @@ border: 1px solid #EE7942;
 <INPUT style="background-color: #1E8449;color: #FFF;" onclick="addText('牛,龙,羊,狗,');" type=button value=绿肖 name=n_绿肖>
 </div>
 <div class="right ds">
- <INPUT onclick="addText('鼠,虎,龙,马,猴,狗,');" type=button value=单肖 name=n_单肖>
+<INPUT onclick="addText('鼠,虎,龙,马,猴,狗,');" type=button value=单肖 name=n_单肖>
 <INPUT onclick="addText('牛,兔,蛇,羊,鸡,猪,');" type=button value=双肖 name=n_双肖>
 <INPUT onclick="addText('牛,马,羊,鸡,狗,猪,');" type=button value=家肖 name=n_家肖> 
 <INPUT onclick="addText('鼠,虎,龙,猴,蛇,兔,');" type=button value=野肖 name=n_野肖> 
@@ -327,7 +327,7 @@ border: 1px solid #EE7942;
 </div>
 </td>
 <td>
- <div class="right">
+<div class="right">
 <div class="ds" style="margin-bottom:5px;">
 <INPUT onclick="addText('牛,兔,龙,马,猴,猪,');" type=button value=天肖 name=n_天肖> 
 <INPUT onclick="addText('鼠,虎,蛇,羊,鸡,狗,');" type=button value=地肖 name=n_地肖> 
@@ -344,7 +344,7 @@ border: 1px solid #EE7942;
 <INPUT title=05,11,17,21,27,33,39,43,49, onclick="addText('绿单,');" type=button value=绿单 name=n_绿单 style="background-color: #1E8449;color: #FFF;"> 
 <INPUT title=06,16,22,28,32,38,44, onclick="addText('绿双,');" type=button value=绿双 name=n_绿双 style="background-color: #1E8449;color: #FFF;">
 </div>
-  </div>
+</div>
 </td>
 </tr>
 <tr>
@@ -404,118 +404,148 @@ border: 1px solid #EE7942;
 <table>
 <tr>
 <td class="ds">
+<div class="left">
 <INPUT title=01,10, onclick="addText('1合,');" type=button value=1合 name=n_1合 style="background-color:rgba(0,0,0,0.05);"> 
 <INPUT title=02,11,20, onclick="addText('2合,');" type=button value=2合 name=n_2合 style="background-color:rgba(0,0,0,0.05);"> 
-
 <INPUT title=03,12,21,30, onclick="addText('3合,');" type=button value=3合 name=n_3合 style="background-color:rgba(0,0,0,0.05);"> 
-
 <INPUT title=04,13,22,31,40, onclick="addText('4合,');" type=button value=4合 name=n_4合 style="background-color:rgba(0,0,0,0.05);"> 
-
-<INPUT title=05,14,23,32,41, onclick="addText('5合,');" type=button value=5合 name=n_5合 style="background-color:rgba(0,0,0,0.05);"> 
+<INPUT title=05,14,23,32,41, onclick="addText('5合,');" type=button value=5合 name=n_5合 style="background-color:rgba(0,0,0,0.05);">
+</div>
+<div class="right">
 <INPUT title=07,08,09,16,17,18,19,25,26,27,28,29,34,35,36,37,38,39,43,44,45,46,47,48,49, onclick="addText('合大,');" type=button value=合大 name=n_合大> 
 <INPUT title=05,06,07,08,09,15,16,17,18,19,25,26,27,28,29,35,36,37,38,39,45,46,47,48,49, onclick="addText('尾大,');" type=button value=尾大 name=n_尾大> 
 <INPUT title=25,27,29,31,33,35,37,39,41,43,45,47,49, onclick="addText('大单,');" type=button value=大单 name=n_大单> 
 <INPUT title=26,28,30,32,34,36,38,40,42,44,46,48, onclick="addText('大双,');" type=button value=大双 name=n_大双>
+</div>
 </td>
 </tr>
 <tr>
 <td class="ds">
+<div class="left">
 <INPUT title=06,15,24,33,42, onclick="addText('6合,');" type=button value=6合 name=n_6合 style="background-color:rgba(0,0,0,0.05);"> 
 <INPUT title=07,16,25,34,43, onclick="addText('7合,');" type=button value=7合 name=n_7合 style="background-color:rgba(0,0,0,0.05);"> 
 <INPUT title=08,17,26,35,44, onclick="addText('8合,');" type=button value=8合 name=n_8合 style="background-color:rgba(0,0,0,0.05);"> 
 <INPUT title=09,18,27,36,45, onclick="addText('9合,');" type=button value=9合 name=n_9合 style="background-color:rgba(0,0,0,0.05);"> 
 <INPUT title=19,28,37,46, onclick="addText('10合,');" type=button value=10合 name=n_10合 style="background-color:rgba(0,0,0,0.05);"> 
+</div>
+<div class="right">
 <INPUT title=01,02,03,04,05,06,10,11,12,13,14,15,20,21,22,23,24,30,31,32,33,40,41,42, onclick="addText('合小,');" type=button value=合小 name=n_合小> 
 <INPUT title=01,02,03,04,10,11,12,13,14,20,21,22,23,24,30,31,32,33,34,40,41,42,43,44, onclick="addText('尾小,');" type=button value=尾小 name=n_尾小> 
 <INPUT title=01,03,05,07,09,11,13,15,17,19,21,23, onclick="addText('小单,');" type=button value=小单 name=n_小单> 
 <INPUT title=02,04,06,08,10,12,14,16,18,20,22,24, onclick="addText('小双,');" type=button value=小双 name=n_小双>
+</div>
 </td>
 </tr>
 <tr>
 <td class="ds">
+<div class="left">
 <INPUT title=29,38,47, onclick="addText('11合,');" type=button value=11合 name=n_11合 style="background-color:rgba(0,0,0,0.05);"> 
 <INPUT title=39,48, onclick="addText('12合,');" type=button value=12合 name=n_12合 style="background-color:rgba(0,0,0,0.05);"> 
 <INPUT title=49, onclick="addText('13合,');" type=button value=13合 name=n_13合 style="background-color:rgba(0,0,0,0.05);">
+</div>
+<div class="right">
 <INPUT onclick="addText('兔,龙,蛇,马,羊,猴,');" type=button value=日肖 name=n_日肖>
 <INPUT onclick="addText('鼠,牛,虎,鸡,狗,猪,');" type=button value=夜肖 name=n_夜肖>
 <INPUT onclick="addText('鼠,牛,龙,蛇,猴,鸡,');" type=button value=左肖 name=n_左肖>
 <INPUT onclick="addText('虎,兔,马,羊,狗,猪,');" type=button value=右肖 name=n_右肖>
 <INPUT onclick="addText('兔,龙,蛇,马,羊,鸡,');" type=button value=美肖 name=n_美肖>
 <INPUT onclick="addText('鼠,牛,虎,猴,狗,猪,');" type=button value=丑肖 name=n_丑肖>
+</div>
 </td>
 </tr>
 <tr>
 <td class="ds">
+<div class="left">
 <INPUT onclick="addText('猴,鸡,');" type=button value=金肖 name=n_金肖>
 <INPUT onclick="addText('虎,兔,');" type=button value=木肖 name=n_木肖>
 <INPUT onclick="addText('鼠,猪,');" type=button value=水肖 name=n_水肖>
 <INPUT onclick="addText('马,蛇,');" type=button value=火肖 name=n_火肖>
 <INPUT onclick="addText('牛,龙,羊,狗,');" type=button value=土肖 name=n_土肖>
+</div>
+<div class="right">
 <INPUT onclick="addText('鼠,龙,蛇,马,猪,狗,');" type=button value=阴肖 name=n_阴肖>
 <INPUT onclick="addText('牛,虎,兔,羊,猴,鸡,');" type=button value=阳肖 name=n_阳肖>
 <INPUT onclick="addText('兔,龙,蛇,马,羊,鸡,');" type=button value=吉肖 name=n_吉肖>
 <INPUT onclick="addText('鼠,牛,虎,猴,狗,猪,');" type=button value=凶肖 name=n_凶肖>
+</div>
 </td>
 </tr>
 <tr>
 <td class="hs">
+<div class="left">
 <INPUT title=19,28,37,46, onclick="addText('0合尾,');" type=button value=0合尾 name=n_0合尾> 
 <INPUT title=01,10,29,38,47, onclick="addText('1合尾,');" type=button value=1合尾 name=n_1合尾> 
-
 <INPUT title=02,11,20,39,48, onclick="addText('2合尾,');" type=button value=2合尾 name=n_2合尾> 
-
 <INPUT title=03,12,21,30,49, onclick="addText('3合尾,');" type=button value=3合尾 name=n_3合尾> 
-
 <INPUT title=04,13,22,31,40, onclick="addText('4合尾,');" type=button value=4合尾 name=n_4合尾>
+</div>
+<div class="right">
 <INPUT onclick="addText('兔,虎,龙,');" type=button value=春 name=n_春 style="background-color:#fff;width: 9.08vw;">
 <INPUT onclick="addText('马,蛇,羊,');" type=button value=夏 name=n_夏 style="background-color:#fff;width: 9.08vw;">
 <INPUT onclick="addText('牛,虎,马,狗,猪,');" type=button value=胆大 name=n_胆大 style="background-color:#fff;width: 9.08vw;">
+</div>
 </td>
 </tr>
 <tr>
 <td class="hs">
+<div class="left">
 <INPUT title=05,14,23,32,41, onclick="addText('5合尾,');" type=button value=5合尾 name=n_5合尾> 
  <INPUT title=06,15,24,33,42, onclick="addText('6合尾,');" type=button value=6合尾 name=n_6合尾>
  <INPUT title=07,16,25,34,43, onclick="addText('7合尾,');" type=button value=7合尾 name=n_7合尾>
 <INPUT title=08,17,26,35,44, onclick="addText('8合尾,');" type=button value=8合尾 name=n_8合尾> 
 <INPUT title=09,18,27,36,45, onclick="addText('9合尾,');" type=button value=9合尾 name=n_9合尾>
+</div>
+<div class="right">
 <INPUT onclick="addText('鸡,猴,狗,');" type=button value=秋 name=n_秋 style="background-color:#fff;width: 9.08vw;">
 <INPUT onclick="addText('鼠,牛,猪,');" type=button value=冬 name=n_冬 style="background-color:#fff;width: 9.08vw;">
 <INPUT onclick="addText('鼠,兔,龙,羊,鸡,');" type=button value=胆小 name=n_胆小 style="background-color:#fff;width: 9.08vw;">
+</div>
 </td>
 </tr>
 <tr>
 <td class="hs">
+<div class="left">
 <INPUT title=01,03,05,07,09, onclick="addText('0头单,');" type=button value=0头单 name=n_0头单> 
 <INPUT title=11,13,15,17,19, onclick="addText('1头单,');" type=button value=1头单 name=n_1头单> 
 <INPUT title=21,23,25,27,29, onclick="addText('2头单,');" type=button value=2头单 name=n_2头单> 
 <INPUT title=31,33,35,37,39, onclick="addText('3头单,');" type=button value=3头单 name=n_3头单> 
 <INPUT title=41,43,45,47,49, onclick="addText('4头单,');" type=button value=4头单 name=n_4头单>
+</div>
+<div class="right">
 <INPUT onclick="addText('鼠,兔,马,鸡,');" type=button value=天 name=n_天 style="background-color:#fff;width: 9.08vw;">
 <INPUT onclick="addText('牛,龙,羊,狗,');" type=button value=地 name=n_地 style="background-color:#fff;width: 9.08vw;">
 <INPUT onclick="addText('虎,蛇,猴,猪,');" type=button value=人 name=n_人 style="background-color:#fff;width: 9.08vw;">
+</div>
 </td>
 </tr>
 <tr>
 <td class="hs">
+<div class="left">
 <INPUT title=02,04,06,08, onclick="addText('0头双,');" type=button value=0头双 name=n_0头双> 
 <INPUT title=10,12,14,16,18, onclick="addText('1头双,');" type=button value=1头双 name=n_1头双> 
 <INPUT title=20,22,24,26,28, onclick="addText('2头双,');" type=button value=2头双 name=n_2头双> 
 <INPUT title=30,32,34,36,38, onclick="addText('3头双,');" type=button value=3头双 name=n_3头双> 
 <INPUT title=40,42,44,46,48, onclick="addText('4头双,');" type=button value=4头双 name=n_4头双>
+</div>
+<div class="right">
+</div>
 </td>
 </tr>
 <tr>
 <td class="ds">
+<div class="left">
 <INPUT title=01,02,03,04,05,06,07,08,09, onclick="addText('1门,');" type=button value=1门 name=n_1门> 
 <INPUT title=10,11,12,13,14,15,16,17,18, onclick="addText('2门,');" type=button value=2门 name=n_2门> 
 <INPUT title=19,20,21,22,23,24,25,26,27, onclick="addText('3门,');" type=button value=3门 name=n_3门> 
 <INPUT title=28,29,30,31,32,33,34,35,36,37, onclick="addText('4门,');" type=button value=4门 name=n_4门> 
 <INPUT title=38,39,40,41,42,43,44,45,46,47,48,49, onclick="addText('5门,');" type=button value=5门 name=n_5门>
+</div>
+<div class="right">
 <INPUT title=31,32,33,34,35,36,37,38,39,40,41,42, onclick="addText('东段,');" type=button value=东段 name=n_东段>
 <INPUT title=07,08,09,10,11,12,13,14,15,16,17,18, onclick="addText('西段,');" type=button value=西段 name=n_西段>
 <INPUT title=19,20,21,22,23,24,25,26,27,28,29,30, onclick="addText('南段,');" type=button value=南段 name=n_南段>
 <INPUT title=01,02,03,04,05,06,43,44,45,46,47,48,49, onclick="addText('北段,');" type=button value=北段 name=n_北段>
+</div>
 </td>
 </tr>
 </table>
