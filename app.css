@@ -15,7 +15,7 @@ margin:0;
 padding:0;
 background-color: #eff1f1;
 font-family:Arial,Helvetica,sans-serif;
-font-size: 4vw;
+font-size: 4.25vw;
 width: 100%;
 height:100%;
 }
@@ -148,7 +148,7 @@ float: left;color:#fff;
 header .topright{
 float: right;
 }
-header .topright span{position:absolute;width:6.4vw;height:8.8vw;color:#fff;}
+header .topright span{position:absolute;width:6.6vw;height:8.8vw;color:#fff;}
 header .topright span.menu{top:1.866vw;right:3vw;background-size:8vw auto;-webkit-background-size:8vw auto;background-position:0 -13.4vw}
 header .menu-list{
 position:absolute;
@@ -157,7 +157,7 @@ right:2.4vw;
 z-index:1001;
 background-color: #fff;
 background-image: linear-gradient(rgba(255,0,0,0.01), rgba(255,0,0,0.06), rgba(255,0,0,0.08));
-width: 26.2vw;
+width: 27.8vw;
 padding:1.333vw 0;
 border: 1px solid rgba(0,0,0,0.03);
 border-radius: 8px;
@@ -172,7 +172,7 @@ text-align: center;
 }
 .index{
 float: left;
-margin-top:11.666vw;
+margin-top:10.988vw;
 width: 100%;
 //background-color: rgba(0,0,0,0.06);
 background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.01), rgba(0,0,0,0.02), rgba(0,0,0,0.03));
@@ -204,7 +204,7 @@ padding: 1.333vw 0;
 border-radius: 0 0 8px 8px ;
 box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
 background-color: #fff;
-margin-bottom:8px;
+margin-bottom:2.133vw;
 display: inline-block;
 }
 .indexkj .kj-left{
@@ -216,7 +216,7 @@ float: right;
 width: 22vw;
 height: 22vw;
 border-radius: 50%;
-margin:8px 1.86vw 0 0;
+margin:4vw 1.86vw 0 0;
 }
 .indexkj .kj-sj{
 padding:2.133vw 1.86vw;
@@ -246,7 +246,7 @@ border: 1px solid rgba(0,0,0,0.1);
 margin:0 1.33vw
   }
 .indexkj .kj-djs .t-tian {
-    font-size: 4vw;
+    font-size: 4.25vw;
     font-weight: 600;
     color: #EE7942;
 margin:1px;
@@ -256,9 +256,9 @@ float: left;
 width: 96%;
 display: inline-block;margin:1.333vw 2.133vw 0 2.133vw;
 }
-.indexkj .kj-hm h2{width: 100%;margin-top: 1.533vw;margin-left:-0.83vw;font-size: 5.533vw; text-align: center;font-weight:normal;}
+.indexkj .kj-hm h2{width: 100%;margin-top: 1.533vw;margin-left:-0.88vw;font-size: 5.5vw; text-align: center;font-weight:normal;}
 .indexkj .kj-hm li{list-style-type: none;}
-.indexkj .kj-hm .sx{width: 10.66vw;line-height: 9.333vw;text-align: center;margin-left:-0.25vw;font-size: 4.2vw;}
+.indexkj .kj-hm .sx{width: 10.66vw;line-height: 9.333vw;text-align: center;margin-left:-0.3vw;font-size: 4.8vw;}
 .indexkj .kj .f{
 float: left;
 border-top: 2px solid rgba(255,127,80,0.8);
@@ -279,7 +279,7 @@ float: right;margin-top:0.8vw;padding: 2.666vw 2.67vw;
 .indexkj .kj .kjjl .kjjlspan span{
 margin:0 1.333vw;
 padding:0.8vw 2.13vw;
-font-size: 3.73vw;
+font-size: 4vw;
 font-weight:normal;
 border: 1px solid #EE7942;border-radius: 8px;
 }
@@ -305,7 +305,7 @@ float: left;
 float: right;
 }
 .lotery-kj .lotery-kj-sj{
-padding-left:1.86vw;line-height: 6.933vw;font-size: 3.466vw;
+margin-left:1.333vw;line-height: 7.333vw;font-size: 3.8vw;
 }
 .lotery-kj .lotery-kj-sj .lotery-h{
 color:#f43;margin:0 0.5px;
@@ -316,11 +316,11 @@ color:#808080;margin-left:0.83vw;
 .lotery-kj .lotery-kj-hm{
 width: 70%;
 display: inline-block;
-margin:0 1.333vw 0 1.333vw;
+margin:0 1.333vw 0 0.333vw;
 }
 .lotery-kj .lotery-kj-hm h2{width: 100%;margin-top: 1.18vw;margin-left:-0.63vw;font-size: 4.26vw; text-align: center;font-weight:normal;}
 .lotery-kj .lotery-kj-hm li{list-style-type: none;}
-.lotery-kj .lotery-kj-hm .lotery-sx{width: 8vw;line-height: 5.966vw;text-align: center;margin-left:-0.233vw;font-size: 3.46vw;}
+.lotery-kj .lotery-kj-hm .lotery-sx{width: 8vw;line-height: 6.933vw;text-align: center;margin-left:-0.3vw;font-size: 3.8vw;}
 .lotery-kj p{
 margin: 0px;
 margin-left:-0.8vw;
@@ -356,7 +356,7 @@ text-align: center;
 }
 #kjYearList li{
 background-color:#fff;
-font-size: 3.46vw;
+font-size: 3.8vw;
 font-family: inherit;
 color: #666;
 list-style: none;
