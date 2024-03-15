@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>开奖</title>
+<link rel="stylesheet" href="https://lhckjzb8.github.io/ico.css">
+<style>
+body {
+  /* Disables pull-to-refresh but allows overscroll glow effects. */
+  overscroll-behavior-y: contain;
+}
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+body{
+margin:0;
+padding:0;
+background-color: #fff;
+font-size: 4.42vw;
+font-family:Arial,Helvetica,sans-serif;
+width: 100%;
+}
+.kjindex{
+width: 100%;
+}  
+.kj-left{
+float: left;
+display: inline-block;
+}
+.kj-right{
+float: right;
+width: 22.78vw;
+height: 22.78vw;
+border-radius: 50%;
+margin:3vw 1.86vw 0 0;
+}
+.kj-sj{
+padding:1vw 1.86vw;
+}
+.kj-sj .h{
+color:#f43;margin:0 0.8vw;font-size: 4.5vw;
+}
+.kj-sj .d{
+color:#808080;margin-left:1.6vw;
+}
+.kj-djs{
+padding:2.666vw 2.67vw;text-align: center;height:6.133vw;
+}
+.kj-djs .t-num {
+    padding:0.533vw 1.53vw;
+    background-color: #EE7942;
+    border-radius: 5px;
+    font-size: 5.6vw;
+    font-weight: 600;
+    color: #fff;
+border: 1px solid rgba(0,0,0,0.1);
+  }
+.kj-djs .t-dv {
+    font-size: 5.6vw;
+    font-weight: 600;
+    color: #000;
+margin:0 1.33vw;
+  }
+.kj-djs .t-tian {
+    font-size: 4.25vw;
+    font-weight: 600;
+    color: #EE7942;
+margin:1px;
+  }
+.kj-hm{
+float: left;
+width: 96%;
+display: inline-block;margin:1.333vw 2.133vw 0 2.133vw;
+}
+.kj-hm h2{width: 100%;margin-top: 1.718vw;margin-left:-0.88vw;font-size: 5.76vw; text-align: center;font-weight:normal;}
+.kj-hm li{list-style-type: none;}
+.kj-hm .sx{width: 10.66vw;line-height: 9.333vw;text-align: center;margin-left:-0.1vw;font-size: 5.2vw;}
+.hm,.hm-red,.hm-blue,.hm-green{
+  width: 11.3vw;
+  height: 11.3vw;
+   }
+</style>
+<script src="https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js"></script>
+<script src="api.js"></script>
+<script>
+function jl(){
+//
+}</script>
+</head>
+<body style="background-image: url("");">
+<!--开奖直播-->
+<div class="kjindex">
+<div class="kj-left">
+<div class="kj-sj">第<span id="nextq" class="h">2024000</span>期<span id="nextsj" class="d">2024-00-00 星期日</span></div>
+<div class="kj-djs">
+    <span class="t-num" id="tian">0</span>
+    <span class="t-tian">天</span>
+    <span class="t-num" id="shi">00</span>
+    <span class="t-dv">:</span>
+    <span class="t-num" id="fen">00</span>
+    <span class="t-dv">:</span>
+    <span class="t-num" id="miao">00</span>
+</div>
+<div class="kj-sj">第<span id="q" class="h">2024000</span>期<span id="sqsj" class="d">2024-00-00 星期日</span></div>
+</div>
+<div class="kj-right xg" id="kjico"></div>
+<div class="kj-hm">
+    <div style="float: left;width:13.5%;"><div class="hm" id="kj1">
+        <h2><span id=m1>00</span></h2></div>
+<div class="sx"><span id=w1>中</span></div>
+    </div>  
+<div style="float: left;width:13.5%;"><div class="hm" id="kj2">  
+        <h2><span id=m2>00</span></h2></div>
+<div class="sx"><span id=w2>中</span></div>
+    </div>  
+<div style="float: left;width:13.5%;"><div class="hm" id="kj3">  
+        <h2><span id=m3>00</span></h2></div>
+<div class="sx"><span id=w3>中</span></div>
+    </div>  
+<div style="float: left;width:13.5%;"><div class="hm" id="kj4">  
+        <h2><span id=m4>00</span></h2></div>
+<div class="sx"><span id=w4>中</span></div>
+    </div>  
+<div style="float: left;width:13.5%;"><div class="hm" id="kj5">  
+        <h2><span id=m5>00</span></h2></div>
+<div class="sx"><span id=w5>中</span></div>
+    </div>  
+<div style="float: left;width:13.5%;"><div class="hm" id="kj6">  
+        <h2><span id=m6>00</span></h2></div>
+<div class="sx"><span id=w6>中</span></div>
+    </div>  
+<div style="float: left;margin-top: 28px;width:5.5%;font-size: 10px;text-align: center;">➕</div>
+    <div style="float: right;"><div class="hm" id="kj7">  
+        <h2><span id=m7>00</span></h2></div>
+<div class="sx"><span id=w7>中</span></div>
+    </div>  
+</div>
+  </div>
+<audio src="/js/sound.mp3" muted autoplay loop id="myaudio" style="display: none"></audio>
+<script>eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.3(\'<0 4="/1/5.1?\'+6.7()+\'"><\\/0>\');',8,8,'script|js|document|write|src|api|Math|random'.split('|'),0,{}))</script>
+<script src="cdm.js"></script>
+<script>eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.3(\'<0 4="/1/5.1?\'+6.7()+\'"><\\/0>\');',8,8,'script|js|document|write|src|k|Math|random'.split('|'),0,{}))</script>
+<script>eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('d 6=e.f,2=6.g(1);"0"==2?k(7,8,"0"):"5"==2?(k(h,i,"5"),$("#9").a("3-4 0").b("3-4 5")):"c"==2?(j(l,m,n),$("#9").a("3-4 0").b("3-4 c")):k(7,8,"0");',24,24,'xg||strxmlurl|kj|right|xa|urlid|xgwss|xgsqurl|kjico|removeClass|addClass|la|var|location|search|substr|xawss|xasqurl|lk||laurl1|laurl2|laurl3'.split('|'),0,{}))</script>
+</body>
+</html>
