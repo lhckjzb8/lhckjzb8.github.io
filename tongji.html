@@ -552,18 +552,33 @@ border: 1px solid #EE7942;
 </ul>
 </div>
 <div class="tjhm">
-<div class="tj"><div class="t"><div class="tjsrico"></div>输入数据 </div><div class="tjspan"><INPUT onclick=resetinput(); type=button value=清空></div></div>
+<div class="tj"><div class="t"><div class="tjsrico"></div>输入数据 </div>
+<div class="tjspan">
+<input type=button value=复制 class="input" style="margin-left:5px;" onClick="copyName('nrname');"></input>
+<INPUT onclick=resetinput(); type=button value=清空></div></div>
 <div class="shuru"><textarea name=inputtxt wrap=PHYSICAL style="height:173px;" placeholder="输入数据..." onClick="makeReadOnly()" id=nrname></textarea></div>
-<div class="tj"><div class="t"><div class="tjico"></div>统计结果 </div><div class="tjspan"><INPUT onclick=resetinputtj(); type=button value=清空 class="input"><INPUT type=button value=暂存 
- onClick="div_none('a2');" name="a2" class="input"><INPUT  onclick="countma();" type=button value=号统><INPUT onclick="countstyle('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪');" type=button value=肖统></div></div>
-<div class="shuru"><div class="f"><input type=button value=编辑 class="a" onClick="switchUser();"></input><input type=button value=复制 class="a" style="margin-left:5px;" onClick="copyName();"></input></div>
+<div class="tj"><div class="t"><div class="tjico"></div>统计结果 </div>
+<div class="tjspan">
+<INPUT onclick=resetinputtj(); type=button value=清空 class="input">
+<INPUT type=button value=暂存 
+ onClick="div_none('a2');" name="a2" class="input">
+<INPUT  onclick="countma();" type=button value=号统>
+<INPUT onclick="countstyle('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪');" type=button value=肖统></div></div>
+<div class="shuru"><div class="f">
+<input type=button value=编辑 class="a" onClick="switchUser();"></input>
+<input type=button value=复制 class="a" style="margin-left:5px;" onClick="copyName('tjname');"></input></div>
       <textarea name=resultstxt style="height:118px;" wrap=PHYSICAL placeholder="统计结果…" readOnly=true id=tjname onpropertychange="setHeight(this);" onmouseover="setHeight(this);" 
 onpaste="setHeight(this);" oninput="setHeight(this);"></textarea>
     </div>
 <!--暂存-->
 <div style="display:none;" class="a2">
-<div class="tj"><div class="t"><div class="tjsrico"></div>暂存 </div><div class="tjspan"><INPUT onclick=resetinputzc(); type=button value=清空 class="input"><INPUT  onclick="cunma();" type=button value=号统><INPUT onclick="cunqt('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪');" type=button value=肖统></div></div>
-<div class="shuru"><textarea name=zancuntxt wrap=PHYSICAL placeholder="暂存…" style="height:173px;" onClick="makeReadOnly();"></textarea>
+<div class="tj"><div class="t"><div class="tjsrico"></div>暂存 </div>
+<div class="tjspan">
+<input type=button value=复制 class="input" style="margin-left:5px;" onClick="copyName('zancuntxt');"></input>
+<INPUT onclick=resetinputzc(); type=button value=清空 class="input">
+<INPUT  onclick="cunma();" type=button value=号统>
+<INPUT onclick="cunqt('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪');" type=button value=肖统></div></div>
+<div class="shuru"><textarea name=zancuntxt wrap=PHYSICAL placeholder="暂存…" style="height:173px;" onClick="makeReadOnly();" id="zancuntxt"></textarea>
     </div></div>
 </div>
 <!---->
