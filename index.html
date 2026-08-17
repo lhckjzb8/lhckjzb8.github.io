@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="现场直播" />
+<!-- 哪怕两种模式你都想要同一个颜色，也必须分开写两行！ -->
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#121212" />
+<link rel="apple-touch-startup-image" media="screen and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)" href="apple-splash.png">
+<link rel="apple-touch-startup-image" media="screen and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="apple-splash.png">
+<link rel="apple-touch-startup-image" media="screen and (device-aspect-ratio: 9/16)" href="apple-splash.png">
+<link rel="apple-touch-icon" href="/img/ico_512.png" />
+<link rel="icon" sizes="192x192" href="/img/ico_512.png">
+<link rel="stylesheet" href="/css/css.css">
+<link rel="stylesheet" href="/css/ico.css">
+<title>现场直播</title>
+ </head>
+  <body>
+    <script>
+    (function() {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+      } else {
+        document.body.classList.remove('light-theme');
+      }
+    })();
+  </script>
+<div id="app-loading-screen">
+  <div class="loading-text-animate">现场直播</div>
+<div class="loading-refresh-btn" style="cursor: pointer; text-align: center; padding: 80px 20px 10px;" id="loading-refresh-btn" onclick="window.location.reload(true);"><span class="loading-refresh-tag" style="padding: 8px 15px;transform: scale(0.6);"><span class="loading-refresh-dot"></span>刷新</span></div>
+</div>
+<script>
+  window.loadingGuardTimer = null;
+  window.autoRefreshTimer = null;
+  window.textCountdownTimer = null;
+  window.loadingGuardTimer = setTimeout(function() {
+    var btn = document.getElementById('loading-refresh-btn');
+    if (btn) {
+      btn.classList.add('active');
+      var secondsLeft = 3;
+      var tagEl = btn.querySelector('.loading-refresh-tag');
+      if (tagEl) {
+        tagEl.innerHTML = '<span class="loading-refresh-dot"></span>加载失败，' + secondsLeft + ' 秒后自动刷新';
+      }
+      window.textCountdownTimer = setInterval(function() {
+        secondsLeft--;
+        if (secondsLeft > 0 && tagEl) {
+          tagEl.innerHTML = '<span class="loading-refresh-dot"></span>加载失败，' + secondsLeft + ' 秒后自动刷新';
+        } else {
+          clearInterval(window.textCountdownTimer);
+        }
+      }, 1000);
+      window.autoRefreshTimer = setTimeout(function() {
+        window.location.reload();
+      }, 3000);
+    }
+  }, 3000);
+
+  window.cancelAutoRefresh = function() {
+    if (window.loadingGuardTimer) {
+      clearTimeout(window.loadingGuardTimer);
+      window.loadingGuardTimer = null;
+    }
+    if (window.autoRefreshTimer) {
+      clearTimeout(window.autoRefreshTimer);
+      window.autoRefreshTimer = null;
+    }
+    if (window.textCountdownTimer) {
+      clearInterval(window.textCountdownTimer);
+      window.textCountdownTimer = null;
+    }
+  }
+
+  window.hideLoadingScreen = function() {
+    if (typeof window.cancelAutoRefresh === 'function') {
+      window.cancelAutoRefresh();
+    }
+    var loader = document.getElementById('app-loading-screen');
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.style.visibility = 'hidden';
+      setTimeout(function() {
+        if (loader.parentNode) {
+          loader.remove();
+        }
+      }, 400);
+    }
+  }
+</script>
+<script src="./js/app.js" type="module"></script>
+ </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "统计助手",
+  "short_name": "统计助手",
+  "start_url": "/tj.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "icons": [
+    {
+      "src": "/img/tj.jpg",
+      "sizes": "192x192", 
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

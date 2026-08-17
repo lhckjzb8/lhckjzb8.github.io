@@ -1,0 +1,16 @@
+{
+  "name": "现场直播",
+  "short_name": "现场直播",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "icons": [
+    {
+      "src": "/img/ico_512.png",
+      "sizes": "192x192", 
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
