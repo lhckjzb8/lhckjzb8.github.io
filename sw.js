@@ -23,6 +23,7 @@ self.addEventListener('install', function (e) {
     })
   );
 });
+
 self.addEventListener('fetch', function (e) {
   if (e.request.method !== 'GET') return;
   const requestUrl = new URL(e.request.url);
