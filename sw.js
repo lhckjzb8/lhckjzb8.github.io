@@ -1,6 +1,6 @@
 // sw.js pwa安装
 
-const CACHE_NAME = 'KjPwa-Y2026-V1.5';
+const CACHE_NAME = 'KjPwa-Y2026-V1.6';
 
 const mandatoryFiles = [
   '/',
