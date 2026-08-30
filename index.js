@@ -21,27 +21,45 @@ function isValidLotteryNumbers(numbers) {
   return true;
 }
 
-/* 动态获取数据转换器 */
-function getTransformer(name) {
-  if (!name) return (data) => data;
-  try {
-    return window[name] || eval(name) || ((data) => data);
-  } catch (e) {
-    console.warn(`[Registry] ⚠️ 动态获取 Transformer [${name}] 失败，使用默认透传`, e);
-    return (data) => data;
-  }
+/* 动态解析 */
+const TRANSFORMER_REGISTRY = new Map();
+const RENDERER_REGISTRY = new Map();
+
+export function registerTransformer(name, fn) {
+  if (typeof name === 'string' && typeof fn === 'function') TRANSFORMER_REGISTRY.set(name, fn);
+}
+export function registerRenderer(name, fn) {
+  if (typeof name === 'string' && typeof fn === 'function') RENDERER_REGISTRY.set(name, fn);
 }
 
-/* 动态获取渲染器 */
-function getRenderer(name) {
-  if (!name) return () => {};
-  try {
-    return window[name] || eval(name) || (() => {});
-  } catch (e) {
-    console.warn(`[Registry] ⚠️ 动态获取 Renderer [${name}] 失败，使用空函数`, e);
-    return () => {};
+// 兼容解析
+function resolveTransformerRef(ref) {
+  if (!ref) return undefined;
+  if (typeof ref === 'function') return ref;
+  if (typeof ref === 'string') {
+    const fromReg = TRANSFORMER_REGISTRY.get(ref);
+    if (typeof fromReg === 'function') return fromReg;
+    const fromWin = window[ref];
+    if (typeof fromWin === 'function') return fromWin;
   }
+  return undefined;
 }
+function resolveRendererRef(ref) {
+  if (!ref) return undefined;
+  if (typeof ref === 'function') return ref;
+  if (typeof ref === 'string') {
+    const fromReg = RENDERER_REGISTRY.get(ref);
+    if (typeof fromReg === 'function') return fromReg;
+    const fromWin = window[ref];
+    if (typeof fromWin === 'function') return fromWin;
+  }
+  return undefined;
+}
+
+/* 动态获取数据转换器 */
+function getTransformer(nameOrFn) { return resolveTransformerRef(nameOrFn); }
+/* 动态获取渲染器 */
+function getRenderer(nameOrFn) { return resolveRendererRef(nameOrFn); }
 
 /* 全局 WebSocket 总线 */
 class GlobalWSBus {
@@ -2544,6 +2562,7 @@ function commonLiveRenderer(standardData) {
       }
     }
   }
+  registerRenderer('commonLiveRenderer', commonLiveRenderer);
 }
 
 // 1. 動態渲染年份標籤列
@@ -2680,6 +2699,7 @@ function renderHistoryBatch(listData, startIndex, batchSize, isAppend) {
   } else {
     listContainer.innerHTML = htmlBuffer.join('');
   }
+  registerRenderer('renderHistoryBatch', renderHistoryBatch);
 }
 
 export { commonLiveRenderer, renderYearTabs, renderHistoryBatch };
@@ -3209,6 +3229,7 @@ function wsLine1Transformer(rawPayload, configObj) {
     console.error("[transformers.js] wsLine1Transformer 解析失败:", err);
     return null;
   }
+  registerTransformer('wsLine1Transformer', wsLine1Transformer);
 }
 
 // 2. WS 線路二
@@ -3266,6 +3287,7 @@ function wsLine2Transformer(rawPayload, configObj) {
     console.error("[transformers.js] wsLine2Transformer 解析失败:", err);
     return null;
   }
+  registerTransformer('wsLine2Transformer', wsLine2Transformer);
 }
 
 // 3. 直播/降級/輪詢/下拉刷新 公用單發 AJAX 解析
@@ -3342,6 +3364,7 @@ function commonLiveAjaxTransformer(rawPayload, configObj) {
     console.error("[transformers.js] commonLiveAjaxTransformer 解析失败:", err);
     return null;
   }
+  registerTransformer('commonLiveAjaxTransformer', commonLiveAjaxTransformer);
 }
 
 // 4. 記錄區單發 AJAX 歷史列表解析
@@ -3420,6 +3443,7 @@ function commonHistoryAjaxTransformer(rawPayload, configObj) {
     console.error("[transformers.js] commonHistoryAjaxTransformer 解析失败:", err);
     return [];
   }
+  registerTransformer('commonHistoryAjaxTransformer', commonHistoryAjaxTransformer);
 }
 
 export {
