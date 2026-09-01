@@ -1,4 +1,4 @@
-// sw.js pwa安装
+// sw.js
 
 const CACHE_NAME = 'KjPwa-Y20269-V1.1';
 
