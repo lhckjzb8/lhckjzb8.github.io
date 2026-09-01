@@ -1,0 +1,1930 @@
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
+}
+body {
+  /* Disables pull-to-refresh but allows overscroll glow effects. */
+  overscroll-behavior-y: contain;
+}
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+body{
+background-color: #121212;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+#qd_pwa-ultimate-splash {
+     background: #121212;
+}
+#qd_pwa-ultimate-splash .qd_color{
+     color: #ffffff;
+}
+.app{
+  width: 100%;
+  max-width: 420px;          /* 完美适配现代所有大屏 Max 手机 */
+  margin: 0 auto;            /* 🧱 在电脑和平板上，完美水平居中 */
+  min-height: 100vh;         /* 确保网页高度至少充满整个手机屏幕 */
+  min-height: 100dvh;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8); /* 可选：给电脑端两侧加点阴影，App感更强 */
+  position: relative;
+  background: radial-gradient(circle at 82% 18%, rgba(255, 45, 85, .10), transparent 190px), linear-gradient(180deg, rgba(12, 12, 14, .96), rgba(8, 8, 9, .98)) !important;
+  padding-bottom: calc(30px + env(safe-area-inset-bottom));
+}
+@media (display-mode: standalone) {
+  .app {
+    min-height: 100svh !important;
+  }
+}
+.qd_splashContainer {
+     background: #121212;
+}
+.qd_splashContainer .qd_color{
+     color: #fff;
+}
+/* 顶部大容器 */
+.top-container {
+  width: 100%;
+  /*background-color: #121212; */
+}
+
+/* 顶端时间栏 */
+.time-bar1 {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+ /* font-family: -apple-system, BlinkMacSystemFont, sans-serif;*/
+  font-size: 13px;
+  color: #ffffff; 
+  letter-spacing: 1px; 
+  /* 漂亮的虚线分割线 */
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2); 
+background-color: #121212;
+}
+
+.time-bar {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  /* 关键：两端对齐，把占位盒顶到最左，图片顶到最右 */
+  justify-content: space-between; 
+  padding: 0 16px; 
+  font-size: 13px;
+  color: #ffffff; 
+  letter-spacing: 1px; 
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2); 
+  background-color: #121212;
+}
+
+/* 关键：让左边占位盒、中间文字、右边图片保持独立的 Flex 挤压逻辑 */
+.time-bar-placeholder {
+  width: 28px; /* 必须和右边图片的宽度完全一样 */
+  visibility: hidden; /* 隐藏它，纯占位 */
+}
+
+.time-text {
+  flex: 1; /* 吃满中间所有剩余空间 */
+  text-align: center; /* 让文字在中间区域内居中 */
+  padding: 0 10px; /* 左右预留安全间距，防止文字挨到图片 */
+  white-space: nowrap; /* 撑满也不换行 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 如果实在太长，末尾自动变省略号(...) */
+}
+
+.time-bar-img {
+  width: 28px; /* 与左侧占位盒同宽 */
+  height: 28px;
+  object-fit: contain;
+  cursor: pointer;
+  flex-shrink: 0; /* 极其重要：防止文字变长时把图片挤压变扁 */
+}
+
+/* 移动端导航外层 */
+.mobile-navbar {
+  width: 100%;
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+/* 栏目包裹容器 white-space: nowrap;*/
+.nav-container {
+  display: flex;
+  padding: 12px 10px; 
+  width: max-content; 
+}
+
+/* 栏目项：独立边框 */
+.nav-item {
+  position: relative; 
+  flex-shrink: 0;
+  margin-right: 10px; 
+  border: 1px solid #333333; 
+  border-radius: 4px; 
+  background-color: #1a1a1a;
+}
+
+/* 最后一个项目去掉右边距，保证完美对齐右侧留出的 5px 边缘 */
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+/* 栏目内的链接文字 */
+.nav-item a {
+  display: flex;           /* 改为 flex 布局方便图标与文字水平居中对齐 */
+  align-items: center;
+  color: #999999;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 15px; 
+}
+
+/* 菜单类库图标基础样式 */
+.nav-icon {
+margin-left: 3px;
+  margin-right: 6px;       /* 图标与右侧文字的间距 */
+  font-size: 18px;         /* 图标大小调节 */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.aoh,.aob,.xgh,.xgb,.tjzsico,.fsjsico{
+    width: 18px;
+    height: 18px;
+margin-top:-1px;
+}
+
+/* 激活/选中状态的栏目样式 */
+.nav-item.active {
+  border-color: #ffffff; 
+  background-color: #222222; 
+}
+.nav-item.active a {
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+/* 朝下的三角形：紧贴选中项底部 */
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #ffffff; 
+  z-index: 10;
+}
+
+/* 隐藏手机端横向滚动条 */
+.mobile-navbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 主体内容区域 */
+.main-content {
+color: #fff;
+padding: 0 10px;
+background-color: transparent;
+}
+@keyframes kj {
+  from {
+    opacity: 0;                  /* 初始完全透明 */
+    transform: translateY(30px); /* 初始向下偏移 30 像素 */
+  }
+  to {
+    opacity: 1;                  /* 最终完全显示 */
+    transform: translateY(0);    /* 回到原始位置 */
+  }
+}
+.kj {
+  animation-name: kj;
+  animation-duration: 0.8s;        /* 动画持续时间 0.8 秒 */
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1); /* 缓动函数，让过渡更平滑 */
+  animation-fill-mode: forwards;
+  display: block; /* 强制单独占满一行 */
+  background: radial-gradient(circle at 86% 4%, rgba(255, 217, 54, .10), transparent 150px), linear-gradient(145deg, rgba(26, 16, 16, .96), rgba(12, 12, 14, .98)) !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, .25) !important;border: 1px solid rgba(255, 255, 255, 0.1) !important;
+padding:  6px 6px 0 6px;
+margin-bottom: 10px;
+border-radius: 8px;
+}
+/* 基础行与展开收起样式 */
+.kj .row {
+  padding: 0;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+/* 第一行 Flex 容器 */
+.kj .row-flex {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 10px; /* 增加三块之间的间距，防止挤压 */
+}
+
+/* 左侧和右侧块 */
+.kj .left-box { cursor: pointer; display: flex; align-items: center; gap: 2px; user-select: none; flex-shrink: 0; font-size:13px;}
+.kj .right-box {
+  flex-shrink: 0;
+  color: #999999;
+  display: flex;
+  align-items: center; /* 确保图片和文字垂直居中对齐 */
+  gap: 6px; /* 图片和文字之间的间距 */
+font-size:14px;
+}
+
+/* 右侧图片样式 */
+.kj .right-icon {
+  width: 18px;   /* 设定图片宽度，可根据实际效果微调 */
+  height: 18px;  /* 设定图片高度 */
+  object-fit: contain; /* 确保图片不形变 */
+}
+
+/* 【新增】中间块级元素的样式 */
+.kj .center-box {
+  flex: 1; /* 核心：自动吃掉中间所有的剩余空间 */
+  text-align: left; /* 让中间的文字水平居中 */
+  padding: 0 5px;
+font-size:14px;
+color:#999999;
+}
+.kj .center-box span {
+  padding: 0 3px;
+font-size:15px;
+color:#EDEA26;
+}
+
+.kj .arrow-icon { display: inline-block; transition: transform 0.3s ease; color:#EDEA26;padding-right:3px;}
+.kj .arrow-rotate { transform: rotate(180deg); padding-right:3px;}
+
+.kj .toggle-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.kj .toggle-wrapper.open {
+  max-height: 250px; /* 始终在一行，高度固定，250px 足够 */
+}
+/* 1. 确保触发按钮的容器是相对定位，作为气泡定位的基准 */
+.toggle-btn-container {
+  position: relative;
+  display: inline-block; 
+  cursor: pointer;
+  margin-top: 0px; /* 留出上方气泡的空间 */
+overflow: visible !important; /* 严防裁剪 */
+}
+/* 2. 悬浮气泡基础样式 */
+.floating-tip {
+  position: absolute;
+  bottom: 135%;             /* 悬浮在“展开”文字的正上方 */
+  left: 70%;
+  transform: translateX(-50%); /* 水平居中 */
+  background-color: rgba(240, 71, 71, 0.9); /* 使用醒目的珊瑚红/橙色，也可以换成深色 rgba(0,0,0,0.8) */
+  color: #ffffff;
+  padding: 2px 2px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;      /* 确保文字在一行内显示不换行 */
+  z-index: 99;              /* 确保层级足够高，不被内容遮挡 */
+  box-shadow: 0 4px 10px rgba(240, 71, 71, 0.3);
+  
+  /* 注入轻微的上下漂浮动画，增加视觉吸引力 */
+  animation: smartTipLoop 10s infinite ease-in-out;
+}
+
+/* 3. 气泡下方的小三角 */
+.floating-tip .tip-arrow {
+  position: absolute;
+  bottom: -4px;             /* 刚好贴在气泡底部 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(240, 71, 71, 0.9); /* 颜色与气泡背景保持一致 */
+}
+
+/* 4. 上下浮动的轻微动画效果 */
+@keyframes smartTipLoop {
+  /* 0秒 ~ 3秒 (前30%)：完全显示，并伴随轻微的上下浮动吸引点击 */
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, -5px); /* 向上浮动 5px */
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  /* 3秒 ~ 4秒 (30% 到 40%)：在 1 秒内平滑淡出隐藏 */
+  40% {
+    opacity: 0;
+    transform: translate(-50%, 5px); /* 隐去时微微下沉 */
+  }
+
+  /* 4秒 ~ 9秒 (40% 到 90%)：这整整 5 秒内，气泡完全消失不打扰用户 */
+  90% {
+    opacity: 0;
+    transform: translate(-50%, 5px);
+  }
+
+  /* 9秒 ~ 10秒 (90% 到 100%)：在最后 1 秒内重新淡入，准备开始下一个循环 */
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* ================= 始终保持单行的响应式布局 ================= */
+.kj .row-always-inline {
+  display: flex;
+  flex-wrap: nowrap !important; /* 强制绝对不换行 */
+  gap: 5px; /* 窄屏幕下缩小间距，防止挤压空间 */
+  overflow: hidden; /* 防止极小屏幕下溢出 */
+  padding: 5px 5px; /* 稍微提炼内边距 */
+}
+
+/* 7个普通元素：均分剩余空间，且允许自由压缩 */
+.kj .grid-item {
+  flex: 1 1 0%; /* 允许撑满、允许压缩、基础宽度为0 */
+  min-width: 0; /* 关键：解除浏览器的最小内容宽度限制，允许缩得极小 */
+  padding: 6px 2px;
+  text-align: center;
+  border-radius: 4px;
+  white-space: nowrap; /* 防止字数多时文字在块内换行 */
+  
+  /* 核心：流体字体大小 */
+  /* 在电脑端最大 16px，在手机端随屏幕缩小，最小不低于 10px */
+  font-size: clamp(10px, 2.5vw, 16px); 
+}
+
+/* 第 7 个元素：宽度始终比别人小 */
+.kj .grid-item.small-item {
+  /* 电脑端占普通元素大约 60% 宽度，手机端也会随 flex 机制按比例同步等比缩小 */
+  flex: 0.4 1 0%; 
+font-size:23px;
+color:#EDEA26;
+font-weight: bold;
+align-items: center; 
+justify-content: center;
+}
+
+/* 针对复合元素 1 的微调：清除内边距，居中对齐 */
+.kj .item-composite {
+  padding: 0 !important; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* 确保内部的圆形在中央对齐 */
+  background-color: transparent !important; 
+}
+
+/* 【核心修改】元素 1 的上面部分：严格的正圆形 */
+.kj .item-top-box.circle-style {
+  width: 41px;               /* 宽度占元素 1 的 80%（可根据需要微调，如 90% 或 100%） */
+max-width: 43px; 
+  aspect-ratio: 1 / 1;      /* 核心：强制宽高比永远是 1:1，无论屏幕多窄都是正方形 */
+  background-color: transparent;
+  border-radius: 50%;       /* 核心：50% 变正圆形 */
+  
+  display: flex;
+  justify-content: center;  /* 内部文字水平居中 */
+  align-items: center;      /* 内部文字垂直居中 */
+  box-sizing: border-box;
+}
+.kjhm{
+border: 3px solid #999999; 
+}
+.kjhm_red{
+border: 2px solid #E35858CC;
+}
+.kjhm_blue{
+border: 2px solid #6092E9CC;
+}
+.kjhm_green{
+border: 2px solid #39C76CCC;
+}
+.kj h2{
+font-weight: bold;
+color:#fff;
+font-size:20px;
+}
+.kjbj,.kjbjd{
+background-repeat:no-repeat;
+background-size: 41px;
+aspect-ratio: 1 / 1;
+margin-top:-0.1px;
+}
+.kjbjopacity{
+/*opacity:0.2;*/
+filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);  
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+filter:alpha(Opacity=50);-moz-opacity:0.5;opacity: 0.5;
+}
+.kjbj h2 span,.kjbjd h2 span{
+font-size: 0px;
+}
+/* 元素 1 的下面部分 */
+.kj .item-bottom-box {
+  padding-top: 6px; /* 与上方的圆形拉开间距 */
+  color: #999999;
+font-size:15px;
+}
+
+/* 第三行容器：宽度90%，水平居中，两端对齐 */
+.kj .row-third {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  /* 左右方向渐变：50%透明黑 -> 20%透明黑 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  
+  /* 加上微妙的半透明边框，丰富层次感 */
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  
+  /* 磨砂玻璃滤镜（高版本浏览器支持，效果极佳） */
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* 基础微调 */
+  padding: 5px 8px;
+  border-radius: 8px;
+  color: #fff;
+  
+}
+
+/* 第三行左侧：上下布局不变 */
+.kj .row-third .third-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.kj .row-third .left-top {color: #999999; font-size: 12px; }
+.kj .row-third .left-top span{color: #EDEA26;font-size: 12.5px;}
+.kj .row-third .left-bottom { color: #ee5b2a; font-size: 12px; text-align: center;}
+
+/* 第三行右侧：倒计时大容器 */
+.kj .row-third .third-right {
+  display: flex;
+  gap: 6px; /* 减少盒子之间的间距，整体更紧凑 */
+}
+
+/* 【核心修改】单个倒计时组合：改为水平排列 */
+/* 单个倒计时组合：强制水平排列，且不被压缩 */
+.kj .row-third .time-box {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  gap: 3px; 
+  flex-shrink: 0; /* 核心：防止在手机端被挤压变形 */
+}
+
+/* 数字方块：严格的尺寸限制 */
+.kj .row-third .time-num {
+  width: 28px;     /* 严格固定宽度 */
+  min-width: 28px; /* 再次确保不会被 flex 挤压缩小 */
+  height: 28px;    /* 固定高度 */
+  background-color: #ee5b2a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(238, 91, 42, 0.2);
+  flex-shrink: 0;  /* 再次锁定，确保动画放大时尺寸基准不崩塌 */
+}
+
+/* 单位标签：固定宽度（可选，能让整体并排更整齐） */
+.kj .row-third .time-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ee5b2a;
+  margin-top: 0;
+  width: 10px; /* 【新增】固定单位的宽度，彻底锁死整个倒计时区域的总宽 */
+  text-align: center;
+}
+
+/* 动效依然只作用于数字，保持特效美观 */
+.kj .row-third .pulse-animation {
+  animation: pulse 0.5s ease-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); background-color: #ff764a; }
+  100% { transform: scale(1); }
+}
+
+/* 包裹容器最大高度 */
+.kj .row-third .toggle-wrapper.open { max-height: 100px; }
+
+.kj .row-third .ended-style {
+  width: 146px;     /* 严格固定宽度 160px*/
+  min-width: 146px; /* 再次确保不会被 160px flex 挤压缩小 */
+  height: 28px;    /* 固定高度 */
+  background-color: #ee5b2a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(238, 91, 42, 0.2);
+  flex-shrink: 0;  /* 再次锁定，确保动画放大时尺寸基准不崩塌 */
+  letter-spacing: 1px; /* 【美化核心】加大汉字之间的间距，瞬间拉满高级感 */
+}
+.kj .row-third .ended-style .end-text-inner {
+background: transparent !important;
+}
+
+/* 抽奖组件主容器 */
+.lottery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* 3个div之间完全无间隔 */
+  width: 100%; /* 占满全宽，不限制最大宽度 */
+background: radial-gradient(circle at 82% 18%, rgba(255, 45, 85, .10), transparent 190px), linear-gradient(180deg, rgba(12, 12, 14, .96), rgba(8, 8, 9, .98)) !important;
+  box-sizing: border-box;
+box-shadow: 0 10px 32px rgba(0, 0, 0, .25) !important;
+border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top-left-radius: 8px;  /* 统一圆角为 5px */
+  border-top-right-radius: 8px; /* 统一圆角为 5px */
+ overflow: hidden;
+}
+
+/* 第第一个 div：实现指定的多断点颜色渐变与上 5px 圆角 */
+.lottery-row-first {
+  width: 100%;
+  height: 35px;
+  /* 精准应用您提供的多色值渐变 */
+  background: linear-gradient(to right, #9E6605, #9E6605, #9E6605, #121212, #121212, #121212, #121212) !important; 
+ overflow: hidden; 
+}
+
+/* 第第一个 div 内部的主布局 */
+.lottery-header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between; /* 左右两端彻底分开 */
+  align-items: center;
+  padding: 0 6px; 
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* 左边元素样式（处于 #EEAD0E 金色背景区域） */
+.lottery-header-left {
+  display: flex;
+  align-items: center;
+  color: #000; /* 金色背景下，左边文字使用黑色更清晰 */
+  font-weight: bold;
+font-size: 15px;
+}
+.lottery-header-left img{
+width: 28px;   /* 设定图片宽度，可根据实际效果微调 */
+  height: 28px;  /* 设定图片高度 */
+  object-fit: contain; /* 确保图片不形变 */
+padding-right: 10px; 
+}
+/* 右边元素组（处于 #121212 暗色背景区域） */
+.lottery-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 内部 2 个子元素之间的水平间距 */
+}
+
+/* 右边元素内部的子元素样式 */
+.lottery-header-right-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px; 
+  padding: 0 10px; 
+  border: 1px solid #444444; /* 契合暗色背景的细边框 */
+  border-radius: 5px; /* 统一圆角为 5px */
+  background-color: rgba(255, 255, 255, 0.05); /* 淡淡的浅色半透明衬托 */
+  color: #ffffff; /* 处于暗色区域，文字使用白色 */
+  font-size: 12px;
+}
+
+/* 第二个 div：列表容器 */
+.lottery-row-items {
+  width: 100%;
+  
+background-color: transparent;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+/* 列表开启 flex 换行 */
+.lottery-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 6px; 
+}
+
+/* 每一个 li 的样式（一行 6 个） */
+.lottery-item {
+  width: calc((100% - 30px) / 6); 
+  height: 25px; 
+  box-sizing: border-box;
+  border: 1px solid #444444; 
+  border-radius: 5px; /* 统一圆角为 5px */
+  background-color: #262626; 
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* ==================================================== */
+/* 第三个 div：重构后的上下双行复合网格 */
+/* ==================================================== */
+.lottery-row-third {
+  width: 100%;
+  background-color: transparent; 
+  color: #ffffff;
+  display: flex; 
+  align-items: center; /* 垂直居中 */
+  padding: 8px 5px;
+  box-sizing: border-box;
+  gap: 5px; /* 左右间距 */
+  border-bottom-left-radius: 5px;  
+  border-bottom-right-radius: 5px; 
+border-top: 1px dashed rgba(255, 255, 255, 0.1) !important;
+}
+.lottery-row-third h.wx{
+display: none;
+color:#613030;
+}
+.lottery-row-third:first-child {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
+}
+/* 第3行-左边大盒：固定宽度，分上下 */
+.lottery-third-left {
+  width: auto; 
+  flex-shrink: 0; 
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; /* 上下文字间距 */
+border-right: 1px dashed rgba(255, 255, 255, 0.1) !important;
+padding-right: 5px;
+}
+
+/* 左边内部元素：背景完全透明 */
+.lottery-third-left-sub {
+  background-color: transparent; /* 背景透明 */
+  color: #999999;
+  font-size: 12px;
+  text-align: right; /* 也可改为 center 居中 */
+
+}
+.lottery-third-left-sub span{
+  color: #EDEA26;font-size: 12.5px;
+}
+/* 第3行-右边大盒：单行 Flex，无边框，承载复合列 */
+.lottery-third-right {
+  flex: 1; 
+  display: flex;
+  align-items: center; /* 纵向居中 */
+  justify-content: space-between; 
+  gap: 3px; 
+text-align: center;
+}
+
+/* 1~6、8号复合元素的垂直容器 */
+.lottery-third-right-cell {
+  flex: 2; /* 确保宽度相当 */
+  display: flex;
+  flex-direction: column; /* 开启垂直方向排版（两行模式） */
+  align-items: center;
+  gap: 4px; /* 第一行圆圈与第二行文本之间的间距 */
+}
+
+/* 第1行：背景为灰色、且为正圆形的样式 */
+.lottery-cell-top-circle {
+  width: 32px;
+  aspect-ratio: 1 / 1; /* 保持 1:1 正方形 */
+  background-color: transparent; /* 灰色背景 */
+  border-radius: 50%; /* 纯圆形 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #ffffff;
+box-sizing: border-box;
+}
+.lottery-cell-top-circle  h2{
+font-weight: bold;
+color:#fff;
+font-size:15px;
+}
+
+/* 第2行：背景透明，字体白色 */
+.lottery-cell-bottom-text {
+  background-color: transparent; /* 背景透明 */
+  font-size: 13px;
+color:#999999;
+  white-space: nowrap; /* 避免文字意外换行 */
+}
+
+/* 第 7 个元素特殊样式：不分上下两行，宽度不相当 */
+.lottery-third-right-special {
+  flex: 1; /* 赋予更高权重，使其宽度明显大于其他圆形格子（不相当） */
+   /*height: 32px; 高度与旁边第一行的圆形大体看齐 */
+margin-top:-18px;
+  color: #EDEA26;
+  border-radius: 5px; /* 统一 5px 微圆角 */
+  font-weight: bold;
+  font-size: 15px;
+font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0;
+}
+/*下拉刷新*/
+/* 容器核心：暗黑科技感背景 */
+.loadingContainer {
+    height: 0;
+    overflow: hidden;
+    background-color: #121212; /* 👈 核心要求的暗黑背景 */
+    background-image: linear-gradient(180deg, #1a1a1a 0%, #121212 100%); /* 增加顶部微弱的渐变层次 */
+    text-align: center;
+    width: 100%;
+    transition: height 0.25s cubic-bezier(0.25, 1, 0.5, 1); /* 改为更加高级的减速贝塞尔曲线 */
+    -ms-touch-action: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03); /* 极细底边，增加高级感 */
+}
+
+/* 内部固定的实际内容高度 */
+.loadingBox {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* 图标和文字的极简间距 */
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px; /* 英文/数字略微留白 */
+    color: rgba(255, 255, 255, 0.7); /* 优雅的高级灰文本 */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* 纯 CSS 极简线条箭头 */
+.arrowIcon {
+    display: inline-block;
+    position: relative;
+    width: 2px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.arrowIcon::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid rgba(255, 255, 255, 0.7); /* 箭头尖端 */
+}
+
+/* 纯 CSS 现代圆环加载动画 */
+.loadingIcon {
+    display: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.15); /* 暗淡底圈 */
+    border-top: 2px solid #ffffff; /* 亮白色流线顶圈 */
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite; /* 无缝无限旋转 */
+}
+
+/* 旋转动画帧 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*  */
+/* 加载中 */
+    /* 核心遮罩层：全屏、透明、不阻挡底层鼠标操作 */
+    #page-loading-mask {
+      position: fixed;     /* 固定定位，不随页面滚动移位 */
+      top: 0;
+      left: 0;
+      width: 100vw;        /* 满宽 */
+      height: 100vh;       /* 满高 */
+      background: transparent; /* 背景完全透明，不遮挡黑色主题网页 */
+      z-index: 9999;       /* 确保层级在最上方 */
+      
+      /* 核心功能：允许鼠标事件穿透此图层，用户可以无视它点击下方的按钮或滑轮滚动 */
+      pointer-events: none; 
+      
+      /* 布局：使用 Flexbox 让内部动画在屏幕正中央绝对居中 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      /* 默认显示，如果需要默认隐藏可以设为 display: none; */
+      display: flex; 
+    }
+
+    /* 外层：具备“蓝紫渐变心跳律动”的圆形边框 */
+    .outer-heartbeat-circle {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(99, 102, 241, 0.4); 
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      /* ⚠️ 注意：因为父级全穿透了，将动画本身恢复鼠标交互，避免极边缘的怪异穿透 */
+      pointer-events: auto; 
+      
+      /* 引入心跳+渐变复合动画：1.4秒一个周期，无限循环 */
+      animation: heartbeat-gradient 1.4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+    }
+
+    /* 内层：在里面流畅转动的 180度 半圆形线圈 */
+    .inner-half-spinner {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 3px solid transparent; /* 基础边框透明 */
+      border-top: 3px solid #6366f1;    /* 上半圆：科技蓝 */
+      border-right: 3px solid #a855f7;  /* 右半圆：极客紫，拼成180度半圆 */
+      
+      /* 霓虹发光滤镜，在黑色模板下效果极佳 */
+      filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.7)); 
+      
+      /* 匀速流畅旋转：0.9秒一圈 */
+      animation: spin-half 0.9s linear infinite;
+    }
+
+    /* 复合动画 1：模拟心跳节奏（砰砰......）以及蓝紫颜色的微弱交替 */
+    @keyframes heartbeat-gradient {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+        border-color: rgba(99, 102, 241, 0.4);
+      }
+      /* 第一跳：迅速放大，爆发紫色微光 */
+      14% {
+        transform: scale(1.15);
+        box-shadow: 0 0 15px 3px rgba(168, 85, 247, 0.3); 
+        border-color: rgba(168, 85, 247, 0.8);          
+      }
+      /* 回弹 */
+      28% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+        border-color: rgba(99, 102, 241, 0.5);
+      }
+      /* 第二跳：紧接着小幅震动，爆发蓝色微光 */
+      42% {
+        transform: scale(1.08);
+        box-shadow: 0 0 10px 1px rgba(99, 102, 241, 0.3); 
+        border-color: rgba(99, 102, 241, 0.7);          
+      }
+      /* 恢复静止状态，直到下一个周期开始 */
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+        border-color: rgba(99, 102, 241, 0.4);
+      }
+    }
+
+    /* 复合动画 2：半圆无缝旋转 */
+    @keyframes spin-half {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    /* index结束 */
+
+    /* 统计 */
+
+/* 主面板外殼：鎖死總容器與屏幕左右邊距固定為 10px */
+.tongji-panel-container {
+    width: calc(100% - 20px); 
+    max-width: 400px; /* 移端最佳體驗寬度閾值 */
+    margin: 0 10px;
+    background: radial-gradient(circle at 86% 4%, rgba(255, 217, 54, .10), transparent 150px), linear-gradient(145deg, rgba(26, 16, 16, .96), rgba(12, 12, 14, .98)) !important;
+    border-radius: 8px;
+    padding: 10px 8px 0;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+    border: 1px solid #222d3d;
+}
+
+/* ==================== 2. 選項卡美化及滑動動畫 ==================== */
+.tongji-tabs-header {
+    display: flex;
+    position: relative;
+    background-color: #0f141c;
+    border: 1px solid #222d3d;
+    border-radius: 6px;
+    padding: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* 滑動背景膠囊 */
+.tongji-tabs-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(50% - 3px);
+    height: calc(100% - 6px);
+    background-color: #2d394e;
+    border-radius: 4px;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.tongji-tab-item {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    padding: 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    transition: color 0.2s;
+}
+
+.tongji-tab-item.tongji-active {
+    color: #38bdf8;
+    font-weight: bold;
+}
+/* 面板淡入動畫 */
+.tongji-animate-fade {
+    animation: tongjiFadeIn 0.2s ease-out forwards;
+}
+
+@keyframes tongjiFadeIn {
+    from { opacity: 0; transform: translateY(2px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ==================== 3. 属性网格与纯净激活按钮 ==================== */
+.tongji-grid-board {
+    background-color: #0f141c;
+    border: 1px solid #222d3d;
+    border-radius: 6px;
+    padding: 6px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* 严格九列轨道 */
+    gap: 5px 4px;
+}
+
+.tongji-hidden {
+    display: none !important;
+}
+
+/* 属性按钮：基础态（全面兼容 input[type="button"]） */
+.tongji-btn {
+    width: 100%;
+    background-color: #1b2330;
+    border: 1px solid #2d3a4f;
+    color: #e2e8f0;
+    padding: 7px 0;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    outline: none;
+    transition: border-color 0.15s, color 0.15s;
+    -webkit-appearance: none; /* 移除移动端iOS默认input弧度样式 */
+}
+
+.tongji-btn:hover {
+    background-color: #243044;
+}
+
+/* 点击时强制激活边框高亮，但完全锁死背景不允许产生突变 */
+.tongji-btn:focus, .tongji-btn:active {
+    border-color: #38bdf8 !important; /* 统一清爽高亮蓝边框 */
+    color: #38bdf8;
+    background-color: #1b2330; 
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 跨行和隐形空间占位 */
+.tongji-span-v2 {
+    grid-row: span 2; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tongji-space {
+    visibility: hidden;
+}
+/* ==================== 4. 属性特定高亮边框与彩标 ==================== */
+.tongji-btn-gold  { color: #fbbf24; border-color: rgba(251, 191, 36, 0.4); }
+.tongji-btn-wood  { color: #34d399; border-color: rgba(52, 211, 153, 0.4); }
+.tongji-btn-water { color: #60a5fa; border-color: rgba(96, 165, 250, 0.4); }
+.tongji-btn-fire  { color: #f87171; border-color: rgba(248, 113, 113, 0.4); }
+.tongji-btn-earth { color: #fb923c; border-color: rgba(251, 146, 60, 0.4); }
+
+.tongji-txt-alert { color: #ef4444; font-weight: bold; }
+.tongji-txt-red   { color: #f87171; }
+.tongji-txt-blue  { color: #60a5fa; }
+.tongji-txt-green { color: #4ade80; }
+
+/* 红、蓝、绿波色块：点击时不换背景、只换边框色 */
+.tongji-wave-btn {
+    background-color: #1b2330 !important; /* 融入暗黑主题背景 */
+    font-weight: bold;
+}
+.tongji-wave-btn.tongji-border-red { color: #f87171; border-color: #b91c1c; }
+.tongji-wave-btn.tongji-border-blue { color: #60a5fa; border-color: #1d4ed8; }
+.tongji-wave-btn.tongji-border-green { color: #4ade80; border-color: #15803d; }
+
+/* 专门定制红蓝绿波点击高亮，只强化对应的物理边框线 */
+.tongji-wave-btn.tongji-border-red:focus { border-color: #ef4444 !important; color: #ef4444; }
+.tongji-wave-btn.tongji-border-blue:focus { border-color: #3b82f6 !important; color: #3b82f6; }
+.tongji-wave-btn.tongji-border-green:focus { border-color: #22c55e !important; color: #22c55e; }
+
+/* 其他双行细边框 */
+.tongji-border-red   { border-color: #b91c1c; color: #f87171; }
+.tongji-border-blue  { border-color: #1d4ed8; color: #60a5fa; }
+.tongji-border-green { border-color: #15803d; color: #4ade80; }
+/* ==================== 5. 下方输入/统计面板与强化交互区 ==================== */
+.tongji-io-section {
+    background-color: #0f141c;
+    border: 1px solid #222d3d;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.tongji-io-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.tongji-io-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #94a3b8;
+}
+
+/* 下方“输入数据”和“统计结果”交互功能按钮的横向间距多加 2px (锁死 6px 间隙) */
+.tongji-io-btns { 
+    display: flex; 
+    gap: 7px; 
+    align-items: center;
+}
+
+/* 控制台普通交互键 */
+.tongji-ctl-btn {
+    background-color: #1b2330;
+    border: 1px solid #2d3a4f;
+    color: #cbd5e1;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+}
+.tongji-ctl-btn:hover { background-color: #243044; }
+.tongji-ctl-btn.tongji-btn-danger { background-color: #991b1b; border: none; color: #fff; }
+.tongji-ctl-btn.tongji-btn-primary { background-color: #1d4ed8; border: none; color: #fff; }
+
+/* 号统、肖统加大强化按钮 */
+.tongji-ctl-btn.tongji-btn-large {
+    padding: 7px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+}
+
+/* 基础自适应文本域（高度由 JS 动态撑开，取消固定高度） */
+.tongji-io-textarea {
+    width: 100%;
+    min-height: 85px; /* 锁死最低初始高度 */
+    background-color: #070a0f;
+    border: 1px solid #222d3d;
+    border-radius: 4px;
+    padding: 8px;
+    color: #f1f5f9;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    display: block;
+    overflow-y: hidden; /* 隐藏原生滚动条，确保完全随内容长高 */
+}
+
+/* ==================== 6. 右上角悬浮透明微框按钮 ==================== */
+.tongji-textarea-wrapper {
+    position: relative; 
+    width: 100%;
+}
+
+.tongji-floating-actions {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    display: flex;
+    gap: 6px;
+    z-index: 5;
+}
+
+/* 编辑和复制保持背景透明，并加上精致边框 */
+.tongji-link-btn {
+    background: transparent;
+    color: #38bdf8; 
+    border: 1px solid rgba(56, 189, 248, 0.4); /* 精致半透明微边框 */
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.2s;
+    -webkit-appearance: none;
+}
+
+.tongji-link-btn:hover {
+    border-color: #38bdf8;
+    color: #7dd3fc;
+    background: rgba(56, 189, 248, 0.05);
+}
+
+
+/* ==================== 7. 全局暗黑 Toast 提示框（完美全屏幕居中版） ==================== */
+.tongji-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* 同时处理水平和垂直居中，并附带未激活时的微下沉动效 */
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: rgba(30, 41, 59, 0.95); /* 饱满的深 slate 暗黑底色 */
+    border: 1px solid #38bdf8; /* 亮蓝科技感科技边框 */
+    color: #38bdf8;
+    padding: 12px 12px; /* 略微加大内边距，提升居中视觉分量 */
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 9999;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    /* 更加细腻平滑的复合过渡效果 */
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
+}
+
+/* Toast 显示态：保持绝对居中，同时回正缩放 */
+.tongji-toast.tongji-show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+    /* 统计结束 */
+/*
+lhqly1689999@gmail-Qly1689999...293455970-aaa55666lhckjzb89999-Qly1689999...
+sL52279393as9917888888
+https://www.whatsapp.com/android
+https://9765888.com/forum.php?mod=viewthread&tid=12039&extra=page%3D2&mobile=2
+余生自在123789
+tfjz333.com:66
+tfjz288.com
+wuweicb1.com
+wuweicb3.com
+lz15622823434767707
+https://obfuscator.io/legacy-playground
+*/
+    /* 复式计算 */
+
+
+/* 1.复式*/
+.fushi-calc-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* 彻底清除移动端和各浏览器点击时的发闪阴影 */
+}
+
+/* 核心要求：应用高级香槟金暗黑立体多层渐变背景 */
+.fushi-calc-project .fushi-container {
+    background: radial-gradient(circle at 86% 4%, rgba(255, 217, 54, .10), transparent 150px), linear-gradient(145deg, rgba(26, 16, 16, .96), rgba(12, 12, 14, .98)) !important;
+    border-radius: 12px;
+    padding: 10px; /* 按照要求：上下保持30px，左右精简为10px */
+    width: 100%;
+    /*max-width: 440px;*/
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    margin: 0 auto;
+}
+
+.fushi-calc-project h2 {
+    margin-top: 0;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   2. 分离卡片式独立边框双层导航栏（与屏幕左右边距严格保持 10px）
+   ========================================== */
+/* 板块一/板块二大导航容器：与浏览器左右严格保持 10px 边距 */
+.fushi-calc-project .fushi-tab-nav-container {
+    display: flex;
+    gap: 12px; /* 核心调整：让两个按键中间拉开并保持一定距离 */
+    width: calc(100% - 20px); /* 扣除左右 10px 边距 */
+    max-width: 420px;
+    margin: 20px 10px 10px 10px; /* 左右外边距严格限定为 10px */
+    box-sizing: border-box;
+}
+
+/* 大导航按钮：每个按钮各自带有独立完整的边框线 */
+.fushi-calc-project .fushi-tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #A0A0A0;
+    background-color: #1E1E1E;
+    border: 1px solid #2A2A2A; /* 独立完整边框 */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: none !important;
+}
+
+/* 悬浮微动浮空效果 */
+.fushi-calc-project .fushi-tab-btn:hover {
+    transform: translateY(-2px);
+    border-color: #3399FF;
+    color: #FFFFFF;
+}
+
+.fushi-calc-project .fushi-tab-btn.fushi-active {
+    background-color: #3399FF;
+    color: #FFFFFF;
+    border-color: #3399FF;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(51, 153, 255, 0.3) !important;
+}
+
+/* 板块二内部选号模式导航容器 */
+.fushi-calc-project .fushi-sub-nav-container {
+    display: flex;
+    gap: 12px; /* 两个子选项中间拉开距离 */
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 子导航按钮：带有独立的完整边框 */
+.fushi-calc-project .fushi-sub-tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 11px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #A0A0A0;
+    background-color: #252525;
+    border: 1px solid #3A3A3A; /* 独立完整边框 */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: none !important;
+}
+
+.fushi-calc-project .fushi-sub-tab-btn:hover {
+    transform: translateY(-1px);
+    border-color: #3399FF;
+}
+
+.fushi-calc-project .fushi-sub-tab-btn.fushi-active {
+    background-color: #2A2A2A;
+    color: #3399FF;
+    border-color: #3399FF;
+    font-weight: bold;
+}
+
+/* ==========================================
+   3. 核心：纯 div 层模拟的高级定制风琴下拉选择器
+   ========================================== */
+.fushi-calc-project .fushi-custom-select-trigger {
+    width: 100%;
+    padding: 12px;
+    background-color: #2A2A2A;
+    border: 1px solid #3A3A3A;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: border-color 0.3s;
+}
+.fushi-calc-project .fushi-custom-select-trigger:hover {
+    border-color: #3399FF;
+}
+
+/* 右侧线性几何折线 V 型下拉箭头图标 */
+.fushi-calc-project .fushi-custom-select-trigger::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #666666;
+    border-bottom: 2px solid #666666;
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.3s ease;
+}
+.fushi-calc-project .fushi-custom-select-trigger.open::after {
+    transform: translateY(-20%) rotate(-135deg);
+    border-color: #3399FF;
+}
+
+/* 风琴式顺滑展开淡入位移过渡容器层 */
+.fushi-calc-project .fushi-custom-select-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background-color: #252525;
+    border: 1px solid #3A3A3A;
+    border-radius: 6px;
+    z-index: 999;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.fushi-calc-project .fushi-custom-select-dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fushi-calc-project .fushi-custom-select-option {
+    padding: 12px;
+    color: #E0E0E0;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s, color 0.2s;
+}
+.fushi-calc-project .fushi-custom-select-option:hover {
+    background-color: #3399FF;
+    color: #FFFFFF;
+}
+/* ==========================================
+   4. 表单通用元素与炫彩熔岩大计算/局部清空按钮
+   ========================================== */
+.fushi-calc-project .fushi-form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.fushi-calc-project .fushi-form-group {
+    flex: 1;
+}
+
+.fushi-calc-project label {
+    display: block;
+    margin-bottom: 8px;
+    color: #A0A0A0;
+    font-size: 14px;
+}
+
+.fushi-calc-project input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #2A2A2A;
+    border: 1px solid #3A3A3A;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: none !important;
+}
+.fushi-calc-project input[type="number"]:focus {
+    border-color: #3399FF;
+}
+
+/* 主计算大按钮：炫彩熔岩渐变微变动效 */
+.fushi-calc-project .fushi-main-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #3399FF, #2288EE);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+}
+.fushi-calc-project .fushi-main-btn:hover {
+    background: linear-gradient(135deg, #2288EE, #1177DD);
+    transform: translateY(-1px);
+}
+.fushi-calc-project .fushi-main-btn:active {
+    transform: scale(0.97); /* 机械点按缩放抗震 */
+}
+
+/* 板块二新增：高阶独立隔离清空按钮 */
+.fushi-calc-project .fushi-clear-btn {
+    flex: 1;
+    padding: 13px;
+    background-color: #1F1A1A;
+    color: #FF4D4D; /* 霓虹红色警示色 */
+    border: 1px solid #5C2525;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+}
+.fushi-calc-project .fushi-clear-btn:hover {
+    background-color: #FF4D4D;
+    color: #121212;
+    border-color: #FF4D4D;
+}
+.fushi-calc-project .fushi-clear-btn:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================
+   5. 选号盘放大、去闪、霓虹翠绿对勾（✓）旋入动效
+   ========================================== */
+.fushi-calc-project .fushi-selector-panel {
+    background-color: #252525;
+    padding: 15px 5px; /* 上下保持15px，左右精准调整为 5px */
+    border-radius: 8px;
+    border: 1px solid #2F2F2F;
+    box-sizing: border-box;
+}
+
+.fushi-calc-project .fushi-grid-container {
+    display: grid;
+    gap: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 4px;
+    text-align: center;
+}
+
+.fushi-calc-project .fushi-num-grid { grid-template-columns: repeat(7, 1fr); }
+.fushi-calc-project .fushi-zodiac-grid { grid-template-columns: repeat(6, 1fr); }
+
+.fushi-calc-project .fushi-grid-item {
+    position: relative;max-width: 43px;
+    background-color: #1A1A1A;
+    border: 1px solid #3A3A3A;
+    color: #E0E0E0;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    box-shadow: none !important; 
+}
+.fushi-calc-project .fushi-grid-item:active {
+    transform: scale(0.92) !important; /* 机械点按缩放动效 */
+}
+
+/* 字体全局放大 */
+.fushi-calc-project .fushi-num-grid .fushi-grid-item {
+    aspect-ratio: 1;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 16px;
+}
+.fushi-calc-project .fushi-zodiac-grid .fushi-grid-item {
+    padding: 11px 0;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.fushi-calc-project .fushi-grid-item.selected {
+    background-color: #3399FF !important;
+    border-color: #3399FF !important;
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+/* 核心美化：选中状态下，极边缘产生霓虹翠绿色对勾（✓），并伴随旋转变大入场动画 */
+.fushi-calc-project .fushi-grid-item.selected::after {
+    content: "✓";
+    position: absolute;
+    color: #39FF14; /* 霓虹翠绿色 */
+    font-weight: 900;
+    font-size: 10px; /* 缩小对勾 */
+    animation: fushiCheckIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* 独立偏向边缘移位，不遮挡文字 */
+.fushi-calc-project .fushi-num-grid .fushi-grid-item.selected::after {
+    bottom: -1px;
+    right: 1px;
+}
+.fushi-calc-project .fushi-zodiac-grid .fushi-grid-item.selected::after {
+    bottom: 0px;
+    right: 1px;
+}
+
+@keyframes fushiCheckIn {
+    0% { transform: scale(0) rotate(-45deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* ==========================================
+   6. 结果级联小卡牌明细
+   ========================================== */
+.fushi-calc-project .fushi-result-box {
+    margin-top: 25px;
+    border-top: 1px solid #3A3A3A;
+    padding-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fushi-calc-project .fushi-section-title {
+    color: #A0A0A0;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.fushi-calc-project .fushi-cards-wrapper {
+    display: flex;color: #fff;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fushi-calc-project .fushi-combo-combo-card {
+    background-color: #252525;
+    border: 1px solid #2F2F2F;
+    border-radius: 8px;
+    padding: 14px 10px; /* 左右边距10px */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fushi-calc-project .fushi-card-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.fushi-calc-project .fushi-card-info-row span.fushi-highlight {
+    color: #FFCC00;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.fushi-calc-project .fushi-card-action-btn {
+    width: 100%;
+    padding: 9px 12px;
+    background-color: #1A2E35;
+    color: #00B4D8;
+    border: 1px solid #005F73;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+}
+.fushi-calc-project .fushi-card-action-btn:hover {
+    background-color: #00B4D8;
+    color: #121212;
+    border-color: #00B4D8;
+    font-weight: bold;
+}
+.fushi-calc-project .fushi-card-action-btn::after {
+    content: "展开 ➔";
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* ==========================================
+   7. 磨砂玻璃（Glassmorphism）景深弹窗与一键复制
+   ========================================== */
+.fushi-calc-project .fushi-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px); /* 强化高档磨砂滤镜 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.fushi-calc-project .fushi-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fushi-calc-project .fushi-modal-card {
+    background-color: #1E1E1E;
+    border: 1px solid #3A3A3A;
+    border-radius: 12px;
+    width: calc(100% - 20px); /* 弹窗两侧严格与屏幕保持10px边距 */
+    max-width: 440px;
+    padding: 25px 10px; /* 左右内边距修改为10px */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+    transform: scale(0.95) translateY(15px); /* 弹性跃出入场动画基准 */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    box-sizing: border-box;
+}
+
+.fushi-calc-project .fushi-modal-overlay.active .fushi-modal-card {
+    transform: scale(1) translateY(0); /* 优雅跃出 */
+}
+
+.fushi-calc-project .fushi-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #3A3A3A;
+    padding-bottom: 10px;
+}
+
+.fushi-calc-project .fushi-modal-title {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.fushi-calc-project .fushi-close-btn {
+    background: none;
+    border: none;
+    color: #A0A0A0;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
+}
+.fushi-calc-project .fushi-close-btn:hover { color: #FFFFFF; }
+
+.fushi-calc-project .fushi-modal-body {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.fushi-calc-project .fushi-combo-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.fushi-calc-project .fushi-copy-action-btn {
+    background-color: #1A2E35;
+    border: 1px solid #00B4D8;
+    color: #00B4D8;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+.fushi-calc-project .fushi-copy-action-btn:hover {
+    background-color: #00B4D8;
+    color: #121212;
+}
+
+.fushi-calc-project .fushi-combo-box-display {
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-radius: 6px;
+    padding: 10px;
+    max-height: 160px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.fushi-calc-project .fushi-winning-list {
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-radius: 6px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+}
+
+.fushi-calc-project .fushi-winning-item {
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #252525;
+    display: flex;
+    justify-content: space-between;
+}
+.fushi-calc-project .fushi-winning-item:last-child {
+    border-bottom: none;
+}
+
+.fushi-calc-project .hit-num { color: #E0E0E0; }
+.fushi-calc-project .win-num { color: #FFCC00; font-weight: bold; }
+
+/* ==========================================
+   8. 全局高级暗红浮动吐司提示层 (Toast)
+   ========================================== */
+.fushi-calc-project .fushi-global-toast {
+    position: fixed;
+    top: -60px; /* 初始隐藏 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(217, 4, 4, 0.95); /* 高级暗红 */
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 100000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    transition: top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.fushi-calc-project .fushi-global-toast.show {
+    top: 25px; /* 平滑滑出 */
+    opacity: 1;
+}
+
+/* 复式结束 */
+/*重新加载*/
+  .jz-reload-container-v2 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 35px 0;
+    width: 100%; 
+  }
+  .jz-reload-tag-v2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid jz- rgba(255, 255, 255, 0.1);
+    border-radius: 8px; /* 偏方正的硬朗线条 */
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    cursor: pointer;
+    user-select: none;
+    transition: honesty 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: all;
+  }
+  /* 初始状态：绿荧光呼吸点 */
+  .jz-status-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    transition: all 0.3s ease;
+  }
+  .jz-status-dot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #10b981;
+    animation: jz-pulse 2s infinite;
+  }
+  @keyframes jz-pulse {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+  /* 悬停激活：变身为轻奢旋转轨道 */
+  .jz-reload-tag-v2:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #f1f5f9;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .jz-reload-tag-v2:hover .jz-status-dot {
+    background: transparent;
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(16, 185, 129, 0.2);
+    border-top-color: #10b981;
+    animation: jz-spin-v2 0.8s linear infinite;
+  }
+  .jz-reload-tag-v2:hover .jz-status-dot::after {
+    display: none; /* 悬停时关闭呼吸层 */
+  }
+  @keyframes jz-spin-v2 {
+    to { transform: rotate(360deg); }
+  }
+/* 重新加载结束 */
+
+/* 收起展开 */
+
+/* 🚀 无论你 class 叫什么，这里通过 ID 后缀强行捕获 hk_rowWrapper, xa_rowWrapper, la_rowWrapper */
+#hk_rowWrapper,
+#xa_rowWrapper,
+#la_rowWrapper,
+.item-row-wrapper-box,
+[id$="_rowWrapper"] {
+    max-height: 0 !important;    /* ⚡ 默认强制完全收缩，解决切换时的生硬突跳 */
+    opacity: 0 !important;       /* ⚡ 默认完全透明隐藏 */
+    overflow: hidden !important; /* ⚡ 物理裁剪超出部分 */
+    display: block !important;   /* ⚡ 关键修复：必须强置为块级元素，否则 max-height 动画在 inline 或 flex 下会死机失效 */
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.25s ease-out !important; /* 🎯 谷歌标准 Material 弹性阻尼曲线 */
+}
+
+/* 🚀 当路由引擎或点击为盒子注入 .open 类名时，优雅徐徐展开 */
+#hk_rowWrapper.open,
+#xa_rowWrapper.open,
+#la_rowWrapper.open,
+.item-row-wrapper-box.open,
+[id$="_rowWrapper"].open {
+    max-height: 250px !important; /* ⚡ 展开最大高度限制，如果你的内容很长，可以随意调大到 1500px */
+    opacity: 1 !important;         /* ⚡ 优雅淡入 */
+}
