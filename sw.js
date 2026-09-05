@@ -1,4 +1,4 @@
-// sw.js
+// sw.js Pwa
 
 const CACHE_NAME = 'KjPwa-Y2026v1';
 
