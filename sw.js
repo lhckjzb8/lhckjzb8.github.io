@@ -1,6 +1,6 @@
 // sw.js Pwa
 
-const CACHE_NAME = 'KjzbPwa-Y2026-v1.2';
+const CACHE_NAME = 'Kjzb8Pwa-Y2026-v1.01';
 
 const mandatoryFiles = [
   '/',
