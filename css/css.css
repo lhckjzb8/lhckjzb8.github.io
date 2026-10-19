@@ -251,6 +251,18 @@ body {
   border-bottom: 1px dashed var(--border-dashed); 
   background-color: var(--bg-main);
 }
+.is-fixed {
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  max-width: 420px;
+  top: 0;
+}
+.loadingContainer-fixed {
+    margin-top: 45px;
+    position: relative;
+    z-index: 10;
+}
 .time-bar-placeholder {
   width: 28px; 
   visibility: hidden; 
