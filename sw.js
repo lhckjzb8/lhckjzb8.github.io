@@ -1,6 +1,6 @@
 // sw.js Pwa
 
-const CACHE_NAME = 'LhcKjzb8Pwa-Y2026kjV1.9';
+const CACHE_NAME = 'LhcKjzb8Pwa-kj2026V1';
 
 const mandatoryFiles = [
   '/',
@@ -9,7 +9,8 @@ const mandatoryFiles = [
   '/manifest.json',
   '/manifest_tj.json',
   '/js/app.js',
-  '/js/tj.js'
+  '/js/tj.js',
+  '/sound.mp3'
 ];
 
 self.addEventListener('install', function (e) {
