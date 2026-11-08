@@ -30,49 +30,34 @@
   </script>
 <div id="app-loading-screen">
   <div class="loading-text-animate">现场直播</div>
-<div class="loading-refresh-btn" style="cursor: pointer; text-align: center; padding: 80px 20px 10px;" id="loading-refresh-btn" onclick="window.location.reload(true);"><span class="loading-refresh-tag" style="padding: 8px 15px;transform: scale(0.6);"><span class="loading-refresh-dot"></span>刷新</span></div>
 </div>
+<div id="app-root"></div>
 <script>
-  window.loadingGuardTimer = null;
-  window.autoRefreshTimer = null;
-  window.textCountdownTimer = null;
-  window.loadingGuardTimer = setTimeout(function() {
-    var btn = document.getElementById('loading-refresh-btn');
-    if (btn) {
-      btn.classList.add('active');
-      var secondsLeft = 3;
-      var tagEl = btn.querySelector('.loading-refresh-tag');
-      if (tagEl) {
-        tagEl.innerHTML = '<span class="loading-refresh-dot"></span>加载失败，' + secondsLeft + ' 秒后自动刷新';
-      }
-      window.textCountdownTimer = setInterval(function() {
-        secondsLeft--;
-        if (secondsLeft > 0 && tagEl) {
-          tagEl.innerHTML = '<span class="loading-refresh-dot"></span>加载失败，' + secondsLeft + ' 秒后自动刷新';
-        } else {
-          clearInterval(window.textCountdownTimer);
-        }
-      }, 1000);
-      window.autoRefreshTimer = setTimeout(function() {
-        window.location.reload();
-      }, 3000);
-    }
-  }, 3000);
+  (function() {
+    var retryCount = 0;
+    try {
+      retryCount = parseInt(sessionStorage.getItem('app_silent_retry') || '0', 10) || 0;
+    } catch (e) {}
+
+    var delay = retryCount >= 3 ? 15000 : 5000;
+
+    window.autoRefreshTimer = setTimeout(function() {
+      try {
+        sessionStorage.setItem('app_silent_retry', String(retryCount + 1));
+      } catch (e) {}
+      window.location.reload();
+    }, delay);
+  })();
 
   window.cancelAutoRefresh = function() {
-    if (window.loadingGuardTimer) {
-      clearTimeout(window.loadingGuardTimer);
-      window.loadingGuardTimer = null;
-    }
     if (window.autoRefreshTimer) {
       clearTimeout(window.autoRefreshTimer);
       window.autoRefreshTimer = null;
     }
-    if (window.textCountdownTimer) {
-      clearInterval(window.textCountdownTimer);
-      window.textCountdownTimer = null;
-    }
-  }
+    try {
+      sessionStorage.removeItem('app_silent_retry');
+    } catch (e) {}
+  };
 
   window.hideLoadingScreen = function() {
     if (typeof window.cancelAutoRefresh === 'function') {
@@ -88,7 +73,7 @@
         }
       }, 400);
     }
-  }
+  };
 </script>
 <script src="./js/app.js" type="module"></script>
  </body>
