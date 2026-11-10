@@ -74,7 +74,7 @@
   --wuxing-text: #8c9ba5;
   --date-muted-text: #6e7785;
   --fold-btn-text: #c2c8d1;
-  --lottery-cell-top-circle-bj: rgba(0, 0, 0, 0.05);
+  --lottery-cell-top-circle-bj: rgba(0, 0, 0, 0.06);
 }
 
 body.light-theme {
