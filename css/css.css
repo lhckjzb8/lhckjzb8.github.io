@@ -171,11 +171,14 @@ body {
   -webkit-user-select: none;
   user-select: none;
   background-color: var(--bg-main);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
   color: var(--text-main);
   font-variant-numeric: lining-nums tabular-nums;
   font-feature-settings: "lnum" on, "tnum" on;
   -webkit-font-feature-settings: "lnum" on, "tnum" on;
+}
+input, textarea, select, button {
+  font-family: inherit;
 }
 #qd_pwa-ultimate-splash,
 .qd_splashContainer {
@@ -206,7 +209,7 @@ body {
   font-size: 35px;
   font-weight: 500;
   color: var(--text-main);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+ /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;*/
   letter-spacing: 1px;
   background: linear-gradient(to right, #444 30%, #ff4d4f 50%, #444 70%);
   background-size: 200% auto;
@@ -684,7 +687,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   padding: 0;
   margin: 0;
   color: rgb(22, 34, 53);
-  font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif;
+ /* font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif;*/
   font-size: clamp(16px, 5.1vw, 20.1px);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
@@ -1062,7 +1065,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   padding: 0;
   margin: 0;
   color: rgb(22, 34, 53);
-  font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif;
+ /* font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif;*/
   font-size: clamp(14.5px, 4.15vw, 17.9px);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
@@ -1865,7 +1868,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   border-radius: 8px;
   text-align: center;
   color: var(--text-main);
-  font-family: monospace;
+ /* font-family: monospace;*/
   font-size: 12px;
   border: 1px solid var(--border-subtle);
 }
@@ -2092,7 +2095,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   background: var(--border-subtle);
   border: 1px solid var(--border-light);
   border-radius: 8px; 
-  font-family: system-ui, sans-serif;
+ /* font-family: system-ui, sans-serif;*/
   font-size: 13px;
   letter-spacing: 1px;
   color: var(--text-secondary);
@@ -2189,7 +2192,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   text-align: center;
   max-width: 280px;
   width: 85%;
-  font-family: sans-serif;
+ /* font-family: sans-serif;*/
   animation: customfadeInScale 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .custom-toast-text {
