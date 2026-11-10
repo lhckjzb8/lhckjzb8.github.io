@@ -171,11 +171,9 @@ body {
   -webkit-user-select: none;
   user-select: none;
   background-color: var(--bg-main);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
   color: var(--text-main);
+  font-family: system-ui, -apple-system, "Quicksand", "Nunito", sans-serif;
   font-variant-numeric: lining-nums tabular-nums;
-  font-feature-settings: "lnum" on, "tnum" on;
-  -webkit-font-feature-settings: "lnum" on, "tnum" on;
 }
 input, textarea, select, button {
   font-family: inherit;
