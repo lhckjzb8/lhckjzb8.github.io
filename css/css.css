@@ -74,6 +74,7 @@
   --wuxing-text: #8c9ba5;
   --date-muted-text: #6e7785;
   --fold-btn-text: #c2c8d1;
+  --lottery-cell-top-circle-bj: rgba(0, 0, 0, 0.05);
 }
 
 body.light-theme {
@@ -149,6 +150,7 @@ body.light-theme {
   --wuxing-text: #8c6d4f;
   --date-muted-text: #9e8267;
   --fold-btn-text: #6e5032;
+  --lottery-cell-top-circle-bj: transparent;
 }
 /* ==========================================================================
    2. 基础重置、全局容器与顶部状态栏
@@ -1021,19 +1023,21 @@ body.light-theme .theme-icon-btn .icon-sun {
   box-sizing: border-box;
   border: none !important;
   box-shadow: none !important;
-  background-color: transparent !important;
+  /*background-color: transparent !important;*/
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
   background-position: center !important;
-  background-image: url('/img/ball_gray.png') !important;
+  background-image: var(--img-ball-gray) !important;
+  background-color: var(--lottery-cell-top-circle-bj) !important;
+  background-blend-mode: multiply !important;
 }
 
 /* 四色球体 PNG 背景图映射 */
-.lottery_open .lottery-cell-top-circle            { background-image: var(--img-ball-gray) !important; }
-.lottery_open .lottery-cell-top-circle.kjhm       { background-image: var(--img-ball-gray) !important; }
-.lottery_open .lottery-cell-top-circle.kjhm_red   { background-image: var(--img-ball-red) !important; }
-.lottery_open .lottery-cell-top-circle.kjhm_blue  { background-image: var(--img-ball-blue) !important; }
-.lottery_open .lottery-cell-top-circle.kjhm_green { background-image: var(--img-ball-green) !important; }
+.lottery_open .lottery-cell-top-circle            { background-image: var(--img-ball-gray) !important;}
+.lottery_open .lottery-cell-top-circle.kjhm       { background-image: var(--img-ball-gray) !important;}
+.lottery_open .lottery-cell-top-circle.kjhm_red   { background-image: var(--img-ball-red) !important;}
+.lottery_open .lottery-cell-top-circle.kjhm_blue  { background-image: var(--img-ball-blue) !important;}
+.lottery_open .lottery-cell-top-circle.kjhm_green { background-image: var(--img-ball-green) !important;}
 
 /* 中心号码直接居中（白圈已包含在 PNG 图片中，无需重复绘制背景） */
 .lottery_open .lottery-cell-top-circle h2 {
