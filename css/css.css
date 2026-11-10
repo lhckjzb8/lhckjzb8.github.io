@@ -194,28 +194,35 @@ input, textarea, select, button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  right: 0;
+  /* 使用 svh（小视口高度）锁死苹果工具栏完全展开后的最小稳定高度，防止加载时高度突变 */
   height: 100vh;
-  background-color: var(--bg-main); 
+  height: 100svh; 
+  background-color: var(--bg-main, #ffffff);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 999999;
   transition: opacity 0.4s ease, visibility 0.4s ease;
   user-select: none;
 }
+
 .loading-text-animate {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
   font-size: 35px;
+  line-height: 1.2;
   font-weight: 500;
-  color: var(--text-main);
- /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;*/
   letter-spacing: 1px;
+  text-indent: 1px;
   background: linear-gradient(to right, #444 30%, #ff4d4f 50%, #444 70%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* 提前强制开启 GPU 合成层，避免 iOS 动画启动瞬间发生字体基线跳动 */
+  will-change: transform, background-position;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   animation: shineText 2.5s linear infinite, pulseText 1.5s ease-in-out infinite alternate;
 }
 #loading-refresh-btn {
