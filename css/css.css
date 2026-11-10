@@ -30,9 +30,9 @@
 
   /* 文字与文本颜色体系 (暗色) */
   --text-main: #ffffff;
-  --text-secondary: #999999;
-  --text-muted: #aeaeb2;
-  --tongji-tab-text: #94a3b8;
+  --text-secondary: #9aa3b2;
+  --text-muted: #9aa3b2;
+  --tongji-tab-text: #9aa3b2;
   --tongji-tab-active: #38bdf8;
   --tongji-btn-text: #e2e8f0;
 
@@ -64,16 +64,16 @@
   --gold-pill-border-active: rgba(255, 193, 7, 0.5);
   --gold-pill-text: #ffd166;
   --gold-sub-text: #d4a359;
-  --gold-unit-text: #9a8f7a;
+  --gold-unit-text: #9aa3b2;
   --header-flow-bg: linear-gradient(90deg, rgba(255, 193, 7, 0.24) 0%, rgba(255, 193, 7, 0.08) 45%, rgba(255, 193, 7, 0.02) 100%);
   --header-flow-border: rgba(255, 193, 7, 0.18);
   --chip-bg: rgba(255, 255, 255, 0.04);
   --chip-border: rgba(255, 255, 255, 0.10);
   --chip-text: #9aa3b2;
-  --zodiac-text: #b8c0cc;
-  --wuxing-text: #8c9ba5;
+  --zodiac-text:  #9aa3b2;
+  --wuxing-text: #9a8f7a;
   --date-muted-text: #6e7785;
-  --fold-btn-text: #c2c8d1;
+  --fold-btn-text: #9aa3b2;
   --lottery-cell-top-circle-bj: rgba(0, 0, 0, 0.08);
 }
 
@@ -107,7 +107,7 @@ body.light-theme {
   /* 文字与文本颜色体系 (亮色) */
   --text-main: #2c1d0c;
   --text-secondary: #7a5c3e;
-  --text-muted: #9e7a56;
+  --text-muted: #7a5c3e;
   --tongji-tab-text: #7a5c3e;
   --tongji-tab-active: #b85207;
   --tongji-btn-text: #3d2712;
@@ -140,16 +140,16 @@ body.light-theme {
   --gold-pill-border-active: rgba(180, 115, 10, 0.65);
   --gold-pill-text: #8c5204;
   --gold-sub-text: #b85207;
-  --gold-unit-text: #8c6d4f;
+  --gold-unit-text: #7a5c3e;
   --header-flow-bg: linear-gradient(90deg, rgba(230, 162, 60, 0.26) 0%, rgba(230, 162, 60, 0.10) 48%, rgba(230, 162, 60, 0.02) 100%);
   --header-flow-border: rgba(217, 140, 20, 0.25);
   --chip-bg: #faf3e8;
   --chip-border: #e2c8a8;
   --chip-text: #7a5c3e;
-  --zodiac-text: #4a3520;
+  --zodiac-text: #7a5c3e;
   --wuxing-text: #8c6d4f;
   --date-muted-text: #9e8267;
-  --fold-btn-text: #6e5032;
+  --fold-btn-text: #7a5c3e;
   --lottery-cell-top-circle-bj: transparent;
 }
 /* ==========================================================================
@@ -175,9 +175,11 @@ body {
   font-family: system-ui, -apple-system, "Quicksand", "Nunito", sans-serif;
   font-variant-numeric: lining-nums tabular-nums;
 }
+/*
 input, textarea, select, button {
   font-family: inherit;
 }
+*/
 #qd_pwa-ultimate-splash,
 .qd_splashContainer {
   background: var(--bg-main);
@@ -682,7 +684,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 1 !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -694,7 +696,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   color: rgb(22, 34, 53);
  /* font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif;*/
   font-size: clamp(16px, 5.1vw, 20.1px);
-  font-weight: 500;
+  font-weight: 600;
   font-variant-numeric: tabular-nums;
   line-height: 1;
   letter-spacing: 0;
@@ -1062,7 +1064,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   align-items: center;
   justify-content: center;
   line-height: 1 !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
 
 .lottery_open .lottery-cell-top-circle h2 span {
@@ -1072,7 +1074,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   color: rgb(22, 34, 53);
  /* font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif;*/
   font-size: clamp(14.5px, 4.15vw, 17.9px);
-  font-weight: 500;
+  font-weight: 600;
   font-variant-numeric: tabular-nums;
   line-height: 1;
   letter-spacing: 0;
