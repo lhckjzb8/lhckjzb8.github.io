@@ -75,6 +75,7 @@
   --date-muted-text: #6e7785;
   --fold-btn-text: #9aa3b2;
   --lottery-cell-top-circle-bj: rgba(0, 0, 0, 0.08);
+  --lottery-gold-pill-bg: rgba(255, 193, 7, 0.03);
 }
 
 body.light-theme {
@@ -151,6 +152,7 @@ body.light-theme {
   --date-muted-text: #9e8267;
   --fold-btn-text: #7a5c3e;
   --lottery-cell-top-circle-bj: transparent;
+  --lottery-gold-pill-bg: rgba(217, 140, 20, 0.03);
 }
 /* ==========================================================================
    2. 基础重置、全局容器与顶部状态栏
@@ -963,6 +965,10 @@ body.light-theme .theme-icon-btn .icon-sun {
   box-sizing: border-box;
   gap: 5px; 
   border-top: 1px dashed var(--border-dashed) !important;
+}
+/* 给偶数行设置不同的背景色 */
+.lottery-row-third:nth-child(even) {
+  background-color: var(--lottery-gold-pill-bg) !important;
 }
 .lottery-row-third h.wx {
   display: none;
