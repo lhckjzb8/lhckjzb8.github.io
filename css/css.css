@@ -2557,7 +2557,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   padding: 10px 15px;
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)) !important;
   border: 1px solid var(--ax-label-border);
-  color: var(--ax-text-main);
+  color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 18px var(--glow-primary); 
   font-size: 14px;
