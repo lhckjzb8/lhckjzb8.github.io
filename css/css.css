@@ -2535,7 +2535,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   width: max-content;
   max-width: 85vw;
   position: fixed;
-  top: 50%;                    
+  top: 30%;                    
   left: 50%;                   
   transform: translate(-50%, -50%); /* 屏幕几何正中心十字绝对居中 */
   z-index: 9999 !important;    
