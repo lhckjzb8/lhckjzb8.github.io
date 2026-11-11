@@ -76,6 +76,23 @@
   --fold-btn-text: #9aa3b2;
   --lottery-cell-top-circle-bj: rgba(0, 0, 0, 0.08);
   --lottery-gold-pill-bg: rgba(255, 193, 7, 0.03);
+  
+  /* 查询助手 */
+    --ax-bg-wall: transparent;
+  --ax-card-bg: rgba(12, 12, 14, 0.96);
+  --ax-text-main: #ffffff;
+  --ax-text-sub: #9aa3b2;
+  --ax-line: #333333;
+  --ax-element-bg: #1e1e1e;
+  --ax-label-bg: rgba(255, 193, 7, 0.14);
+  --ax-label-border: rgba(255, 193, 7, 0.35);
+  --ax-gold: #e6a23c;
+  --ax-gold-glow: rgba(230, 162, 60, 0.3);
+  --ax-pop-bg: rgba(18, 18, 20, 0.98);
+  --ax-btn-prime-bg: linear-gradient(135deg, #ee5b2a 0%, #e6a23c 100%);
+  --ax-btn-prime-shadow: 0 4px 16px rgba(238, 91, 42, 0.35);
+  --ax-stepper-btn-bg: #2c2c35;
+  --ax-card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 body.light-theme {
@@ -153,6 +170,23 @@ body.light-theme {
   --fold-btn-text: #7a5c3e;
   --lottery-cell-top-circle-bj: transparent;
   --lottery-gold-pill-bg: rgba(217, 140, 20, 0.03);
+  
+  /* 查询助手 */
+  --ax-bg-wall: transparent;
+  --ax-card-bg: rgba(255, 255, 255, 0.96);
+  --ax-text-main: #2c1d0c;
+  --ax-text-sub: #7a5c3e;
+  --ax-line: #d9b48c;
+  --ax-element-bg: rgba(253, 246, 238, 0.96);
+  --ax-label-bg: rgba(255, 255, 255, 0.98);
+  --ax-label-border: #d9b48c;
+  --ax-gold: #b28200;
+  --ax-gold-glow: rgba(230, 162, 60, 0.3);
+  --ax-pop-bg: rgba(255, 255, 255, 0.98);
+  --ax-btn-prime-bg: linear-gradient(135deg, #d94e1b 0%, #b28200 100%);
+  --ax-btn-prime-shadow: 0 4px 14px rgba(217, 78, 27, 0.25);
+  --ax-stepper-btn-bg: #f4e3cd;
+  --ax-card-shadow: 0 10px 30px -10px rgba(140, 90, 40, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 /* ==========================================================================
    2. 基础重置、全局容器与顶部状态栏
@@ -406,7 +440,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   display: inline-block;
   vertical-align: middle;
 }
-.aoh, .aob, .xgh, .xgb, .kl8, .tjzsico, .fsjsico {
+.aoh, .aob, .xgh, .xgb, .kl8, .kjjlico, .tjzsico, .fsjsico {
   width: 18px;
   height: 18px;
   margin-top: -1px;
@@ -750,6 +784,11 @@ body.light-theme .theme-icon-btn .icon-sun {
   color: var(--zodiac-text);
   font-size: 15px;
 }
+.kj h.wx {
+ /* display: none;*/
+  color: var(--wuxing-text) !important;
+  font-size: 12.5px;
+}
 .kj .row-third {
   width: 95%;
   margin-left: auto;
@@ -971,12 +1010,13 @@ body.light-theme .theme-icon-btn .icon-sun {
   background-color: var(--lottery-gold-pill-bg) !important;
 }
 .lottery-row-third h.wx {
-  display: none;
+  /*display: none;*/
   color: var(--wuxing-text) !important;
-  font-size: 11.5px;
+  font-size: 11px;
 }
 .show-wuxing-mode .wx {
-  display: inline-block !important;
+  display: none !important;
+  /*display: inline-block !important;*/
 }
 .lottery-third-left {
   width: auto; 
@@ -2227,4 +2267,520 @@ body.light-theme .theme-icon-btn .icon-sun {
 }
 .custom-toast-btn:active {
   opacity: 0.8;
+}
+/* ==========================================
+   查询助手  组件核心样式（全部绑定变量，实现零硬编码）
+   ========================================== */
+.ax-ultra-slim-container {
+  background-color: var(--ax-bg-wall);
+  padding: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.ax-dashboard-card {
+  background-color: var(--ax-card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--ax-line);
+  border-radius: 10px;
+  padding: 8px 8px;
+  box-shadow: var(--ax-card-shadow);
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ax-lane-row {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+ /* border-bottom: 1px dashed var(--ax-line);*/
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+.ax-lane-row.no-border { border: none; }
+
+/* 延伸区隐藏时自动收起行高和边框 */
+.ax-lane-row:has(#context-extension-lane.ax-ext-hide) {
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
+.ax-lane-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ax-text-main);
+  width: 45px;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+  text-align: center; 
+  padding: 8px 5px;
+  border-radius: 8px;
+  background-color: var(--ax-label-bg);
+  border: 1px solid var(--ax-label-border);
+  margin-right: 7px;
+}
+
+.ax-lane-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 5px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* 年份行防溢出包裹 */
+.year-flex-wrap {
+  flex-wrap: wrap;
+  row-gap: 5px;
+}
+
+.ax-recent-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.ax-grid-input-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 现代化质感触发器 */
+.ax-select-trigger {
+  background-color: var(--ax-element-bg);
+  color: var(--ax-text-main);
+  padding: 8px 7px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--ax-line);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.ax-select-trigger:after {
+  content: "";
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--ax-text-sub);
+  opacity: 0.7;
+  margin-left: 8px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+.ax-select-trigger:hover {
+  border-color: var(--ax-gold);
+  background-color: var(--ax-gold-glow);
+  box-shadow: 0 0 12px var(--ax-gold-glow);
+}
+.ax-select-trigger.active {
+  border-color: var(--ax-gold);
+  box-shadow: 0 0 16px var(--ax-gold-glow);
+}
+.ax-select-trigger.active:after { transform: rotate(180deg); opacity: 1; }
+
+.ax-text-split { font-size: 14px; color: var(--ax-text-sub); opacity: 0.9; white-space: nowrap; }
+
+/* 联动数字输入框 */
+.ax-num-input-wrap {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--ax-element-bg);
+  padding: 3px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--ax-line);
+}
+.ax-pure-num-field {
+  width: 23px;
+  border: none;
+  background: transparent;
+  outline: none;
+  text-align: center;
+  color: var(--ax-text-main);
+  font-size: 14px;
+  font-weight: 700;
+}
+.ax-pure-num-field::-webkit-inner-spin-button { -webkit-appearance: none; }
+.ax-input-unit { font-size: 14px; font-weight: bold; color: var(--ax-text-sub); opacity: 0.9; }
+
+/* 现代输入框 */
+.ax-modern-input-box {
+  background-color: var(--ax-element-bg);
+  border-radius: 8px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--ax-line);
+  transition: all 0.25s;
+  box-sizing: border-box;
+  width: 100%;
+}
+.ax-modern-input-box:focus-within {
+  border-color: var(--ax-gold);
+  box-shadow: 0 0 16px var(--ax-gold-glow);
+}
+.ax-pure-text-field {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--ax-text-main);
+  font-weight: 600;
+}
+.ax-pure-text-field::placeholder { color: var(--ax-text-sub); opacity: 0.6; font-weight: 400; }
+
+/* 延伸区 */
+.ax-popup-extension-wrap {
+  width: 100%;
+  margin-top: 0px;
+  background-color: var(--ax-element-bg);
+  border-radius: 10px;
+  border: 1.5px dashed var(--ax-line);
+  overflow: hidden;
+  max-height: 60px;
+  opacity: 1;
+  box-sizing: border-box;
+  transition: max-height 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+.ax-popup-extension-wrap.ax-ext-hide { max-height: 0; opacity: 0; margin-top: 0; border-color: transparent; }
+.ax-ext-inline-inner { display: flex; align-items: center; justify-content: flex-start; padding: 8px 14px; font-size: 14px; white-space: nowrap; width: 100%; box-sizing: border-box; }
+
+.ax-stepper-txt { color: var(--ax-text-sub); margin-right: 6px; font-weight: 600; }
+.ax-stepper-btn {
+  width: 22px; height: 22px;
+  background-color: var(--ax-stepper-btn-bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: bold; border-radius: 6px;
+  cursor: pointer; user-select: none;
+  border: 1px solid var(--ax-line);
+  color: var(--ax-text-main);
+  transition: all 0.15s;
+}
+.ax-stepper-btn:hover { background-color: var(--ax-gold); color: #ffffff; border-color: transparent; }
+.ax-stepper-val { width: 24px; border: none; background: transparent; text-align: center; color: var(--ax-text-main); font-size: 12.5px; font-weight: bold; outline: none; }
+.ax-stepper-unit { color: var(--ax-text-sub); opacity: 0.9; padding-left: 2px; }
+
+/* 行动按钮 */
+.ax-luxury-action-btn {
+  padding: 9px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.ax-luxury-action-btn:active { transform: scale(0.95); }
+.btn-prime {
+  background: var(--ax-btn-prime-bg);
+  color: #ffffff;
+  box-shadow: var(--ax-btn-prime-shadow);
+}
+.btn-prime:hover { filter: brightness(1.1); }
+.btn-sub { background-color: transparent; color: var(--ax-text-sub); }
+.btn-sub:hover { background-color: var(--ax-element-bg); color: var(--ax-text-main); }
+
+/* Popover 弹窗系统 */
+.ax-blur-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(4px); z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.25s ease; }
+.ax-blur-overlay.active { opacity: 1; pointer-events: auto; }
+
+.ax-luxury-popover {
+  position: absolute; z-index: 2500;
+  background-color: var(--ax-pop-bg);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--ax-line);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  opacity: 0; transform: translateY(-8px) scale(0.96); pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  width: max-content !important;
+  max-width: calc(100% - 24px);
+}
+.ax-luxury-popover.active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.ax-popover-inner { padding: 6px; display: flex; flex-direction: column; gap: 3px; }
+
+.ax-popover-item {
+  padding: 10px 16px; font-size: 14px; font-weight: 600; border-radius: 8px; cursor: pointer;
+  color: var(--ax-text-main); display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  transition: background 0.15s, color 0.15s;
+}
+.ax-popover-item:hover { background-color: var(--ax-element-bg); color: var(--ax-gold); }
+.ax-popover-item:after { content: "✓"; font-weight: 900; font-size: 14px; color: var(--ax-gold); opacity: 0; }
+.ax-popover-item.is-selected:after { opacity: 1; }
+
+/* Toast 提示 */
+/* 1. 提示外壳容器 */
+.ax-toast-container {
+  width: max-content;
+  max-width: 85vw;
+  position: fixed;
+  top: 50%;                    
+  left: 50%;                   
+  transform: translate(-50%, -50%); /* 屏幕几何正中心十字绝对居中 */
+  z-index: 9999 !important;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;         
+  justify-content: center;     
+  gap: 8px;
+  pointer-events: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 2. 内部具体卡片皮肤 */
+.ax-toast-container .ax-toast-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: var(--ax-label-bg);
+  border: 1px solid var(--ax-label-border);
+  color: var(--ax-text-main);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25); 
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+@keyframes toastPop { from { opacity: 0; transform: translateY(-12px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.ax-matrix-display-canvas { width: 100%; border-radius: 8px; margin-top: 14px; border: 1px solid var(--ax-line); background-color: var(--ax-card-bg); }
+.ax-modern-empty-state { text-align: center; padding: 36px; color: var(--ax-text-sub); font-size: 14px; border-radius: 8px; }
+
+/* ==========================================================================
+   LOTTERY INDEPENDENT TABS (彩种独立切换按钮 - 含动态打钩高亮)
+   ========================================================================== */
+.ax-tab-btn {
+  display: inline-flex;  /* 💡 改为弹性盒，确保文字与打钩符号横向平铺居中 */
+  align-items: center;
+  justify-content: center;
+  gap: 0;                /* 未激活时字距为0 */
+  padding: 8px 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 0.5px solid var(--ax-line);
+  color: var(--ax-text-sub);
+  background-color: var(--ax-card-bg);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+/* 预留打钩伪元素：默认处于隐藏、收缩、透明度为 0 的状态 */
+.ax-tab-btn::after {
+  content: " ✓";        /* 💡 静态注入精致的打钩符号 */
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+  max-width: 0;         /* 宽度为0，不占用原本的文字空间 */
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* 丝滑展开过渡动效 */
+}
+
+/* 激活状态：完美切换品牌渐变底色 */
+.ax-tab-btn.is-active {
+  background: var(--ax-btn-prime-bg) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  font-weight: 600;
+  box-shadow: var(--ax-btn-prime-shadow);
+  transform: translateY(-1px);
+  gap: 3px;             /* 💡 激活时，字与打钩符号之间弹开 4px 的呼吸间距 */
+}
+
+/* 💡 核心核心：当按钮被激活时，后面的打钩伪元素平滑舒展开来 */
+.ax-tab-btn.is-active::after {
+  max-width: 12px;      /* 展开宽度，完全露出打钩 */
+  opacity: 1;           /* 渐现显现 */
+}
+
+/* ==========================================================================
+   AX-MATRIX RESULT DATA GRID CONTAINER (高精度单行闭合线网格)
+   ========================================================================== */
+
+/* 外壳：保持透明，不篡改、不遮挡原卡片的任何背景和 padding */
+.ax-result-table-div {
+  display: grid;
+  grid-template-columns: minmax(min-content, 50px) repeat(7, 1fr); 
+  width: 100%;
+  max-width: 100%;
+  padding: 9px; 
+  font-size: 14px;
+  color: var(--ax-text-main);
+  box-sizing: border-box;
+  background-color: transparent; 
+  position: relative; /* 为绝对定位的闭合线提供参考 */
+}
+
+/* 单元格基类：彻底放弃 margin 负值和 box-shadow 偏置 */
+.ax-result-table-div .ax-grid-cell {
+  /* 核心核心：每个单元格严格只画右边和下边，元素之间零重叠、零碰撞 */
+  border-right: 0.5px solid var(--ax-line);
+  border-bottom: 0.5px solid var(--ax-line);
+  height: 35px;        
+  display: flex;
+  flex-direction: row; /* 单行极简风格：内容横向排布 */
+  align-items: center;     
+  justify-content: center; 
+  gap: 2px;            /* 号码与生肖之间的微小间距（按期数查询时有用） */
+  padding: 0 6px; 
+  box-sizing: border-box;
+  background-color: transparent; /* 保持透明，完美透出父卡片背景 */
+  transition: all 0.15s ease;
+  
+  /* 严格防溢出截断 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 补齐最左侧的大外框线 */
+.ax-result-table-div::before {
+  content: "";
+  position: absolute;
+  top: 9px;    /* 严格对齐外壳的 padding-top */
+  bottom: 9px; /* 严格对齐外壳的 padding-bottom */
+  left: 9px;   /* 严格对齐外壳的 padding-left */
+  border-left: 0.5px solid var(--ax-line);
+  pointer-events: none;
+}
+
+/* 补齐最上侧的大外框线 */
+.ax-result-table-div::after {
+  content: "";
+  position: absolute;
+  top: 9px;    /* 严格对齐外壳的 padding-top */
+  left: 9px;   /* 严格对齐外壳的 padding-left */
+  right: 9px;  /* 严格对齐外壳的 padding-right */
+  border-top: 0.5px solid var(--ax-line);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   ROLE DEFINITIONS (身份样式层级)
+   ========================================================================== */
+
+/* 表头与期号列样式：应用变量背景色以作区域视觉区隔 */
+.ax-result-table-div .ax-grid-cell.is-header,
+.ax-result-table-div .ax-grid-cell.is-period {
+  background-color: var(--ax-element-bg);
+  color: var(--ax-text-sub);
+  font-weight: 500;
+}
+
+/* 普通号码单元格样式 */
+.ax-result-table-div .ax-grid-cell.is-num {
+  background-color: transparent; 
+}
+
+/* 单元格文本基础微调 */
+.ax-result-table-div .ball-text {
+  font-weight: 700;
+  color: var(--ax-text-main);
+  transition: all 0.12s ease;
+}
+.ax-result-table-div .zodiac-text {
+  font-size: 11px;
+  color: var(--ax-text-sub);
+}
+
+/* ==========================================================================
+   DYNAMIC INTERACTIVE STATES (多维度动态高亮与解耦控制)
+   ========================================================================== */
+
+/* 1. 位置栏目削弱：当某列位置未被勾选时，整体淡化，实现视线聚焦 */
+.ax-result-table-div .ax-grid-cell.pos-disabled {
+  opacity: 0.25;
+}
+
+/* 2. 行命中背景提示（号码/生肖查询命中时，期号单元格呈现柔和的半透明品牌底色） */
+.ax-result-table-div .ax-grid-cell.is-period.row-direct-match {
+  background-color: var(--ax-label-bg);
+  color: var(--ax-gold);
+  font-weight: 600;
+}
+/* 命中行上下文的号码格子，背景色赋予极轻微的感知微调 */
+.ax-result-table-div .ax-grid-cell.row-match-context {
+  background-color: rgba(230, 162, 60, 0.02);
+}
+
+/* 3. 【核心球体高亮】：号码/生肖被直接击中时的变装样式 */
+.ax-result-table-div .ax-grid-cell.ball-hit-highlight {
+  /* 在紧凑单行35px高度下，不破坏格子的框线，用一个精致的小圆点或内圆包裹 */
+  background-color: rgba(238, 91, 42, 0.06); 
+}
+.ax-result-table-div .ax-grid-cell.ball-hit-highlight .ball-text {
+  background: var(--ax-btn-prime-bg);
+  color: #ffffff !important;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: var(--ax-btn-prime-shadow);
+  font-size: 13px;
+}
+.ax-result-table-div .ax-grid-cell.ball-hit-highlight .zodiac-text {
+  color: var(--ax-gold);
+  font-weight: 600;
+}
+
+/* 4. 【精准期数高亮】：当按期数查询命中时，该期号格转换为独占的瞩目渐变色状态 */
+.ax-result-table-div .ax-grid-cell.is-period.period-hit-highlight {
+  background: var(--ax-element-bg) !important;
+  box-shadow: none !important;
+}
+.ax-result-table-div .ax-grid-cell.period-hit-highlight span {
+  color: var(--ax-gold) !important;
+  font-weight: 700;
+}
+/* ==========================================================================
+   POPOVER OVERLAY TOP LEVEL LAYER (全局弹窗顶级安全层级轰炸)
+   ========================================================================== */
+.ax-blur-overlay {
+  z-index: 9998 !important; /* 彻底超越一切业务层卡片 */
+}
+.ax-luxury-popover {
+  z-index: 9999 !important; /* 保证下拉列表永远居于最高视觉层级，绝不被导航遮挡 */
+}
+/* ==========================================================================
+   TRIGGER DISABLED STATE (下拉触发器禁选/锁死状态)
+   ========================================================================== */
+.ax-select-trigger.ax-trigger-disabled {
+  cursor: not-allowed !important;         /* 鼠标悬浮时变为禁用图标 */
+  opacity: 0.45 !important;               /* 降低整体透明度，呈现灰色锁定感 */
+  background-color: var(--ax-line) !important; /* 自动使用当前主题的线框色作为保护背景 */
+  border-color: var(--ax-line) !important;
+  pointer-events: none;                   /* 彻底锁死浏览器底层的原生指针与点击穿透 */
 }
