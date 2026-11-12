@@ -2341,14 +2341,6 @@ body.light-theme .theme-icon-btn .icon-sun {
   row-gap: 5px;
 }
 
-.ax-recent-group {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-shrink: 0;
-  margin-left: auto;
-}
-
 .ax-grid-input-row {
   display: grid;
   grid-template-columns: 1fr;
@@ -2403,12 +2395,16 @@ body.light-theme .theme-icon-btn .icon-sun {
   display: inline-flex;
   align-items: center;
   background-color: var(--ax-element-bg);
-  padding: 3px 6px;
+  padding: 8px 7px;
   border-radius: 8px;
   border: 1px solid var(--ax-line);
 }
+.ax-num-input-wrap:focus-within {
+  border-color: var(--ax-gold);
+  box-shadow: 0 0 16px var(--ax-gold-glow);
+}
 .ax-pure-num-field {
-  width: 23px;
+  width: 18px;
   border: none;
   background: transparent;
   outline: none;
@@ -2418,7 +2414,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   font-weight: 700;
 }
 .ax-pure-num-field::-webkit-inner-spin-button { -webkit-appearance: none; }
-.ax-input-unit { font-size: 14px; font-weight: bold; color: var(--ax-text-sub); opacity: 0.9; }
+.ax-input-unit { font-size: 14px; font-weight: 400; color: var(--ax-text-sub); opacity: 0.9; }
 
 /* 现代输入框 */
 .ax-modern-input-box {
