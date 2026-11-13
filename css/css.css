@@ -2388,7 +2388,7 @@ body.light-theme .theme-icon-btn .icon-sun {
 }
 .ax-select-trigger.active:after { transform: rotate(180deg); opacity: 1; }
 
-.ax-text-split { font-size: 14px; color: var(--ax-text-sub); opacity: 0.9; white-space: nowrap; }
+.ax-text-split { font-size: 14px; color: var(--ax-text-sub); opacity: 0.9; white-space: nowrap; margin: 0 0.5px;}
 
 /* 联动数字输入框 */
 .ax-num-input-wrap {
@@ -2404,14 +2404,16 @@ body.light-theme .theme-icon-btn .icon-sun {
   box-shadow: 0 0 16px var(--ax-gold-glow);
 }
 .ax-pure-num-field {
-  width: 18px;
+  width: 20px;
   border: none;
+  border-bottom: 0.5px solid var(--ax-text-sub);
   background: transparent;
   outline: none;
   text-align: center;
   color: var(--ax-text-main);
   font-size: 14px;
   font-weight: 700;
+  margin:0 5px;
 }
 .ax-pure-num-field::-webkit-inner-spin-button { -webkit-appearance: none; }
 .ax-input-unit { font-size: 14px; font-weight: 400; color: var(--ax-text-sub); opacity: 0.9; }
@@ -2567,7 +2569,7 @@ body.light-theme .theme-icon-btn .icon-sun {
 
 @keyframes toastPop { from { opacity: 0; transform: translateY(-12px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
-.ax-matrix-display-canvas { width: 100%; border-radius: 8px; margin-top: 14px; border: 1px solid var(--ax-line); background-color: var(--ax-card-bg); }
+.ax-matrix-display-canvas { width: 100%; border-radius: 8px; margin-top: 14px; border: 1px solid var(--ax-line); background-color: var(--ax-card-bg);padding: 5px 0; }
 .ax-modern-empty-state { text-align: center; padding: 36px; color: var(--ax-text-sub); font-size: 14px; border-radius: 8px; }
 
 /* ==========================================================================
