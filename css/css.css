@@ -2474,6 +2474,22 @@ body.light-theme .theme-icon-btn .icon-sun {
   transition: all 0.15s;
 }
 .ax-stepper-btn:hover { background-color: var(--ax-gold); color: #ffffff; border-color: transparent; }
+.ax-stepper-jjbtn {
+  width: 22px; 
+  height: 22px;
+  background-color: var(--ax-stepper-btn-bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: bold; border-radius: 6px;
+  cursor: pointer; user-select: none;
+  border: 1px solid var(--ax-line);
+  color: var(--ax-text-main);
+  transition: all 0.15s;
+}
+.ax-stepper-jjbtn.active {
+  background: var(--ax-btn-prime-bg);
+  color: #ffffff;
+  box-shadow: var(--ax-btn-prime-shadow);
+}
 .ax-stepper-val { width: 24px; border: none; background: transparent; text-align: center; color: var(--ax-text-main); font-size: 12.5px; font-weight: bold; outline: none; }
 .ax-stepper-unit { color: var(--ax-text-sub); opacity: 0.9; padding-left: 2px; }
 
