@@ -2434,17 +2434,35 @@ body.light-theme .theme-icon-btn .icon-sun {
   border-color: var(--ax-gold);
   box-shadow: 0 0 16px var(--ax-gold-glow);
 }
+.ax-pure-text-input {
+  width: 100px;
+  background-color: var(--ax-element-bg);
+  border: 1px solid var(--ax-line);
+  align-items: center;
+  outline: none;
+  padding: 8px 0;
+  font-size: 14px;
+  border-radius: 8px;
+  color: var(--ax-text-main);
+  font-weight: 600;
+  text-align: center;
+  margin-right: 6px;
+}
+.ax-pure-text-input:focus-within {
+  border-color: var(--ax-gold);
+  box-shadow: 0 0 16px var(--ax-gold-glow);
+}
 .ax-pure-text-field {
   width: 100%;
   background: transparent;
   border: none;
   outline: none;
-  padding: 9px 0;
+  padding: 8px 0;
   font-size: 14px;
   color: var(--ax-text-main);
   font-weight: 600;
 }
-.ax-pure-text-field::placeholder { color: var(--ax-text-sub); opacity: 0.6; font-weight: 400; }
+.ax-pure-text-input::placeholder, .ax-pure-text-field::placeholder { color: var(--ax-text-sub); opacity: 0.6; font-weight: 400; }
 
 /* 延伸区 */
 .ax-popup-extension-wrap {
