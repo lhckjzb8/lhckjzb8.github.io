@@ -2420,19 +2420,20 @@ body.light-theme .theme-icon-btn .icon-sun {
 
 /* 现代输入框 */
 .ax-modern-input-box {
-  background-color: var(--ax-element-bg);
+  background-color: var(--ax-element-bg, #1c1c1e);
   border-radius: 8px;
-  padding: 0 14px;
+  padding: 8px 14px;
   display: flex;
-  align-items: center;
-  border: 1px solid var(--ax-line);
-  transition: all 0.25s;
+  align-items: flex-start;        /* 顶部对齐：多行时按钮始终固定在右上角 */
+  border: 1px solid var(--ax-line, rgba(255, 255, 255, 0.15));
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
   box-sizing: border-box;
   width: 100%;
 }
+/* 内部输入获得焦点时，外层亮起金色边框和光晕 */
 .ax-modern-input-box:focus-within {
-  border-color: var(--ax-gold);
-  box-shadow: 0 0 16px var(--ax-gold-glow);
+  border-color: var(--ax-gold, #f5c542);
+  box-shadow: 0 0 16px var(--ax-gold-glow, rgba(245, 197, 66, 0.35));
 }
 .ax-pure-text-input {
   width: 100px;
@@ -2452,17 +2453,75 @@ body.light-theme .theme-icon-btn .icon-sun {
   border-color: var(--ax-gold);
   box-shadow: 0 0 16px var(--ax-gold-glow);
 }
+/* 多行自适应输入框 */
 .ax-pure-text-field {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
+  min-height: 21px;
+  max-height: 100px;
+  overflow-y: auto;
   background: transparent;
   border: none;
   outline: none;
-  padding: 8px 0;
-  font-size: 14px;
-  color: var(--ax-text-main);
+  padding: 0;
+  margin: 0;
+  font-size: 14px; 
+  line-height: 1.5;
+  color: var(--ax-text-main, #ffffff);
   font-weight: 600;
+  resize: none;
+  font-family: inherit;
+  -webkit-appearance: none;       /* 清除 iOS 默认内阴影与圆角 */
 }
-.ax-pure-text-input::placeholder, .ax-pure-text-field::placeholder { color: var(--ax-text-sub); opacity: 0.6; font-weight: 400; }
+
+.ax-pure-text-field::placeholder {
+  color: var(--ax-text-sub, #9ca3af);
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+/* 右上角提取按钮 */
+.ax-btn-primary {
+  flex-shrink: 0;                 /* 防止被长文本挤压变形 */
+  margin-left: 10px;              /* 用 margin 替代 flex gap，兼容所有老旧手机浏览器 */
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--ax-gold, #f5c542) 0%, #d49b1a 100%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent; /* 清除手机端点击时的默认灰色闪块 */
+}
+
+/* 悬停微亮 */
+.ax-btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 0 12px var(--ax-gold-glow, rgba(245, 197, 66, 0.45));
+}
+
+/* 按住瞬间反馈 */
+.ax-btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* 点击后持久变色状态（成功绿，也可按需改为其他色值） */
+.ax-btn-primary.is-active {
+  background: #10b981;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.45);
+}
+
+/* 键盘 Tab 导航时的替代焦点环 */
+.ax-btn-primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #141414, 0 0 0 4px var(--ax-gold, #f5c542);
+}
+
 
 /* 延伸区 */
 .ax-popup-extension-wrap {
@@ -2655,6 +2714,7 @@ body.light-theme .theme-icon-btn .icon-sun {
   max-width: 12px;      /* 展开宽度，完全露出打钩 */
   opacity: 1;           /* 渐现显现 */
 }
+
 
 /* ==========================================================================
    AX-MATRIX RESULT DATA GRID CONTAINER (高精度单行闭合线网格)
