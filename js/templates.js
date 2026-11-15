@@ -1,1 +1,591 @@
-const _0x565fe2=_0x16b9;(function(_0x420a71,_0x5ef8a0){const _0x5125a0=_0x16b9,_0x3f0467=_0x420a71();while(!![]){try{const _0x4686c3=-parseInt(_0x5125a0(0x0))/0x1+-parseInt(_0x5125a0(0x1))/0x2*(-parseInt(_0x5125a0(0x2))/0x3)+parseInt(_0x5125a0(0x3))/0x4+parseInt(_0x5125a0(0x4))/0x5*(parseInt(_0x5125a0(0x5))/0x6)+-parseInt(_0x5125a0(0x6))/0x7+parseInt(_0x5125a0(0x7))/0x8+-parseInt(_0x5125a0(0x8))/0x9*(parseInt(_0x5125a0(0x9))/0xa);if(_0x4686c3===_0x5ef8a0)break;else _0x3f0467['push'](_0x3f0467['shift']());}catch(_0x53e711){_0x3f0467['push'](_0x3f0467['shift']());}}}(_0x2fcc,0x32255));const _0x345b2e=(function(){let _0x25c2b4=!![];return function(_0x3103f0,_0x2d917c){const _0xfd60c0=_0x25c2b4?function(){if(_0x2d917c){const _0x177042=_0x2d917c['apply'](_0x3103f0,arguments);return _0x2d917c=null,_0x177042;}}:function(){};return _0x25c2b4=![],_0xfd60c0;};}()),_0x1df577=_0x345b2e(this,function(){const _0x1801f7=_0x16b9,_0x5e53c3=function(){const _0x33f64c=_0x16b9;let _0xc2928f;try{_0xc2928f=Function(_0x33f64c(0xa)+_0x33f64c(0xb)+');')();}catch(_0x316ee6){_0xc2928f=window;}return _0xc2928f;},_0x132b35=_0x5e53c3(),_0x27df04=new RegExp('[WTZersPEsGnKWJVHWdvpDYJdWMmDexBATUOqnHaQN]','g'),_0xaf35dc='lWThZcerkjzsPEbs8G.ginKWtJhVHuWdvpbDY.JdioWMmDexBATUOqnHaQN'[_0x1801f7(0xc)](_0x27df04,'')[_0x1801f7(0xd)](';');let _0xb066bf,_0x4c7551,_0x2574be,_0x98dbf8;const _0x189557=function(_0xae5b18,_0x576a82,_0x43a80b){const _0x4b99c6=_0x16b9;if(_0xae5b18[_0x4b99c6(0xe)]!=_0x576a82)return![];for(let _0x39cabe=0x0;_0x39cabe<_0x576a82;_0x39cabe++){for(let _0x5e91a6=0x0;_0x5e91a6<_0x43a80b[_0x4b99c6(0xe)];_0x5e91a6+=0x2){if(_0x39cabe==_0x43a80b[_0x5e91a6]&&_0xae5b18[_0x4b99c6(0xf)](_0x39cabe)!=_0x43a80b[_0x5e91a6+0x1])return![];}}return!![];},_0x2dba11=function(_0x97609e,_0x4f7ad2,_0x4b59bd){return _0x189557(_0x4f7ad2,_0x4b59bd,_0x97609e);},_0x59f22a=function(_0x52ffc1,_0xe1a393,_0x207fa5){return _0x2dba11(_0xe1a393,_0x52ffc1,_0x207fa5);},_0x13dd1d=function(_0x5e309b,_0x191243,_0xe545da){return _0x59f22a(_0x191243,_0xe545da,_0x5e309b);};for(let _0x593e0a in _0x132b35){if(_0x189557(_0x593e0a,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){_0xb066bf=_0x593e0a;break;}}for(let _0xb71245 in _0x132b35[_0xb066bf]){if(_0x13dd1d(0x6,_0xb71245,[0x5,0x6e,0x0,0x64])){_0x4c7551=_0xb71245;break;}}for(let _0x263a6c in _0x132b35[_0xb066bf]){if(_0x59f22a(_0x263a6c,[0x7,0x6e,0x0,0x6c],0x8)){_0x2574be=_0x263a6c;break;}}if(!('~'>_0x4c7551))for(let _0x395d7a in _0x132b35[_0xb066bf][_0x2574be]){if(_0x2dba11([0x7,0x65,0x0,0x68],_0x395d7a,0x8)){_0x98dbf8=_0x395d7a;break;}}if(!_0xb066bf||!_0x132b35[_0xb066bf])return;const _0xc063c9=_0x132b35[_0xb066bf][_0x4c7551],_0x32bb40=!!_0x132b35[_0xb066bf][_0x2574be]&&_0x132b35[_0xb066bf][_0x2574be][_0x98dbf8],_0x544439=_0xc063c9||_0x32bb40;if(!_0x544439)return;let _0x33affe=![];for(let _0xe1fe01=0x0;_0xe1fe01<_0xaf35dc[_0x1801f7(0xe)];_0xe1fe01++){const _0x2b87d4=_0xaf35dc[_0xe1fe01],_0x5c7c63=_0x2b87d4[0x0]===String[_0x1801f7(0x10)](0x2e)?_0x2b87d4[_0x1801f7(0x11)](0x1):_0x2b87d4,_0xc5d56a=_0x544439[_0x1801f7(0xe)]-_0x5c7c63[_0x1801f7(0xe)],_0xfacc41=_0x544439[_0x1801f7(0x12)](_0x5c7c63,_0xc5d56a),_0x288315=_0xfacc41!==-0x1&&_0xfacc41===_0xc5d56a;_0x288315&&((_0x544439[_0x1801f7(0xe)]==_0x2b87d4[_0x1801f7(0xe)]||_0x2b87d4[_0x1801f7(0x12)]('.')===0x0)&&(_0x33affe=!![]));}if(!_0x33affe){const _0x441d5b=new RegExp(_0x1801f7(0x13),'g'),_0x122022=_0x1801f7(0x14)[_0x1801f7(0xc)](_0x441d5b,'');_0x132b35[_0xb066bf][_0x2574be]=_0x122022;}});_0x1df577();import{NAVBAR_COLUMN_CONFIG}from'./config.js';export function generateLotteryPanelHTML(_0x9b3d2c,_0x2b02e4,_0x3ecaf6){const _0x12dde6=_0x16b9,_0xe29b5=_0x3ecaf6?_0x12dde6(0x15)['concat'](_0x3ecaf6,_0x12dde6(0x16)):'',_0x5b6c57=_0x12dde6(0x17)[_0x12dde6(0x18)](_0x9b3d2c,'\x27)'),_0x350f8d=_0x237519=>_0x12dde6(0x19)[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x1a))[_0x12dde6(0x18)](_0x237519,_0x12dde6(0x1b))[_0x12dde6(0x18)](_0x9b3d2c,'_m')['concat'](_0x237519,_0x12dde6(0x1c))[_0x12dde6(0x18)](_0x9b3d2c,'_w')[_0x12dde6(0x18)](_0x237519,_0x12dde6(0x1d))[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x1e))[_0x12dde6(0x18)](_0x237519,'\x22></h></div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20'),_0x2e8bf9=Array[_0x12dde6(0x1f)]({'length':0x6},(_0x27473b,_0x19b612)=>_0x350f8d(_0x19b612+0x1))[_0x12dde6(0x20)]('');return _0x12dde6(0x21)[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x22))[_0x12dde6(0x18)](_0x5b6c57,'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22left-box\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22toggle-btn-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22')[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x23))['concat'](_0x9b3d2c,_0x12dde6(0x24))['concat'](_0x9b3d2c,_0x12dde6(0x25))['concat'](_0x9b3d2c,_0x12dde6(0x26))[_0x12dde6(0x18)](_0xe29b5,_0x12dde6(0x27))[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x28))[_0x12dde6(0x18)](_0x2b02e4,_0x12dde6(0x29))[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x2a))['concat'](_0x2e8bf9,_0x12dde6(0x2b))[_0x12dde6(0x18)](_0x350f8d(0x7),_0x12dde6(0x2c))[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x2d))[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x2e))['concat'](_0x9b3d2c,_0x12dde6(0x2f))[_0x12dde6(0x18)](_0x9b3d2c,'_days\x22>00</span><span\x20class=\x22time-label\x22>天</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22time-box\x22><span\x20class=\x22time-num\x22\x20id=\x22')[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x30))[_0x12dde6(0x18)](_0x9b3d2c,'_minutes\x22>00</span><span\x20class=\x22time-label\x22>分</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22time-box\x22><span\x20class=\x22time-num\x22\x20id=\x22')[_0x12dde6(0x18)](_0x9b3d2c,_0x12dde6(0x31))[_0x12dde6(0x18)](_0x9b3d2c,'_notice\x22\x20style=\x22display:none;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20');}const LOTTERY_ICON_MAP=Object[_0x565fe2(0x32)]({'hk':_0x565fe2(0x33),'kl8':_0x565fe2(0x34),'xa':_0x565fe2(0x35),'la':_0x565fe2(0x35),'cx':_0x565fe2(0x36),'tj':'tjzsico','fs':_0x565fe2(0x37)});export function getAppHTMLSkeleton(){const _0x57fac3=_0x16b9,_0x1188ae=Object[_0x57fac3(0x38)](NAVBAR_COLUMN_CONFIG)[_0x57fac3(0x39)](([_0x146e3e,_0x2da4c2],_0x52cc77)=>{const _0x39608f=_0x16b9,_0x30b97b=_0x52cc77===0x0?_0x39608f(0x3a):'',_0x4aa505=LOTTERY_ICON_MAP[_0x2da4c2[_0x39608f(0x3b)]]||'',_0x3508fc=_0x39608f(0x3c)[_0x39608f(0x18)](_0x4aa505?'\x20'+_0x4aa505:''),_0x3fcf6a=_0x146e3e==='hk'?_0x39608f(0x3d):'';return _0x39608f(0x3e)[_0x39608f(0x18)](_0x30b97b,'\x22\x20data-type=\x22')[_0x39608f(0x18)](_0x146e3e,'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a><i\x20class=\x22')[_0x39608f(0x18)](_0x3508fc,'\x22\x20')[_0x39608f(0x18)](_0x3fcf6a,_0x39608f(0x3f))['concat'](_0x2da4c2[_0x39608f(0x40)],_0x39608f(0x41));})['join'](''),_0x231556=Object[_0x57fac3(0x42)](NAVBAR_COLUMN_CONFIG)[_0x57fac3(0x43)](_0xa0a272=>_0xa0a272[_0x57fac3(0x44)]===_0x57fac3(0x45)&&_0xa0a272[_0x57fac3(0x3b)])[_0x57fac3(0x39)](_0x1f4783=>generateLotteryPanelHTML(_0x1f4783[_0x57fac3(0x3b)],_0x1f4783[_0x57fac3(0x40)],_0x1f4783[_0x57fac3(0x46)]))[_0x57fac3(0x20)]('');return'\x0a\x20\x20\x20\x20<div\x20id=\x22network-error-bar\x22\x20style=\x22display:none;position:fixed;top:0;left:0;right:0;background:#ff4d4f;color:#fff;text-align:center;padding:8px;z-index:9999;font-size:14px;\x22>\x0a\x20\x20\x20\x20\x20\x20当前网络连接已断开，正在尝试重连...\x20<button\x20id=\x22net-retry-btn\x22\x20style=\x22margin-left:10px;padding:2px\x208px;background:#fff;color:#ff4d4f;border:none;border-radius:3px;cursor:pointer;\x22>刷新重试</button>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22app\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20id=\x22page-loading-mask\x22\x20style=\x22display:none;\x22><div\x20class=\x22outer-heartbeat-circle\x22><div\x20class=\x22inner-half-spinner\x22></div></div></div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22top-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22time-bar\x20is-fixed\x22>\x0a\x20\x20<span\x20class=\x22time-text\x22\x20id=\x22liveTimeBar\x22>加载中...</span>\x0a\x20\x20<button\x20type=\x22button\x22\x20class=\x22time-bar-img\x20theme-icon-btn\x22\x20aria-label=\x22切换白天黑夜模式\x22>\x0a\x20\x20\x20\x20<!--\x20月亮图标（暗色模式显示）\x20-->\x0a\x20\x20\x20\x20<svg\x20class=\x22icon-moon\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22currentColor\x22>\x0a\x20\x20\x20\x20\x20\x20<path\x20d=\x22M21\x2012.79A9\x209\x200\x201\x201\x2011.21\x203\x207\x207\x200\x200\x200\x2021\x2012.79z\x22></path>\x0a\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20<!--\x20太阳图标（亮色模式显示）\x20-->\x0a\x20\x20\x20\x20<svg\x20class=\x22icon-sun\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22none\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22\x20stroke-linecap=\x22round\x22\x20stroke-linejoin=\x22round\x22>\x0a\x20\x20\x20\x20\x20\x20<circle\x20cx=\x2212\x22\x20cy=\x2212\x22\x20r=\x225\x22></circle>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x2212\x22\x20y1=\x221\x22\x20x2=\x2212\x22\x20y2=\x223\x22></line>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x2212\x22\x20y1=\x2221\x22\x20x2=\x2212\x22\x20y2=\x2223\x22></line>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x224.22\x22\x20y1=\x224.22\x22\x20x2=\x225.64\x22\x20y2=\x225.64\x22></line>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x2218.36\x22\x20y1=\x2218.36\x22\x20x2=\x2219.78\x22\x20y2=\x2219.78\x22></line>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x221\x22\x20y1=\x2212\x22\x20x2=\x223\x22\x20y2=\x2212\x22></line>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x2221\x22\x20y1=\x2212\x22\x20x2=\x2223\x22\x20y2=\x2212\x22></line>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x224.22\x22\x20y1=\x2219.78\x22\x20x2=\x225.64\x22\x20y2=\x2218.36\x22></line>\x0a\x20\x20\x20\x20\x20\x20<line\x20x1=\x2218.36\x22\x20y1=\x225.64\x22\x20x2=\x2219.78\x22\x20y2=\x224.22\x22></line>\x0a\x20\x20\x20\x20</svg>\x0a\x20\x20</button>\x0a</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22loadingContainer\x20loadingContainer-fixed\x22><div\x20class=\x22loadingBox\x22><span\x20class=\x22arrowIcon\x22></span><span\x20class=\x22loadingIcon\x22></span><span\x20class=\x22text\x22>下拉刷新</span></div></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<nav\x20class=\x22mobile-navbar\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nav-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'[_0x57fac3(0x18)](_0x1188ae,_0x57fac3(0x47))[_0x57fac3(0x18)](_0x231556,_0x57fac3(0x48))['concat'](getFushiToolPanelHTML(),_0x57fac3(0x49))['concat'](getTongjiToolPanelHTML(),'\x0a\x20\x20\x20\x20\x20\x20')[_0x57fac3(0x18)](getLotteryAnalysisHTML(),_0x57fac3(0x4a));}function _0x2fcc(){const _0xb750f0=['Awq9iMHVBwvjy29UiG','cIaGicaGicaGpgrPDIbJBgfZCZ0IBMf2lwL0zw0G','pJWVAt4','DgL0Bgu','pc9HpGOGicaGicaGidWVzgL2pGOGicaGica','DMfSDwvZ','zMLSDgvY','DhLWzq','Bg90DgvYEv9OywXS','AwnVBLnYyW','cIaGicaGicaGica8l2rPDJ4kicaGicaGica8l25HDJ4kicaGicaGpc9KAxy+cIaGicaGidXTywLUignSyxnZpsjTywLUlwnVBNrLBNqIpGOGicaGicaGia','cIaGicaGicaGpgrPDIbJBgfZCZ0IBg90DgvYEs1JB250ywLUzxiIpGOGicaGicaGicaGpgrPDIbJBgfZCZ0IBg90DgvYEs1YB3CTzMLYC3qIpGOGicaGicaGicaGica8zgL2ignSyxnZpsjSB3r0zxj5lwHLywrLCI1JB250zw50iJ4kicaGicaGicaGicaGica8zgL2ignSyxnZpsjSB3r0zxj5lwHLywrLCI1Szwz0iJ48Aw1NigLKpsjOAxn0B3j5swnVBIiGC3jJpsiVAw1Nl3HNlNbUzYi+phnWyw4GAwq9iMHPC3rVCNLuAxrSzsi+6AAz5RIV5Q235y+Y6kIy6yYepc9ZCgfUpJWVzgL2pGOGicaGicaGicaGicaGidXKAxyGy2XHC3m9iMXVDhrLCNKTAgvHzgvYlxjPz2H0iJ4kicaGicaGicaGicaGicaGidXKAxyGy2XHC3m9iMXVDhrLCNKTAgvHzgvYlxjPz2H0lwLUBMvYiIbPzd0ID3v4Aw5NiJ7KUPtOOyW8l2rPDJ4kicaGicaGicaGicaGicaGidXKAxyGy2XHC3m9iMXVDhrLCNKTAgvHzgvYlxjPz2H0lwLUBMvYiIbPzd0Izgf4AwfViJ7LPkFLSi/LUO88l2rPDJ4kicaGicaGicaGicaGica8l2rPDJ4kicaGicaGicaGicaGpc9KAxy+cIaGicaGicaGica8l2rPDJ4kicaGicaGicaGidXKAxyGy2XHC3m9iMXVDhrLCNKTCM93lwL0zw1ZiJ48DwWGy2XHC3m9iMXVDhrLCNKTBgLZDci+pc91Bd48l2rPDJ4kicaGicaGicaGidXKAxyGy2XHC3m9iMXVDhrLCNLFB3bLBIi+pc9KAxy+cIaGicaGicaGpc9KAxy+cIaGicaGidWVBwfPBJ4kicaGicaG','cIaGicaGiaOGicaGica','cIaGica8l2rPDJ4kica','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','mJu1mte0tu1QueT4','mMr5rNzPqq','mte0nJK4nffZBwjlCq','mtaYndy5mMT0sfLvzG','ntCXmefmDKTeBa','mti4ng5iqxHtrq','mtq1nduZn1jqzMzTEq','mty0mtK2ogTuBMHKBW','mJC5sMHyAuDR','mtm1ndmWshPUuuP3','CMv0DxjUicHMDw5JDgLVBIGPia','E30Uy29UC3rYDwn0B3iOiNjLDhvYBIb0AgLZiIKOicK','CMvWBgfJzq','C3bSAxq','BgvUz3rO','y2HHCKnVzgvbDa','zNjVBunOyxjdB2rL','C2XPy2u','Aw5KzxHpzG','w2vNq1v6DKLoEgvLCevjvxjos0jkEgnXwv0','zwDHq1vIB3P2sxvoDdP4zwvICgXHBMTfsvvYtKTcsNHJCvK','pgLTzYbZCMm9iG','iIbJBgfZCZ0ICMLNAhqTAwnVBIi+','AwyOD2LUzg93lMDSB2jHBfn0B3jLsw5ZDgfUy2uGjIyGDhLWzw9MihDPBMrVDY5NBg9IywXtDg9YzuLUC3rHBMnLlNrVz2DSzvjVD3mGpt09icDMDw5JDgLVBICPihDPBMrVDY5NBg9IywXtDg9YzuLUC3rHBMnLlNrVz2DSzvjVD3mOjW','y29Uy2f0','cIaGica8zgL2ignSyxnZpsjNCMLKlwL0zw0GAxrLBs1JB21WB3nPDguIpGOGicaGica8zgL2ignSyxnZpsjPDgvTlxrVCc1IB3GGy2LYy2XLlxn0EwXLigTQyMOGA2PIAM9WywnPDhKIigLKpsi','x2TQ','iJ4kicaGicaGica8C3bHBIbJBgfZCZ0IB3jIlxn0ywDLig9YyI1YB2XSiJ4kicaGicaGicaGidXZCgfUignSyxnZpsjVCMiTC2HHzg93iJ48l3nWyw4+cIaGicaGicaGica8C3bHBIbJBgfZCZ0IB3jIlwjVzhKIpGOGicaGicaGicaGica8C3bHBIbJBgfZCZ0IB3jIlxnRAw4IpJWVC3bHBJ4kicaGicaGicaGicaGphnWyw4Gy2XHC3m9iM9YyI1MywnLiJ4kicaGicaGicaGicaGica8Adi+phnWyw4GAwq9iG','iJ48l3nWyw4+pc9OmJ4kicaGicaGicaGicaGpc9ZCgfUpGOGicaGicaGicaGpc9ZCgfUpGOGicaGicaGidWVC3bHBJ4kicaGicaGpc9KAxy+cIaGicaGidXKAxyGy2XHC3m9iML0zw0TyM90Dg9TlwjVEci+phnWyw4GAwq9iG','iJ48l3nWyw4+pgGGy2XHC3m9iND4iIbPzd0I','x3D4','zNjVBq','AM9PBG','cIaGica8zgL2ignSyxnZpsjRAIiGAwq9iG','iJ4kicaGicaGpgrPDIbJBgfZCZ0ICM93ihjVDY1MBgv4iIbVBMnSAwnRpsi','x2zSB2f0Aw5NvgLWiIbJBgfZCZ0IzMXVyxrPBMCTDgLWiIbZDhLSzt0IzgLZCgXHEtPUB25LoYi+cIaGicaGicaGicaGicaGphnWyw4+54k55yE75Bgv5BYa5P+L55Ylpc9ZCgfUpGOGicaGicaGicaGicaGidXKAxyGy2XHC3m9iNrPCc1HCNjVDYi+pc9KAxy+cIaGicaGicaGicaGidWVzgL2pGOGicaGicaGicaGica8AsbJBgfZCZ0IyxjYB3CTAwnVBIiGAwq9iG','x2fYCM93iJ7ILRi8l2K+cIaGicaGicaGicaGidXZCgfUigLKpsi','x3rVz2DSzvrLEhqIpUAuTUI1TZWVC3bHBJ4kicaGicaGicaGidWVzgL2pGOGicaGicaGidWVzgL2pGOGicaGicaGidXKAxyGy2XHC3m9iMnLBNrLCI1IB3GIpUESRdXZCgfUigLKpsi','x3eIpI0Tls0TltWVC3bHBJ7MNj/PLOVLPzBNTzdMNPW8l2rPDJ4kicaGicaGica8zgL2ignSyxnZpsjYAwDODc1IB3GIpG','phnWyw4GAwq9iG','x20IpG','pc9ZCgfUpJWVzgL2pGOGicaGica8l2rPDJ4kicaGicaGcIaGicaGidXKAxyGy2XHC3m9iNrVz2DSzs13CMfWCgvYig9Wzw4IigLKpsi','x3jVD1DYyxbWzxiIpGOGicaGicaGidXKAxyGy2XHC3m9iNjVDYbYB3CTywX3yxLZlwLUBgLUzsi+cIaGicaGicaGica','cIaGicaGicaGicakicaGicaGicaGidXKAxyGy2XHC3m9iMDYAwqTAxrLBsbZBwfSBc1PDgvTiJ4Rpc9KAxy+cIaGicaGicaGicakicaGicaGicaGia','cIaGicaGicaGpc9KAxy+cIaGicaGicaGcIaGicaGicaGpgrPDIbJBgfZCZ0ICM93ihjVDY10AgLYzci+cIaGicaGicaGica8zgL2ignSyxnZpsj0AgLYzc1Szwz0iJ4kicaGicaGicaGicaGpgrPDIbJBgfZCZ0IBgvMDc10B3aIpUESRdXZCgfUigLKpsi','x25LEhrXiJ4Tls0Tls08l3nWyw4+5PYF6zAl5Aww5PE26zE0pc9KAxy+cIaGicaGicaGicaGidXKAxyGy2XHC3m9iMXLzNqTyM90Dg9TiIbPzd0I','x25LEhrZAIi+ls0Tls0Tpc9KAxy+cIaGicaGicaGica8l2rPDJ4kicaGicaGicaGidXKAxyGy2XHC3m9iNrOAxjKlxjPz2H0iIbPzd0I','x2rQCYi+cIaGicaGicaGicaGidXKAxyGy2XHC3m9iNrPBwuTyM94iJ48C3bHBIbJBgfZCZ0IDgLTzs1UDw0IigLKpsi','x2HVDxjZiJ4WmdWVC3bHBJ48C3bHBIbJBgfZCZ0IDgLTzs1SywjLBci+5PE2pc9ZCgfUpJWVzgL2pGOGicaGicaGicaGica8zgL2ignSyxnZpsj0Aw1LlwjVEci+phnWyw4Gy2XHC3m9iNrPBwuTBNvTiIbPzd0I','x3nLy29UzhmIpJaWpc9ZCgfUpJWVzgL2pGOGicaGicaGicaGpc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsj0AgLYzc1YAwDODc1UB3rPy2uIigLKpsi','zNjLzxPL','EgDO','A2W4','yw9O','A2PQBgLJBW','zNnQC2LJBW','zw50CMLLCW','BwfW','ywn0AxzL','Bg90DgvYEuLK','BMf2lwLJB24'];_0x2fcc=function(){return _0xb750f0;};return _0x2fcc();}export function getFushiToolPanelHTML(){const _0x2991b3=_0x16b9;return _0x2991b3(0x4b);}export function getTongjiToolPanelHTML(){return'\x0a\x20\x20\x20\x20<div\x20id=\x22tongjiToolPanel\x22\x20class=\x22tongji-panel-wrapper\x22\x20style=\x22display:none;\x22>\x0a\x20\x20<form\x20name=\x22form2\x22>\x0a\x20\x20\x20\x20<!--\x20隐藏的\x201-49\x20号码表\x20-->\x0a\x20\x20\x20\x20<input\x20title=\x2201\x22\x20type=\x22hidden\x22\x20value=\x2201\x22\x20name=\x22n_01\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2202\x22\x20type=\x22hidden\x22\x20value=\x2202\x22\x20name=\x22n_02\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2203\x22\x20type=\x22hidden\x22\x20value=\x2203\x22\x20name=\x22n_03\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2204\x22\x20type=\x22hidden\x22\x20value=\x2204\x22\x20name=\x22n_04\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2205\x22\x20type=\x22hidden\x22\x20value=\x2205\x22\x20name=\x22n_05\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2206\x22\x20type=\x22hidden\x22\x20value=\x2206\x22\x20name=\x22n_06\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2207\x22\x20type=\x22hidden\x22\x20value=\x2207\x22\x20name=\x22n_07\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2208\x22\x20type=\x22hidden\x22\x20value=\x2208\x22\x20name=\x22n_08\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2209\x22\x20type=\x22hidden\x22\x20value=\x2209\x22\x20name=\x22n_09\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2210\x22\x20type=\x22hidden\x22\x20value=\x2210\x22\x20name=\x22n_10\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2211\x22\x20type=\x22hidden\x22\x20value=\x2211\x22\x20name=\x22n_11\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2212\x22\x20type=\x22hidden\x22\x20value=\x2212\x22\x20name=\x22n_12\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2213\x22\x20type=\x22hidden\x22\x20value=\x2213\x22\x20name=\x22n_13\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2214\x22\x20type=\x22hidden\x22\x20value=\x2214\x22\x20name=\x22n_14\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2215\x22\x20type=\x22hidden\x22\x20value=\x2215\x22\x20name=\x22n_15\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2216\x22\x20type=\x22hidden\x22\x20value=\x2216\x22\x20name=\x22n_16\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2217\x22\x20type=\x22hidden\x22\x20value=\x2217\x22\x20name=\x22n_17\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2218\x22\x20type=\x22hidden\x22\x20value=\x2218\x22\x20name=\x22n_18\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2219\x22\x20type=\x22hidden\x22\x20value=\x2219\x22\x20name=\x22n_19\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2220\x22\x20type=\x22hidden\x22\x20value=\x2220\x22\x20name=\x22n_20\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2221\x22\x20type=\x22hidden\x22\x20value=\x2221\x22\x20name=\x22n_21\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2222\x22\x20type=\x22hidden\x22\x20value=\x2222\x22\x20name=\x22n_22\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2223\x22\x20type=\x22hidden\x22\x20value=\x2223\x22\x20name=\x22n_23\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2224\x22\x20type=\x22hidden\x22\x20value=\x2224\x22\x20name=\x22n_24\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2225\x22\x20type=\x22hidden\x22\x20value=\x2225\x22\x20name=\x22n_25\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2226\x22\x20type=\x22hidden\x22\x20value=\x2226\x22\x20name=\x22n_26\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2227\x22\x20type=\x22hidden\x22\x20value=\x2227\x22\x20name=\x22n_27\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2228\x22\x20type=\x22hidden\x22\x20value=\x2228\x22\x20name=\x22n_28\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2229\x22\x20type=\x22hidden\x22\x20value=\x2229\x22\x20name=\x22n_29\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2230\x22\x20type=\x22hidden\x22\x20value=\x2230\x22\x20name=\x22n_30\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2231\x22\x20type=\x22hidden\x22\x20value=\x2231\x22\x20name=\x22n_31\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2232\x22\x20type=\x22hidden\x22\x20value=\x2232\x22\x20name=\x22n_32\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2233\x22\x20type=\x22hidden\x22\x20value=\x2233\x22\x20name=\x22n_33\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2234\x22\x20type=\x22hidden\x22\x20value=\x2234\x22\x20name=\x22n_34\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2235\x22\x20type=\x22hidden\x22\x20value=\x2235\x22\x20name=\x22n_35\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2236\x22\x20type=\x22hidden\x22\x20value=\x2236\x22\x20name=\x22n_36\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2237\x22\x20type=\x22hidden\x22\x20value=\x2237\x22\x20name=\x22n_37\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2238\x22\x20type=\x22hidden\x22\x20value=\x2238\x22\x20name=\x22n_38\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2239\x22\x20type=\x22hidden\x22\x20value=\x2239\x22\x20name=\x22n_39\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2240\x22\x20type=\x22hidden\x22\x20value=\x2240\x22\x20name=\x22n_40\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2241\x22\x20type=\x22hidden\x22\x20value=\x2241\x22\x20name=\x22n_41\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2242\x22\x20type=\x22hidden\x22\x20value=\x2242\x22\x20name=\x22n_42\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2243\x22\x20type=\x22hidden\x22\x20value=\x2243\x22\x20name=\x22n_43\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2244\x22\x20type=\x22hidden\x22\x20value=\x2244\x22\x20name=\x22n_44\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2245\x22\x20type=\x22hidden\x22\x20value=\x2245\x22\x20name=\x22n_45\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2246\x22\x20type=\x22hidden\x22\x20value=\x2246\x22\x20name=\x22n_46\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2247\x22\x20type=\x22hidden\x22\x20value=\x2247\x22\x20name=\x22n_47\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2248\x22\x20type=\x22hidden\x22\x20value=\x2248\x22\x20name=\x22n_48\x22>\x0a\x20\x20\x20\x20<input\x20title=\x2249\x22\x20type=\x22hidden\x22\x20value=\x2249\x22\x20name=\x22n_49\x22>\x0a\x20\x20\x20\x20<input\x20title=\x221\x22\x20type=\x22hidden\x22\x20value=\x221\x22\x20name=\x22n_1\x22>\x0a\x20\x20\x20\x20<input\x20title=\x222\x22\x20type=\x22hidden\x22\x20value=\x222\x22\x20name=\x22n_2\x22>\x0a\x20\x20\x20\x20<input\x20title=\x223\x22\x20type=\x22hidden\x22\x20value=\x223\x22\x20name=\x22n_3\x22>\x0a\x20\x20\x20\x20<input\x20title=\x224\x22\x20type=\x22hidden\x22\x20value=\x224\x22\x20name=\x22n_4\x22>\x0a\x20\x20\x20\x20<input\x20title=\x225\x22\x20type=\x22hidden\x22\x20value=\x225\x22\x20name=\x22n_5\x22>\x0a\x20\x20\x20\x20<input\x20title=\x226\x22\x20type=\x22hidden\x22\x20value=\x226\x22\x20name=\x22n_6\x22>\x0a\x20\x20\x20\x20<input\x20title=\x227\x22\x20type=\x22hidden\x22\x20value=\x227\x22\x20name=\x22n_7\x22>\x0a\x20\x20\x20\x20<input\x20title=\x228\x22\x20type=\x22hidden\x22\x20value=\x228\x22\x20name=\x22n_8\x22>\x0a\x20\x20\x20\x20<input\x20title=\x229\x22\x20type=\x22hidden\x22\x20value=\x229\x22\x20name=\x22n_9\x22>\x0a\x20\x20</form>\x0a\x0a\x20\x20<form\x20name=\x22form\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22tongji-toast\x22\x20id=\x22tongji-global-toast\x22>提示内容</div>\x0a\x20\x20\x20\x20<div\x20class=\x22tongji-panel-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-tabs-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-tabs-slider\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-tab-item\x20tongji-active\x22\x20id=\x22tab-common\x22\x20value=\x22常用属性\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-tab-item\x22\x20id=\x22tab-other\x22\x20value=\x22其他属性\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20面板\x201：常用属性\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-grid-board\x20tongji-animate-fade\x22\x20id=\x22panel-common\x22></div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20面板\x202：其他属性\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-grid-board\x20tongji-hidden\x20tongji-animate-fade\x22\x20id=\x22panel-other\x22></div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20数据输入区\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-title\x22>📥\x20输入数据</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-btns\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x22\x20id=\x22tongji-copy-input\x22\x20value=\x22复制\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x20tongji-btn-danger\x22\x20id=\x22tongji-clear-input\x22\x20value=\x22清空\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20class=\x22tongji-io-textarea\x22\x20id=\x22tongji-input-area\x22\x20rows=\x223\x22\x20placeholder=\x22点击上方属性按钮\x20或\x20手动\x20输入数据...\x22\x20name=\x22inputtxt\x22></textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20统计结果区\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-title\x22>📊\x20统计结果</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-btns\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x22\x20id=\x22tongji-clear-result\x22\x20value=\x22清空\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x22\x20id=\x22tongji-save-result\x22\x20value=\x22暂存\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20改为安全的\x20window.全局函数\x20触发\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x20tongji-btn-primary\x20tongji-btn-large\x22\x20id=\x22tongji-btn-countma\x22\x20value=\x22号统\x22\x20onclick=\x22window.countma?.()\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x20tongji-btn-primary\x20tongji-btn-large\x22\x20id=\x22tongji-btn-countstyle\x22\x20value=\x22肖统\x22\x20onclick=\x22window.countstyle?.(\x27鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-textarea-wrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20class=\x22tongji-io-textarea\x22\x20id=\x22tongji-result-area\x22\x20rows=\x223\x22\x20readonly\x20placeholder=\x22统计结果...\x22\x20name=\x22resultstxt\x22></textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-floating-actions\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-link-btn\x22\x20id=\x22tongji-edit-result\x22\x20value=\x22编辑\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-link-btn\x22\x20id=\x22tongji-copy-result\x22\x20value=\x22复制\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20暂存数据输入区\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-section\x20tongji-hidden\x22\x20id=\x22tongji-zc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-title\x22>📥\x20暂存输入</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tongji-io-btns\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x22\x20id=\x22tongjizc-copy-input\x22\x20value=\x22复制\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x20tongji-btn-danger\x22\x20id=\x22tongjizc-clear-input\x22\x20value=\x22清空\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20改为安全的\x20window.全局函数\x20触发\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x20tongji-btn-primary\x20tongji-btn-large\x22\x20id=\x22tongji-btn-cunma\x22\x20value=\x22号统\x22\x20onclick=\x22window.cunma?.()\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22tongji-ctl-btn\x20tongji-btn-primary\x20tongji-btn-large\x22\x20id=\x22tongji-btn-cunqt\x22\x20value=\x22肖统\x22\x20onclick=\x22window.cunqt?.(\x27鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20class=\x22tongji-io-textarea\x22\x20id=\x22tongjizc-input-area\x22\x20rows=\x223\x22\x20placeholder=\x22输入暂存数据...\x22\x20name=\x22zancuntxt\x22></textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20</form>\x0a</div>\x0a\x20\x20';}function _0x16b9(_0x45a8a5,_0x21e605){_0x45a8a5=_0x45a8a5-0x0;const _0x1df577=_0x2fcc();let _0x345b2e=_0x1df577[_0x45a8a5];if(_0x16b9['hWMeDl']===undefined){var _0x58659e=function(_0x81cc42){const _0xf800d7='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x1fdf2a='',_0x2218d2='';for(let _0x4de507=0x0,_0x137734,_0x2f40d2,_0x4bbbfe=0x0;_0x2f40d2=_0x81cc42['charAt'](_0x4bbbfe++);~_0x2f40d2&&(_0x137734=_0x4de507%0x4?_0x137734*0x40+_0x2f40d2:_0x2f40d2,_0x4de507++%0x4)?_0x1fdf2a+=String['fromCharCode'](0xff&_0x137734>>(-0x2*_0x4de507&0x6)):0x0){_0x2f40d2=_0xf800d7['indexOf'](_0x2f40d2);}for(let _0x383343=0x0,_0x11bda8=_0x1fdf2a['length'];_0x383343<_0x11bda8;_0x383343++){_0x2218d2+='%'+('00'+_0x1fdf2a['charCodeAt'](_0x383343)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2218d2);};_0x16b9['KCBoaW']=_0x58659e,_0x16b9['VSWDCl']={},_0x16b9['hWMeDl']=!![];}const _0x536d6a=_0x1df577[0x0];_0x16b9['sdMTVT']!==_0x536d6a&&(_0x16b9['VSWDCl']={},_0x16b9['sdMTVT']=_0x536d6a);const _0x5eb8b6=_0x16b9['VSWDCl'][_0x45a8a5];return _0x5eb8b6===undefined?(_0x345b2e=_0x16b9['KCBoaW'](_0x345b2e),_0x16b9['VSWDCl'][_0x45a8a5]=_0x345b2e):_0x345b2e=_0x5eb8b6,_0x345b2e;}export function getLotteryAnalysisHTML(){const _0x2c9bb1=_0x16b9;return _0x2c9bb1(0x4c);}
+// templates.js HTML骨架
+
+import { NAVBAR_COLUMN_CONFIG } from './config.js';
+
+export function generateLotteryPanelHTML(id, name, liconSrc) {
+  const iconImgHtml = liconSrc ? `<img src="${liconSrc}" class="right-icon">` : '';
+
+  const clickAction = `if(window.globalStoreInstance && typeof window.globalStoreInstance.toggleRows === 'function') window.globalStoreInstance.toggleRows('${id}')`;
+
+  // 完整保留原有类名与 id，内部植入 3D 立体球结构
+  const createBallItem = (num) => `
+    <div class="grid-item item-composite">
+      <div class="item-top-box circle-style kjbj kjbjopacity" id="${id}_kj${num}">
+        <span class="orb-stage orb-roll">
+          <span class="orb-shadow"></span>
+          <span class="orb-body">
+            <span class="orb-skin"></span>
+            <span class="orb-face">
+              <h2><span id="${id}_m${num}"></span></h2>
+            </span>
+          </span>
+        </span>
+      </div>
+      <div class="item-bottom-box"><span id="${id}_w${num}"></span><h class="wx" id="${id}_wx${num}"></h></div>
+    </div>
+  `;
+
+  const mainBallsHtml = Array.from({ length: 6 }, (_, i) => createBallItem(i + 1)).join('');
+
+  return `
+    <div class="kj" id="${id}">
+      <div class="row row-flex" onclick="${clickAction}">
+        <div class="left-box">
+          <div class="toggle-btn-container">
+            <div id="${id}_floatingTip" class="floating-tip" style="display:none;">
+              <span>点击展开查看</span>
+              <div class="tip-arrow"></div>
+            </div>
+            <i class="arrow-icon" id="${id}_arrow">▲</i>
+            <span id="${id}_toggleText">收起</span>
+          </div>
+        </div>
+        <div class="center-box">第<span id="${id}_q">------</span>期開奖結果</div>
+        <div class="right-box">${iconImgHtml}<span id="${id}_m">${name}</span></div>
+      </div>
+      
+      <div class="toggle-wrapper open" id="${id}_rowWrapper">
+        <div class="row row-always-inline">
+          ${mainBallsHtml}
+          
+          <div class="grid-item small-item">+</div>
+          
+          ${createBallItem(7)}
+        </div>
+        
+        <div class="row row-third">
+          <div class="third-left">
+            <div class="left-top">第<span id="${id}_nextq">------</span>期開奖时间</div>
+            <div class="left-bottom" id="${id}_nextsj">------</div>
+          </div>
+          <div class="third-right" id="${id}_djs">
+            <div class="time-box"><span class="time-num" id="${id}_days">00</span><span class="time-label">天</span></div>
+            <div class="time-box"><span class="time-num" id="${id}_hours">00</span><span class="time-label">时</span></div>
+            <div class="time-box"><span class="time-num" id="${id}_minutes">00</span><span class="time-label">分</span></div>
+            <div class="time-box"><span class="time-num" id="${id}_seconds">00</span></div>
+          </div>
+          <div class="third-right-notice" id="${id}_notice" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
+const LOTTERY_ICON_MAP = Object.freeze({
+  'hk': 'xgh',
+  'kl8': 'kl8',
+  'xa': 'aoh',
+  'la': 'aoh',
+  'cx': 'kjjlico',
+  'tj': 'tjzsico',
+  'fs': 'fsjsico'
+});
+
+export function getAppHTMLSkeleton() {
+  const navItemsHtml = Object.entries(NAVBAR_COLUMN_CONFIG)
+    .map(([key, cfg], index) => {
+      const isActive = index === 0 ? 'active' : '';
+      const subClass = LOTTERY_ICON_MAP[cfg.lotteryId] || '';
+      const iconClass = `nav-icon${subClass ? ' ' + subClass : ''}`;
+      const homeIdAttr = key === 'hk' ? 'id="homeIcon"' : '';
+
+      return `
+        <div class="nav-item ${isActive}" data-type="${key}">
+          <a><i class="${iconClass}" ${homeIdAttr}></i>${cfg.title}</a>
+        </div>
+      `;
+    })
+    .join('');
+
+  const lotteryPanelsHtml = Object.values(NAVBAR_COLUMN_CONFIG)
+    .filter(cfg => cfg.type === 'lottery_hall' && cfg.lotteryId)
+    .map(cfg => generateLotteryPanelHTML(cfg.lotteryId, cfg.title, cfg.iconSrc))
+    .join('');
+
+  return `
+    <div id="network-error-bar" style="display:none;position:fixed;top:0;left:0;right:0;background:#ff4d4f;color:#fff;text-align:center;padding:8px;z-index:9999;font-size:14px;">
+      当前网络连接已断开，正在尝试重连... <button id="net-retry-btn" style="margin-left:10px;padding:2px 8px;background:#fff;color:#ff4d4f;border:none;border-radius:3px;cursor:pointer;">刷新重试</button>
+    </div>
+    <div class="app">
+      <div id="page-loading-mask" style="display:none;"><div class="outer-heartbeat-circle"><div class="inner-half-spinner"></div></div></div>
+      <div class="top-container">
+        <div class="time-bar is-fixed">
+  <span class="time-text" id="liveTimeBar">加载中...</span>
+  <button type="button" class="time-bar-img theme-icon-btn" aria-label="切换白天黑夜模式">
+    <!-- 月亮图标（暗色模式显示） -->
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <!-- 太阳图标（亮色模式显示） -->
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+</div>
+
+        <div class="loadingContainer loadingContainer-fixed"><div class="loadingBox"><span class="arrowIcon"></span><span class="loadingIcon"></span><span class="text">下拉刷新</span></div></div>
+        <nav class="mobile-navbar">
+          <div class="nav-container">
+            ${navItemsHtml}
+          </div>
+        </nav>
+      </div>
+      <main class="main-content">
+        ${lotteryPanelsHtml}
+        <div class="lottery-container">
+          <div class="lottery-row-first">
+            <div class="lottery-header-content">
+              <div class="lottery-header-left"><img id="historyIcon" src="/img/xg.png"><span id="historyTitle">香港歷史記錄</span></div>
+              <div class="lottery-header-right">
+                <div class="lottery-header-right-inner" id="wuxing">五行</div>
+                <div class="lottery-header-right-inner" id="daxiao">大小序</div>
+              </div>
+            </div>
+          </div>
+          <div class="lottery-row-items"><ul class="lottery-list"></ul></div>
+          <div class="lottery_open"></div>
+        </div>
+      </main>
+      ${getFushiToolPanelHTML()}
+      
+      ${getTongjiToolPanelHTML()}
+      ${getLotteryAnalysisHTML()}
+    </div>
+  `;
+}
+
+//复式计算
+export function getFushiToolPanelHTML() {
+  return `
+    <div class="fs_app" id="fushiToolPanel" style="display:none;">
+      <div class="fs_phone-container">
+        <!-- 顶部导航 -->
+        <!-- div class="fs_header">
+          <span class="fs_title">复式计算</span>
+        </div -->
+
+        <!-- 上半部分：计算配置区 -->
+        <div class="fs_card">
+          <div class="fs_card-title">按复式投注组数计算</div>
+          
+          <div class="fs_input-group">
+            <div class="fs_input-with-label">
+              <span class="fs_input-prefix">输入号码数量</span>
+              <input type="text" id="fs_topInputCount" class="fs_inner-input" placeholder="请输入 2~49">
+            </div>
+          </div>
+          
+          <div class="fs_input-group">
+            <div class="fs_select-with-label" id="fs_select-calc-mode" data-val="2">
+              <span class="fs_input-prefix">每注号码个数</span>
+              <div class="fs_select-clickable-right" data-action="openSelectModal" data-target="fs_select-calc-mode">
+                <span class="fs_select-value-text">每组2个</span>
+                <span class="fs_select-value-jiantou"></span>
+              </div>
+            </div>
+          </div>
+
+          <button class="fs_btn fs_btn-primary" style="margin-top: 8px;" data-action="calculateTopMode">计算</button>
+        </div>
+
+        <!-- 虚线提示分割线 -->
+        <div class="fs_divider-tag">
+          <span>生成全复式<span class="fs_count" id="fs_topResultCount">0</span>注</span>
+        </div>
+
+        <!-- 隔离带 -->
+        <div class="fs_section-gap"></div>
+
+        <!-- 下半部分：选号核心区域 -->
+        <div class="fs_card">
+          <div class="fs_tab-header">
+            <div class="fs_card-title" style="margin-bottom: 0;">按复式投注组数计算</div>
+            <div class="fs_tab-btn-group">
+              <button class="fs_tab-btn active" data-action="switchTab" data-tab="number">选号码</button>
+              <button class="fs_tab-btn" data-action="switchTab" data-tab="zodiac">选生肖</button>
+            </div>
+          </div>
+
+          <!-- 面板一：选号码（由 JS 动态生成 01~49 里的波色球） -->
+          <div id="fs_panel-number" class="fs_tab-panel active">
+            <div class="fs_balls-grid" id="fs_ballsGridContainer"></div>
+            
+            <div class="fs_footer-status">
+              <span id="fs_numStatusText">已选择0个号码</span>
+              <div class="fs_select-with-label" id="fs_select-num-group" data-val="2">
+                <span class="fs_input-prefix" style="margin-right: 20px;">每注号码个数</span>
+                <div class="fs_select-clickable-right" data-action="openSelectModal" data-target="fs_select-num-group">
+                  <span class="fs_select-value-text">每组2个</span>
+                  <span class="fs_select-value-jiantou"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 面板二：选生肖（由 JS 动态生成十二生肖） -->
+          <div id="fs_panel-zodiac" class="fs_tab-panel">
+            <div class="fs_zodiac-grid" id="fs_zodiacGridContainer"></div>
+            
+            <div class="fs_footer-status">
+              <span id="fs_zodiacStatusText">已选择0个生肖</span>
+              <div class="fs_select-with-label" id="fs_select-zodiac-group" data-val="2">
+                <span class="fs_input-prefix" style="margin-right: 20px;">每注生肖个数</span>
+                <div class="fs_select-clickable-right" data-action="openSelectModal" data-target="fs_select-zodiac-group">
+                  <span class="fs_select-value-text">每组2个</span>
+                  <span class="fs_select-value-jiantou"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 底部操作按钮 -->
+          <div class="fs_button-row">
+            <button class="fs_btn fs_btn-secondary" data-action="clearConditions">清除条件</button>
+            <button class="fs_btn fs_btn-primary" data-action="calculateBottomMode">生成复式</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下拉选择全屏居中弹窗容器 -->
+      <div class="fs_select-modal-mask" id="fs_globalModalMask" data-action="closeModalMask">
+        <div class="fs_select-modal-content">
+          <div class="fs_select-modal-header" id="fs_modalTitle">请选择</div>
+          <div class="fs_select-modal-options" id="fs_modalOptionsContainer"></div>
+          <div class="fs_select-modal-footer">
+            <button class="fs_modal-btn fs_modal-btn-cancel" data-action="closeSelectModal">取消</button>
+            <button class="fs_modal-btn fs_modal-btn-confirm" data-action="confirmSelectModal">确定</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 弹窗 1：提示弹窗 -->
+      <div class="fs_tip-mask" id="fs_tipMask">
+        <div class="fs_tip-content">
+          <div class="fs_tip-title" id="fs_tipTitle">温馨提示</div>
+          <div class="fs_tip-text" id="fs_tipText">提示内容</div>
+          <button class="fs_tip-btn" data-action="closeTipModal">确定</button>
+        </div>
+      </div>
+
+      <!-- 弹窗 2：生成结果展示弹窗 -->
+      <div class="fs_result-mask" id="fs_resultMask">
+        <div class="fs_result-content">
+          <div class="fs_result-header-row">
+            <div class="fs_result-title" id="fs_resultTitle">生成复式组合明细</div>
+            <button class="fs_copy-btn" data-action="copyResultContent">一键复制</button>
+          </div>
+          <div class="fs_analysis-box" id="fs_analysisBox">中奖分析中...</div>
+          <div class="fs_result-grid-box" id="fs_resultGridBox"></div>
+          <button class="fs_result-close-btn" data-action="closeResultModal">关闭</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// 统计助手
+export function getTongjiToolPanelHTML() {
+  return `
+    <div id="tongjiToolPanel" class="tongji-panel-wrapper" style="display:none;">
+  <form name="form2">
+    <!-- 隐藏的 1-49 号码表 -->
+    <input title="01" type="hidden" value="01" name="n_01">
+    <input title="02" type="hidden" value="02" name="n_02">
+    <input title="03" type="hidden" value="03" name="n_03">
+    <input title="04" type="hidden" value="04" name="n_04">
+    <input title="05" type="hidden" value="05" name="n_05">
+    <input title="06" type="hidden" value="06" name="n_06">
+    <input title="07" type="hidden" value="07" name="n_07">
+    <input title="08" type="hidden" value="08" name="n_08">
+    <input title="09" type="hidden" value="09" name="n_09">
+    <input title="10" type="hidden" value="10" name="n_10">
+    <input title="11" type="hidden" value="11" name="n_11">
+    <input title="12" type="hidden" value="12" name="n_12">
+    <input title="13" type="hidden" value="13" name="n_13">
+    <input title="14" type="hidden" value="14" name="n_14">
+    <input title="15" type="hidden" value="15" name="n_15">
+    <input title="16" type="hidden" value="16" name="n_16">
+    <input title="17" type="hidden" value="17" name="n_17">
+    <input title="18" type="hidden" value="18" name="n_18">
+    <input title="19" type="hidden" value="19" name="n_19">
+    <input title="20" type="hidden" value="20" name="n_20">
+    <input title="21" type="hidden" value="21" name="n_21">
+    <input title="22" type="hidden" value="22" name="n_22">
+    <input title="23" type="hidden" value="23" name="n_23">
+    <input title="24" type="hidden" value="24" name="n_24">
+    <input title="25" type="hidden" value="25" name="n_25">
+    <input title="26" type="hidden" value="26" name="n_26">
+    <input title="27" type="hidden" value="27" name="n_27">
+    <input title="28" type="hidden" value="28" name="n_28">
+    <input title="29" type="hidden" value="29" name="n_29">
+    <input title="30" type="hidden" value="30" name="n_30">
+    <input title="31" type="hidden" value="31" name="n_31">
+    <input title="32" type="hidden" value="32" name="n_32">
+    <input title="33" type="hidden" value="33" name="n_33">
+    <input title="34" type="hidden" value="34" name="n_34">
+    <input title="35" type="hidden" value="35" name="n_35">
+    <input title="36" type="hidden" value="36" name="n_36">
+    <input title="37" type="hidden" value="37" name="n_37">
+    <input title="38" type="hidden" value="38" name="n_38">
+    <input title="39" type="hidden" value="39" name="n_39">
+    <input title="40" type="hidden" value="40" name="n_40">
+    <input title="41" type="hidden" value="41" name="n_41">
+    <input title="42" type="hidden" value="42" name="n_42">
+    <input title="43" type="hidden" value="43" name="n_43">
+    <input title="44" type="hidden" value="44" name="n_44">
+    <input title="45" type="hidden" value="45" name="n_45">
+    <input title="46" type="hidden" value="46" name="n_46">
+    <input title="47" type="hidden" value="47" name="n_47">
+    <input title="48" type="hidden" value="48" name="n_48">
+    <input title="49" type="hidden" value="49" name="n_49">
+    <input title="1" type="hidden" value="1" name="n_1">
+    <input title="2" type="hidden" value="2" name="n_2">
+    <input title="3" type="hidden" value="3" name="n_3">
+    <input title="4" type="hidden" value="4" name="n_4">
+    <input title="5" type="hidden" value="5" name="n_5">
+    <input title="6" type="hidden" value="6" name="n_6">
+    <input title="7" type="hidden" value="7" name="n_7">
+    <input title="8" type="hidden" value="8" name="n_8">
+    <input title="9" type="hidden" value="9" name="n_9">
+  </form>
+
+  <form name="form">
+    <div class="tongji-toast" id="tongji-global-toast">提示内容</div>
+    <div class="tongji-panel-container">
+        <div class="tongji-tabs-header">
+            <div class="tongji-tabs-slider"></div>
+            <input type="button" class="tongji-tab-item tongji-active" id="tab-common" value="常用属性">
+            <input type="button" class="tongji-tab-item" id="tab-other" value="其他属性">
+        </div>
+
+        <!-- 面板 1：常用属性 -->
+        <div class="tongji-grid-board tongji-animate-fade" id="panel-common"></div>
+
+        <!-- 面板 2：其他属性 -->
+        <div class="tongji-grid-board tongji-hidden tongji-animate-fade" id="panel-other"></div>
+
+        <!-- 数据输入区 -->
+        <div class="tongji-io-section">
+            <div class="tongji-io-header">
+                <div class="tongji-io-title">📥 输入数据</div>
+                <div class="tongji-io-btns">
+                    <input type="button" class="tongji-ctl-btn" id="tongji-copy-input" value="复制">
+                    <input type="button" class="tongji-ctl-btn tongji-btn-danger" id="tongji-clear-input" value="清空">
+                </div>
+            </div>
+            <textarea class="tongji-io-textarea" id="tongji-input-area" rows="3" placeholder="点击上方属性按钮 或 手动 输入数据..." name="inputtxt"></textarea>
+        </div>
+
+        <!-- 统计结果区 -->
+        <div class="tongji-io-section">
+            <div class="tongji-io-header">
+                <div class="tongji-io-title">📊 统计结果</div>
+                <div class="tongji-io-btns">
+                    <input type="button" class="tongji-ctl-btn" id="tongji-clear-result" value="清空">
+                    <input type="button" class="tongji-ctl-btn" id="tongji-save-result" value="暂存">
+                    <!-- 改为安全的 window.全局函数 触发 -->
+                    <input type="button" class="tongji-ctl-btn tongji-btn-primary tongji-btn-large" id="tongji-btn-countma" value="号统" onclick="window.countma?.()">
+                    <input type="button" class="tongji-ctl-btn tongji-btn-primary tongji-btn-large" id="tongji-btn-countstyle" value="肖统" onclick="window.countstyle?.('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪')">
+                </div>
+            </div>
+            <div class="tongji-textarea-wrapper">
+                <textarea class="tongji-io-textarea" id="tongji-result-area" rows="3" readonly placeholder="统计结果..." name="resultstxt"></textarea>
+                <div class="tongji-floating-actions">
+                    <input type="button" class="tongji-link-btn" id="tongji-edit-result" value="编辑">
+                    <input type="button" class="tongji-link-btn" id="tongji-copy-result" value="复制">
+                </div>
+            </div>
+        </div>
+
+        <!-- 暂存数据输入区 -->
+        <div class="tongji-io-section tongji-hidden" id="tongji-zc">
+            <div class="tongji-io-header">
+                <div class="tongji-io-title">📥 暂存输入</div>
+                <div class="tongji-io-btns">
+                    <input type="button" class="tongji-ctl-btn" id="tongjizc-copy-input" value="复制">
+                    <input type="button" class="tongji-ctl-btn tongji-btn-danger" id="tongjizc-clear-input" value="清空">
+                    <!-- 改为安全的 window.全局函数 触发 -->
+                    <input type="button" class="tongji-ctl-btn tongji-btn-primary tongji-btn-large" id="tongji-btn-cunma" value="号统" onclick="window.cunma?.()">
+                    <input type="button" class="tongji-ctl-btn tongji-btn-primary tongji-btn-large" id="tongji-btn-cunqt" value="肖统" onclick="window.cunqt?.('鼠,牛,虎,兔,龙,蛇,马,羊,猴,鸡,狗,猪')">
+                </div>
+            </div>
+            <textarea class="tongji-io-textarea" id="tongjizc-input-area" rows="3" placeholder="输入暂存数据..." name="zancuntxt"></textarea>
+        </div>
+    </div>
+  </form>
+</div>
+  `;
+}
+
+// 查询助手
+export function getLotteryAnalysisHTML() {
+  return `
+  <!-- 顶级独立模块命名空间 -->
+<div id="lottery-analysis-module" class="ax-ultra-slim-container" style="display:none;">
+  <div class="ax-dashboard-card">
+  
+    <!-- LINE 0: 独立栏目彩种按钮切换行 -->
+    <div class="ax-lane-row">
+      <div class="ax-lane-label">彩种</div>
+      <div class="ax-lane-content lottery-tab-wrap" style="gap: 8px; flex-wrap: wrap;" id="ax-analysis-lottery-tabs">
+      </div>
+    </div>
+    
+    <!-- LINE 1: 独立查询模式按钮切换行 -->
+    <div class="ax-lane-row">
+      <div class="ax-lane-label">模式</div>
+      <div class="ax-lane-content lottery-tab-wrap" id="ax-query-mode-tabs" style="gap: 8px; flex-wrap: wrap;">
+        <div class="ax-tab-btn is-active" data-mode="recent">最近 N 期</div>
+        <div class="ax-tab-btn" data-mode="period">起止期数</div>
+        <div class="ax-tab-btn" data-mode="year">年份范围</div>
+      </div>
+    </div>
+    
+    <div class="ax-query-input-lanes">
+      <!-- LINE 1.1: 模式 1：最近 N 期输入面板（默认显示） -->
+      <div class="ax-lane-row" id="lane-mode-recent">
+        <div class="ax-lane-label">最近</div>
+        <div class="ax-lane-content">
+          <input type="number" id="input-recent-limit" value="100" min="1" max="1000" class="ax-pure-text-input">
+          <span class="ax-input-unit">期数据</span>
+        </div>
+      </div>
+
+      <!-- LINE 1.2: 模式 2：起止期数输入面板（默认隐藏） -->
+      <div class="ax-lane-row" id="lane-mode-period" style="display: none;">
+        <div class="ax-lane-label">期数</div>
+        <div class="ax-lane-content">
+          <input type="text" id="input-start-period" placeholder="起始期数" class="ax-pure-text-input" />
+          <span class="ax-text-split">至</span>
+          <input type="text" id="input-end-period" placeholder="结束期数" class="ax-pure-text-input" style="margin-left: 6px;" />
+        </div>
+      </div>
+
+      <!-- LINE 1.3: 模式 3：年份范围输入面板（默认隐藏) -->
+      <div class="ax-lane-row" id="lane-mode-year" style="display: none;">
+        <div class="ax-lane-label">年份</div>
+        <div class="ax-lane-content year-flex-wrap">
+          <div class="ax-select-trigger" id="trigger-start-year" data-value="">2025 年</div>
+          <span class="ax-text-split">至</span>
+          <div class="ax-select-trigger" id="trigger-end-year" data-value="">2026 年</div>
+          <div class="ax-num-input-wrap">
+            <span class="ax-text-split">近</span>
+            <input type="number" id="input-recent-years" class="ax-pure-num-field" value="2" min="1" max="7">
+            <span class="ax-input-unit">年</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE 2: 条件（维度与逻辑模式） -->
+    <div class="ax-lane-row">
+      <div class="ax-lane-label">条件</div>
+      <div class="ax-lane-content">
+        <div class="ax-select-trigger" id="trigger-filter-type" data-value="number">按号码</div>
+        <div class="ax-select-trigger" id="trigger-logic-mode" data-value="OR">满足任意条件</div>
+        <div class="ax-select-trigger" id="trigger-sort-mode" data-value="drop">落球序</div>
+      </div>
+    </div>
+
+    <!-- LINE 3: 网格输入行 -->
+    <div class="ax-lane-row">
+      <div class="ax-lane-label" style="border: none;background-color: transparent;"></div>
+      <div class="ax-lane-content">
+        <div class="ax-grid-input-row">
+          <div class="ax-modern-input-box">
+          <textarea id="analysis-input-value" class="ax-pure-text-field" rows="1" placeholder="输入条件，如: 08,12,33"></textarea>
+          <button type="button" id="btn-extract-recent" class="ax-btn-primary">提取</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE 3.5: 延伸区独立行（像网格输入行一样，左侧留空对齐，右侧独占整行） -->
+    <div class="ax-lane-row" id="context-extension-alternate" style="display:none;">
+      <div class="ax-lane-label" style="border: none;background-color: transparent;"></div>
+      <div class="ax-lane-content">
+        <div class="ax-popup-extension-wrap" style="max-height: 120px;width: 100%;">
+          <div class="ax-ext-inline-inner">
+          <span class="ax-text-split">间隔</span>
+            <input type="number" id="input-inter-period" class="ax-pure-num-field" style="wid1th: 28px;" value="0">
+            <span class="ax-input-unit">期 </span><!--span style="font-size: 11px;color:#999999;margin-left: 5px;">💡 提示：0=连续，1=隔1期 ...</span-->
+            <div class="ax-select-trigger" id="trigger-frequency-mode" data-value="SINGLE" style="border: none;background-color: transparent;padding-top: 0;padding-bottom: 0;margin-left: 3px;">单次 (固定)</div>
+             <div class="ax-stepper-jjbtn active" id="input-inter-jia" style="margin: 0 3.5px;">加</div><div class="ax-stepper-jjbtn" id="input-inter-jian">减</div>
+            <input type="number" id="input-inter-offset" class="ax-pure-num-field" value="0">
+          </div>
+          <div class="ax-ext-inline-inner">
+            <!-- 规律跨位置全自动扫描开关 -->
+          <input type="checkbox" id="chk-auto-cross-pos" style="cursor: pointer;" />
+          <span class="ax-stepper-unit">规律性跨位置</span>
+          <span class="ax-stepper-txt">范围：左</span>
+          <input type="number" id="input-zodiac-left" class="ax-pure-num-field" value="0">
+          <span class="ax-stepper-txt">右</span>
+          <input type="number" id="input-zodiac-right" class="ax-pure-num-field" value="0">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE 4: 结果显示主行（左侧位置选择 + 右侧显示模式） -->
+    <div class="ax-lane-row">
+      <div class="ax-lane-label">结果</div>
+      <div class="ax-lane-content">
+        <div class="ax-select-trigger" id="trigger-position-select" data-selected="0,1,2,3,4,5,6" style="flex-shrink: 0;">位置：全部 (7)</div>
+        <div class="ax-select-trigger" id="trigger-display-mode" data-value="ALL" style="flex: 1;">显示全部期数</div>
+      </div>
+    </div>
+
+    <!-- LINE 4.5: 延伸区独立行（像网格输入行一样，左侧留空对齐，右侧独占整行） -->
+    <div class="ax-lane-row">
+      <div class="ax-lane-label" style="border: none;background-color: transparent;"></div>
+      <div class="ax-lane-content">
+        <div id="context-extension-lane" class="ax-popup-extension-wrap ax-ext-hide" style="width: 100%;">
+          <div class="ax-ext-inline-inner">
+            <span class="ax-stepper-txt">前显</span>
+            <div class="ax-stepper-btn" id="step-prev-minus">-</div>
+            <input type="number" id="input-prev-count" class="ax-stepper-val" value="0" readonly>
+            <div class="ax-stepper-btn" id="step-prev-plus">+</div>
+            <span class="ax-stepper-unit">期</span>
+
+            <span class="ax-stepper-txt" style="margin-left: 16px;">后显</span>
+            <div class="ax-stepper-btn" id="step-next-minus">-</div>
+            <input type="number" id="input-next-count" class="ax-stepper-val" value="0" readonly>
+            <div class="ax-stepper-btn" id="step-next-plus">+</div>
+            <span class="ax-stepper-unit">期</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE 5: 底部行动按钮 -->
+    <div class="ax-lane-row no-border" style="padding: 14px 0 6px 0;">
+      <div class="ax-lane-content" style="justify-content: flex-end; gap: 12px;">
+        <button id="btn-analysis-execute" class="ax-luxury-action-btn btn-prime">⚡ 开始查询</button>
+        <button id="btn-analysis-reset" class="ax-luxury-action-btn btn-sub">重置</button>
+        <button id="btn-analysis-copy" class="ax-luxury-action-btn btn-sub" style="border: 0.8px solid #e6a23c;font-size: 10px;padding:2px 4px;border-radius: 6px;">复制结果</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="analysis-matrix-output" class="ax-matrix-display-canvas">
+    <div class="ax-modern-empty-state">暂未触发查询分析。</div>
+  </div>
+
+  <!-- 浮层与弹窗系统 -->
+  <div id="ax-global-overlay" class="ax-blur-overlay"></div>
+  <div id="ax-dropdown-popover" class="ax-luxury-popover">
+    <div class="ax-popover-inner" id="ax-popover-options-list"></div>
+  </div>
+  <div id="ax-toast-container" class="ax-toast-container"></div>
+</div>
+  `;
+}
